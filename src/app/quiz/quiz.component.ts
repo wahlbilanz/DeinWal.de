@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestiondataService } from '../questiondata.service';
 
 @Component({
   selector: 'app-quiz',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
-
-  constructor() { }
+  model:any;
+  answers = ["neutral","neutral","neutral","neutral"]
+  constructor(public questionData:QuestiondataService) { }
 
   ngOnInit() {
   }
 
+  print(){
+    console.log(this.model);
+    console.log(this.answers);
+  }
 }

@@ -1,3 +1,13 @@
-<p>
-  quiz works!
-</p>
+
+<div *ngFor="let question of questionData.questions">
+  <h3>{{question.qtitle}}</h3>
+  <p>{{question.qdescription}}</p>
+  <form  name="ba">
+    <input type="radio" name="answer" [(ngModel)]="answers[question.qtitle]" value="yes" >Zustimmen<br>
+    <input type="radio" name="answer" [(ngModel)]="answers[question.qtitle]" value="neutral">Enthalten<br>
+    <input type="radio" name="answer" [(ngModel)]="answers[question.qtitle]" value="no">Dagegen Stimmen<br>
+    <input type="radio" name="answer" [(ngModel)]="answers[question.qtitle]" value="away" checked>Abstimmung Schwänzen
+  </form>
+</div>
+
+<button (click)="print()">test result</button>
