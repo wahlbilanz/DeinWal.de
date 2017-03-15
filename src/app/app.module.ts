@@ -1,3 +1,4 @@
+import { QuestiondataService } from './questiondata.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -18,7 +19,7 @@ import { QuizComponent } from './quiz/quiz.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [QuestiondataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
