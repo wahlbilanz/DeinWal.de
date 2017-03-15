@@ -8,7 +8,7 @@ import { QuestiondataService } from '../questiondata.service';
 })
 export class QuizComponent implements OnInit {
   model:any;
-  answers = ["neutral","neutral","neutral","neutral"]
+  answers = [];
   constructor(public questionData:QuestiondataService) { }
 
   ngOnInit() {
