@@ -4,14 +4,14 @@ import { Injectable } from '@angular/core';
 export class QuestiondataService {
   questions = [
     {
-      "qtext":"Soll der Afganistan-einsatz verlängert werden?",
-      "qtextLong":"blablabla .... bombem .... Flugzeuge .... 1000 Soldaten ... kinder umbringen ... krankenhäuser aufbauen und zerbomben",
+      "qtitle":"Soll der Afganistan-einsatz verlängert werden?",
+      "qdescription":"blablabla .... bombem .... Flugzeuge .... 1000 Soldaten ... kinder umbringen ... krankenhäuser aufbauen und zerbomben",
 
     },
     {
       "qtitle":"Fortsetzung des Bundeswehreinsatzes in Mali",
       "qdate":"26.01.2017",
-      "qdescription1":"Der Bundestag hat eine Ausweitung des Bundeswehreinsatzes in Mali beschlossen. Als einzige Fraktion stimmte die Linke geschlossen gegen den Regierungsantrag.",
+      "qdescription":"Der Bundestag hat eine Ausweitung des Bundeswehreinsatzes in Mali beschlossen. Als einzige Fraktion stimmte die Linke geschlossen gegen den Regierungsantrag.",
       "abgeordnetenwatchLink":"http://www.abgeordnetenwatch.de/fortsetzung_des_bundeswehreinsatzes_in_mali-1105-847.html",
       "results":{
         "overall":{"yes":79.05,"no":8.73,"neutral":0.48,"away":11.75},
@@ -22,7 +22,7 @@ export class QuestiondataService {
         "spd":{"yes":90.16,"no":3.63,"neutral":0.52,"away":5.70}
       }
     }
-  ]
+  ];
 
   constructor() { }
 
