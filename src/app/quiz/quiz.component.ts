@@ -9,6 +9,8 @@ import { QuestiondataService } from '../questiondata.service';
 export class QuizComponent implements OnInit {
 
   answers = {};
+  partyResults = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
+
   constructor(public questionData:QuestiondataService) { }
 
   ngOnInit() {
@@ -20,14 +22,22 @@ export class QuizComponent implements OnInit {
   }
 
   testresultauswertung(){
-    for(let answer in this.answers){
-      console.log(answer);
-      let results = this.questionData.getResultById(answer);
-      console.log(results);
-      for(let partei in results){
-        
+  this.partyResults = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
+    for(let questionID in this.answers){
+      //console.log('QuestionID:' + questionID + ' answer:' + this.answers[questionID]);
+      for(let partei in this.partyResults){
+        let answerDifference = 1.0;
+        let answerByParty = this.questionData.getDefinitiveAnswerByIdAndParty(questionID,partei);
+        if (answerByParty==this.answers[questionID]){
+          answerDifference = 0.0;
+        } else {
+          answerDifference = 1.0;
+        }
+        this.partyResults[partei].push(answerDifference);
+        this.partyResults[partei][0] += answerDifference;
       }
     }
+    console.log(this.partyResults);
   }
 
 }

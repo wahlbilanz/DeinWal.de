@@ -45,6 +45,21 @@ export class QuestiondataService {
     return null; //not found
   }
 
+  getDefinitiveAnswerByIdAndParty(id:string,party:string){
+    let result = this.getResultById(id);
+    let partyResults = result[party]; //like this: {"yes":79.05,"no":8.73,"neutral":0.48,"away":11.75}
+    //now get the answer with the highest percent points:
+    let maxAnswer = 'dunno';
+    let maxPercentage = -0.0;
+    for(let answer in partyResults){
+      if(partyResults[answer]>maxPercentage){
+        maxAnswer = answer; //'yes' or 'no' or...
+        maxPercentage = partyResults[answer];
+      }
+    }
+    return maxAnswer;
+  }
+
   getNRandomQuestions(n:number){
     return this.questions;
   }
