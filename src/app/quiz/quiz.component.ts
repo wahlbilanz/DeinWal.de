@@ -7,15 +7,14 @@ import { QuestiondataService } from '../questiondata.service';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
-  model:any;
-  answers = [];
+
+  answers = {};
   constructor(public questionData:QuestiondataService) { }
 
   ngOnInit() {
   }
 
   print(){
-    console.log(this.model);
     console.log(this.answers);
   }
 }

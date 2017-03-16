@@ -3,11 +3,12 @@
   <h3>{{question.qtitle}}</h3>
   <p>{{question.qdescription}}</p>
   <form  name="ba">
-    <input type="radio" name="answer" [(ngModel)]="answers[question.qtitle]" value="yes" >Zustimmen<br>
-    <input type="radio" name="answer" [(ngModel)]="answers[question.qtitle]" value="neutral">Enthalten<br>
-    <input type="radio" name="answer" [(ngModel)]="answers[question.qtitle]" value="no">Dagegen Stimmen<br>
-    <input type="radio" name="answer" [(ngModel)]="answers[question.qtitle]" value="away" checked>Abstimmung Schwänzen
+    <input type="radio" name="answer" [(ngModel)]="answers[question.id]" value="yes" >Zustimmen<br>
+    <input type="radio" name="answer" [(ngModel)]="answers[question.id]" value="neutral">Enthalten<br>
+    <input type="radio" name="answer" [(ngModel)]="answers[question.id]" value="no">Dagegen Stimmen<br>
+    <input type="radio" name="answer" [(ngModel)]="answers[question.id]" value="away" checked>Abstimmung Schwänzen
   </form>
 </div>
 
 <button (click)="print()">test result</button>
+<p> {{answers | json }} </p>

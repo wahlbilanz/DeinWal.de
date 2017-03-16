@@ -4,11 +4,13 @@ import { Injectable } from '@angular/core';
 export class QuestiondataService {
   questions = [
     {
-      "qtitle":"Soll der Afganistan-einsatz verlängert werden?",
+      "id":"Afghanistan1",
+      "qtitle":"Soll der Afghanistan-einsatz verlängert werden?",
       "qdescription":"blablabla .... bombem .... Flugzeuge .... 1000 Soldaten ... kinder umbringen ... krankenhäuser aufbauen und zerbomben",
 
     },
     {
+      "id":"Mali1",
       "qtitle":"Fortsetzung des Bundeswehreinsatzes in Mali",
       "qdate":"26.01.2017",
       "qdescription":"Der Bundestag hat eine Ausweitung des Bundeswehreinsatzes in Mali beschlossen. Als einzige Fraktion stimmte die Linke geschlossen gegen den Regierungsantrag.",
