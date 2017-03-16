@@ -16,5 +16,18 @@ export class QuizComponent implements OnInit {
 
   print(){
     console.log(this.answers);
+    this.testresultauswertung();
   }
+
+  testresultauswertung(){
+    for(let answer in this.answers){
+      console.log(answer);
+      let results = this.questionData.getResultById(answer);
+      console.log(results);
+      for(let partei in results){
+        
+      }
+    }
+  }
+
 }
