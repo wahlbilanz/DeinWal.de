@@ -8,6 +8,11 @@
  * im Ordner hier drüber `npm install` tipseln
  * `ng serve` startet einen server. App kann über localhost:4200 aufgerufen werden
 
+ * bauen: `ng build`
+ * besseres bauen:
+ `ng build --prod --bh /wahlwal -d /wahlwal`
+ danach ist alles in dist\ zu finden
+
  ## Wichtige Dateien
 
  Alles wichtige ist im Ordner src\app\ und dann:
