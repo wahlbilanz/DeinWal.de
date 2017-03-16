@@ -10,5 +10,11 @@
   </form>
 </div>
 
-<button (click)="print()">test result</button>
+<button (click)="print()">Ergebnis Berechnen</button>
 <p> {{answers | json }} </p>
+
+<div *ngFor="let party of ['cdu','csu','spd','gruen','linke']">
+  <h5>{{party}}</h5>
+  <p>Anzahl von Abstimmungen mit unterschiedlicher Meinung: {{partyResultsDifferent[party][0]}}</p>
+  <p>Anzahl von Abstimmungen mit gleicher Meinung: {{partyResultsSame[party][0]}}</p>
+</div>

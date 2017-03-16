@@ -9,7 +9,8 @@ import { QuestiondataService } from '../questiondata.service';
 export class QuizComponent implements OnInit {
 
   answers = {};
-  partyResults = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
+  partyResultsDifferent = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
+  partyResultsSame = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
 
   constructor(public questionData:QuestiondataService) { }
 
@@ -22,22 +23,25 @@ export class QuizComponent implements OnInit {
   }
 
   testresultauswertung(){
-  this.partyResults = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
+  this.partyResultsDifferent = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
     for(let questionID in this.answers){
       //console.log('QuestionID:' + questionID + ' answer:' + this.answers[questionID]);
-      for(let partei in this.partyResults){
-        let answerDifference = 1.0;
+      for(let partei in this.partyResultsDifferent){
         let answerByParty = this.questionData.getDefinitiveAnswerByIdAndParty(questionID,partei);
         if (answerByParty==this.answers[questionID]){
-          answerDifference = 0.0;
+          this.partyResultsDifferent[partei].push(0.0);
+          this.partyResultsDifferent[partei][0] += 0.0;
+          this.partyResultsSame[partei].push(1.0);
+          this.partyResultsSame[partei][0] += 1.0;
         } else {
-          answerDifference = 1.0;
+          this.partyResultsDifferent[partei].push(1.0);
+          this.partyResultsDifferent[partei][0] += 1.0;
+          this.partyResultsSame[partei].push(0.0);
+          this.partyResultsSame[partei][0] += 0.0;
         }
-        this.partyResults[partei].push(answerDifference);
-        this.partyResults[partei][0] += answerDifference;
       }
     }
-    console.log(this.partyResults);
+    console.log(this.partyResultsDifferent);
   }
 
 }
