@@ -1,20 +1,3 @@
 
-<div *ngFor="let question of questionData.questions">
-  <h3>{{question.qtitle}}</h3>
-  <p>{{question.qdescription}}</p>
-  <form  name="ba">
-    <input type="radio" name="answer" [(ngModel)]="answers[question.id]" value="yes" >Zustimmen<br>
-    <input type="radio" name="answer" [(ngModel)]="answers[question.id]" value="neutral">Enthalten<br>
-    <input type="radio" name="answer" [(ngModel)]="answers[question.id]" value="no">Dagegen Stimmen<br>
-    <input type="radio" name="answer" [(ngModel)]="answers[question.id]" value="away" checked>Abstimmung Schwänzen
-  </form>
-</div>
+{{questionData| json}}
 
-<button (click)="print()">Ergebnis Berechnen</button>
-<p> {{answers | json }} </p>
-
-<div *ngFor="let party of ['cdu','csu','spd','gruen','linke']">
-  <h5>{{party}}</h5>
-  <p>Anzahl von Abstimmungen mit unterschiedlicher Meinung: {{partyResultsDifferent[party][0]}}</p>
-  <p>Anzahl von Abstimmungen mit gleicher Meinung: {{partyResultsSame[party][0]}}</p>
-</div>

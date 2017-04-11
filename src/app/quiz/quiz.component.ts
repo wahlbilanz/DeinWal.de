@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestiondataService } from '../questiondata.service';
+/*import {Http, Headers} from '@angular/http';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/observable/of';
+import 'rxjs/add/operator/share';
+import 'rxjs/add/operator/map';*/
+
 
 @Component({
   selector: 'app-quiz',
@@ -7,13 +13,18 @@ import { QuestiondataService } from '../questiondata.service';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
-
+	questionData = {};
   answers = {};
   partyResultsDifferent = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
   partyResultsSame = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
 
-  constructor(public questionData:QuestiondataService) { }
-
+	constructor(private qserv: QuestiondataService) {
+		this.qserv.getData().subscribe((data) => {
+			console.log("what is in the data ", data);
+			this.questionData = data;
+		})
+	}
+	
   ngOnInit() {
   }
 
@@ -23,7 +34,7 @@ export class QuizComponent implements OnInit {
   }
 
   testresultauswertung(){
-  this.partyResultsDifferent = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
+  /*this.partyResultsDifferent = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
     for(let questionID in this.answers){
       //console.log('QuestionID:' + questionID + ' answer:' + this.answers[questionID]);
       for(let partei in this.partyResultsDifferent){
@@ -41,7 +52,7 @@ export class QuizComponent implements OnInit {
         }
       }
     }
-    console.log(this.partyResultsDifferent);
+    console.log(this.partyResultsDifferent);*/
   }
 
 }
