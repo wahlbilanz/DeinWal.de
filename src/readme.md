@@ -10,8 +10,22 @@
 
  * bauen: `ng build`
  * besseres bauen:
- `ng build --prod --bh /wahlwal -d /wahlwal`
+ `ng build --prod --bh / -d /`
  danach ist alles in dist\ zu finden
+
+## The Docker way
+
+* work on it:
+
+    docker run --rm -it -v /PATH/TO/PROJECT:/usr/src/app -p 4200:4200 binfalse/angular-cli
+
+* compile a release:
+
+    docker run --rm -it -v /PATH/TO/PROJECT:/usr/src/app -p 4200:4200 binfalse/angular-cli ng build --prod --bh / -d /
+
+* serve the release through an nginx:
+
+    docker run --rm -it -p 8081:80 -v /PATH/TO/PROJECT/dist:/usr/share/nginx/html:ro nginx
 
  ## Wichtige Dateien
 
