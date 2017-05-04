@@ -14,8 +14,9 @@ import 'rxjs/add/operator/map';*/
 })
 export class QuizComponent implements OnInit {
 	questionData = [];
+  questionIndex = 0;
   answers = {};
-  progress = 10.0;
+  progress = 0.0;
   partyResultsDifferent = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
   partyResultsSame = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
 
@@ -27,6 +28,7 @@ export class QuizComponent implements OnInit {
       } else {
 			  this.questionData = data;
       }
+      this.showQuestion(0);
 		})
 	}
 	
@@ -59,5 +61,38 @@ export class QuizComponent implements OnInit {
     }
     console.log(this.partyResultsDifferent);*/
   }
+
+  /**
+   * Zeige nur Question Nummer n (div.style.display = block), verstecke alle anderen(div.style.display = none)
+   * nicht wirklich schoen.
+   * @param {any} n 
+   * 
+   * @memberof QuizComponent
+   */
+  showQuestion(n) {
+      let i;
+      let x = document.getElementsByClassName("myQuestions");
+      console.log('anzahl fragen:', x.length);
+
+      this.progress = 100.0 * n / x.length;
+
+      for (i = 0; i < x.length; i++) {
+        let y = <HTMLElement> x[i];
+        y.style.display = "none";
+      }
+      if(n>=x.length){
+        //vorbei!
+        console.log('vorbei!');
+      } else {
+        let y = <HTMLElement> x[this.questionIndex];
+        y.style.display = "block";
+      }
+  }
+  
+  nextQuestion(n) {
+    this.questionIndex += n;
+    this.showQuestion(this.questionIndex);
+  }
+
 
 }
