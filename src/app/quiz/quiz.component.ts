@@ -13,15 +13,20 @@ import 'rxjs/add/operator/map';*/
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
-	questionData = {};
+	questionData = [];
   answers = {};
+  progress = 10.0;
   partyResultsDifferent = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
   partyResultsSame = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
 
 	constructor(private qserv: QuestiondataService) {
 		this.qserv.getData().subscribe((data) => {
 			console.log("what is in the data ", data);
-			this.questionData = data;
+      if (! Array.isArray(data)){
+        this.questionData = [];
+      } else {
+			  this.questionData = data;
+      }
 		})
 	}
 	
