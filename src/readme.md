@@ -36,3 +36,8 @@
  quiz\quiz.component.html --> layout für das Quiz
 
  quiz\quiz.component.ts --> logik hinterm Quiz
+
+## UI mit W3.CSS
+
+Als CSS-Framework wird jetzt auf [w3.css](https://www.w3schools.com/w3css/w3css_intro.asp) gesetzt.
+
