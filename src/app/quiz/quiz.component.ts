@@ -74,7 +74,7 @@ export class QuizComponent implements OnInit {
       let x = document.getElementsByClassName("myQuestions");
       console.log('anzahl fragen:', x.length);
 
-      this.progress = 100.0 * n / x.length;
+      this.progress = 100.0 * n / (x.length-1);
 
       for (i = 0; i < x.length; i++) {
         let y = <HTMLElement> x[i];
