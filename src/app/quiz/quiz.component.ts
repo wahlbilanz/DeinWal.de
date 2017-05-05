@@ -17,6 +17,7 @@ export class QuizComponent implements OnInit {
   questionIndex = 0;
   answers = {};
   progress = 0.0;
+  choice = 'notyet';
   partyResultsDifferent = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
   partyResultsSame = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
 
@@ -38,6 +39,16 @@ export class QuizComponent implements OnInit {
   print(){
     console.log(this.answers);
     this.testresultauswertung();
+  }
+
+  choose(choice, questionId){
+    if(this.choice!=choice){
+      this.choice = choice;
+      this.answers[questionId] = choice;
+    } else {
+      this.choice = 'notyet';
+      this.answers[questionId] = 'notyet';
+    }
   }
 
   testresultauswertung(){
@@ -90,6 +101,7 @@ export class QuizComponent implements OnInit {
   }
   
   nextQuestion(n) {
+    this.choice = 'notyet';
     this.questionIndex += n;
     this.showQuestion(this.questionIndex);
   }
