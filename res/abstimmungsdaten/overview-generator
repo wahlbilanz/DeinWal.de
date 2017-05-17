@@ -1,0 +1,18 @@
+#!/bin/bash
+
+for i in $(cat ../abstimmungsliste/analyses/results.table | \grep -v ABSTIMMUNG | sed 's/\t.*\t//' | sort | uniq);
+do
+    pdf=$(echo $i | sed 's%\([^-]\{3\}-[^-]\{3\}-[^-]\{2\}\)\(.*\)_xls.*%\2-data.pdf%')
+    #echo $pdf
+    pdffile="../abstimmungsliste/$pdf"
+    #[ -e "$pdffile" ] || echo $pdf
+
+    echo $i | sed 's%\([^-]\{3\}-[^-]\{3\}-[^-]\{2\}\)\(.*\)%== \1 ==\n* Title: \n* Link: \n * \n * \n* Data: \n * source:wahl/res/abstimmungsliste/'$pdf'\n * source:wahl/res/abstimmungsliste/analyses/\2\n* Documents: \n * source:wahl/res/abstimmungsdaten/\1/\n * source:wahl/res/abstimmungsdaten/\1/\n* Snippet: %'
+
+
+
+    pdftotext -l 1 "$pdffile" - | sed 's/^/> /'
+    echo ""
+    echo ""
+done > overview
+
