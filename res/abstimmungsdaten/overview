@@ -1,20 +1,6 @@
 * what's up with https://www.bundestag.de/parlament/plenum/abstimmung/abstimmung?id=36 ?
 
 
-== 018-001-01 ==
-* Title: 
-* Link: 
- * 
- * 
-* Data: 
- * source:wahl/res/abstimmungsliste/20140409-data.pdf
- * source:wahl/res/abstimmungsliste/analyses/20140409_xls-data.csv
-* Documents: 
- * source:wahl/res/abstimmungsdaten/018-001-01/
- * source:wahl/res/abstimmungsdaten/018-001-01/
-* Snippet: 
-> 
-
 == 018-003-01 ==
 * Title: Bundeswehreinsatz in Südsudan
 * Link: 
@@ -790,6 +776,9 @@
 * Link: 
  * https://www.bundestag.de/parlament/plenum/abstimmung/abstimmung?id=260
  * 
+* Data: 
+ * source:wahl/res/abstimmungsliste/20140409-data.pdf
+ * source:wahl/res/abstimmungsliste/analyses/20140409_xls-data.csv
 * Documents: 
  * source:wahl/res/abstimmungsdaten/018-026-03/1800984.pdf
  * source:wahl/res/abstimmungsdaten/018-026-03/1801067.pdf
