@@ -1,31 +1,11 @@
 
 <h2 class="w3-center">Abstimmungen</h2>
 
-<div class="myQuestions w3-card-4 w3-light-grey w3-padding-16 w3-margin w3-animate-bottom" style="display:none;">
-    <div class="w3-container">
-        <header class="w3-container w3-dark-grey">
-            <h3>Bundeswehr mobilisieren</h3>
-        </header>
-        <img src="img_avatar3.png" alt="passendes Bild" style="width:80%">
-        <h4>Soll die komplette Bundeswehr mobilisiert werden?</h4>
-        <p> 
-            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo d
-        </p>
-        <button class="w3-button w3-hover-green w3-ripple active w3-large" [class.w3-pale-green]="choice!='yes'" [class.w3-green]="choice=='yes'" (click)="choose('yes','bw')">Zustimmen</button>
-        <button class="w3-button w3-hover-red w3-ripple w3-large" [class.w3-pale-red]="choice!='no'" [class.w3-red]="choice=='no'" (click)="choose('no','bw')">Ablehnen</button>
-        <button class="w3-button w3-hover-blue w3-ripple w3-large" [class.w3-pale-blue]="choice!='neutral'" [class.w3-blue]="choice=='neutral'" (click)="choose('neutral','bw')">Egal</button>
-        <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large" (click)="nextQuestion(1)">nächste Frage</button>
-    </div>
-</div>
-
-<div class="myQuestions w3-card-4 w3-dark-grey w3-padding-16 w3-margin w3-animate-opacity" style="display:none;" *ngFor="let question of questionData">
+<div class="myQuestions w3-card-4 w3-dark-grey w3-padding-16 w3-margin w3-animate-zoom" *ngIf="!resultsVisible">
     <div class="w3-container">
         <header class="w3-container w3-light-grey">
             <h3>{{question.qtitle}}</h3>
         </header>
-        <img src="img_avatar3.png" alt="passendes Bild" style="width:80%">
         <h4>{{question.qtitle}}</h4>
         <p> 
             {{question.qdescription}}    
@@ -41,7 +21,7 @@
   <div class="w3-container w3-green w3-center" [style.width.%]="progress">{{progress | number:'1.1-1'}}%</div>
 </div>
 
-<div class="myQuestions w3-card-4 w3-light-grey w3-padding-16 w3-margin w3-animate-top" style="display:none;">
+<div class="w3-card-4 w3-light-grey w3-padding-16 w3-margin w3-animate-bottom" *ngIf="resultsVisible">
     <div class="w3-container">
         <header class="w3-container w3-green">
             <h3>Auswertung </h3>
