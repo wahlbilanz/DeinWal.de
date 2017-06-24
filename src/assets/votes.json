@@ -1,30 +1,138 @@
 [
-    {
-      "id":"Afghanistan1",
-      "qtitle":"Soll der Afghanistan-einsatz verlängert werden?",
-      "qdescription":"blablabla .... bombem .... Flugzeuge .... 1000 Soldaten ... kinder umbringen ... krankenhäuser aufbauen und zerbomben",
-      "results":{
-        "overall":{"yes":66.05,"no":6.73,"neutral":6.48,"away":6.75},
-        "cdu":{"yes":77.93,"no":7.0,"neutral":0.0,"away":7.07},
-        "csu":{"yes":55.36,"no":0.0,"neutral":55.0,"away":55.64},
-        "gruen":{"yes":44.13,"no":4.59,"neutral":4.12,"away":44.11},
-        "linke":{"yes":27.0,"no":72.44,"neutral":2.0,"away":22.56},
-        "spd":{"yes":33.16,"no":3.63,"neutral":33.52,"away":33.70}
-      }
-    },
-    {
-      "id":"Mali1",
-      "qtitle":"Fortsetzung des Bundeswehreinsatzes in Mali",
-      "qdate":"26.01.2017",
-      "qdescription":"Der Bundestag hat eine Ausweitung des Bundeswehreinsatzes in Mali beschlossen. Als einzige Fraktion stimmte die Linke geschlossen gegen den Regierungsantrag.",
-      "abgeordnetenwatchLink":"http://www.abgeordnetenwatch.de/fortsetzung_des_bundeswehreinsatzes_in_mali-1105-847.html",
-      "results":{
-        "overall":{"yes":79.05,"no":8.73,"neutral":0.48,"away":11.75},
-        "cdu":{"yes":88.93,"no":0.0,"neutral":0.0,"away":11.07},
-        "csu":{"yes":80.36,"no":0.0,"neutral":0.0,"away":19.64},
-        "gruen":{"yes":84.13,"no":1.59,"neutral":3.12,"away":11.11},
-        "linke":{"yes":0.0,"no":73.44,"neutral":0.0,"away":26.56},
-        "spd":{"yes":90.16,"no":3.63,"neutral":0.52,"away":5.70}
-      }
-    }
-  ]
+  "gentechnik": {
+		"topic": ["Gesundheit", "Ernährung", "Landwirtschaft", "Verbraucherschutz"],
+		"titel": "Gentechnik in der Landwirtschaft",
+		"beschreibung": "Mithilfe von Gentechnik werden Lebewesen künstlich verändert, so dass sie Beispielsweise einen höheren Ertrag liefern oder Resistenzen gegenüber Schädlingen und schlechten Umweltbedingungen aufweisen.",
+		"bild": "",
+		"subtext": "mehr informationen ueber gentechnik?",
+		"fragen": [
+			{
+				"context": "Honig könnte Pollen von gentechnisch veränderten Pflanzen enthalten.",
+				"frage" : "Sollte gentechnisch veränderter Honig für Verbraucher gekennzeichnet werden?",
+				"choice" : -1,
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-020-01/",
+				"results": {
+					"cdu/csu": {
+						"enthaltung": 4,
+						"gesamt": 311,
+						"ja": 269,
+						"nein": 3,
+						"nichtabgegeben": 35,
+						"ungueltig": 0
+					},
+					"die.linke": {
+						"enthaltung": 0,
+						"gesamt": 64,
+						"ja": 0,
+						"nein": 51,
+						"nichtabgegeben": 13,
+						"ungueltig": 0
+					},
+					"file": "20140313_1_xls-data.xls",
+					"gruenen": {
+						"enthaltung": 0,
+						"gesamt": 63,
+						"ja": 0,
+						"nein": 56,
+						"nichtabgegeben": 7,
+						"ungueltig": 0
+					},
+					"spd": {
+						"enthaltung": 5,
+						"gesamt": 193,
+						"ja": 171,
+						"nein": 0,
+						"nichtabgegeben": 17,
+						"ungueltig": 0
+					}
+				}
+			},
+			{
+				"context": "Die Maislinie 1507 wurde gentechnisch so verändert, dass sie ein Gift für bestimmte Insekten produziert und resistent gegen das Totalherbizid Glufosinat ist.",
+				"frage" : "Soll die Maislinie 1507 fuer den Anbau in der EU zugelassen werden?",
+				"choice" : -1,
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-011-01/",
+				"results": {
+					"cdu/csu": {
+						"enthaltung": 3,
+						"gesamt": 311,
+						"ja": 291,
+						"nein": 5,
+						"nichtabgegeben": 12,
+						"ungueltig": 0
+					},
+					"die.linke": {
+						"enthaltung": 0,
+						"gesamt": 64,
+						"ja": 0,
+						"nein": 58,
+						"nichtabgegeben": 6,
+						"ungueltig": 0
+					},
+					"file": "20140130_1_xls-data.xls",
+					"gruenen": {
+						"enthaltung": 0,
+						"gesamt": 63,
+						"ja": 0,
+						"nein": 58,
+						"nichtabgegeben": 5,
+						"ungueltig": 0
+					},
+					"spd": {
+						"enthaltung": 15,
+						"gesamt": 193,
+						"ja": 160,
+						"nein": 0,
+						"nichtabgegeben": 18,
+						"ungueltig": 0
+					}
+				}
+			},
+			{
+				"context": "Plfanzen und insbesondere Pollen verbreiten sich unkontrolliert und langfristige Auswirkungen sind schwer abschätzbar. ",
+				"frage" : "Sollte Gentechnik im Pflanzenbau verboten werden?",
+				"choice" : -1,
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-036-03/",
+				"results": {
+					"cdu/csu": {
+						"enthaltung": 2,
+						"gesamt": 311,
+						"ja": 0,
+						"nein": 287,
+						"nichtabgegeben": 22,
+						"ungueltig": 0
+					},
+					"die.linke": {
+						"enthaltung": 0,
+						"gesamt": 64,
+						"ja": 52,
+						"nein": 0,
+						"nichtabgegeben": 12,
+						"ungueltig": 0
+					},
+					"file": "20140522_3_xls-data.xls",
+					"gruenen": {
+						"enthaltung": 0,
+						"gesamt": 63,
+						"ja": 54,
+						"nein": 0,
+						"nichtabgegeben": 9,
+						"ungueltig": 0
+					},
+					"spd": {
+						"enthaltung": 1,
+						"gesamt": 193,
+						"ja": 1,
+						"nein": 170,
+						"nichtabgegeben": 21,
+						"ungueltig": 0
+					}
+				}
+			},
+			
+		]
+	},
+]
