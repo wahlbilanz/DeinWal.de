@@ -1,5 +1,5 @@
 [
-  "gentechnik": {
+	{
 		"topic": ["Gesundheit", "Ernährung", "Landwirtschaft", "Verbraucherschutz"],
 		"titel": "Gentechnik in der Landwirtschaft",
 		"beschreibung": "Mithilfe von Gentechnik werden Lebewesen künstlich verändert, so dass sie Beispielsweise einen höheren Ertrag liefern oder Resistenzen gegenüber Schädlingen und schlechten Umweltbedingungen aufweisen.",
@@ -131,10 +131,10 @@
 						"ungueltig": 0
 					}
 				}
-			},
+			}
 		}
 	},
-  "bundeswehr": {
+  {
 		"topic": ["Bundeswehr", "Ausland"],
 		"titel": "Einsatz der Bundeswehr",
 		"beschreibung": "Die Bundeswehr wird in verschiedenen Krisengebieten fuer verschiendene blabla Missionen",
@@ -232,7 +232,7 @@
 						"ungueltig": 0
 					}
 				}
-			},
+			}
 		}
-	},
+	}
 ]
