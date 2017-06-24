@@ -5,8 +5,8 @@
 		"beschreibung": "Mithilfe von Gentechnik werden Lebewesen künstlich verändert, so dass sie Beispielsweise einen höheren Ertrag liefern oder Resistenzen gegenüber Schädlingen und schlechten Umweltbedingungen aufweisen.",
 		"bild": "",
 		"subtext": "mehr informationen ueber gentechnik?",
-		"fragen": [
-			{
+		"fragen": {
+			"018-020-01": {
 				"context": "Honig könnte Pollen von gentechnisch veränderten Pflanzen enthalten.",
 				"frage" : "Sollte gentechnisch veränderter Honig für Verbraucher gekennzeichnet werden?",
 				"choice" : -1,
@@ -48,7 +48,7 @@
 					}
 				}
 			},
-			{
+			"018-011-01": {
 				"context": "Die Maislinie 1507 wurde gentechnisch so verändert, dass sie ein Gift für bestimmte Insekten produziert und resistent gegen das Totalherbizid Glufosinat ist.",
 				"frage" : "Soll die Maislinie 1507 fuer den Anbau in der EU zugelassen werden?",
 				"choice" : -1,
@@ -90,7 +90,7 @@
 					}
 				}
 			},
-			{
+			"018-036-03" : {
 				"context": "Plfanzen und insbesondere Pollen verbreiten sich unkontrolliert und langfristige Auswirkungen sind schwer abschätzbar. ",
 				"frage" : "Sollte Gentechnik im Pflanzenbau verboten werden?",
 				"choice" : -1,
@@ -132,7 +132,107 @@
 					}
 				}
 			},
-			
-		]
+		}
+	},
+  "bundeswehr": {
+		"topic": ["Bundeswehr", "Ausland"],
+		"titel": "Einsatz der Bundeswehr",
+		"beschreibung": "Die Bundeswehr wird in verschiedenen Krisengebieten fuer verschiendene blabla Missionen",
+		"bild": "",
+		"subtext": "mehr informationen ueber bundeswehr?",
+		"fragen": {
+			"018-161-01" : {
+				"context": "Die EU führt eine Ausbildungsmission zur stbilisierung staatlicher Strukturen in Somalia.",
+				"frage" : "Sollte sich die Bundeswehr daran beteiligen?",
+				"choice" : -1,
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-161-01/",
+				"results": {
+					"cdu/csu": {
+						"enthaltung": 0,
+						"gesamt": 310,
+						"ja": 284,
+						"nein": 0,
+						"nichtabgegeben": 26,
+						"ungueltig": 0
+					},
+					"die.linke": {
+						"enthaltung": 0,
+						"gesamt": 64,
+						"ja": 0,
+						"nein": 61,
+						"nichtabgegeben": 3,
+						"ungueltig": 0
+					},
+					"file": "20160317_1_xls-data.xls",
+					"gruenen": {
+						"enthaltung": 0,
+						"gesamt": 63,
+						"ja": 0,
+						"nein": 56,
+						"nichtabgegeben": 7,
+						"ungueltig": 0
+					},
+					"spd": {
+						"enthaltung": 1,
+						"gesamt": 193,
+						"ja": 172,
+						"nein": 6,
+						"nichtabgegeben": 14,
+						"ungueltig": 0
+					}
+				}
+			},
+			"018-215-02": {
+				"context": "Deutschland könnte sich bei der Ausbildungsunterstützung von Sicherheitskräften in der Region Kurdistan-Irak beteiligen.",
+				"frage" : "?",
+				"choice" : -1,
+				"subtext" : "Aufgaben: Ausbildungslehrgänge, Koordinierungsverantwortung, Verbindungs-, Beratungs- und Unterstützungsaufgaben, Beratung.",
+				"link": "https://wahlbilanz.de/abstimmungen/018-215-02/",
+				"results": {
+					"cdu/csu": {
+						"enthaltung": 0,
+						"gesamt": 309,
+						"ja": 273,
+						"nein": 0,
+						"nichtabgegeben": 36,
+						"ungueltig": 0
+					},
+					"die.linke": {
+						"enthaltung": 0,
+						"gesamt": 64,
+						"ja": 0,
+						"nein": 46,
+						"nichtabgegeben": 18,
+						"ungueltig": 0
+					},
+					"file": "20170126_2_xls-data.xls",
+					"fraktionslos": {
+						"enthaltung": 0,
+						"gesamt": 1,
+						"ja": 1,
+						"nein": 0,
+						"nichtabgegeben": 0,
+						"ungueltig": 0
+					},
+					"gruenen": {
+						"enthaltung": 46,
+						"gesamt": 63,
+						"ja": 2,
+						"nein": 9,
+						"nichtabgegeben": 6,
+						"ungueltig": 0
+					},
+					"spd": {
+						"enthaltung": 0,
+						"gesamt": 193,
+						"ja": 168,
+						"nein": 12,
+						"nichtabgegeben": 13,
+						"ungueltig": 0
+					}
+				}
+			},
+		}
 	},
 ]
