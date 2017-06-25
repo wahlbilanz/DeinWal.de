@@ -82,10 +82,13 @@ export class QuizComponent implements OnInit {
   
   nextQuestion(n) {
     this.questionIndex += n;
-    if(this.questionIndex>=this.questionData.length){
+    if (this.questionIndex >= this.questionData.length){
       //reached last question
       this.progress = 100;
       this.showResults();
+    } else if (this.questionIndex < 0) {
+      this.questionIndex = 0;
+      this.showQuestion(this.questionIndex);
     } else {
       this.showQuestion(this.questionIndex);
     }
