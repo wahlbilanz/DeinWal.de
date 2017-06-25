@@ -16,12 +16,13 @@ export class QuizComponent implements OnInit {
 	questionData = [];
   questionIndex = 0;
   question = {};
+  actualQuestions = [];
   answers = {};
   progress = 0.0;
-  choice = 'notyet';
+  //choice = {};
   resultsVisible = false;
-  partyResultsDifferent = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
-  partyResultsSame = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
+//  partyResultsDifferent = {'cdu/csu':[0],'spd':[0],'gruenen':[0],'die.linke':[0]};
+//  partyResultsSame = {'cdu/csu':[0],'spd':[0],'gruenen':[0],'die.linke':[0]};
 
 	constructor(private qserv: QuestiondataService) {
 		this.qserv.getData().subscribe((data) => {
@@ -30,6 +31,11 @@ export class QuizComponent implements OnInit {
         this.questionData = [];
       } else {
 			  this.questionData = data;
+        for (let q of this.questionData) {
+          for (let f in q["fragen"]) {
+            this.answers[f] = -1;
+          }
+        }
       }
       this.showQuestion(0);
 		})
@@ -43,36 +49,12 @@ export class QuizComponent implements OnInit {
     this.testresultauswertung();
   }
 
-  choose(choice, questionId){
-    if(this.choice!=choice){
-      this.choice = choice;
-      this.answers[questionId] = choice;
-    } else {
-      this.choice = 'notyet';
-      this.answers[questionId] = 'notyet';
-    }
+  choose(id, choice){
+    this.answers[id] = choice;
+    console.log (this.answers)
   }
 
   testresultauswertung(){
-  /*this.partyResultsDifferent = {'cdu':[0],'csu':[0],'spd':[0],'gruen':[0],'linke':[0],'overall':[0]};
-    for(let questionID in this.answers){
-      //console.log('QuestionID:' + questionID + ' answer:' + this.answers[questionID]);
-      for(let partei in this.partyResultsDifferent){
-        let answerByParty = this.questionData.getDefinitiveAnswerByIdAndParty(questionID,partei);
-        if (answerByParty==this.answers[questionID]){
-          this.partyResultsDifferent[partei].push(0.0);
-          this.partyResultsDifferent[partei][0] += 0.0;
-          this.partyResultsSame[partei].push(1.0);
-          this.partyResultsSame[partei][0] += 1.0;
-        } else {
-          this.partyResultsDifferent[partei].push(1.0);
-          this.partyResultsDifferent[partei][0] += 1.0;
-          this.partyResultsSame[partei].push(0.0);
-          this.partyResultsSame[partei][0] += 0.0;
-        }
-      }
-    }
-    console.log(this.partyResultsDifferent);*/
   }
 
   /**
@@ -83,15 +65,22 @@ export class QuizComponent implements OnInit {
    * @memberof QuizComponent
    */
   showQuestion(n) {
+//    this.choice = {};
       let i;
       let nQuestions = this.questionData.length;
       console.log('anzahl fragen:', nQuestions);
       this.progress = 100.0 * n / (nQuestions);
-      this.question = this.questionData[n]
+      this.question = this.questionData[n];
+    this.actualQuestions = Object.keys (this.question['fragen']);
+    /*for (let q of this.actualQuestions) {
+      if (this.answers[q])
+            this.choice[q] = 'notyet';
+      else
+            this.choice[q] = 'notyet';
+    }*/
   }
   
   nextQuestion(n) {
-    this.choice = 'notyet';
     this.questionIndex += n;
     if(this.questionIndex>=this.questionData.length){
       //reached last question
