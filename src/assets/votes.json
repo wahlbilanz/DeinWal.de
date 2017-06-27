@@ -239,5 +239,65 @@
 				}
 			}
 		}
+	},
+  {
+		"topic": ["Gesellschaft"],
+    "titel":"Sterbehilfe",
+    "beschreibung":"Sterbehilfe bezeichnet die Hilfe zum Sterben meist schmerzbehafteter Patienten. Bisher agieren Vereine zur Sterbehilfe in einer Grauzone",
+    "bild":"",
+    "subtext":"",
+		"link":"https://wahlbilanz.de/abstimmungen/018-134-03/",
+    "fragen": {
+      "018-134-03":{
+        "context":"",
+        "frage":"Geschäftsmäßige Sterbehilfe - wie z.B. in Vereinen - sollte unter Strafe gestellt werden. Angehörige von Sterbewilligen sind von Strafen ausgenommen. Bisher erlaubte Maßnahmen von Medizinern  - zB. Abschalten von Lebenserhaltenden Maschinen - bleiben weiterhin erlaubt.",
+        "short":"Sterbehilfe unter Strafe stellen.",
+        "choice":-1,
+        "link":"",
+				"results": {
+					"cdu/csu": {
+						"enthaltung": 0,
+						"gesamt": 309,
+						"ja": 273,
+						"nein": 0,
+						"nichtabgegeben": 36,
+						"ungueltig": 0
+					},
+					"die.linke": {
+						"enthaltung": 0,
+						"gesamt": 64,
+						"ja": 0,
+						"nein": 46,
+						"nichtabgegeben": 18,
+						"ungueltig": 0
+					},
+					"file": "20170126_2_xls-data.xls",
+					"fraktionslos": {
+						"enthaltung": 0,
+						"gesamt": 1,
+						"ja": 1,
+						"nein": 0,
+						"nichtabgegeben": 0,
+						"ungueltig": 0
+					},
+					"gruenen": {
+						"enthaltung": 46,
+						"gesamt": 63,
+						"ja": 2,
+						"nein": 9,
+						"nichtabgegeben": 6,
+						"ungueltig": 0
+					},
+					"spd": {
+						"enthaltung": 0,
+						"gesamt": 193,
+						"ja": 168,
+						"nein": 12,
+						"nichtabgegeben": 13,
+						"ungueltig": 0
+					}
+				}
+			}
+		}
 	}
 ]
