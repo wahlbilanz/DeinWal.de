@@ -10,7 +10,7 @@
 				"context": "Honig könnte Pollen von gentechnisch veränderten Pflanzen enthalten.",
 				"frage" : "Sollte gentechnisch veränderter Honig für Verbraucher gekennzeichnet werden?",
 				"choice" : -1,
-				"short" : "Gen-Honig kennzeichnen?",
+				"short" : "Gen-Honig kennzeichnen",
 				"subtext" : "",
 				"link": "https://wahlbilanz.de/abstimmungen/018-020-01/",
 				"results": {
@@ -53,7 +53,7 @@
 				"context": "Die Maislinie 1507 wurde gentechnisch so verändert, dass sie ein Gift für bestimmte Insekten produziert und resistent gegen das Totalherbizid Glufosinat ist.",
 				"frage" : "Soll die Maislinie 1507 fuer den Anbau in der EU zugelassen werden?",
 				"choice" : -1,
-				"short" : "Maislinie 1507 zulassen?",
+				"short" : "Maislinie 1507 zulassen",
 				"subtext" : "",
 				"link": "https://wahlbilanz.de/abstimmungen/018-011-01/",
 				"results": {
@@ -96,7 +96,7 @@
 				"context": "Plfanzen und insbesondere Pollen verbreiten sich unkontrolliert und langfristige Auswirkungen sind schwer abschätzbar. ",
 				"frage" : "Sollte Gentechnik im Pflanzenbau verboten werden?",
 				"choice" : -1,
-				"short" : "Gentechnik im Pflanzenbau verbieten?",
+				"short" : "Gentechnik im Pflanzenbau verbieten",
 				"subtext" : "",
 				"link": "https://wahlbilanz.de/abstimmungen/018-036-03/",
 				"results": {
@@ -191,7 +191,7 @@
 				"context": "Deutschland könnte sich bei der Ausbildungsunterstützung von Sicherheitskräften in der Region Kurdistan-Irak beteiligen.",
 				"frage" : "?",
 				"choice" : -1,
-				"short" : "Kurdistan-Irak-Einsatz der BW",
+				"short" : "Kurdistan-Irak-Einsatz der BW autorisieren",
 				"subtext" : "Aufgaben: Ausbildungslehrgänge, Koordinierungsverantwortung, Verbindungs-, Beratungs- und Unterstützungsaufgaben, Beratung.",
 				"link": "https://wahlbilanz.de/abstimmungen/018-215-02/",
 				"results": {
@@ -251,7 +251,7 @@
       "018-134-03":{
         "context":"",
         "frage":"Geschäftsmäßige Sterbehilfe - wie z.B. in Vereinen - sollte unter Strafe gestellt werden. Angehörige von Sterbewilligen sind von Strafen ausgenommen. Bisher erlaubte Maßnahmen von Medizinern  - zB. Abschalten von Lebenserhaltenden Maschinen - bleiben weiterhin erlaubt.",
-        "short":"Sterbehilfe unter Strafe stellen.",
+        "short":"Sterbehilfe unter Strafe stellen",
         "choice":-1,
         "link":"",
 				"results": {
