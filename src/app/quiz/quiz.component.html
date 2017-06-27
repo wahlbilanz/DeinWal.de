@@ -1,29 +1,34 @@
 
 <h2 class="w3-center">Abstimmungen</h2>
 
-<div class="myQuestions w3-card-4 w3-dark-grey w3-padding-16 w3-margin w3-animate-zoom" *ngIf="!resultsVisible">
+<div class="myQuestions w3-card-4 w3-dark-grey w3-padding-16 w3-animate-zoom" *ngIf="!resultsVisible">
     <div class="w3-container">
-        <header class="w3-container w3-light-grey">
-            <h3>{{question.topic}}</h3>
-        </header>
-        <h4>{{question.titel}}</h4>
-        <p> 
-            {{question.beschreibung}}    
-        </p>
-        <!--<p> {{question.fragen | json}} </p>-->
-
-        <div class="w3-card-4 w3-grey" *ngFor="let subquestion of question.fragen">
-            <p>
-                {{subquestion.frage}}
-            </p>
-            <button class="w3-button w3-hover-green w3-ripple active w3-large" [class.w3-pale-green]="subquestion.choice!='yes'" [class.w3-green]="subquestion.choice=='yes'" (click)="choose('yes',subquestion)">Zustimmen</button>
-            <button class="w3-button w3-hover-red w3-ripple w3-large" [class.w3-pale-red]="subquestion.choice!='no'" [class.w3-red]="subquestion.choice=='no'" (click)="subquestion.choice='no'">Ablehnen</button>
-            <button class="w3-button w3-hover-blue w3-ripple w3-large" [class.w3-pale-blue]="subquestion.choice!='neutral'" [class.w3-blue]="subquestion.choice=='neutral'" (click)="subquestion.choice='neutral'">Egal</button>
+        <div class="question-tags">
+        	<span class="question-tag" *ngFor="let t of question.topic"><a href="https://wahlbilanz.de/categories/#{{t}}">{{t}}</a></span>
         </div>
-        <hr>
-        <button class="w3-button w3-grey w3-hover-light-gray w3-left w3-ripple w3-large" (click)="nextQuestion(-1)">vorherige Frage</button>
-    
-        <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large" (click)="nextQuestion(1)">nächste Frage</button>
+	    <div style="clear:both"></div>
+        <header class="w3-container w3-light-grey">
+            <h3>{{question.titel}}</h3>
+        </header>
+        <div class="question-description"> 
+            {{question.beschreibung}}    
+        </div>
+        <div class="q-actual" id="question-{{q}}" *ngFor="let q of actualQuestions">
+        	<div class="q-text">
+	        	<span class="q-context">{{question.fragen[q].context}}</span>
+	        	<span class="q-question">{{question.fragen[q].frage}}</span>
+	        	<div class="q-supplemental">{{question.fragen[q].subtext}} <a href="{{question.fragen[q].link}}">Mehr Informationen</a></div>
+        	</div>
+        	<div class="q-buttons">
+		        <button class="w3-button w3-hover-green w3-ripple active w3-large" [class.w3-pale-green]="answers[q]!=1" [class.w3-green]="answers[q]==1" (click)="choose(q,1)">Zustimmen</button>
+		        <button class="w3-button w3-hover-red w3-ripple w3-large" [class.w3-pale-red]="answers[q]!=2" [class.w3-red]="answers[q]==2" (click)="choose(q,2)">Ablehnen</button>
+		        <button class="w3-button w3-hover-blue w3-ripple w3-large" [class.w3-pale-blue]="answers[q]!=0" [class.w3-blue]="answers[q]==0" (click)="choose(q,0)">Egal</button>
+	        </div>
+	        <div style="clear:both"></div>
+        </div>
+	    <button class="w3-button w3-grey w3-hover-light-gray w3-left w3-ripple w3-large" (click)="nextQuestion(-1)" *ngIf="questionIndex > 0">vorherige Frage</button>
+	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large" (click)="nextQuestion(1)" *ngIf="questionIndex < questionData.length - 1">nächste Frage</button>
+	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large" (click)="nextQuestion(1)" *ngIf="questionIndex >= questionData.length - 1">Auswertung</button>
      </div>
 </div>
 
@@ -31,17 +36,42 @@
   <div class="w3-container w3-green w3-center" [style.width.%]="progress">{{progress | number:'1.1-1'}}%</div>
 </div>
 
-<div class="w3-card-4 w3-light-grey w3-padding-16 w3-margin w3-animate-bottom" *ngIf="resultsVisible">
+<div class="myResult w3-card-4 w3-light-grey w3-padding-16 w3-animate-bottom" *ngIf="resultsVisible">
     <div class="w3-container">
         <header class="w3-container w3-green">
             <h3>Auswertung </h3>
         </header>
         <h4>Welche Partei hat am ähnlichsten wie du abgestimmt?</h4>
-        <p> 
-            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo d
-        </p>
-        {{answers | json}}
+        In der folgenden Tabelle siehst du wieviele Abgeordnete in den verschiedenen Parteien in deinem Sinne abgestimmt haben:
+        <div class="w3-responsive">
+	        <table id="auswertungstabelle" class="w3-table w3-bordered w3-hoverable">
+	        	<thead class="w3-dark-grey">
+	        		<tr>
+	        			<th class="w3-left-align">Abstimmung</th>
+	        			<th class="w3-center">Deine Antwort</th>
+	        			<th class="w3-right-align">Icon Gruene</th>
+	        			<th class="w3-right-align">Icon CDU</th>
+	        			<th class="w3-right-align">Icon DIE LINKE</th>
+	        			<th class="w3-right-align">Icon SPD</th>
+	        	</thead>
+	        	<tbody>
+	        		<ng-container *ngFor="let quest of questionData; let i = index">
+		        		<tr class="auswertung-abschnitt">
+		        			<th colspan="6" class="w3-grey w3-left-align" (click)="showQuestion(i)">{{quest.titel}}</th>
+		        		</tr>
+		        		<ng-container *ngFor="let q of quest.fragenIds">
+			        		<tr class="auswertung-zeile" id="auswertung-{{q}}">
+			        			<td class="w3-left-align">{{quest.fragen[q].short}}</td>
+			        			<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{partyVotes[answers[q]]}}</td>
+			        			<td class="w3-right-align">{{quest.fragen[q].gruene}}</td>
+			        			<td class="w3-right-align">{{quest.fragen[q].cdu}}</td>
+			        			<td class="w3-right-align">{{quest.fragen[q].linke}}</td>
+			        			<td class="w3-right-align">{{quest.fragen[q].spd}}</td>
+			        		</tr>
+		        		</ng-container>
+	        		</ng-container>
+	        	</tbody>
+	        </table>
+        </div> 
     </div>
 </div>

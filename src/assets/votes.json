@@ -1,143 +1,243 @@
 [
+	{
+		"topic": ["Gesundheit", "Ernährung", "Landwirtschaft", "Verbraucherschutz"],
+		"titel": "Gentechnik in der Landwirtschaft",
+		"beschreibung": "Mithilfe von Gentechnik werden Lebewesen künstlich verändert, so dass sie Beispielsweise einen höheren Ertrag liefern oder Resistenzen gegenüber Schädlingen und schlechten Umweltbedingungen aufweisen.",
+		"bild": "",
+		"subtext": "mehr informationen ueber gentechnik?",
+		"fragen": {
+			"018-020-01": {
+				"context": "Honig könnte Pollen von gentechnisch veränderten Pflanzen enthalten.",
+				"frage" : "Sollte gentechnisch veränderter Honig für Verbraucher gekennzeichnet werden?",
+				"choice" : -1,
+				"short" : "Gentechnisch veränderter Honig",
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-020-01/",
+				"results": {
+					"cdu/csu": {
+						"enthaltung": 4,
+						"gesamt": 311,
+						"ja": 269,
+						"nein": 3,
+						"nichtabgegeben": 35,
+						"ungueltig": 0
+					},
+					"die.linke": {
+						"enthaltung": 0,
+						"gesamt": 64,
+						"ja": 0,
+						"nein": 51,
+						"nichtabgegeben": 13,
+						"ungueltig": 0
+					},
+					"file": "20140313_1_xls-data.xls",
+					"gruenen": {
+						"enthaltung": 0,
+						"gesamt": 63,
+						"ja": 0,
+						"nein": 56,
+						"nichtabgegeben": 7,
+						"ungueltig": 0
+					},
+					"spd": {
+						"enthaltung": 5,
+						"gesamt": 193,
+						"ja": 171,
+						"nein": 0,
+						"nichtabgegeben": 17,
+						"ungueltig": 0
+					}
+				}
+			},
+			"018-011-01": {
+				"context": "Die Maislinie 1507 wurde gentechnisch so verändert, dass sie ein Gift für bestimmte Insekten produziert und resistent gegen das Totalherbizid Glufosinat ist.",
+				"frage" : "Soll die Maislinie 1507 fuer den Anbau in der EU zugelassen werden?",
+				"choice" : -1,
+				"short" : "Maislinie 1507",
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-011-01/",
+				"results": {
+					"cdu/csu": {
+						"enthaltung": 3,
+						"gesamt": 311,
+						"ja": 291,
+						"nein": 5,
+						"nichtabgegeben": 12,
+						"ungueltig": 0
+					},
+					"die.linke": {
+						"enthaltung": 0,
+						"gesamt": 64,
+						"ja": 0,
+						"nein": 58,
+						"nichtabgegeben": 6,
+						"ungueltig": 0
+					},
+					"file": "20140130_1_xls-data.xls",
+					"gruenen": {
+						"enthaltung": 0,
+						"gesamt": 63,
+						"ja": 0,
+						"nein": 58,
+						"nichtabgegeben": 5,
+						"ungueltig": 0
+					},
+					"spd": {
+						"enthaltung": 15,
+						"gesamt": 193,
+						"ja": 160,
+						"nein": 0,
+						"nichtabgegeben": 18,
+						"ungueltig": 0
+					}
+				}
+			},
+			"018-036-03" : {
+				"context": "Plfanzen und insbesondere Pollen verbreiten sich unkontrolliert und langfristige Auswirkungen sind schwer abschätzbar. ",
+				"frage" : "Sollte Gentechnik im Pflanzenbau verboten werden?",
+				"choice" : -1,
+				"short" : "Gentechnik im Pflanzenbau",
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-036-03/",
+				"results": {
+					"cdu/csu": {
+						"enthaltung": 2,
+						"gesamt": 311,
+						"ja": 0,
+						"nein": 287,
+						"nichtabgegeben": 22,
+						"ungueltig": 0
+					},
+					"die.linke": {
+						"enthaltung": 0,
+						"gesamt": 64,
+						"ja": 52,
+						"nein": 0,
+						"nichtabgegeben": 12,
+						"ungueltig": 0
+					},
+					"file": "20140522_3_xls-data.xls",
+					"gruenen": {
+						"enthaltung": 0,
+						"gesamt": 63,
+						"ja": 54,
+						"nein": 0,
+						"nichtabgegeben": 9,
+						"ungueltig": 0
+					},
+					"spd": {
+						"enthaltung": 1,
+						"gesamt": 193,
+						"ja": 1,
+						"nein": 170,
+						"nichtabgegeben": 21,
+						"ungueltig": 0
+					}
+				}
+			}
+		}
+	},
   {
-    "topic":"Gesellschaft",
-    "titel":"Sterbehilfe",
-    "beschreibung":"Sterbehilfe bezeichnet die Hilfe zum Sterben meist schmerzbehafteter Patienten. Bisher agieren Vereine zur Sterbehilfe in einer Grauzone",
-    "bild":"",
-    "subtext":"",
-    "fragen": [
-      {
-        "context":"",
-        "frage":"Geschäftsmäßige Sterbehilfe - wie z.B. in Vereinen - sollte unter Strafe gestellt werden. Angehörige von Sterbewilligen sind von Strafen ausgenommen. Bisher erlaubte Maßnahmen von Medizinern  - zB. Abschalten von Lebenserhaltenden Maschinen - bleiben weiterhin erlaubt.",
-        "short":"Sterbehilfe unter Strafe stellen.",
-        "choice":-1,
-        "link":"",
-        "results":{
-          "cdu/csu": {
-            "enthaltung": 0,
-            "gesamt": 0,
-            "ja": 252,
-            "nein": 0,
-            "nichtabgegeben": 0,
-            "ungueltig": 0
-          },
-          "spd": {
-            "enthaltung": 0,
-            "gesamt": 0,
-            "ja": 0,
-            "nein": 0,
-            "nichtabgegeben": 0,
-            "ungueltig": 0
-          },
-          "linke": {
-            "enthaltung": 0,
-            "gesamt": 0,
-            "ja": 0,
-            "nein": 0,
-            "nichtabgegeben": 0,
-            "ungueltig": 0
-          },
-          "gruene": {
-            "enthaltung": 0,
-            "gesamt": 0,
-            "ja": 0,
-            "nein": 0,
-            "nichtabgegeben": 0,
-            "ungueltig": 0
-          }
-        }
-      },
-      {
-        "context":"",
-        "frage":"Medizinische Sterbehilfe klar regeln und erlauben. Keine Strafen für Sterbehilfe vorsehen, aber geschäftsmäßige Sterbehilfe verbieten",
-        "short":"geregelte Sterbehilfe erlauben",
-        "choice":-1,
-        "link":"",
-        "results":{
-          "cdu/csu": {
-            "enthaltung": 0,
-            "gesamt": 0,
-            "ja": 252,
-            "nein": 0,
-            "nichtabgegeben": 0,
-            "ungueltig": 0
-          },
-          "spd": {
-            "enthaltung": 0,
-            "gesamt": 0,
-            "ja": 0,
-            "nein": 0,
-            "nichtabgegeben": 0,
-            "ungueltig": 0
-          },
-          "linke": {
-            "enthaltung": 0,
-            "gesamt": 0,
-            "ja": 0,
-            "nein": 0,
-            "nichtabgegeben": 0,
-            "ungueltig": 0
-          },
-          "gruene": {
-            "enthaltung": 0,
-            "gesamt": 0,
-            "ja": 0,
-            "nein": 0,
-            "nichtabgegeben": 0,
-            "ungueltig": 0
-          }
-        }
-      }
-    ]
-  },
-  {
-    "topic":"",
-    "titel":"",
-    "beschreibung":"",
-    "bild":"",
-    "subtext":"",
-    "fragen": [
-      {
-        "context":"",
-        "frage":"",
-        "short":"",
-        "choice":-1,
-        "link":"",
-        "results":{
-          "cdu/csu": {
-            "enthaltung": 0,
-            "gesamt": 0,
-            "ja": 0,
-            "nein": 0,
-            "nichtabgegeben": 0,
-            "ungueltig": 0
-          },
-          "spd": {
-            "enthaltung": 0,
-            "gesamt": 0,
-            "ja": 0,
-            "nein": 0,
-            "nichtabgegeben": 0,
-            "ungueltig": 0
-          },
-          "linke": {
-            "enthaltung": 0,
-            "gesamt": 0,
-            "ja": 0,
-            "nein": 0,
-            "nichtabgegeben": 0,
-            "ungueltig": 0
-          },
-          "gruene": {
-            "enthaltung": 0,
-            "gesamt": 0,
-            "ja": 0,
-            "nein": 0,
-            "nichtabgegeben": 0,
-            "ungueltig": 0
-          }
-        }
-      }
-    ]
-  }
+		"topic": ["Bundeswehr", "Ausland"],
+		"titel": "Einsatz der Bundeswehr",
+		"beschreibung": "Die Bundeswehr wird in verschiedenen Krisengebieten fuer verschiendene blabla Missionen",
+		"bild": "",
+		"subtext": "mehr informationen ueber bundeswehr?",
+		"fragen": {
+			"018-161-01" : {
+				"context": "Die EU führt eine Ausbildungsmission zur stbilisierung staatlicher Strukturen in Somalia.",
+				"frage" : "Sollte sich die Bundeswehr daran beteiligen?",
+				"choice" : -1,
+				"short" : "Somalia",
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-161-01/",
+				"results": {
+					"cdu/csu": {
+						"enthaltung": 0,
+						"gesamt": 310,
+						"ja": 284,
+						"nein": 0,
+						"nichtabgegeben": 26,
+						"ungueltig": 0
+					},
+					"die.linke": {
+						"enthaltung": 0,
+						"gesamt": 64,
+						"ja": 0,
+						"nein": 61,
+						"nichtabgegeben": 3,
+						"ungueltig": 0
+					},
+					"file": "20160317_1_xls-data.xls",
+					"gruenen": {
+						"enthaltung": 0,
+						"gesamt": 63,
+						"ja": 0,
+						"nein": 56,
+						"nichtabgegeben": 7,
+						"ungueltig": 0
+					},
+					"spd": {
+						"enthaltung": 1,
+						"gesamt": 193,
+						"ja": 172,
+						"nein": 6,
+						"nichtabgegeben": 14,
+						"ungueltig": 0
+					}
+				}
+			},
+			"018-215-02": {
+				"context": "Deutschland könnte sich bei der Ausbildungsunterstützung von Sicherheitskräften in der Region Kurdistan-Irak beteiligen.",
+				"frage" : "?",
+				"choice" : -1,
+				"short" : "Kurdistan-Irak",
+				"subtext" : "Aufgaben: Ausbildungslehrgänge, Koordinierungsverantwortung, Verbindungs-, Beratungs- und Unterstützungsaufgaben, Beratung.",
+				"link": "https://wahlbilanz.de/abstimmungen/018-215-02/",
+				"results": {
+					"cdu/csu": {
+						"enthaltung": 0,
+						"gesamt": 309,
+						"ja": 273,
+						"nein": 0,
+						"nichtabgegeben": 36,
+						"ungueltig": 0
+					},
+					"die.linke": {
+						"enthaltung": 0,
+						"gesamt": 64,
+						"ja": 0,
+						"nein": 46,
+						"nichtabgegeben": 18,
+						"ungueltig": 0
+					},
+					"file": "20170126_2_xls-data.xls",
+					"fraktionslos": {
+						"enthaltung": 0,
+						"gesamt": 1,
+						"ja": 1,
+						"nein": 0,
+						"nichtabgegeben": 0,
+						"ungueltig": 0
+					},
+					"gruenen": {
+						"enthaltung": 46,
+						"gesamt": 63,
+						"ja": 2,
+						"nein": 9,
+						"nichtabgegeben": 6,
+						"ungueltig": 0
+					},
+					"spd": {
+						"enthaltung": 0,
+						"gesamt": 193,
+						"ja": 168,
+						"nein": 12,
+						"nichtabgegeben": 13,
+						"ungueltig": 0
+					}
+				}
+			}
+		}
+	}
 ]
