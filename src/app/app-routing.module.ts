@@ -1,5 +1,6 @@
 import { FaqComponent } from './faq/faq.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'quiz',
     component:QuizComponent
+  },
+  {
+    path: 'impressum',
+    component:ImpressumComponent
   },
   {
     path: 'faq',
