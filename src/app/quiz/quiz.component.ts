@@ -45,6 +45,15 @@ export class QuizComponent implements OnInit {
       }
       this.showQuestion (0);
     });
+
+    ///example to test localStorage:
+    if (localStorage.getItem('count')) {
+      localStorage.setItem('count', String(Number(localStorage.getItem('count')) + 1));
+      console.log('number of times you opened the quiz: ', localStorage.getItem('count'));
+    } else {
+      localStorage.setItem('count','1');
+    }
+    //// example-end/
   }
 
   ngOnInit () {
