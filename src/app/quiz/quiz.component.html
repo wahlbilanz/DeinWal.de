@@ -3,6 +3,7 @@
 
 <div class="myQuestions w3-card-4 w3-dark-grey w3-padding-16 w3-animate-zoom" *ngIf="!resultsVisible">
     <div class="w3-container">
+		<button (click)="toggleSave()" [class.w3-pale-green]="!doSave" [class.w3-green]="doSave">speichern</button>
         <div class="question-tags">
         	<span class="question-tag" *ngFor="let t of question.topic"><a href="https://wahlbilanz.de/categories/#{{t}}">{{t}}</a></span>
         </div>

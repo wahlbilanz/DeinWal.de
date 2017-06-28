@@ -25,26 +25,45 @@ export class QuizComponent implements OnInit {
   //  parties = [ 'gruenen', 'cdu/csu', 'die.linke', 'spd' ];
   //  partyResultsDifferent = {'cdu/csu':[0],'spd':[0],'gruenen':[0],'die.linke':[0]};
   //  partyResultsSame = {'cdu/csu':[0],'spd':[0],'gruenen':[0],'die.linke':[0]};
+  doSave:boolean = false; // if true: save choices in localStorage
 
   constructor (private qserv: QuestiondataService) {
-    this.qserv.getData ().subscribe ((data) => {
-      // console.log ('what is in the data', data);
-      if (!Array.isArray (data)) {
-        this.questionData = [];
+    let loadNewData = true;
+    if (localStorage.getItem('doSave')) {
+      this.doSave = JSON.parse(localStorage.getItem('doSave'));
+      console.log('doSave is there: ', this.doSave,localStorage.getItem('doSave'))
+      if(this.doSave){
+        loadNewData = false;
+        if(localStorage.getItem('questionData')){
+          console.log('load data from local storage...')
+          this.getQuestionDataFromLocalStorage();
+          this.showQuestion(0);
+        }
       } else {
-        this.questionData = data;
-        for (const q of this.questionData) {
-          q['fragenIds'] = [];
-          for (const f in q['fragen']) {
-            if (q['fragen'].hasOwnProperty (f)) {
-              this.answers[f] = -1;
-              q['fragenIds'].push (f);
+        loadNewData = true;
+      }
+    }
+
+    if (loadNewData) {      
+      this.qserv.getData ().subscribe ((data) => {
+        console.log ('what is in the data', data);
+        if (!Array.isArray (data)) {
+          this.questionData = [];
+        } else {
+          this.questionData = data;
+          for (const q of this.questionData) {
+            q['fragenIds'] = [];
+            for (const f in q['fragen']) {
+              if (q['fragen'].hasOwnProperty (f)) {
+                this.answers[f] = -1;
+                q['fragenIds'].push (f);
+              }
             }
           }
         }
-      }
-      this.showQuestion (0);
-    });
+        this.showQuestion (0);
+      });
+    }
 
     ///example to test localStorage:
     if (localStorage.getItem('count')) {
@@ -65,6 +84,7 @@ export class QuizComponent implements OnInit {
 
   choose (id, choice) {
     this.answers[id] = choice;
+    this.saveQuestionDataToLocalStorage();
     // console.log (this.answers);
   }
 
@@ -136,5 +156,34 @@ export class QuizComponent implements OnInit {
       }
     }
     this.resultsVisible = true;
+  }
+  
+  toggleSave(){
+    this.doSave = !this.doSave;
+    localStorage.setItem('doSave', JSON.stringify(this.doSave));
+    if(this.doSave){
+      this.saveQuestionDataToLocalStorage();
+    } else {
+      this.eraseQuestionDataFromLocalStorage();
+    }
+  }
+
+  eraseQuestionDataFromLocalStorage(){
+    localStorage.removeItem('questionData');
+    localStorage.removeItem('answers');
+    //localStorage.clear(); //alternatively clear the whole thing
+  }
+
+  saveQuestionDataToLocalStorage(){
+    if(this.doSave){
+      localStorage.setItem('questionData', JSON.stringify(this.questionData));
+      localStorage.setItem('answers', JSON.stringify(this.answers));
+      //console.log('save QuestionData...: ', JSON.stringify(this.questionData));
+    }
+  }
+
+  getQuestionDataFromLocalStorage(){
+        this.questionData = JSON.parse(localStorage.getItem('questionData'));
+        this.answers = JSON.parse(localStorage.getItem('answers'));
   }
 }
