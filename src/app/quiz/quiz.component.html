@@ -3,7 +3,10 @@
 
 <div class="myQuestions w3-card-4 w3-dark-grey w3-padding-16 w3-animate-zoom" *ngIf="!resultsVisible">
     <div class="w3-container">
-		<button (click)="toggleSave()" [class.w3-pale-green]="!doSave" [class.w3-green]="doSave">speichern</button>
+		<span class="w3-tooltip">
+			<span style="position:absolute;left:0;top:1.8em;width:15em;" class="w3-text w3-tag">Speichere deine Eingaben lokal in deinem Browser</span> 
+			<button class="w3-button w3-hover-green" (click)="toggleSave()" [class.w3-pale-green]="!doSave" [class.w3-green]="doSave">speichern</button>
+		</span>
         <div class="question-tags">
         	<span class="question-tag" *ngFor="let t of question.topic"><a href="https://wahlbilanz.de/categories/#{{t}}">{{t}}</a></span>
         </div>
@@ -65,7 +68,7 @@
 			        			<td class="w3-left-align">{{quest.fragen[q].short}}</td>
 			        			<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{partyVotes[answers[q]]}}</td>
 			        			<td class="w3-right-align">{{quest.fragen[q].gruene}}</td>
-			        			<td class="w3-right-align">{{quest.fragen[q].cdu}}</td>
+			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].cdu}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-tag">100% Ja, 200% Nein</span> </td>
 			        			<td class="w3-right-align">{{quest.fragen[q].linke}}</td>
 			        			<td class="w3-right-align">{{quest.fragen[q].spd}}</td>
 			        		</tr>
