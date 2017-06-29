@@ -13,20 +13,21 @@
 				"short" : "Gen-Honig kennzeichnen",
 				"subtext" : "",
 				"link": "https://wahlbilanz.de/abstimmungen/018-020-01/",
+				"bemerkung":"In den Results wurde Ja und Nein ausgetauscht um es einfacher zu machen.",
 				"results": {
 					"cdu/csu": {
 						"enthaltung": 4,
 						"gesamt": 311,
-						"ja": 269,
-						"nein": 3,
+						"nein": 269,
+						"ja": 3,
 						"nichtabgegeben": 35,
 						"ungueltig": 0
 					},
 					"die.linke": {
 						"enthaltung": 0,
 						"gesamt": 64,
-						"ja": 0,
-						"nein": 51,
+						"nein": 0,
+						"ja": 51,
 						"nichtabgegeben": 13,
 						"ungueltig": 0
 					},
@@ -34,16 +35,16 @@
 					"gruenen": {
 						"enthaltung": 0,
 						"gesamt": 63,
-						"ja": 0,
-						"nein": 56,
+						"nein": 0,
+						"ja": 56,
 						"nichtabgegeben": 7,
 						"ungueltig": 0
 					},
 					"spd": {
 						"enthaltung": 5,
 						"gesamt": 193,
-						"ja": 171,
-						"nein": 0,
+						"nein": 171,
+						"ja": 0,
 						"nichtabgegeben": 17,
 						"ungueltig": 0
 					}
