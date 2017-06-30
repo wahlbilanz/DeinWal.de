@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { FaqComponent } from './faq/faq.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { PartyVotesComponent } from './party-votes/party-votes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuizComponent,
     FaqComponent,
-    ImpressumComponent
+    ImpressumComponent,
+    PartyVotesComponent
   ],
   imports: [
     BrowserModule,
