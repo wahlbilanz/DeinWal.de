@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-party-votes',
@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartyVotesComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  test = {ja:37, nein:77};
+
+  @Input()
+  testtext = "bambalam";
+
+  
+  constructor() { 
+    console.log(this.test);
+  }
 
   ngOnInit() {
   }
