@@ -69,7 +69,7 @@
 			        			<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{partyVotes[answers[q]]}}</td>
 			        			<td class="w3-right-align">{{quest.fragen[q].gruene}}</td>
 			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].cdu}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-tag">100% Ja, 200% Nein</span> </td>
-			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].linke}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-tag"><app-party-votes class="w3-tag" testtext="bambalamba!"></app-party-votes></span></td>
+			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].linke}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-tag"><app-party-votes class="w3-tag" testtext="bambalamba5x!" [test]="test"></app-party-votes></span></td>
 			        			<td class="w3-right-align">{{quest.fragen[q].spd}}</td>
 			        		</tr>
 		        		</ng-container>

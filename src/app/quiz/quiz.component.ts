@@ -20,6 +20,7 @@ export class QuizComponent implements OnInit {
   answers = {};
   progress = 0.0;
   resultsVisible = false;
+  test={"ja":11,"nein":"10"};
   // user votes with: 0 => enthaltung; 1 => ja ; 2 => nein
   partyVotes = [ 'enthaltung', 'ja', 'nein' ];
   //  parties = [ 'gruenen', 'cdu/csu', 'die.linke', 'spd' ];

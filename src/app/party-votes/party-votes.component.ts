@@ -8,14 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PartyVotesComponent implements OnInit {
 
   @Input()
-  test = {ja:37, nein:77};
+  test = {"ja":37, "nein":"77"};
 
   @Input()
-  testtext = "bambalam";
+  testtext = "bambalamui9";
 
   
   constructor() { 
-    console.log(this.test);
+    console.log("inputof partyvotes Component", this.test);
   }
 
   ngOnInit() {
