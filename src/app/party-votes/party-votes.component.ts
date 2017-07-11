@@ -8,16 +8,19 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PartyVotesComponent implements OnInit {
 
   @Input()
-  test = {"ja":37, "nein":"77"};
+  results = {"ja":37, "nein":77, "enthaltung":4};
 
-  @Input()
-  testtext = "bambalamui9";
+  resultsPercent = {"ja":37.43, "nein":61.33, "enthaltung":4.44};
 
   
   constructor() { 
-    console.log("inputof partyvotes Component", this.test);
+    console.log("inputof partyvotes Component", this.results);
   }
 
+  calculatePercents() { 
+
+  }
+  
   ngOnInit() {
   }
 

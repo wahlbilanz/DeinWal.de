@@ -1,15 +1,20 @@
 <div>
+  <!--
 <p>
-  party-votes works! {{testtext}}
-</p>
+  json: {{results | json}}
+</p>-->
   <table>
     <tr>
-      <td>ja:</td>
-      <td>{{test.ja}}</td>
+      <td>Ja:</td>
+      <td>{{results.ja}}</td>
     </tr>
     <tr>
-      <td>nein:</td>
-      <td>{{test.nein}}</td>
+      <td>Nein:</td>
+      <td>{{results.nein}}</td>
+    </tr>
+    <tr>
+      <td>Enthaltungen:</td>
+      <td>{{results.enthaltung}}</td>
     </tr>
   </table>
 </div>

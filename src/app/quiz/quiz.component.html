@@ -32,7 +32,7 @@
         </div>
 	    <button class="w3-button w3-grey w3-hover-light-gray w3-left w3-ripple w3-large" (click)="nextQuestion(-1)" *ngIf="questionIndex > 0">vorherige Frage</button>
 	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large" (click)="nextQuestion(1)" *ngIf="questionIndex < questionData.length - 1">nächste Frage</button>
-	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large" (click)="nextQuestion(1)" *ngIf="questionIndex >= questionData.length - 1">Auswertung</button>
+	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large" (click)="nextQuestion(100)" *ngIf="questionIndex >= questionData.length - 10">Auswertung</button>
      </div>
 </div>
 
@@ -67,10 +67,10 @@
 			        		<tr class="auswertung-zeile" id="auswertung-{{q}}">
 			        			<td class="w3-left-align">{{quest.fragen[q].short}}</td>
 			        			<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{partyVotes[answers[q]]}}</td>
-			        			<td class="w3-right-align">{{quest.fragen[q].gruene}}</td>
-			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].cdu}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-tag">100% Ja, 200% Nein</span> </td>
-			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].linke}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-tag"><app-party-votes class="w3-tag" testtext="bambalamba5x!" [test]="test"></app-party-votes></span></td>
-			        			<td class="w3-right-align">{{quest.fragen[q].spd}}</td>
+			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].gruene}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-tag"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results['gruenen']"></app-party-votes></span></td>
+			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].cdu}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-tag"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results['cdu/csu']"></app-party-votes></span></td>
+			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].linke}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-red w3-round"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results['die.linke']"></app-party-votes></span></td>
+			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].spd}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-tag"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results.spd"></app-party-votes></span></td>
 			        		</tr>
 		        		</ng-container>
 	        		</ng-container>
