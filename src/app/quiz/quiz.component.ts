@@ -84,7 +84,11 @@ export class QuizComponent implements OnInit {
   }
 
   choose (id, choice) {
-    this.answers[id] = choice;
+    if(this.answers[id]==choice){
+      this.answers[id]=null;
+    } else {
+      this.answers[id] = choice;
+    }
     this.saveQuestionDataToLocalStorage();
     // console.log (this.answers);
   }
