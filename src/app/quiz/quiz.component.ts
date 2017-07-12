@@ -27,6 +27,7 @@ export class QuizComponent implements OnInit {
   //  partyResultsDifferent = {'cdu/csu':[0],'spd':[0],'gruenen':[0],'die.linke':[0]};
   //  partyResultsSame = {'cdu/csu':[0],'spd':[0],'gruenen':[0],'die.linke':[0]};
   doSave:boolean = false; // if true: save choices in localStorage
+  overallResult = {'gruenen':0.0,'cdu/csu':0.0,'die.linke':0.0,'spd':0.0};
 
   constructor (private qserv: QuestiondataService) {
     let loadNewData = true;
@@ -132,6 +133,8 @@ export class QuizComponent implements OnInit {
   }
 
   showResults () {
+    let nzustimmung = {'gruenen':0.0,'cdu/csu':0.0,'die.linke':0.0,'spd':0.0};
+    let ngesamt = {'gruenen':0.0,'cdu/csu':0.0,'die.linke':0.0,'spd':0.0};
     for (const q of this.questionData) {
       for (const f in q['fragen']) {
         if (q['fragen'].hasOwnProperty(f)) {
@@ -142,15 +145,23 @@ export class QuizComponent implements OnInit {
 
             const s_gruen = results['gruenen'][opt[0]] + results['gruenen'][opt[1]] + results['gruenen'][opt[2]];
             q['fragen'][f]['gruene'] = this.toPercent (results['gruenen'][answer] / s_gruen);
+            nzustimmung['gruenen'] += results['gruenen'][answer];// 
+            ngesamt['gruenen'] += s_gruen;
 
             const s_cdu = results['cdu/csu'][opt[0]] + results['cdu/csu'][opt[1]] + results['cdu/csu'][opt[2]];
             q['fragen'][f]['cdu'] = this.toPercent (results['cdu/csu'][answer] / s_cdu);
+            nzustimmung['cdu/csu'] += results['cdu/csu'][answer];// 
+            ngesamt['cdu/csu'] += s_cdu;
 
             const s_linke = results['die.linke'][opt[0]] + results['die.linke'][opt[1]] + results['die.linke'][opt[2]];
             q['fragen'][f]['linke'] = this.toPercent (results['die.linke'][answer] / s_linke);
+            nzustimmung['die.linke'] += results['die.linke'][answer];// 
+            ngesamt['die.linke'] += s_linke;
 
             const s_spd = results['spd'][opt[0]] + results['spd'][opt[1]] + results['spd'][opt[2]];
             q['fragen'][f]['spd'] = this.toPercent (results['spd'][answer] / s_spd);
+            nzustimmung['spd'] += results['spd'][answer];// 
+            ngesamt['spd'] += s_spd;
           } else {
             q['fragen'][f]['gruene'] = '-';
             q['fragen'][f]['cdu'] = '-';
@@ -160,6 +171,10 @@ export class QuizComponent implements OnInit {
         }
       }
     }
+    this.overallResult['spd'] = nzustimmung.spd / ngesamt.spd;
+    this.overallResult['gruenen'] = nzustimmung['gruenen'] / ngesamt['gruenen'];
+    this.overallResult['die.linke'] = nzustimmung['die.linke'] / ngesamt['die.linke']; 
+    this.overallResult['cdu/csu'] = nzustimmung['cdu/csu'] / ngesamt['cdu/csu'];
     this.resultsVisible = true;
   }
   
