@@ -67,10 +67,10 @@
 			        		<tr class="auswertung-zeile" id="auswertung-{{q}}">
 			        			<td class="w3-left-align">{{quest.fragen[q].short}}</td>
 			        			<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{partyVotes[answers[q]]}}</td>
-			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].gruene}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-tag"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results['gruenen']"></app-party-votes></span></td>
-			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].cdu}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-tag"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results['cdu/csu']"></app-party-votes></span></td>
-			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].linke}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-red w3-round"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results['die.linke']"></app-party-votes></span></td>
-			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].spd}}<span style="position:absolute;left:0;top:0px" class="w3-text w3-tag"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results.spd"></app-party-votes></span></td>
+			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].gruene}}<span style="position:absolute;z-index:1;left:-30%;top:85%" class="w3-text w3-tag"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results['gruenen']"></app-party-votes></span></td>
+			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].cdu}}<span style="position:absolute;z-index:1;left:-10%;top:90%" class="w3-text"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results['cdu/csu']"></app-party-votes></span></td>
+			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q].linke}}<span style="position:absolute;z-index:1;left:-30%;top:85%" class="w3-text"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results['die.linke']"></app-party-votes></span></td>
+			        			<td class="w3-right-align w3-dropdown-hover">{{quest.fragen[q].spd}}<span style="position:absolute;z-index:100;left:-30%;top:3em" class="w3-dropdown-content"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results.spd"></app-party-votes></span></td>
 			        		</tr>
 		        		</ng-container>
 	        		</ng-container>
