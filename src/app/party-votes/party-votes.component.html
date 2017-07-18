@@ -7,16 +7,16 @@
       <td>{{resultsPercent.ja | percent:'1.1-1'}}</td>
     </tr>
 
-    <tr class="w3-light-grey w3-tiny"><div class="w3-red" style="position:absolute;width:77%;z-index:-1;background-color: #8ef;"></div>
+    <tr class="w3-light-grey w3-tiny">
+      <td colspan="3"><div class="w3-green" [style.width.%]="resultsPercent.ja * 100" style="margin:0;padding:0;top:0;bottom:0">sd</div></td>
     </tr>
     <tr>
-      <td>Nein:<div class="w3-red" style="position:absolute;width:77%;z-index:-1;background-color: #8ef;"></div></td>
+      <td>Nein:<div class="w3-red" style="position:absolute;width:77%;z-index:-1;background-color: #8ef;">a</div></td>
       <td>{{results.nein}}</td>
       <td>{{resultsPercent.nein | percent:'1.1-1'}}</td>
     </tr>
     <tr class="w3-light-grey w3-tiny">
-      <td><div class="w3-red" style="position:absolute;width:77%;z-index:-1;background-color: #8ef;"></div>
-      </td>
+      <td colspan="3"><div class="w3-red" [style.width.%]="resultsPercent.nein * 100" style="margin:0;padding:0;top:0;bottom:0">sd</div></td>
     </tr>
     <tr>
       <td>Enthaltungen:</td>
@@ -24,8 +24,7 @@
       <td>{{resultsPercent.enthaltung | percent:'1.1-1'}}</td>
     </tr>
     <tr class="w3-light-grey w3-tiny">
-      <td class="w3-dark-grey" style="width: 5%">
-      </td>
+      <td colspan="3"><div class="w3-grey" [style.width.%]="resultsPercent.enthaltung * 100" style="margin:0;padding:0;top:0;bottom:0">sd</div></td>
     </tr>
   </table>
 </div>
