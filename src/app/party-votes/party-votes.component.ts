@@ -10,18 +10,21 @@ export class PartyVotesComponent implements OnInit {
   @Input()
   results = {"ja":37, "nein":77, "enthaltung":4};
 
-  resultsPercent = {"ja":37.43, "nein":61.33, "enthaltung":4.44};
+  resultsPercent = {"ja":0.0, "nein":95.6, "enthaltung":4.4};
 
   
   constructor() { 
+    }
+
+  ngOnInit (){
     console.log("inputof partyvotes Component", this.results);
+    this.calculatePercents();
   }
 
   calculatePercents() { 
-
+    this.resultsPercent.ja = this.results.ja / (this.results.ja + this.results.nein + this.results.enthaltung);
+    this.resultsPercent.nein = this.results.nein / (this.results.ja + this.results.nein + this.results.enthaltung);
+    this.resultsPercent.enthaltung = this.results.enthaltung / (this.results.ja + this.results.nein + this.results.enthaltung);
   }
   
-  ngOnInit() {
-  }
-
 }
