@@ -1,8 +1,5 @@
 <div class="w3-card w3-blue">
-  <!--
-<p>
-  json: {{results | json}}
-</p>-->
+
   <table class="w3-table">
     <tr>
       <td>Ja:</td>
@@ -10,17 +7,15 @@
       <td>{{resultsPercent.ja | percent:'1.1-1'}}</td>
     </tr>
 
-    <tr class="w3-light-grey w3-tiny">
-      <td class="w3-green" style="width: 55%">
-      </td>
+    <tr class="w3-light-grey w3-tiny"><div class="w3-red" style="position:absolute;width:77%;z-index:-1;background-color: #8ef;"></div>
     </tr>
     <tr>
-      <td>Nein:</td>
+      <td>Nein:<div class="w3-red" style="position:absolute;width:77%;z-index:-1;background-color: #8ef;"></div></td>
       <td>{{results.nein}}</td>
       <td>{{resultsPercent.nein | percent:'1.1-1'}}</td>
     </tr>
     <tr class="w3-light-grey w3-tiny">
-      <td class="w3-red" style="width: 20%">
+      <td><div class="w3-red" style="position:absolute;width:77%;z-index:-1;background-color: #8ef;"></div>
       </td>
     </tr>
     <tr>
