@@ -142,31 +142,19 @@ export class QuizComponent implements OnInit {
             const opt = this.partyVotes;
             const answer = opt[this.answers[f]];
             const results = q['fragen'][f]['results'];
+            console.log('---g3- results', results,answer)
 
-            const s_gruen = results['gruenen'][opt[0]] + results['gruenen'][opt[1]] + results['gruenen'][opt[2]];
-            q['fragen'][f]['gruene'] = this.toPercent (results['gruenen'][answer] / s_gruen);
-            nzustimmung['gruenen'] += results['gruenen'][answer];// 
-            ngesamt['gruenen'] += s_gruen;
-
-            const s_cdu = results['cdu/csu'][opt[0]] + results['cdu/csu'][opt[1]] + results['cdu/csu'][opt[2]];
-            q['fragen'][f]['cdu'] = this.toPercent (results['cdu/csu'][answer] / s_cdu);
-            nzustimmung['cdu/csu'] += results['cdu/csu'][answer];// 
-            ngesamt['cdu/csu'] += s_cdu;
-
-            const s_linke = results['die.linke'][opt[0]] + results['die.linke'][opt[1]] + results['die.linke'][opt[2]];
-            q['fragen'][f]['linke'] = this.toPercent (results['die.linke'][answer] / s_linke);
-            nzustimmung['die.linke'] += results['die.linke'][answer];// 
-            ngesamt['die.linke'] += s_linke;
-
-            const s_spd = results['spd'][opt[0]] + results['spd'][opt[1]] + results['spd'][opt[2]];
-            q['fragen'][f]['spd'] = this.toPercent (results['spd'][answer] / s_spd);
-            nzustimmung['spd'] += results['spd'][answer];// 
-            ngesamt['spd'] += s_spd;
+            for(let partyName of ['gruenen','cdu/csu','spd','die.linke']){
+              let tempPunkte = this.getZustimmungsPunkte(results[partyName],answer);
+              q['fragen'][f][partyName] = tempPunkte.punkteRelativ;
+              nzustimmung[partyName] =tempPunkte.punkteAbsolut;
+              ngesamt[partyName] =tempPunkte.nAbgegebeneStimmen;
+              console.log('---h3', partyName, tempPunkte)
+            }
           } else {
-            q['fragen'][f]['gruene'] = '-';
-            q['fragen'][f]['cdu'] = '-';
-            q['fragen'][f]['linke'] = '-';
-            q['fragen'][f]['spd'] = '-';
+            for(let partyName of ['gruenen','cdu/csu','spd','die.linke']){
+              q['fragen'][f][partyName] = -1
+            }
           }
         }
       }
@@ -175,7 +163,23 @@ export class QuizComponent implements OnInit {
     this.overallResult['gruenen'] = nzustimmung['gruenen'] / ngesamt['gruenen'];
     this.overallResult['die.linke'] = nzustimmung['die.linke'] / ngesamt['die.linke']; 
     this.overallResult['cdu/csu'] = nzustimmung['cdu/csu'] / ngesamt['cdu/csu'];
+    console.log('overall:', this.overallResult);
+    console.log('zustimmung:', nzustimmung)
     this.resultsVisible = true;
+  }
+
+  getZustimmungsPunkte(partyResults, answer){
+    const opt = this.partyVotes;
+    let nAbgegebeneStimmen = partyResults[opt[0]] + partyResults[opt[1]] + partyResults[opt[2]];
+    let punkte = 0;
+    if(answer=='enthaltung'){ //Enthaltung
+      punkte = partyResults[opt[0]] + 0.5* partyResults[opt[1]] + 0.5 * partyResults[opt[2]];
+    } else if (answer=='ja'){ //ja
+      punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[1]];
+    } else if (answer=='nein'){ //nein
+      punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[2]];
+    } 
+    return {'punkteRelativ':(punkte / nAbgegebeneStimmen), 'punkteAbsolut':punkte, 'nAbgegebeneStimmen':nAbgegebeneStimmen};
   }
   
   toggleSave(){
