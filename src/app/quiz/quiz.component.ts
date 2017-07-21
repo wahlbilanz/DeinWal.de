@@ -142,13 +142,11 @@ export class QuizComponent implements OnInit {
             const opt = this.partyVotes;
             const answer = opt[this.answers[f]];
             const results = q['fragen'][f]['results'];
-            console.log('---g3- results', results,answer)
-
             for(let partyName of ['gruenen','cdu/csu','spd','die.linke']){
               let tempPunkte = this.getZustimmungsPunkte(results[partyName],answer);
               q['fragen'][f][partyName] = tempPunkte.punkteRelativ;
-              nzustimmung[partyName] =tempPunkte.punkteAbsolut;
-              ngesamt[partyName] =tempPunkte.nAbgegebeneStimmen;
+              nzustimmung[partyName] += tempPunkte.punkteAbsolut;
+              ngesamt[partyName] += tempPunkte.nAbgegebeneStimmen;
               console.log('---h3', partyName, tempPunkte)
             }
           } else {
@@ -163,8 +161,6 @@ export class QuizComponent implements OnInit {
     this.overallResult['gruenen'] = nzustimmung['gruenen'] / ngesamt['gruenen'];
     this.overallResult['die.linke'] = nzustimmung['die.linke'] / ngesamt['die.linke']; 
     this.overallResult['cdu/csu'] = nzustimmung['cdu/csu'] / ngesamt['cdu/csu'];
-    console.log('overall:', this.overallResult);
-    console.log('zustimmung:', nzustimmung)
     this.resultsVisible = true;
   }
 
