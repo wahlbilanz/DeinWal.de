@@ -174,7 +174,12 @@ export class QuizComponent implements OnInit {
       punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[1]];
     } else if (answer=='nein'){ //nein
       punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[2]];
-    } 
+    } else {
+      //wenn der Benutzer gar keine Antwort ausgewaehlt hat
+      //sowol punkte als auch nAbgegebeneStimmen auf 0 setzen, damit sie nicht ins gesamtergebnis reinzaehlen:
+      punkte = 0;
+      nAbgegebeneStimmen = 0;
+    }
     return {'punkteRelativ':(punkte / nAbgegebeneStimmen), 'punkteAbsolut':punkte, 'nAbgegebeneStimmen':nAbgegebeneStimmen};
   }
   
