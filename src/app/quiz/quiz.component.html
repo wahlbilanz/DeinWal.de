@@ -32,7 +32,7 @@
         </div>
 	    <button class="w3-button w3-grey w3-hover-light-gray w3-left w3-ripple w3-large" (click)="nextQuestion(-1)" *ngIf="questionIndex > 0">vorherige Frage</button>
 	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large" (click)="nextQuestion(1)" *ngIf="questionIndex < questionData.length - 1">nächste Frage</button>
-	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large" (click)="nextQuestion(100)" *ngIf="questionIndex >= questionData.length - 10">Auswertung</button>
+	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large" (click)="showResults()">Auswertung</button>
      </div>
 </div>
 

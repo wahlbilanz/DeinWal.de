@@ -111,6 +111,8 @@ export class QuizComponent implements OnInit {
     this.actualQuestions = Object.keys (this.question['fragen']);
   }
   
+  
+  
   /**
    *
    */
@@ -118,7 +120,6 @@ export class QuizComponent implements OnInit {
     this.questionIndex += n;
     if (this.questionIndex >= this.questionData.length) {
       // auswertung
-      this.progress = 100;
       this.showResults ();
     } else if (this.questionIndex < 0) {
       this.questionIndex = 0;
@@ -133,6 +134,8 @@ export class QuizComponent implements OnInit {
   }
 
   showResults () {
+    this.questionIndex = this.questionData.length;
+      this.progress = 100;
     let nzustimmung = {'gruenen':0.0,'cdu/csu':0.0,'die.linke':0.0,'spd':0.0};
     let ngesamt = {'gruenen':0.0,'cdu/csu':0.0,'die.linke':0.0,'spd':0.0};
     for (const q of this.questionData) {
@@ -147,11 +150,11 @@ export class QuizComponent implements OnInit {
               q['fragen'][f][partyName] = tempPunkte.punkteRelativ;
               nzustimmung[partyName] += tempPunkte.punkteAbsolut;
               ngesamt[partyName] += tempPunkte.nAbgegebeneStimmen;
-              console.log('---h3', partyName, tempPunkte)
+              console.log('---h3', partyName, tempPunkte);
             }
           } else {
             for(let partyName of ['gruenen','cdu/csu','spd','die.linke']){
-              q['fragen'][f][partyName] = -1
+              q['fragen'][f][partyName] = 0;
             }
           }
         }

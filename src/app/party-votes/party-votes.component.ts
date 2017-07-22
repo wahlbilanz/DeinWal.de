@@ -22,9 +22,10 @@ export class PartyVotesComponent implements OnInit {
   }
 
   calculatePercents() { 
-    this.resultsPercent.ja = this.results.ja / (this.results.ja + this.results.nein + this.results.enthaltung);
-    this.resultsPercent.nein = this.results.nein / (this.results.ja + this.results.nein + this.results.enthaltung);
-    this.resultsPercent.enthaltung = this.results.enthaltung / (this.results.ja + this.results.nein + this.results.enthaltung);
+		let gesamt = (this.results.ja + this.results.nein + this.results.enthaltung);
+    this.resultsPercent.ja = this.results.ja / gesamt;
+    this.resultsPercent.nein = this.results.nein / gesamt;
+    this.resultsPercent.enthaltung = this.results.enthaltung / gesamt;
   }
   
 }
