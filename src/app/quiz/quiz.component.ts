@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestiondataService } from '../questiondata.service';
-import { settings } from '../settings';
 import { AppComponent } from '../app.component';
 /*import {Http, Headers} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
@@ -36,22 +35,20 @@ export class QuizComponent implements OnInit {
   // should we save the answers in the local storage
   doSave:boolean = false; // if true: save choices in localStorage
   // auswertung der auswertung
-  overallResult = {'gruenen':0.0,'cdu/csu':0.0,'die.linke':0.0,'spd':0.0};
+  overallResult = {};
 
   constructor (private qserv: QuestiondataService, private app:AppComponent) {
     
-//    title.setTitle ("test");
-    
-    if (localStorage.getItem('doSave')) {
-      this.debugLog ("restoring data from local storage");
-       this.getQuestionDataFromLocalStorage();
+    if (localStorage.getItem('doSave') && JSON.parse(localStorage.getItem('doSave'))) {
+      this.app.log ("restoring data from local storage");
+      this.getQuestionDataFromLocalStorage();
     }
     
-    this.debugLog ("retrieving newest questions");
+    this.app.log ("retrieving newest questions");
     this.qserv.getData ().subscribe ((data) => {
-      this.debugLog ('retrieved data:', data);
+      this.app.log ('retrieved data:', data);
       if (!Array.isArray (data)) {
-        this.debugLog ("error retrieving data!")
+        this.app.log ("error retrieving data!")
         // TODO: what are we supposed to do here?
         // at least show some warning...
       } else {
@@ -62,7 +59,8 @@ export class QuizComponent implements OnInit {
           for (const f in q['fragen']) {
             if (q['fragen'].hasOwnProperty (f)) {
               // -1 means -> not answered yet
-              this.answers[f] = -1;
+              if (!this.answers.hasOwnProperty (f))
+                this.answers[f] = -1;
               q['fragenIds'].push (f);
             }
           }
@@ -81,14 +79,6 @@ export class QuizComponent implements OnInit {
    */
   debugAnswers () {
     console.log (this.answers);
-  }
-  
-  /**
-   * print some debug message, unless we're in production mode...
-   */
-  debugLog (...msg) {
-    if (!settings.production)
-      console.log (msg);
   }
 
   /**
@@ -160,8 +150,10 @@ export class QuizComponent implements OnInit {
     this.progress = 100;
     this.app.overwriteTitle ("Auswertung");
     
+    this.overallResult = {'gruenen':'-','cdu/csu':'-','die.linke':'-','spd':'-'};
     let nzustimmung = {'gruenen':0.0,'cdu/csu':0.0,'die.linke':0.0,'spd':0.0};
-    let ngesamt = {'gruenen':0.0,'cdu/csu':0.0,'die.linke':0.0,'spd':0.0};
+    let nAnswered = 0;
+    
     for (const q of this.questionData) {
       for (const f in q['fragen']) {
         if (q['fragen'].hasOwnProperty(f)) {
@@ -169,25 +161,28 @@ export class QuizComponent implements OnInit {
             const opt = this.voteOptions;
             const answer = opt[this.answers[f]];
             const results = q['fragen'][f]['results'];
+            nAnswered++;
             for(let partyName of ['gruenen','cdu/csu','spd','die.linke']){
               let tempPunkte = this.getZustimmungsPunkte(results[partyName],answer);
-              q['fragen'][f][partyName] = tempPunkte.punkteRelativ;
-              nzustimmung[partyName] += tempPunkte.punkteAbsolut;
-              ngesamt[partyName] += tempPunkte.nAbgegebeneStimmen;
-              console.log('---h3', partyName, tempPunkte);
+              q['fragen'][f][partyName] = this.toPercent (tempPunkte.punkteRelativ);
+              nzustimmung[partyName] += tempPunkte.punkteRelativ;
+              this.app.log('---h3', partyName, tempPunkte);
             }
           } else {
             for(let partyName of ['gruenen','cdu/csu','spd','die.linke']){
-              q['fragen'][f][partyName] = 0;
+              q['fragen'][f][partyName] = "-";
             }
           }
         }
       }
     }
-    this.overallResult['spd'] = nzustimmung.spd / ngesamt.spd;
-    this.overallResult['gruenen'] = nzustimmung['gruenen'] / ngesamt['gruenen'];
-    this.overallResult['die.linke'] = nzustimmung['die.linke'] / ngesamt['die.linke']; 
-    this.overallResult['cdu/csu'] = nzustimmung['cdu/csu'] / ngesamt['cdu/csu'];
+    
+    if (nAnswered > 0) {
+      this.overallResult['spd'] = this.toPercent (nzustimmung['spd'] / nAnswered);
+      this.overallResult['gruenen'] = this.toPercent (nzustimmung['gruenen'] / nAnswered);
+      this.overallResult['die.linke'] = this.toPercent (nzustimmung['die.linke'] / nAnswered); 
+      this.overallResult['cdu/csu'] = this.toPercent (nzustimmung['cdu/csu'] / nAnswered);
+    }
     this.resultsVisible = true;
   }
 
@@ -236,9 +231,7 @@ export class QuizComponent implements OnInit {
   }
 
   eraseQuestionDataFromLocalStorage(){
-    localStorage.removeItem('questionData');
-    localStorage.removeItem('answers');
-    //localStorage.clear(); //alternatively clear the whole thing
+    localStorage.clear(); //alternatively clear the whole thing
   }
 
   saveQuestionDataToLocalStorage(){
@@ -249,7 +242,8 @@ export class QuizComponent implements OnInit {
   }
 
   getQuestionDataFromLocalStorage(){
-        this.questionData = JSON.parse(localStorage.getItem('questionData'));
-        this.answers = JSON.parse(localStorage.getItem('answers'));
+     this.questionData = JSON.parse(localStorage.getItem('questionData'));
+     this.answers = JSON.parse(localStorage.getItem('answers'));
+     this.doSave = JSON.parse(localStorage.getItem('doSave'));
   }
 }

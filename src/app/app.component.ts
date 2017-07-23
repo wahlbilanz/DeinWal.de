@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, enableProdMode } from '@angular/core';
 import { settings } from './settings';
 import { Title } from '@angular/platform-browser';
-import { Router,NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -19,12 +19,31 @@ export class AppComponent {
             titleService.setTitle(title + " | "  + settings.title);
           }
        });
+     if (settings.production)
+       enableProdMode ();
     }
   
-  // components should be able to overwrite the title
+  /**
+   * overwrite the page title
+   * 
+   * this way components can overwrite the page's title.
+   * `settings.title` will always be appended!
+   */
   overwriteTitle (title) {
     this.titleService.setTitle(title + " | "  + settings.title);
   }
+  
+  
+  
+  /**
+   * print some debug message, unless we're in production mode...
+   */
+  log (...msg) {
+    if (!settings.production)
+      console.log (msg);
+  }
+  
+  
   
   // get the title based on route-definition
   getTitle (state, parent) {
