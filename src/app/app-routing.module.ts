@@ -8,19 +8,22 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'quiz',
-    pathMatch: 'full'  
+    pathMatch: 'full'
   },
   {
     path: 'quiz',
-    component:QuizComponent
+    component:QuizComponent,
+    data: {title: 'Quiz'}
   },
   {
     path: 'impressum',
-    component:ImpressumComponent
+    component:ImpressumComponent,
+    data: {title: 'Impressum'}
   },
   {
     path: 'faq',
-    component:FaqComponent
+    component:FaqComponent,
+    data: {title: 'FAQ'}
   }
 ];
 

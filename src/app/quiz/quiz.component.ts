@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestiondataService } from '../questiondata.service';
 import { settings } from '../settings';
+import { AppComponent } from '../app.component';
 /*import {Http, Headers} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/observable/of';
@@ -37,7 +38,9 @@ export class QuizComponent implements OnInit {
   // auswertung der auswertung
   overallResult = {'gruenen':0.0,'cdu/csu':0.0,'die.linke':0.0,'spd':0.0};
 
-  constructor (private qserv: QuestiondataService) {
+  constructor (private qserv: QuestiondataService, private app:AppComponent) {
+    
+//    title.setTitle ("test");
     
     if (localStorage.getItem('doSave')) {
       this.debugLog ("restoring data from local storage");
@@ -120,7 +123,7 @@ export class QuizComponent implements OnInit {
     }
     // otherwise show question n
     else {
-      
+      this.app.overwriteTitle ("Quiz");
       this.resultsVisible = false;
       this.progress = 100.0 * n / this.questionData.length;
       this.question = this.questionData[this.questionIndex];
@@ -155,6 +158,7 @@ export class QuizComponent implements OnInit {
   showResults () {
     this.questionIndex = this.questionData.length;
     this.progress = 100;
+    this.app.overwriteTitle ("Auswertung");
     
     let nzustimmung = {'gruenen':0.0,'cdu/csu':0.0,'die.linke':0.0,'spd':0.0};
     let ngesamt = {'gruenen':0.0,'cdu/csu':0.0,'die.linke':0.0,'spd':0.0};

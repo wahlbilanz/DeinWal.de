@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { settings } from './settings';
+import { Title } from '@angular/platform-browser';
+import { Router,NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '';
+  
+  // setup route-listener to update title of the page 
+  constructor(router:Router, private titleService:Title) {
+       router.events.subscribe((event)=>{ 
+          if(event instanceof NavigationEnd) {
+            var title = this.getTitle(router.routerState, router.routerState.root).join('-');
+            console.log('title', title);
+            titleService.setTitle(title + " | "  + settings.title);
+          }
+       });
+    }
+  
+  // components should be able to overwrite the title
+  overwriteTitle (title) {
+    this.titleService.setTitle(title + " | "  + settings.title);
+  }
+  
+  // get the title based on route-definition
+  getTitle (state, parent) {
+    var data = [];
+    if (parent && parent.snapshot.data && parent.snapshot.data.title) {
+      data.push(parent.snapshot.data.title);
+    }
+
+    if(state && parent) {
+      data.push(... this.getTitle(state, state.firstChild(parent)));
+    }
+    return data;
+  }
 }
