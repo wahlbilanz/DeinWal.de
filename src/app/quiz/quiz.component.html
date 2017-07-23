@@ -66,7 +66,7 @@
 		        		<ng-container *ngFor="let q of quest.fragenIds">
 			        		<tr class="auswertung-zeile" id="auswertung-{{q}}">
 			        			<td class="w3-left-align">{{quest.fragen[q].short}}</td>
-			        			<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{partyVotes[answers[q]]}}</td>
+			        			<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{voteOptions[answers[q]]}}</td>
 			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q]['gruenen'] | percent:'1.1-1'}}<span style="position:absolute;z-index:1;right:-30%;top:2.3em" class="w3-text w3-tag"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results['gruenen']"></app-party-votes></span></td>
 			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q]['cdu/csu'] | percent:'1.1-1'}}<span style="position:absolute;z-index:1;right:-30%;top:2.4em" class="w3-text"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results['cdu/csu']"></app-party-votes></span></td>
 			        			<td class="w3-right-align w3-tooltip">{{quest.fragen[q]['die.linke'] | percent:'1.1-1'}}<span style="position:absolute;z-index:1;right:-25%;top:2.5em" class="w3-text"><app-party-votes class="w3-tag" [results]="quest.fragen[q].results['die.linke']"></app-party-votes></span></td>
