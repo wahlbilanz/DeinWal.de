@@ -6,12 +6,45 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./faq.component.css']
 })
 export class FaqComponent implements OnInit {
-
-  constructor() { }
+  localStorageOn = 'gespeichert';
+  
+  constructor() {
+    this.updateLocalStorage ();
+  }
 
   ngOnInit() {
   }
+  ngAfterContentInit() {
+    this.updateLocalStorage ();
+  }
+  ngAfterViewInit() {
+    this.updateLocalStorage ();
+  }
+  ngAfterViewChecked() {
+    this.updateLocalStorage ();
+  }
+  ngDoCheck() {
+    this.updateLocalStorage ();
+  }
+  ngOnChanges(changes) {
+    this.updateLocalStorage ();
+  }
+  
+  
+  
+  updateLocalStorage () {
+    if (localStorage.getItem('doSave') && JSON.parse(localStorage.getItem('doSave'))) {
+      this.localStorageOn = 'gespeichert';
+    } else {
+      this.localStorageOn = 'nicht gespeichert';
+    }
+  }
+  
 
+  clearData () {
+    localStorage.clear();
+    this.updateLocalStorage ();
+  }
   
   /**
    * toggle visibility of an FAQ content element and toggles caret if defined.

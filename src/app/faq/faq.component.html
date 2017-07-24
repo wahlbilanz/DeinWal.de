@@ -15,28 +15,39 @@
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Habt ihr nix besseres zu tun? <i class="fa fa-caret-down"></i></h3>
+      <h3 (click)="accordion($event)">Was wird gespeichert? <i class="fa fa-caret-down"></i></h3>
     </header>
     <div class="w3-container" style="display: none">
-      <p>Ja doch, eigentlich schon. Aber wer rettet sonst die Demokratie??!</p>
-    </div>
-  </div>
-
-  <div class="w3-card-4 w3-margin">
-    <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Warum erscheint die AfD nicht in den Empfehlungen für Parteien? <i class="fa fa-caret-down"></i></h3>
-    </header>
-    <div class="w3-container" style="display: none">
-      <p>Die AfD wurde bisher nicht in den Bundestag gewählt und daher haben wir auch keine Daten.</p>
-    </div>
-  </div>
-
-  <div class="w3-card-4 w3-margin">
-    <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Warum erscheint die FDP nicht in den Empfehlungen für Parteien? <i class="fa fa-caret-down"></i></h3>
-    </header>
-    <div class="w3-container" style="display: none">
-      <p>Die FDP wurde nicht in den 17. Bundestag gewählt und daher haben wir auch keine Daten.</p>
+      <p>
+      	Das Speichern deiner Daten ist optional und standardmäßig ausgeschaltet.
+      	Wenn "Speichern" aktiviert ist, bleiben deine Antworten erhalten auch wenn du die Seite neu lädst oder deinen Rechner herunter fährst.
+      	Du kannst dann also zum Beispiel morgen mit der Bearbeitung des Quizzes fortfahren.
+      	Wenn du deine Antworten speichern möchtest, musst du den Speichern-Knopf oben im Quiz aktivieren.
+      	Der Knopf sieht wie folgt aus, wenn:
+      </p>
+      	
+      <p>
+	      <button class="w3-button w3-pale-green w3-hover-green">nicht gespeichert wird</button>
+	      <button class="w3-button w3-green w3-hover-pale-green">gespeichert wird</button>
+      </p>
+      
+      <p ng-show="updateLocalStorage ()">
+      	Aktuell werden deine Daten <strong>{{localStorageOn}}</strong>.
+      </p>
+      <p>
+      	<strong>Wir speichern deine Daten ausschliesslich in deinem Browser.</strong>
+      	Dabei benutzen wir eine Technik die sich <em>local storage</em> nennt (siehe <a href="https://de.wikipedia.org/wiki/Web_Storage#localStorage">Wikipedia</a>).
+      	Die Antworten zu den Fragen verbleiben also zu jeder Zeit auf deinem Computer und werden von uns niemals ueber das Netz gesendet!
+      </p>
+      
+      <p>
+      	Wenn du den Speichern-Knopf wieder aus drückst werden alle gespeicherten Daten sofort gelöscht.
+      	Du kannst deine Daten auch gleich hier löschen (es gibt für uns dann keine Möglichkeit deine Antworten wieder herzustellen).
+      </p>
+      	
+      <p>
+      	<button class="w3-button w3-red" (click)="clearData()">Daten löschen</button>
+      </p>
     </div>
   </div>
 
@@ -46,15 +57,14 @@
     </header>
     <div class="w3-container" style="display: none">
       <p>Das ist ja das coole: Wir haben fast keine Daten von dir!</p>
-    </div>
-  </div>
-
-  <div class="w3-card-4 w3-margin">
-    <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Was wird gespeichert? <i class="fa fa-caret-down"></i></h3>
-    </header>
-    <div class="w3-container" style="display: none">
-      <p>local storage -- maybe show?</p>
+      
+      <p>
+      	Deine Antworten sind ausschliesslich auf in deinem Browser bei dir auf dem Rechner gespeichert und werden von uns niemals über das Internet versendet.
+      	Dein Computer nimmt nur einmal kurz mit unserem Server kontakt auf um die Webseite zu laden.
+      	Danach läuft alles nur noch bei dir auf dem Computer.
+      	Du kannst jetzt also gern dein Internet ausschalten &mdash; das Quiz läuft normal weiter, ganz ohne irgendeine Netzwerkverbindung! :)
+      </p>
+      
     </div>
   </div>
 
@@ -64,11 +74,31 @@
     </header>
     <div class="w3-container" style="display: none">
       <p>
-      Aus <a href="https://wahlbilanz.de">wahlbilanz.de</a> haben wir die Abstimmungen im Bundestag der letzten Legislaturperiode zusammengetragen, analysiert und kategoriesiert.
-      Wir haben die verschiedenen <a href="https://wahlbilanz.de/categories/">Kategorien</a> dann bewertet und Fragen daraus zusammengetragen.
-      Da es aber 
-      Dabei haben wir natuerlich ein
+	      Auf <a href="https://wahlbilanz.de">wahlbilanz.de</a> haben wir die Abstimmungen im Bundestag der letzten Legislaturperiode zusammengetragen, analysiert und kategoriesiert.
+	      Wir haben die verschiedenen <a href="https://wahlbilanz.de/categories/">Kategorien</a> dann bewertet und potentielle Fragen und Themengebiete zusammengetragen.
+	      In einem aufwendigen und zähen Prozess wurden die Fragen ausgedünnt und formuliert.
+	      Dabei haben wir stets versucht Formulierungen zu finden, die euch nicht beeinglussen.
+	      Das war äussert kompliziert und ist uns vielleicht nicht immer zu 100% geglückt.
+	      Wenn ihr verbesserungsvorschläge fuer eine Frage habt könnt ihr euch super gern <a routerLink="/impressum">bei uns melden</a>! 
       </p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <h3 (click)="accordion($event)">Warum erscheint die FDP nicht in der Auswertung? <i class="fa fa-caret-down"></i></h3>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>Die FDP wurde nicht in den 17. Bundestag gewählt und wir haben daher keine Abstimmungsergebnisse.</p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <h3 (click)="accordion($event)">Warum erscheint die AfD nicht in der Auswertung? <i class="fa fa-caret-down"></i></h3>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>Die AfD wurde bisher nicht in den Bundestag gewählt und wir haben daher keine Abstimmungsergebnisse.</p>
     </div>
   </div>
 
