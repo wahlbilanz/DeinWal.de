@@ -1,4 +1,4 @@
- <div class="w3-container padding"> 
+ <div class="w3-container padding" id="faq"> 
   
   <header class="w3-container">
     <h1>FAQs - Häufig gestellte und ausgedachte Fragen</h1>
@@ -6,37 +6,69 @@
   
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3>Wie kommt ihr auf den bescheuerten Namen?</h3>
+      <h3 (click)="accordion($event)">Wie kommt ihr auf den bescheuerten Namen? <i class="fa fa-caret-down"></i></h3>
     </header>
-    <div class="w3-container">
-      <p>WahlWachtel.de war irgendwie noch bescheuerter.</p>
+    <div class="w3-container" style="display: none">
+      <p> WahlWal.de war leider schon vergeben und WahlWachtel.de war irgendwie noch bescheuerter.</p>
     </div>
   </div>
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3>Habt ihr nix besseres zu tun?</h3>
+      <h3 (click)="accordion($event)">Habt ihr nix besseres zu tun? <i class="fa fa-caret-down"></i></h3>
     </header>
-    <div class="w3-container">
+    <div class="w3-container" style="display: none">
       <p>Ja doch, eigentlich schon. Aber wer rettet sonst die Demokratie??!</p>
     </div>
   </div>
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3>Warum erscheint die AfD nicht in den Empfehlungen für Parteien?</h3>
+      <h3 (click)="accordion($event)">Warum erscheint die AfD nicht in den Empfehlungen für Parteien? <i class="fa fa-caret-down"></i></h3>
     </header>
-    <div class="w3-container">
+    <div class="w3-container" style="display: none">
       <p>Die AfD wurde bisher nicht in den Bundestag gewählt und daher haben wir auch keine Daten.</p>
     </div>
   </div>
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3>Warum erscheint die FDP nicht in den Empfehlungen für Parteien?</h3>
+      <h3 (click)="accordion($event)">Warum erscheint die FDP nicht in den Empfehlungen für Parteien? <i class="fa fa-caret-down"></i></h3>
     </header>
-    <div class="w3-container">
+    <div class="w3-container" style="display: none">
       <p>Die FDP wurde nicht in den 17. Bundestag gewählt und daher haben wir auch keine Daten.</p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <h3 (click)="accordion($event)">Was macht ihr mit meinen Daten? <i class="fa fa-caret-down"></i></h3>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>Das ist ja das coole: Wir haben fast keine Daten von dir!</p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <h3 (click)="accordion($event)">Was wird gespeichert? <i class="fa fa-caret-down"></i></h3>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>local storage -- maybe show?</p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <h3 (click)="accordion($event)">Wie habt ihr die Fragen ausgewaehlt? <i class="fa fa-caret-down"></i></h3>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>
+      Aus <a href="https://wahlbilanz.de">wahlbilanz.de</a> haben wir die Abstimmungen im Bundestag der letzten Legislaturperiode zusammengetragen, analysiert und kategoriesiert.
+      Wir haben die verschiedenen <a href="https://wahlbilanz.de/categories/">Kategorien</a> dann bewertet und Fragen daraus zusammengetragen.
+      Da es aber 
+      Dabei haben wir natuerlich ein
+      </p>
     </div>
   </div>
 
