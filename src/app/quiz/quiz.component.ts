@@ -8,7 +8,7 @@ import 'rxjs/add/operator/share';
 import 'rxjs/add/operator/map';*/
 
 
-@Component ({
+@Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.css']
@@ -31,24 +31,24 @@ export class QuizComponent implements OnInit {
   // auswertung anzeigen?
   resultsVisible = false;
   // options for votes with: 0 => enthaltung; 1 => ja ; 2 => nein
-  voteOptions = [ 'enthaltung', 'ja', 'nein' ];
+  voteOptions = ['enthaltung', 'ja', 'nein'];
   // should we save the answers in the local storage
-  doSave:boolean = false; // if true: save choices in localStorage
+  doSave: boolean = false; // if true: save choices in localStorage
   // auswertung der auswertung
   overallResult = {};
 
-  constructor (private qserv: QuestiondataService, private app:AppComponent) {
-    
+  constructor(private qserv: QuestiondataService, private app: AppComponent) {
+
     if (localStorage.getItem('doSave') && JSON.parse(localStorage.getItem('doSave'))) {
-      this.app.log ("restoring data from local storage");
+      this.app.log("restoring data from local storage");
       this.getQuestionDataFromLocalStorage();
     }
-    
-    this.app.log ("retrieving newest questions");
-    this.qserv.getData ().subscribe ((data) => {
-      this.app.log ('retrieved data:', data);
-      if (!Array.isArray (data)) {
-        this.app.log ("error retrieving data!")
+
+    this.app.log("retrieving newest questions");
+    this.qserv.getData().subscribe((data) => {
+      this.app.log('retrieved data:', data);
+      if (!Array.isArray(data)) {
+        this.app.log("error retrieving data!")
         // TODO: what are we supposed to do here?
         // at least show some warning...
       } else {
@@ -57,42 +57,42 @@ export class QuizComponent implements OnInit {
         for (const q of this.questionData) {
           q['fragenIds'] = [];
           for (const f in q['fragen']) {
-            if (q['fragen'].hasOwnProperty (f)) {
+            if (q['fragen'].hasOwnProperty(f)) {
               // -1 means -> not answered yet
-              if (!this.answers.hasOwnProperty (f))
+              if (!this.answers.hasOwnProperty(f))
                 this.answers[f] = -1;
-              q['fragenIds'].push (f);
+              q['fragenIds'].push(f);
             }
           }
         }
       }
       // show first question
-      this.showQuestion (0);
+      this.showQuestion(0);
     });
   }
 
-  ngOnInit () {
+  ngOnInit() {
   }
 
   /**
    * print answers in console
    */
-  debugAnswers () {
-    console.log (this.answers);
+  debugAnswers() {
+    console.log(this.answers);
   }
 
   /**
    * select an answer
    */
-  choose (id, choice) {
+  choose(id, choice) {
     // unselect a previously selected answer
-    if (this.answers[id] == choice){
+    if (this.answers[id] == choice) {
       this.answers[id] = null;
     } else {
       // select this answer
       this.answers[id] = choice;
     }
-    
+
     // save the selection (if saving is enabled)
     this.saveQuestionDataToLocalStorage();
   }
@@ -100,60 +100,60 @@ export class QuizComponent implements OnInit {
   /**
    * Zeige nur Question Nummer n
    */
-  showQuestion (n) {
+  showQuestion(n) {
     this.questionIndex = n;
-    
+
     // there is no question with negative index...
     if (this.questionIndex < 0)
       this.questionIndex = 0;
-    
+
     // if n is bigger than the number of questions -> show results
     if (this.questionIndex >= this.questionData.length) {
-      this.showResults ();
+      this.showResults();
     }
     // otherwise show question n
     else {
-      this.app.overwriteTitle ("Quiz");
+      this.app.overwriteTitle("Quiz");
       this.resultsVisible = false;
       this.progress = 100.0 * n / this.questionData.length;
       this.question = this.questionData[this.questionIndex];
       // get sub-questions
-      this.actualQuestions = Object.keys (this.question['fragen']);
+      this.actualQuestions = Object.keys(this.question['fragen']);
     }
   }
-  
-  
-  
+
+
+
   /**
    * jump a number of questions forward (n is positiv) or backward (n is negative)
    */
-  nextQuestion (n) {
-    this.showQuestion (this.questionIndex + n);
+  nextQuestion(n) {
+    this.showQuestion(this.questionIndex + n);
   }
 
-  
-  
+
+
   /**
    * beautiful percentage:
    * give n in [0,1] and get percent in [0.00, 100.00]
    */
-  toPercent (n) {
-    return (Math.round (10000 * n) / 100) + "%";
+  toPercent(n) {
+    return (Math.round(10000 * n) / 100) + "%";
   }
 
-  
+
   /**
    * auswertungstabelle generieren und anzeigen
    */
-  showResults () {
+  showResults() {
     this.questionIndex = this.questionData.length;
     this.progress = 100;
-    this.app.overwriteTitle ("Auswertung");
-    
-    this.overallResult = {'gruenen':'-','cdu/csu':'-','die.linke':'-','spd':'-'};
-    let nzustimmung = {'gruenen':0.0,'cdu/csu':0.0,'die.linke':0.0,'spd':0.0};
+    this.app.overwriteTitle("Auswertung");
+
+    this.overallResult = { 'gruenen': '-', 'cdu/csu': '-', 'die.linke': '-', 'spd': '-' };
+    let nzustimmung = { 'gruenen': 0.0, 'cdu/csu': 0.0, 'die.linke': 0.0, 'spd': 0.0 };
     let nAnswered = 0;
-    
+
     for (const q of this.questionData) {
       for (const f in q['fragen']) {
         if (q['fragen'].hasOwnProperty(f)) {
@@ -162,26 +162,26 @@ export class QuizComponent implements OnInit {
             const answer = opt[this.answers[f]];
             const results = q['fragen'][f]['results'];
             nAnswered++;
-            for(let partyName of ['gruenen','cdu/csu','spd','die.linke']){
-              let tempPunkte = this.getZustimmungsPunkte(results[partyName],answer);
-              q['fragen'][f][partyName] = this.toPercent (tempPunkte.punkteRelativ);
+            for (let partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
+              let tempPunkte = this.getZustimmungsPunkte(results[partyName], answer);
+              q['fragen'][f][partyName] = this.toPercent(tempPunkte.punkteRelativ);
               nzustimmung[partyName] += tempPunkte.punkteRelativ;
               this.app.log('---h3', partyName, tempPunkte);
             }
           } else {
-            for(let partyName of ['gruenen','cdu/csu','spd','die.linke']){
+            for (let partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
               q['fragen'][f][partyName] = "-";
             }
           }
         }
       }
     }
-    
+
     if (nAnswered > 0) {
-      this.overallResult['spd'] = this.toPercent (nzustimmung['spd'] / nAnswered);
-      this.overallResult['gruenen'] = this.toPercent (nzustimmung['gruenen'] / nAnswered);
-      this.overallResult['die.linke'] = this.toPercent (nzustimmung['die.linke'] / nAnswered); 
-      this.overallResult['cdu/csu'] = this.toPercent (nzustimmung['cdu/csu'] / nAnswered);
+      this.overallResult['spd'] = this.toPercent(nzustimmung['spd'] / nAnswered);
+      this.overallResult['gruenen'] = this.toPercent(nzustimmung['gruenen'] / nAnswered);
+      this.overallResult['die.linke'] = this.toPercent(nzustimmung['die.linke'] / nAnswered);
+      this.overallResult['cdu/csu'] = this.toPercent(nzustimmung['cdu/csu'] / nAnswered);
     }
     this.resultsVisible = true;
   }
@@ -194,15 +194,15 @@ export class QuizComponent implements OnInit {
    * @param answer human readable vote of user (ja/nein/..)
    * 
    */
-  getZustimmungsPunkte(partyResults, answer){
+  getZustimmungsPunkte(partyResults, answer) {
     const opt = this.voteOptions;
     let nAbgegebeneStimmen = partyResults[opt[0]] + partyResults[opt[1]] + partyResults[opt[2]];
     let punkte = 0;
-    if(answer=='enthaltung'){ //Enthaltung
-      punkte = partyResults[opt[0]] + 0.5* partyResults[opt[1]] + 0.5 * partyResults[opt[2]];
-    } else if (answer=='ja'){ //ja
+    if (answer == 'enthaltung') { //Enthaltung
+      punkte = partyResults[opt[0]] + 0.5 * partyResults[opt[1]] + 0.5 * partyResults[opt[2]];
+    } else if (answer == 'ja') { //ja
       punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[1]];
-    } else if (answer=='nein'){ //nein
+    } else if (answer == 'nein') { //nein
       punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[2]];
     } else {
       //wenn der Benutzer gar keine Antwort ausgewaehlt hat
@@ -210,40 +210,44 @@ export class QuizComponent implements OnInit {
       punkte = 0;
       nAbgegebeneStimmen = 0;
     }
-    return {'punkteRelativ':(punkte / nAbgegebeneStimmen), 'punkteAbsolut':punkte, 'nAbgegebeneStimmen':nAbgegebeneStimmen};
+    return { 'punkteRelativ': (punkte / nAbgegebeneStimmen), 'punkteAbsolut': punkte, 'nAbgegebeneStimmen': nAbgegebeneStimmen };
   }
-  
-  
-  
-  
-  
+
+
+
+
+
   // below is local storage stuff
-  
-  
-  toggleSave(){
+
+
+  toggleSave() {
     this.doSave = !this.doSave;
     localStorage.setItem('doSave', JSON.stringify(this.doSave));
-    if(this.doSave){
+    if (this.doSave) {
       this.saveQuestionDataToLocalStorage();
     } else {
       this.eraseQuestionDataFromLocalStorage();
     }
   }
 
-  eraseQuestionDataFromLocalStorage(){
+  eraseQuestionDataFromLocalStorage() {
     localStorage.clear(); //alternatively clear the whole thing
   }
 
-  saveQuestionDataToLocalStorage(){
-    if(this.doSave){
+  saveQuestionDataToLocalStorage() {
+    if (this.doSave) {
       localStorage.setItem('questionData', JSON.stringify(this.questionData));
       localStorage.setItem('answers', JSON.stringify(this.answers));
     }
   }
 
-  getQuestionDataFromLocalStorage(){
-     this.questionData = JSON.parse(localStorage.getItem('questionData'));
-     this.answers = JSON.parse(localStorage.getItem('answers'));
-     this.doSave = JSON.parse(localStorage.getItem('doSave'));
+  getQuestionDataFromLocalStorage() {
+    this.questionData = JSON.parse(localStorage.getItem('questionData'));
+    this.answers = JSON.parse(localStorage.getItem('answers'));
+    this.doSave = JSON.parse(localStorage.getItem('doSave'));
   }
+
+
+
+
 }

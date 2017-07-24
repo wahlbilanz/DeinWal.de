@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouteReuseStrategy, ActivatedRouteSnapshot, DetachedRouteHandle } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { FaqComponent } from './faq/faq.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { PartyVotesComponent } from './party-votes/party-votes.component';
 import { HomeComponent } from './home/home.component';
+import { CustomReuseStrategy } from './route.reuse';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,7 @@ import { HomeComponent } from './home/home.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [QuestiondataService],
+  providers: [QuestiondataService, {provide: RouteReuseStrategy, useClass: CustomReuseStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
