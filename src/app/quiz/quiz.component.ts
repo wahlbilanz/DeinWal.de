@@ -14,27 +14,27 @@ import 'rxjs/add/operator/map';*/
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
-  // is this production or debug mode?
+  /** is this production or debug mode?*/
   production;
-  // the whole question information as it will be retrieved from votes.json
+  /** the whole question information as it will be retrieved from votes.json*/
   questionData = [];
-  // currently visible question index
+  /** currently visible question index*/
   questionIndex = 0;
-  // currently visible question -- basically equals `this.questionData[this.questionIndex]`
+  /** currently visible question -- basically equals `this.questionData[this.questionIndex]`*/
   question = {};
-  // actual questions in `question`
+  /** actual questions in `question`*/
   actualQuestions = [];
-  // the usesr's answers to the questions, keys are the question ids, values are one of `voteOptions`
+  /** the usesr's answers to the questions, keys are the question ids, values are one of `voteOptions`*/
   answers = {};
-  // current progress in the quiz 
+  /** current progress in the quiz */
   progress = 0.0;
-  // auswertung anzeigen?
+  /** auswertung anzeigen?*/
   resultsVisible = false;
-  // options for votes with: 0 => enthaltung; 1 => ja ; 2 => nein
+  /** options for votes with: 0 => enthaltung; 1 => ja ; 2 => nein*/ 
   voteOptions = ['enthaltung', 'ja', 'nein'];
-  // should we save the answers in the local storage
+  /** should we save the answers in the local storage*/
   doSave: boolean = false; // if true: save choices in localStorage
-  // auswertung der auswertung
+  /** auswertung der auswertung*/
   overallResult = {};
 
   constructor(private qserv: QuestiondataService, private app: AppComponent) {
