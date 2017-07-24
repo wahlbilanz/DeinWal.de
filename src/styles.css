@@ -1,4 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro'), url(/assets/fonts/SourceSansPro-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro'), local('SourceSansPro'), url(/assets/fonts/SourceSansPro-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro'), url(/assets/fonts/SourceSansPro-Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Source Sans Pro'), local('SourceSansPro'), url(/assets/fonts/SourceSansPro-BoldItalic.ttf) format('truetype');
+}
+
+
+
+body {
+	font-family: 'Source Sans Pro', 'Verdana', sans-serif;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    font-family: 'Source Sans Pro',Arial,sans-serif;
+    font-weight: 600;
+    margin: 10px 0;
+
+}
+
 #top-icon {
 	max-height: 1.2em;
 }
+
