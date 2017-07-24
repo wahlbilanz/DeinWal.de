@@ -10,6 +10,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { FaqComponent } from './faq/faq.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { PartyVotesComponent } from './party-votes/party-votes.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PartyVotesComponent } from './party-votes/party-votes.component';
     QuizComponent,
     FaqComponent,
     ImpressumComponent,
-    PartyVotesComponent
+    PartyVotesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
