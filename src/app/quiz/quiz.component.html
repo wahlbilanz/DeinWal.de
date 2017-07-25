@@ -53,15 +53,15 @@
 	        		<tr>
 	        			<th class="w3-left-align">Abstimmung</th>
 	        			<th class="w3-center">Deine Antwort</th>
-	        			<th class="w3-right-align">Icon Gruene</th>
-	        			<th class="w3-right-align">Icon CDU</th>
-	        			<th class="w3-right-align">Icon DIE LINKE</th>
-	        			<th class="w3-right-align">Icon SPD</th>
+	        			<th class="w3-right-align">Die Grünen</th>
+	        			<th class="w3-right-align">CDU</th>
+	        			<th class="w3-right-align">DIE LINKE</th>
+	        			<th class="w3-right-align">SPD</th>
 	        	</thead>
 	        	<tbody>
 	        		<ng-container *ngFor="let quest of questionData; let i = index">
 		        		<tr class="auswertung-abschnitt">
-		        			<th colspan="6" class="w3-grey w3-left-align" (click)="showQuestion(i)">{{quest.titel}}</th>
+		        			<th class="w3-grey" colspan="6">{{quest.titel}}<button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button></th>
 		        		</tr>
 		        		<ng-container *ngFor="let q of quest.fragenIds">
 			        		<tr class="auswertung-zeile" id="auswertung-{{q}}">
