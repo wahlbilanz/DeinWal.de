@@ -42,12 +42,14 @@
 
 <div class="myResult w3-card-4 w3-light-grey w3-padding-16 w3-animate-bottom" *ngIf="resultsVisible">
     <div class="w3-container">
-        <header class="w3-container w3-green">
+        <header class="w3-container w3-green w3-margin">
             <h3>Auswertung </h3>
         </header>
-        <h4>Welche Partei hat am ähnlichsten wie du abgestimmt?</h4>
-        In der folgenden Tabelle siehst du wieviele Abgeordnete in den verschiedenen Parteien in deinem Sinne abgestimmt haben:
-        <div class="w3-responsive">
+        <div class="w3-margin">
+	        <h4>Welche Partei hat am ähnlichsten wie du abgestimmt?</h4>
+	        In der folgenden Tabelle siehst du wieviele Abgeordnete in den verschiedenen Parteien in deinem Sinne abgestimmt haben:
+        </div>
+        <div class="w3-responsive w3-margin">
 	        <table id="auswertungstabelle" class="w3-table w3-bordered w3-hoverable">
 	        	<thead class="w3-dark-grey">
 	        		<tr>
@@ -88,5 +90,11 @@
 	        	</tbody>
 	        </table>
         </div> 
+        <div class="w3-margin">
+	        Bitte beachte, dass die Auswertung dir nur zeigt welche Parteien so ähnlich abgestimmt haben wie du.
+	        <strong>
+	        	DeinWal.de kann auf gar keinen Fall die einzige Quelle sein, die du für deine Entscheidung zur Bundestagswahl nutzt!
+	        </strong>
+        </div>
     </div>
 </div>
