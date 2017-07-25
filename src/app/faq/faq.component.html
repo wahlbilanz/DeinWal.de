@@ -6,16 +6,27 @@
   
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Wie kommt ihr auf den bescheuerten Namen? <i class="fa fa-caret-down"></i></h3>
+      <h3 (click)="accordion($event)">Wie kommt ihr auf den bescheuerten Namen? <i class="fa fa-caret-down" aria-hidden="true"></i></h3>
     </header>
     <div class="w3-container" style="display: none">
       <p> WahlWal.de war leider schon vergeben und WahlWachtel.de war irgendwie noch bescheuerter.</p>
     </div>
   </div>
+  
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <h3 (click)="accordion($event)">Wie berechnet ihr die Auswertung? <i class="fa fa-caret-down" aria-hidden="true"></i></h3>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>
+      	Über das Rechenmodell für die Auswertung deiner Antworten haben wir lange nachgedacht. TODO... PDF zum herunterladen
+      </p>
+    </div>
+  </div>
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Was wird gespeichert? <i class="fa fa-caret-down"></i></h3>
+      <h3 (click)="accordion($event)">Was wird gespeichert? <i class="fa fa-caret-down" aria-hidden="true"></i></h3>
     </header>
     <div class="w3-container" style="display: none">
       <p>
@@ -53,7 +64,7 @@
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Was macht ihr mit meinen Daten? <i class="fa fa-caret-down"></i></h3>
+      <h3 (click)="accordion($event)">Was macht ihr mit meinen Daten? <i class="fa fa-caret-down" aria-hidden="true"></i></h3>
     </header>
     <div class="w3-container" style="display: none">
       <p>Das ist ja das coole: <strong>Wir haben fast keine Daten von dir!</strong></p>
@@ -75,7 +86,7 @@
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Wie habt ihr die Fragen ausgewaehlt? <i class="fa fa-caret-down"></i></h3>
+      <h3 (click)="accordion($event)">Wie habt ihr die Fragen ausgewaehlt? <i class="fa fa-caret-down" aria-hidden="true"></i></h3>
     </header>
     <div class="w3-container" style="display: none">
       <p>
@@ -91,7 +102,7 @@
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Warum erscheint die FDP nicht in der Auswertung? <i class="fa fa-caret-down"></i></h3>
+      <h3 (click)="accordion($event)">Warum erscheint die FDP nicht in der Auswertung? <i class="fa fa-caret-down" aria-hidden="true"></i></h3>
     </header>
     <div class="w3-container" style="display: none">
       <p>Die FDP wurde nicht in den 17. Bundestag gewählt und wir haben daher keine Abstimmungsergebnisse.</p>
@@ -100,7 +111,7 @@
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Warum erscheint die AfD nicht in der Auswertung? <i class="fa fa-caret-down"></i></h3>
+      <h3 (click)="accordion($event)">Warum erscheint die AfD nicht in der Auswertung? <i class="fa fa-caret-down" aria-hidden="true"></i></h3>
     </header>
     <div class="w3-container" style="display: none">
       <p>Die AfD wurde bisher nicht in den Bundestag gewählt und wir haben daher keine Abstimmungsergebnisse.</p>

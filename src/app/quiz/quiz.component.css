@@ -1,28 +1,22 @@
 .question-description {
 	
 }
-.q-question {
+/*.q-question {
 	font-weight: bold;
-}
-.q-actual {
-	background-color: #f1f1f1;
-	color: black;
-	margin: 15px;
-	padding: 10px;
 }
 .q-buttons {
 	float: right;
 }
 .q-text {
 	float: left;
-}
+}*/
+
 .myQuestions,
 .myResult {
 	max-width: 800px;
 	margin: 5px auto;
 }
 .question-tags {
-	float: right;
 	margin: 10px 0px;
 }
 .question-tag {

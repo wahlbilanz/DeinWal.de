@@ -3,36 +3,36 @@
 
 <div class="myQuestions w3-card-4 w3-dark-grey w3-padding-16 w3-animate-zoom" *ngIf="!resultsVisible">
     <div class="w3-container">
-		<span class="w3-tooltip">
+		<span class="w3-tooltip w3-margin">
 			<span style="position:absolute;left:0;top:1.8em;width:15em;" class="w3-text w3-tag">Speichere deine Eingaben lokal in deinem Browser</span> 
 			<button class="w3-button w3-hover-green" (click)="toggleSave()" [class.w3-pale-green]="!doSave" [class.w3-green]="doSave">speichern</button>
 		</span>
-        <div class="question-tags">
+        <div class="question-tags w3-right w3-margin">
         	<span class="question-tag" *ngFor="let t of question.topic"><a href="https://wahlbilanz.de/categories/#{{t}}">{{t}}</a></span>
         </div>
 	    <div style="clear:both"></div>
-        <header class="w3-container w3-light-grey">
+        <header class="w3-container w3-light-grey w3-margin">
             <h3>{{question.titel}}</h3>
         </header>
-        <div class="question-description"> 
+        <div class="question-description w3-margin"> 
             {{question.beschreibung}}    
         </div>
-        <div class="q-actual" id="question-{{q}}" *ngFor="let q of actualQuestions">
+        <div class="w3-light-grey w3-padding w3-padding-16 w3-margin" id="question-{{q}}" *ngFor="let q of actualQuestions">
         	<div class="q-text">
 	        	<span class="q-context">{{question.fragen[q].context}}</span>
-	        	<span class="q-question">{{question.fragen[q].frage}}</span>
+	        	<strong class="q-question">{{question.fragen[q].frage}}</strong>
 	        	<div class="q-supplemental">{{question.fragen[q].subtext}} <a href="{{question.fragen[q].link}}">Mehr Informationen</a></div>
         	</div>
-        	<div class="q-buttons">
-		        <button class="w3-button w3-hover-green w3-ripple active w3-large" [class.w3-pale-green]="answers[q]!=1" [class.w3-green]="answers[q]==1" (click)="choose(q,1)">Zustimmen</button>
-		        <button class="w3-button w3-hover-red w3-ripple w3-large" [class.w3-pale-red]="answers[q]!=2" [class.w3-red]="answers[q]==2" (click)="choose(q,2)">Ablehnen</button>
-		        <button class="w3-button w3-hover-blue w3-ripple w3-large" [class.w3-pale-blue]="answers[q]!=0" [class.w3-blue]="answers[q]==0" (click)="choose(q,0)">Enthalten</button>
+        	<div class="q-buttons w3-right">
+		        <button class="w3-button w3-hover-green w3-ripple active w3-large" [class.w3-pale-green]="answers[q]!=1" [class.w3-green]="answers[q]==1" (click)="choose(q,1)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Zustimmen</button>
+		        <button class="w3-button w3-hover-red w3-ripple w3-large" [class.w3-pale-red]="answers[q]!=2" [class.w3-red]="answers[q]==2" (click)="choose(q,2)"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Ablehnen</button>
+		        <button class="w3-button w3-hover-blue w3-ripple w3-large" [class.w3-pale-blue]="answers[q]!=0" [class.w3-blue]="answers[q]==0" (click)="choose(q,0)"><i class="fa fa-hand-peace-o" aria-hidden="true"></i> Enthalten</button>
 	        </div>
 	        <div style="clear:both"></div>
         </div>
-	    <button class="w3-button w3-grey w3-hover-light-gray w3-left w3-ripple w3-large" (click)="nextQuestion(-1)" *ngIf="questionIndex > 0">vorherige Frage</button>
-	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large" (click)="nextQuestion(1)" *ngIf="questionIndex < questionData.length - 1">nächste Frage</button>
-	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large" (click)="showResults()">Auswertung</button>
+	    <button class="w3-button w3-grey w3-hover-light-gray w3-left w3-ripple w3-large w3-margin-left" (click)="nextQuestion(-1)" *ngIf="questionIndex > 0"><i class="fa fa-chevron-left" aria-hidden="true"></i> vorherige Frage</button>
+	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large w3-margin-right" (click)="nextQuestion(1)" *ngIf="questionIndex < questionData.length - 1"><i class="fa fa-chevron-right" aria-hidden="true"></i> nächste Frage</button>
+	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large w3-margin-right" (click)="showResults()"><i class="fa fa-line-chart" aria-hidden="true"></i> Auswertung</button>
      </div>
 </div>
 
