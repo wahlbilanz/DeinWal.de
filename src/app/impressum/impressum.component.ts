@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImpressumComponent implements OnInit {
 
-  test1 = {ja:234, nein:11};
-  test2 = "moin!";
-  constructor() { }
+  addr = 'info <ät> deinWal [punkt] de ';
+  contactlink = 'https://binfalse.de';
+  
+  constructor() {
+    this.addr = this.addr.replace(' <ät> ', '@').replace(' [punkt] ', '.');
+    const tmp = 'ailt';
+      this.contactlink = 'm' + tmp + 'o:' + this.addr;
+   }
 
   ngOnInit() {
   }
