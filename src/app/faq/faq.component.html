@@ -191,6 +191,28 @@
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Warum ist Abstimmung XYZ nicht dabei?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>
+      	Die Auswahl der spezifischen Fragen war sehr aufwendig und hat uns viel Zeit und Energie gekostet.
+      	Nicht jede Abstimmung eignet sich für dieses Projekt.
+      	Wenn eine Partei in einem Antrag bspw. viele verschiedene Forderungen stellt ist es manchmal unmöglich diesen Antrag in eine einfache Frage für DeinWal.de zu übersetzen.
+      	Wir können aber auch nicht einzelne Aspeckte herausziehen, da wir nicht wissen wie die Abgeordneten zu diesem speziellen Aspekt abgestimmt hätten.  
+      	Insgesamt sollten es natürlich auch nicht zu viele Abstimmungen sein.
+      	Im Bundestag liefen mehr als 200 Abstimmungen &mdash; wenn ihr die alle abarbeiten müsstet säßt ihr hier eine ganze Weile und würdet wahrscheinlich irgendwann frustriert aufgeben.
+      	Zumal einige Fragen auch viel Hintergrundwissen abverlangen.
+      </p>
+      <p>
+      	Wenn du trotzdem der Meinung bist, dass eine bestimmte Frage unbedingt bei DeinWal.de auftauchen sollte, kannst du gern versuchen uns davon zu überzeugen!
+      	Schreib uns eine Mail (siehe <a routerLink="/impressum">Impressum</a>) oder <a href="https://github.com/wahlbilanz/DeinWal.de//issues/new">mach ein Ticket bei GitHub auf</a>.
+      	Wir werden dir dann erklaeren warum es die Frage nicht geschafft hat, oder überlegen sie doch noch aufzunehmen :) 
+      </p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
       <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Wer steckt alles hinter DeinWal.de?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
     </header>
     <div class="w3-container" style="display: none">
