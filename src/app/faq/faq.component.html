@@ -58,13 +58,19 @@
       	   in den <a href="https://www.wahl-o-mat.de/">Wahl-O-Mat</a>
       	</li>
       	<li>
-      		in die <a href="http://www.bundestagswahl-bw.de/wahlprogramme_btwahl2017.html">Wahlprogramme der verschiedenen Parteien</a> 
+      		in die <a href="http://www.bundestagswahl-bw.de/wahlprogramme_btwahl2017.html">Wahlprogramme der verschiedenen Parteien</a> (<a href="https://github.com/barrierefreie/parteiprogramme">Barrierefreie Parteiprogramme</a>) 
+      	</li>
+      	<li>
+      		zum <a href="http://www.wahldatenhelfer.de/">Wahl.Daten.Helfer</a>
       	</li>
       	<li>
       		zu <a href="https://wahlomat.co/">Wahlomat & Co.</a>
       	</li>
       	<li>
       		zu <a href="https://bundestagswahl-2017.com/">bundestagswahl-2017.com</a>
+      	</li>
+      	<li>
+      		zur <a href="https://wahl2017.gerritalex.de/">Wahlorientierungshilfe</a>
       	</li>
       </ul>
     </div>
@@ -100,12 +106,12 @@
       </p>
       	
       <p>
-	      <button class="w3-button w3-pale-green w3-hover-green">nicht gespeichert wird</button>
-	      <button class="w3-button w3-green w3-hover-pale-green">gespeichert wird</button>
+	      <button class="w3-button w3-pale-green w3-hover-green">nicht gespeichert</button>
+	      <button class="w3-button w3-green w3-hover-pale-green">gespeichert</button>
       </p>
       
       <p ng-show="updateLocalStorage ()">
-      	Aktuell werden deine Daten <strong>{{localStorageOn}}</strong>.
+      	wird. Aktuell werden deine Daten <strong>{{localStorageOn}}</strong>.
       </p>
       <p>
       	<strong>Wir speichern deine Daten ausschliesslich in deinem Browser.</strong>
@@ -180,6 +186,39 @@
     </header>
     <div class="w3-container" style="display: none">
       <p>Die AfD wurde bisher nicht in den Bundestag gewählt und wir haben daher keine Abstimmungsergebnisse.</p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Wer steckt alles hinter DeinWal.de?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>
+      	Das initiale Team hinter DeinWal.de bestand aus genau 2 Personen: <a href="https://binfalse.de">Martin</a> und <a href="https://github.com/tomthe">Tom</a>.
+      	Wir sind beide unabhängig, gehören keiner Partei an und haben (bisher) keinen Cent fuer das Projekt bekommen.
+      	Unsere Motivation ist einfach polistisches Interesse.
+      	Wir wollten mehr über Bundestag und das System in Deutschland lernen.
+      	Das ist uns mit 
+      </p>
+      <p>
+      	Mittlerweile haben aber vielleicht schon viele andere Leute mitgewirkt.
+      	Wir versuchen alle im <a routerLink="/impressum">Impressum</a> zu nennen.
+      	Im Projekt <a href="https://github.com/wahlbilanz/DeinWal.de">wahlbilanz/DeinWal.de auf GitHub</a> könnt ihr auch sehen <a href="https://github.com/wahlbilanz/DeinWal.de/graphs/contributors">wer Code beigetragen hat</a>.
+      </p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Wer finanziert das Projekt?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>
+      	DeinWal.de wird (bisher) ausschliesslich von uns privat finanziert.
+      	Martin hat die Domain gekauft und stellt den Webserver zur Verfügung.
+      	Brainstormen, Hacken, Schreiben, Formulieren, Layouten, Bewerben etc. in den letzten 9 Monate haben wir alles in unserer privaten Freizeit gemacht.  
+      </p>
     </div>
   </div>
 
