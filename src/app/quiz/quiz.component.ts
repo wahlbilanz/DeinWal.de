@@ -36,6 +36,10 @@ export class QuizComponent implements OnInit {
   doSave: boolean = false; // if true: save choices in localStorage
   /** auswertung der auswertung*/
   overallResult = {};
+  /** text fuer den speichern button */
+  speichernText = 'speichern';
+  /** text fuer den speichern tooltip */
+  speichernTooltip = 'Speichere deine Eingaben lokal in deinem Browser.';
 
   constructor(private qserv: QuestiondataService, private app: AppComponent) {
 
@@ -188,25 +192,25 @@ export class QuizComponent implements OnInit {
 
   /**
    * hat eine partei mit der antwort eines users uebereingestimmt?
-   * 
-   * 
+   *
+   *
    * @param partyResults object of `voteOptions` (ja/nein/..) -> `anzahl votes`
    * @param answer human readable vote of user (ja/nein/..)
-   * 
+   *
    */
   getZustimmungsPunkte(partyResults, answer) {
     const opt = this.voteOptions;
     let nAbgegebeneStimmen = partyResults[opt[0]] + partyResults[opt[1]] + partyResults[opt[2]];
     let punkte = 0;
-    if (answer == 'enthaltung') { //Enthaltung
+    if (answer === 'enthaltung') { // Enthaltung
       punkte = partyResults[opt[0]] + 0.5 * partyResults[opt[1]] + 0.5 * partyResults[opt[2]];
-    } else if (answer == 'ja') { //ja
+    } else if (answer === 'ja') { // ja
       punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[1]];
-    } else if (answer == 'nein') { //nein
+    } else if (answer === 'nein') { // nein
       punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[2]];
     } else {
-      //wenn der Benutzer gar keine Antwort ausgewaehlt hat
-      //sowol punkte als auch nAbgegebeneStimmen auf 0 setzen, damit sie nicht ins gesamtergebnis reinzaehlen:
+      // wenn der Benutzer gar keine Antwort ausgewaehlt hat
+      // sowol punkte als auch nAbgegebeneStimmen auf 0 setzen, damit sie nicht ins gesamtergebnis reinzaehlen:
       punkte = 0;
       nAbgegebeneStimmen = 0;
     }
@@ -225,13 +229,17 @@ export class QuizComponent implements OnInit {
     localStorage.setItem('doSave', JSON.stringify(this.doSave));
     if (this.doSave) {
       this.saveQuestionDataToLocalStorage();
+      this.speichernText = 'gespeichert';
+      this.speichernTooltip = 'Deine Eingaben werden in deinem Browser gespeichert. Nochmal drücken zum Löschen.';
     } else {
       this.eraseQuestionDataFromLocalStorage();
+      this.speichernText = 'speichern';
+      this.speichernTooltip = 'Speichere deine Eingaben lokal in deinem Browser.';
     }
   }
 
   eraseQuestionDataFromLocalStorage() {
-    localStorage.clear(); //alternatively clear the whole thing
+    localStorage.clear(); // alternatively clear the whole thing
   }
 
   saveQuestionDataToLocalStorage() {
