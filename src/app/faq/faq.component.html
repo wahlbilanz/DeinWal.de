@@ -6,16 +6,95 @@
   
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Wie kommt ihr auf den bescheuerten Namen? <i class="fa fa-caret-down"></i></h3>
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Wie kommt ihr auf den bescheuerten Namen?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
     </header>
     <div class="w3-container" style="display: none">
       <p> WahlWal.de war leider schon vergeben und WahlWachtel.de war irgendwie noch bescheuerter.</p>
     </div>
   </div>
+  
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Wie berechnet ihr die Auswertung?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>
+      	Über das Rechenmodell für die Auswertung deiner Antworten haben wir lange nachgedacht. TODO... PDF zum herunterladen
+      </p>
+    </div>
+  </div>
+  
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Also soll ich jetzt SPD, CDU, DIE LINKE oder Die Grünen wählen?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>
+      	Das können wir dir leider nicht sagen... :(
+      </p>
+      <p>
+      	Was ist denn überhaupt mit der FDP oder der AFD?
+      	Oder den vielen anderen Partein?
+      	Dazu haben wir gar keine Daten!
+      </p>
+      <p>
+      	Ausserdem sind die Abstimmungsergebnisse viel komplexer, als es auf den ersten Blick erscheint.
+      	Zum Beispiel gibt es einen Koalitionsvertrag, an den sich SPD und CDU halten müssen/wollen.
+      	Wenn die SPD also für den Bundeswehreinsatz in Darfur stimmt, dann muss das nicht unbedingt heissen, dass die SPD den Einsatz grundsätzlich gut findet.
+      	Vielleicht hatte dieses Thema bei den Koalitionsverhandlungen für die SPD nur weniger Priorität als andere Themen.
+      	Die Abgeordneten sind dann meist durch die Fraktionsdisziplin dazu angehalten einheitlich abzustimmen.
+      	Auf <a href="https://wahlbilanz.de/2017/06/ueber-fraktionsdisziplin-und-den-koalitionsvertrag/">wahlbilanz.de gibt es einen interessanten Artikel über Fraktionsdisziplin und den Koalitionsvertrag.</a> 
+      </p>
+      <p>
+      	DeinWal.de kann und möchte dir also gar keine Empfehlung geben.
+      	Du hast hier ausschliesslich die Möglichkeit die Entscheidungen der Parteien in der letzten Legislaturperiode mit deinen Einstellungen zu vergleichen.
+        <strong>
+        	DeinWal.de sollte auf gar keinen Fall deine einzige Quelle sein, die du für deine Entscheidung zur Bundestagswahl nutzt!
+        </strong>
+        Guck am besten auch mal
+      </p>
+      <ul>
+      	<li>
+      	   in den <a href="https://www.wahl-o-mat.de/">Wahl-O-Mat</a>
+      	</li>
+      	<li>
+      		in die <a href="http://www.bundestagswahl-bw.de/wahlprogramme_btwahl2017.html">Wahlprogramme der verschiedenen Parteien</a> (<a href="https://github.com/barrierefreie/parteiprogramme">Barrierefreie Parteiprogramme</a>) 
+      	</li>
+      	<li>
+      		zum <a href="http://www.wahldatenhelfer.de/">Wahl.Daten.Helfer</a>
+      	</li>
+      	<li>
+      		zu <a href="https://wahlomat.co/">Wahlomat & Co.</a>
+      	</li>
+      	<li>
+      		zu <a href="https://bundestagswahl-2017.com/">bundestagswahl-2017.com</a>
+      	</li>
+      	<li>
+      		zur <a href="https://wahl2017.gerritalex.de/">Wahlorientierungshilfe</a>
+      	</li>
+      </ul>
+    </div>
+  </div>
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Was wird gespeichert? <i class="fa fa-caret-down"></i></h3>
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Wie habt ihr die Fragen ausgewaehlt?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>
+	      Auf <a href="https://wahlbilanz.de">wahlbilanz.de</a> haben wir die Abstimmungen im Bundestag der letzten Legislaturperiode zusammengetragen, analysiert und kategoriesiert.
+	      Wir haben die verschiedenen <a href="https://wahlbilanz.de/categories/">Kategorien</a> dann bewertet und potentielle Fragen und Themengebiete zusammengetragen.
+	      In einem aufwendigen und zähen Prozess wurden die Fragen ausgedünnt und formuliert.
+	      Dabei haben wir stets versucht Formulierungen zu finden, die euch nicht beeinglussen.
+	      Das war äussert kompliziert und ist uns vielleicht nicht immer zu 100% geglückt.
+	      <strong>Wenn du Verbesserungsvorschläge fuer eine Frage hast kannst du dich super gern <a routerLink="/impressum">bei uns melden</a>!</strong> 
+      </p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Was wird gespeichert?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
     </header>
     <div class="w3-container" style="display: none">
       <p>
@@ -23,16 +102,16 @@
       	Wenn "Speichern" aktiviert ist, bleiben deine Antworten erhalten, auch wenn du die Seite neu lädst oder deinen Rechner herunter fährst.
       	Du kannst dann also zum Beispiel morgen mit der Bearbeitung des Quizzes fortfahren.
       	Wenn du deine Antworten speichern möchtest, musst du den Speichern-Knopf oben im Quiz aktivieren.
-      	Der Knopf sieht wie folgt aus, wenn:
+      	Der Knopf sieht wie folgt aus, wenn
       </p>
       	
       <p>
-	      <button class="w3-button w3-pale-green w3-hover-green">nicht gespeichert wird</button>
-	      <button class="w3-button w3-green w3-hover-pale-green">gespeichert wird</button>
+	      <button class="w3-button w3-pale-green w3-hover-green">nicht gespeichert</button>
+	      <button class="w3-button w3-green w3-hover-pale-green">gespeichert</button>
       </p>
       
       <p ng-show="updateLocalStorage ()">
-      	Aktuell werden deine Daten <strong>{{localStorageOn}}</strong>.
+      	wird. Aktuell werden deine Daten <strong>{{localStorageOn}}</strong>.
       </p>
       <p>
       	<strong>Wir speichern deine Daten ausschliesslich in deinem Browser.</strong>
@@ -53,7 +132,7 @@
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Was macht ihr mit meinen Daten? <i class="fa fa-caret-down"></i></h3>
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Was macht ihr mit meinen Daten?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
     </header>
     <div class="w3-container" style="display: none">
       <p>Das ist ja das coole: <strong>Wir haben fast keine Daten von dir!</strong></p>
@@ -85,13 +164,30 @@
 	      Dabei haben wir stets versucht Formulierungen zu finden, die euch nicht beeinflussen.
 	      Das war äussert kompliziert und ist uns vielleicht nicht immer zu 100% geglückt.
 	      Wenn ihr verbesserungsvorschläge für eine Frage habt könnt ihr euch super gern <a routerLink="/impressum">bei uns melden</a>! 
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Wie habt ihr das technisch gelöst?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <h3 (click)="accordion($event)">Wie habt ihr die Fragen ausgewählt? <i class="fa fa-caret-down"></i></h3>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>
+      	Die komplette Webseite ist mit <a href="https://angular.io/">Angular</a> entwickelt.
+      	Angular ist ein Typescript-Framework mit dem sich clientseitige Web-Applikationen sowohl für den Desktop als auch für mobile Geräte entwickeln lassen.
+      	Das Layout haben wir mit dem <a href="https://www.w3schools.com/w3css/default.asp">W3.CSS Framework</a> gestaltet.
+      	Das Webprojekt kompiliert zu statischem Javascript-HTML-CSS-Brei, den wir dann einfach mit einem <a href="https://nginx.org/">nginx</a> Webserver mittels <a href="https://www.docker.com/">Docker</a> Container ausliefern.
+      </p>
+      
+      <p>
+      	<strong>Die Webseite ist übrigens Open Source:</strong>
+      	Auf <a href="https://github.com/wahlbilanz/DeinWal.de">github.com/wahlbilanz/DeinWal.de</a> könnt ihr die Webseite angucken, forken, Verbesserungsvorschläge einreichen und mitmachen!
       </p>
     </div>
   </div>
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Warum erscheint die FDP nicht in der Auswertung? <i class="fa fa-caret-down"></i></h3>
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Warum erscheint die FDP nicht in der Auswertung?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
     </header>
     <div class="w3-container" style="display: none">
       <p>Die FDP wurde nicht in den 18. Bundestag gewählt und wir haben daher keine Abstimmungsergebnisse.</p>
@@ -100,10 +196,68 @@
 
   <div class="w3-card-4 w3-margin">
     <header class="w3-container w3-light-gray">
-      <h3 (click)="accordion($event)">Warum erscheint die AfD nicht in der Auswertung? <i class="fa fa-caret-down"></i></h3>
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Warum erscheint die AfD nicht in der Auswertung?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
     </header>
     <div class="w3-container" style="display: none">
       <p>Die AfD wurde bisher nicht in den Bundestag gewählt und wir haben daher keine Abstimmungsergebnisse.</p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Warum ist Abstimmung XYZ nicht dabei?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>
+      	Die Auswahl der spezifischen Fragen war sehr aufwendig und hat uns viel Zeit und Energie gekostet.
+      	Nicht jede Abstimmung eignet sich für dieses Projekt.
+      	Wenn eine Partei in einem Antrag bspw. viele verschiedene Forderungen stellt ist es manchmal unmöglich diesen Antrag in eine einfache Frage für DeinWal.de zu übersetzen.
+      	Wir können aber auch nicht einzelne Aspeckte herausziehen, da wir nicht wissen wie die Abgeordneten zu diesem speziellen Aspekt abgestimmt hätten.  
+      	Insgesamt sollten es natürlich auch nicht zu viele Abstimmungen sein.
+      	Im Bundestag liefen mehr als 200 Abstimmungen &mdash; wenn ihr die alle abarbeiten müsstet säßt ihr hier eine ganze Weile und würdet wahrscheinlich irgendwann frustriert aufgeben.
+      	Zumal einige Fragen auch viel Hintergrundwissen abverlangen.
+      </p>
+      <p>
+      	Wenn du trotzdem der Meinung bist, dass eine bestimmte Frage unbedingt bei DeinWal.de auftauchen sollte, kannst du gern versuchen uns davon zu überzeugen!
+      	Schreib uns eine Mail (siehe <a routerLink="/impressum">Impressum</a>) oder <a href="https://github.com/wahlbilanz/DeinWal.de//issues/new">mach ein Ticket bei GitHub auf</a>.
+      	Wir werden dir dann erklaeren warum es die Frage nicht geschafft hat, oder überlegen sie doch noch aufzunehmen :) 
+      </p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Wer steckt alles hinter DeinWal.de?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>
+      	Das initiale Team hinter DeinWal.de bestand aus genau 2 Personen: <a href="https://binfalse.de">Martin</a> und <a href="https://github.com/tomthe">Tom</a>.
+      </p>
+      <p>
+      	<strong>Wir sind unabhängig, gehören keiner Partei an und haben (bisher) keinen Cent fuer das Projekt bekommen.</strong>
+      	Unsere Motivation ist einfach polistisches Interesse.
+      	Wir wollten mehr über Bundestag und das System in Deutschland lernen.
+      	Das ist uns auch ganz gut gelungen.
+      	Nun wollen wir das Wissen und weitergeben und aufklären :) 
+      </p>
+      <p>
+      	Mittlerweile haben aber vielleicht schon viele andere Leute mitgewirkt.
+      	Wir versuchen alle im <a routerLink="/impressum">Impressum</a> zu nennen.
+      	Im Projekt <a href="https://github.com/wahlbilanz/DeinWal.de">wahlbilanz/DeinWal.de auf GitHub</a> könnt ihr auch sehen <a href="https://github.com/wahlbilanz/DeinWal.de/graphs/contributors">wer Code beigetragen hat</a>.
+      </p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-light-gray">
+      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Wer finanziert das Projekt?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+    </header>
+    <div class="w3-container" style="display: none">
+      <p>
+      	DeinWal.de wird (bisher) ausschliesslich von uns privat finanziert.
+      	Martin hat die Domain gekauft und stellt den Webserver zur Verfügung.
+      	Brainstormen, Hacken, Schreiben, Formulieren, Layouten, Bewerben etc. in den letzten 9 Monate haben wir alles in unserer Freizeit gemacht.  
+      </p>
     </div>
   </div>
 
