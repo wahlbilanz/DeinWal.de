@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges } from '@angular/core';
 import { QuestiondataService } from '../questiondata.service';
 import { AppComponent } from '../app.component';
 /*import {Http, Headers} from '@angular/http';
@@ -13,7 +13,7 @@ import 'rxjs/add/operator/map';*/
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.css']
 })
-export class QuizComponent implements OnInit {
+export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges {
   /** is this production or debug mode?*/
   production;
   /** the whole question information as it will be retrieved from votes.json*/
