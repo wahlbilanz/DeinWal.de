@@ -191,7 +191,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
             }
           } else {
             for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
-              q['fragen'][f][partyName] = "-";
+              q['fragen'][f][partyName] = '-';
             }
           }
         }
