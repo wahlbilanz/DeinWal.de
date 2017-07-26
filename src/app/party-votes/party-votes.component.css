@@ -1,0 +1,15 @@
+.pie-legend {
+	min-width: 210px;
+}
+.stackedbar {
+    height: 10px;
+    width: 100%;
+    margin: 5px 0;
+    padding: 0;
+}
+
+
+.stackedbarbar {
+	height: 10px;
+	float: left;
+}

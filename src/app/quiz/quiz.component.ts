@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges } from '@angular/core';
 import { QuestiondataService } from '../questiondata.service';
 import { AppComponent } from '../app.component';
 /*import {Http, Headers} from '@angular/http';
@@ -13,7 +13,7 @@ import 'rxjs/add/operator/map';*/
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.css']
 })
-export class QuizComponent implements OnInit {
+export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges {
   /** is this production or debug mode?*/
   production;
   /** the whole question information as it will be retrieved from votes.json*/
@@ -30,25 +30,31 @@ export class QuizComponent implements OnInit {
   progress = 0.0;
   /** auswertung anzeigen?*/
   resultsVisible = false;
-  /** options for votes with: 0 => enthaltung; 1 => ja ; 2 => nein*/ 
+  /** options for votes with: 0 => enthaltung; 1 => ja ; 2 => nein*/
   voteOptions = ['enthaltung', 'ja', 'nein'];
   /** should we save the answers in the local storage*/
   doSave: boolean = false; // if true: save choices in localStorage
   /** auswertung der auswertung*/
   overallResult = {};
+  /** text fuer den speichern button */
+  speichernText = 'speichern';
+  /** text fuer den speichern tooltip */
+  speichernTooltip = 'Speichere deine Eingaben lokal in deinem Browser.';
 
   constructor(private qserv: QuestiondataService, private app: AppComponent) {
+    
+    this.checkSave ();
 
-    if (localStorage.getItem('doSave') && JSON.parse(localStorage.getItem('doSave'))) {
-      this.app.log("restoring data from local storage");
+    if (this.doSave) {
+      this.app.log('restoring data from local storage');
       this.getQuestionDataFromLocalStorage();
     }
 
-    this.app.log("retrieving newest questions");
+    this.app.log('retrieving newest questions');
     this.qserv.getData().subscribe((data) => {
       this.app.log('retrieved data:', data);
       if (!Array.isArray(data)) {
-        this.app.log("error retrieving data!")
+        this.app.log('error retrieving data!')
         // TODO: what are we supposed to do here?
         // at least show some warning...
       } else {
@@ -59,8 +65,9 @@ export class QuizComponent implements OnInit {
           for (const f in q['fragen']) {
             if (q['fragen'].hasOwnProperty(f)) {
               // -1 means -> not answered yet
-              if (!this.answers.hasOwnProperty(f))
+              if (!this.answers.hasOwnProperty(f)) {
                 this.answers[f] = -1;
+              }
               q['fragenIds'].push(f);
             }
           }
@@ -72,6 +79,21 @@ export class QuizComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+  ngAfterContentInit() {
+    this.checkSave ();
+  }
+  ngAfterViewInit() {
+    this.checkSave ();
+  }
+  ngAfterViewChecked() {
+    this.checkSave ();
+  }
+  ngDoCheck() {
+    this.checkSave ();
+  }
+  ngOnChanges(changes) {
+    this.checkSave ();
   }
 
   /**
@@ -86,7 +108,7 @@ export class QuizComponent implements OnInit {
    */
   choose(id, choice) {
     // unselect a previously selected answer
-    if (this.answers[id] == choice) {
+    if (this.answers[id] === choice) {
       this.answers[id] = null;
     } else {
       // select this answer
@@ -104,16 +126,15 @@ export class QuizComponent implements OnInit {
     this.questionIndex = n;
 
     // there is no question with negative index...
-    if (this.questionIndex < 0)
+    if (this.questionIndex < 0) {
       this.questionIndex = 0;
+    }
 
     // if n is bigger than the number of questions -> show results
     if (this.questionIndex >= this.questionData.length) {
       this.showResults();
-    }
-    // otherwise show question n
-    else {
-      this.app.overwriteTitle("Quiz");
+    } else { // otherwise show question n
+      this.app.overwriteTitle('Quiz');
       this.resultsVisible = false;
       this.progress = 100.0 * n / this.questionData.length;
       this.question = this.questionData[this.questionIndex];
@@ -151,7 +172,7 @@ export class QuizComponent implements OnInit {
     this.app.overwriteTitle("Auswertung");
 
     this.overallResult = { 'gruenen': '-', 'cdu/csu': '-', 'die.linke': '-', 'spd': '-' };
-    let nzustimmung = { 'gruenen': 0.0, 'cdu/csu': 0.0, 'die.linke': 0.0, 'spd': 0.0 };
+    const nzustimmung = { 'gruenen': 0.0, 'cdu/csu': 0.0, 'die.linke': 0.0, 'spd': 0.0 };
     let nAnswered = 0;
 
     for (const q of this.questionData) {
@@ -162,15 +183,15 @@ export class QuizComponent implements OnInit {
             const answer = opt[this.answers[f]];
             const results = q['fragen'][f]['results'];
             nAnswered++;
-            for (let partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
-              let tempPunkte = this.getZustimmungsPunkte(results[partyName], answer);
+            for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
+              const tempPunkte = this.getZustimmungsPunkte(results[partyName], answer);
               q['fragen'][f][partyName] = this.toPercent(tempPunkte.punkteRelativ);
               nzustimmung[partyName] += tempPunkte.punkteRelativ;
               this.app.log('---h3', partyName, tempPunkte);
             }
           } else {
-            for (let partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
-              q['fragen'][f][partyName] = "-";
+            for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
+              q['fragen'][f][partyName] = '-';
             }
           }
         }
@@ -188,25 +209,25 @@ export class QuizComponent implements OnInit {
 
   /**
    * hat eine partei mit der antwort eines users uebereingestimmt?
-   * 
-   * 
+   *
+   *
    * @param partyResults object of `voteOptions` (ja/nein/..) -> `anzahl votes`
    * @param answer human readable vote of user (ja/nein/..)
-   * 
+   *
    */
   getZustimmungsPunkte(partyResults, answer) {
     const opt = this.voteOptions;
     let nAbgegebeneStimmen = partyResults[opt[0]] + partyResults[opt[1]] + partyResults[opt[2]];
     let punkte = 0;
-    if (answer == 'enthaltung') { //Enthaltung
+    if (answer === 'enthaltung') { // Enthaltung
       punkte = partyResults[opt[0]] + 0.5 * partyResults[opt[1]] + 0.5 * partyResults[opt[2]];
-    } else if (answer == 'ja') { //ja
+    } else if (answer === 'ja') { // ja
       punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[1]];
-    } else if (answer == 'nein') { //nein
+    } else if (answer === 'nein') { // nein
       punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[2]];
     } else {
-      //wenn der Benutzer gar keine Antwort ausgewaehlt hat
-      //sowol punkte als auch nAbgegebeneStimmen auf 0 setzen, damit sie nicht ins gesamtergebnis reinzaehlen:
+      // wenn der Benutzer gar keine Antwort ausgewaehlt hat
+      // sowol punkte als auch nAbgegebeneStimmen auf 0 setzen, damit sie nicht ins gesamtergebnis reinzaehlen:
       punkte = 0;
       nAbgegebeneStimmen = 0;
     }
@@ -221,8 +242,9 @@ export class QuizComponent implements OnInit {
 
 
   toggleSave() {
-    this.doSave = !this.doSave;
-    localStorage.setItem('doSave', JSON.stringify(this.doSave));
+    localStorage.setItem('doSave', JSON.stringify (!this.doSave));
+    this.checkSave ();
+    
     if (this.doSave) {
       this.saveQuestionDataToLocalStorage();
     } else {
@@ -230,8 +252,23 @@ export class QuizComponent implements OnInit {
     }
   }
 
+  checkSave () {
+    this.doSave = false;
+    if (localStorage.getItem ('doSave') !== null) {
+      this.doSave = JSON.parse(localStorage.getItem('doSave'));
+    }
+    
+    if (this.doSave) {
+      this.speichernText = 'gespeichert';
+      this.speichernTooltip = 'Deine Eingaben werden in deinem Browser gespeichert. Nochmal drücken zum Löschen.';
+    } else {
+      this.speichernText = 'speichern';
+      this.speichernTooltip = 'Speichere deine Eingaben lokal in deinem Browser.';
+    }
+  }
+
   eraseQuestionDataFromLocalStorage() {
-    localStorage.clear(); //alternatively clear the whole thing
+    localStorage.clear(); // alternatively clear the whole thing
   }
 
   saveQuestionDataToLocalStorage() {
