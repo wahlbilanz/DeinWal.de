@@ -1,31 +1,13 @@
-<div class="w3-card w3-blue">
-
-  <table class="w3-table">
-    <tr>
-      <td>Ja:</td>
-      <td>{{results.ja}}</td>
-      <td>{{resultsPercent.ja | percent:'1.1-1'}}</td>
-    </tr>
-
-    <tr class="w3-light-grey w3-tiny">
-      <td colspan="3"><div class="w3-green" [style.width.%]="resultsPercent.ja * 100" style="margin:0;padding:0;top:0;bottom:0">Ja</div></td>
-    </tr>
-    <tr>
-      <td>Nein:</td>
-      <td>{{results.nein}}</td>
-      <td>{{resultsPercent.nein | percent:'1.1-1'}}</td>
-    </tr>
-    <tr class="w3-light-grey w3-tiny">
-      <td colspan="3"><div class="w3-red" [style.width.%]="resultsPercent.nein * 100" style="margin:0;padding:0;top:0;bottom:0">Nein</div></td>
-    </tr>
-    <tr>
-      <td>Enthaltungen:</td>
-      <td>{{results.enthaltung}}</td>
-      <td>{{resultsPercent.enthaltung | percent:'1.1-1'}}</td>
-    </tr>
-    <tr class="w3-light-grey w3-tiny">
-      <td colspan="3"><div class="w3-blue" [style.width.%]="resultsPercent.enthaltung * 100" style="margin:0;padding:0;top:0;bottom:0">Enthaltungen</div></td>
-    </tr>
-  </table>
+<div class="w3-card">
+	<div #pieDiv id="{{id}}" class="pie w3-left"></div>
+	<div id="{{id}}-legend" class="pie-legend w3-small">
+		<div class="stackedbar">
+			<div class="stackedbarbar w3-green" [style.width.%]="resultsPercent.ja * 100" style="margin:0;padding:0;top:0;bottom:0"></div>
+			<div class="stackedbarbar w3-red" [style.width.%]="resultsPercent.nein * 100" style="margin:0;padding:0;top:0;bottom:0"></div>
+			<div class="stackedbarbar w3-blue" [style.width.%]="resultsPercent.enthaltung * 100" style="margin:0;padding:0;top:0;bottom:0"></div><br>
+		</div>
+		<div>Ja: {{results.ja}} &mdash; Nein: {{results.nein}} &mdash; Enthaltung: {{results.enthaltung}}</div>
+		<div>Score: {{score}}</div> 
+	</div>
 </div>
     
