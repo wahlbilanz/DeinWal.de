@@ -57,7 +57,7 @@ export class PartyVotesComponent implements OnInit {
     } else if (this.choice === 2) {
       this.score = '(' + this.results.nein + ' + 1/2 · ' + this.results.enthaltung + ') / ' + this.nAbgeordnete + ' = ' + this.quiz.toPercent((this.results.nein + .5 * this.results.enthaltung) / this.nAbgeordnete);
     } else if (this.choice === 0) {
-      this.score = '(' + ' + 1/2 · ' + this.results.ja + '+ 1/2 · ' + this.results.nein + this.results.enthaltung + ') / ' + this.nAbgeordnete + ' = ' + this.quiz.toPercent((this.results.enthaltung + .5 * this.results.ja + .5 * this.results.nein) / this.nAbgeordnete);
+      this.score = '(' + this.results.enthaltung + ' + 1/2 · ' + this.results.ja + '+ 1/2 · ' + this.results.nein + this.results.enthaltung + ') / ' + this.nAbgeordnete + ' = ' + this.quiz.toPercent((this.results.enthaltung + .5 * this.results.ja + .5 * this.results.nein) / this.nAbgeordnete);
     }
   }
 
