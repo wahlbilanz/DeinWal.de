@@ -34,6 +34,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
   voteOptions = ['enthaltung', 'ja', 'nein'];
   /** should we save the answers in the local storage*/
   doSave: boolean = false; // if true: save choices in localStorage
+  /** saving is impossible if the users blocks local storage */
+  saveImpossible: boolean = false;
   /** auswertung der auswertung*/
   overallResult = {};
   /** text fuer den speichern button */
@@ -242,25 +244,35 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 
 
   toggleSave() {
-    localStorage.setItem('doSave', JSON.stringify (!this.doSave));
-    this.checkSave ();
-    
-    if (this.doSave) {
-      this.saveQuestionDataToLocalStorage();
-    } else {
-      this.eraseQuestionDataFromLocalStorage();
-    }
+	if (!this.saveImpossible) {
+	    localStorage.setItem('doSave', JSON.stringify (!this.doSave));
+	    this.checkSave ();
+	    
+	    if (this.doSave) {
+	      this.saveQuestionDataToLocalStorage();
+	    } else {
+	      this.eraseQuestionDataFromLocalStorage();
+	    }
+	}
   }
 
   checkSave () {
     this.doSave = false;
-    if (localStorage.getItem ('doSave') !== null) {
-      this.doSave = JSON.parse(localStorage.getItem('doSave'));
-    }
     
+    try {
+	    if (localStorage.getItem ('doSave') !== null) {
+	      this.doSave = JSON.parse(localStorage.getItem('doSave'));
+	    }
+    } catch (e) {
+    	this.saveImpossible = true;
+    }
+
     if (this.doSave) {
       this.speichernText = 'gespeichert';
       this.speichernTooltip = 'Deine Eingaben werden in deinem Browser gespeichert. Nochmal drücken zum Löschen.';
+    } else if (this.saveImpossible) {
+        this.speichernText = 'speichern nicht möglich';
+        this.speichernTooltip = 'Dein Browser erlaubt keine Cookies und/oder local Storage. Deine Eingaben gehen verloren wenn du das Fenster schliesst oder neu lädst.';
     } else {
       this.speichernText = 'speichern';
       this.speichernTooltip = 'Speichere deine Eingaben lokal in deinem Browser.';
@@ -268,7 +280,9 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
   }
 
   eraseQuestionDataFromLocalStorage() {
-    localStorage.clear(); // alternatively clear the whole thing
+	if (!this.saveImpossible) {
+		localStorage.clear(); // clear the whole thing
+	}
   }
 
   saveQuestionDataToLocalStorage() {

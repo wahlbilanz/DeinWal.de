@@ -5,7 +5,7 @@
     <div class="w3-container">
 		<span class="w3-tooltip w3-margin">
 			<span style="position:absolute;left:0;top:1.8em;width:15em;" class="w3-text w3-tag w3-padding-16 w3-animate-opacity">{{speichernTooltip}}</span> 
-			<button class="w3-button w3-hover-green" (click)="toggleSave()" [class.w3-pale-green]="!doSave" [class.w3-green]="doSave"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
+			<button class="w3-button w3-hover-green" (click)="toggleSave()" [class.w3-pale-green]="!doSave && !saveImpossible" [class.w3-green]="doSave && !saveImpossible" [class.w3-dark-grey]="saveImpossible" [class.w3-hover-red]="saveImpossible"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
 		</span>
         <div class="question-tags w3-right w3-margin">
         	<span class="question-tag" *ngFor="let t of question.topic"><a href="https://wahlbilanz.de/categories/#{{t}}">{{t}}</a></span>

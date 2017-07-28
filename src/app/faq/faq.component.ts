@@ -33,16 +33,23 @@ export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, Af
   
   
   updateLocalStorage () {
-    if (localStorage.getItem('doSave') && JSON.parse(localStorage.getItem('doSave'))) {
-      this.localStorageOn = 'gespeichert';
-    } else {
-      this.localStorageOn = 'nicht gespeichert';
-    }
+	try {
+	    if (localStorage.getItem('doSave') && JSON.parse(localStorage.getItem('doSave'))) {
+	      this.localStorageOn = 'gespeichert';
+	    } else {
+	      this.localStorageOn = 'nicht gespeichert';
+	    }
+	} catch (e) {
+	    this.localStorageOn = 'nicht gespeichert';
+	}
   }
   
 
   clearData () {
-    localStorage.clear();
+	try {
+	    localStorage.clear();
+	} catch (e) {
+	}
     this.updateLocalStorage ();
   }
   
@@ -70,8 +77,6 @@ export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, Af
    * this can easily be used from the HTML -- see there for an example ;-)
    */
   accordion(clickEvent) {
-    console.log(clickEvent);
-    console.log(clickEvent.target.parentElement);
     
     let caret = null;
     for (let i = 0; i < clickEvent.target.childNodes.length; i++) {
