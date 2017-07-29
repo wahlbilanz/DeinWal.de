@@ -25,7 +25,7 @@ export class PartyVotesComponent implements OnInit {
 
   resultsPercent = {'ja': 0.0, 'nein': 95.6, 'enthaltung': 4.4};
   
-  score = 'unknown';
+  score = '-';
   nAbgeordnete = 0;
   
   id = 'unknown';
