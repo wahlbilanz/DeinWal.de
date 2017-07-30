@@ -27,7 +27,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
   /** the usesr's answers to the questions, keys are the question ids, values are one of `voteOptions`*/
   answers = {};
   /** current progress in the quiz */
-  progress = 0.0;
+  progress = "0%";
   /** auswertung anzeigen?*/
   resultsVisible = false;
   /** options for votes with: 0 => enthaltung; 1 => ja ; 2 => nein*/
@@ -138,7 +138,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
     } else { // otherwise show question n
       this.app.overwriteTitle('Quiz');
       this.resultsVisible = false;
-      this.progress = 100.0 * n / this.questionData.length;
+      this.progress = this.toPercent (n / this.questionData.length);
       this.question = this.questionData[this.questionIndex];
       // get sub-questions
       this.actualQuestions = Object.keys(this.question['fragen']);
@@ -170,7 +170,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    */
   showResults() {
     this.questionIndex = this.questionData.length;
-    this.progress = 100;
+    this.progress = this.toPercent (1);
     this.app.overwriteTitle("Auswertung");
 
     this.overallResult = { 'gruenen': '-', 'cdu/csu': '-', 'die.linke': '-', 'spd': '-' };
