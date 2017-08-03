@@ -35,8 +35,8 @@ export class PartyVotesComponent implements OnInit {
 
   ngOnInit () {
     this.id = this.qid + '-' + this.party;
-    console.log (this.questions.fragen[this.qid]);
-    console.log (this.party);
+    //console.log (this.questions.fragen[this.qid]);
+    //console.log (this.party);
     this.results = this.questions.fragen[this.qid].results[this.party];
     
     

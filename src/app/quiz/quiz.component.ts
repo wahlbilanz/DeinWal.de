@@ -189,7 +189,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    * auswertungstabelle generieren und anzeigen
    */
   showResults() {
-    this.location.go('quiz/results') // 
+    this.location.go('quiz/results') // change URL
     this.questionIndex = this.questionData.length;
     this.progress = this.toPercent (1);
     this.app.overwriteTitle("Auswertung");
@@ -210,7 +210,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
               const tempPunkte = this.getZustimmungsPunkte(results[partyName], answer);
               q['fragen'][f][partyName] = this.toPercent(tempPunkte.punkteRelativ);
               nzustimmung[partyName] += tempPunkte.punkteRelativ;
-              this.app.log('---h3', partyName, tempPunkte);
+              //this.app.log('---h3', partyName, tempPunkte);
             }
           } else {
             for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
