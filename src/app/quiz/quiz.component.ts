@@ -158,10 +158,12 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 
   /**
    * beautiful percentage:
-   * give n in [0,1] and get percent in [0.00, 100.00]
+   * give n in [0,1] and get percent in [0.0, 100.0]
+   * with nachkommastellen precision
    */
-  toPercent(n) {
-    return (Math.round(10000 * n) / 100) + "%";
+  toPercent(n,nachkommastellen=0) {
+    let precision = [ 1, 10, 100, 1000, 1000, 10000] //10 ^ x-1
+    return (Math.round(100 * precision[nachkommastellen] * n) / (precision[nachkommastellen])) + "%";
   }
 
 
