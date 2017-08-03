@@ -22,6 +22,11 @@ const routes: Routes = [
     data: {title: 'Quiz'}
   },
   {
+    path: 'quiz/:questionPage',
+    component: QuizComponent,
+    data: {title: 'Quiz'}
+  },
+  {
     path: 'impressum',
     component: ImpressumComponent,
     data: {title: 'Impressum'}

@@ -1,4 +1,6 @@
 import { Component, OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
+import { Location } from '@angular/common';
 import { QuestiondataService } from '../questiondata.service';
 import { AppComponent } from '../app.component';
 /*import {Http, Headers} from '@angular/http';
@@ -43,7 +45,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
   /** text fuer den speichern tooltip */
   speichernTooltip = 'Speichere deine Eingaben lokal in deinem Browser.';
 
-  constructor(private qserv: QuestiondataService, private app: AppComponent) {
+  constructor(private qserv: QuestiondataService, private app: AppComponent, private route: ActivatedRoute,private location: Location) {
     
     this.checkSave ();
 
@@ -76,11 +78,26 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
         }
       }
       // show first question
-      this.showQuestion(0);
+      //this.showQuestion(0); //happens in ngOnInit
     });
   }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      try {
+        if(params['questionPage']=='results'){
+          this.showResults();
+        } else {
+          this.questionIndex = Number.parseInt(params['questionPage']);
+          this.showQuestion(this.questionIndex);
+        }
+      } catch (e) {
+        console.log('keine question id angegeben ')
+        // show first question
+        this.showQuestion(0);
+      }
+    });
+
   }
   ngAfterContentInit() {
     this.checkSave ();
@@ -126,6 +143,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    */
   showQuestion(n) {
     this.questionIndex = n;
+    this.location.go('quiz/' + n) // die entsprechende URL im adressfeld anzeigen und auf history-stack pushen
 
     // there is no question with negative index...
     if (this.questionIndex < 0) {
@@ -171,6 +189,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    * auswertungstabelle generieren und anzeigen
    */
   showResults() {
+    this.location.go('quiz/results') // 
     this.questionIndex = this.questionData.length;
     this.progress = this.toPercent (1);
     this.app.overwriteTitle("Auswertung");
