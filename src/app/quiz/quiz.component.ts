@@ -85,7 +85,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
   ngOnInit() {
     this.route.params.subscribe(params => {
       try {
-        if(params['questionPage']=='results'){
+        if(params['questionPage']=='auswertung'){
           this.showResults();
         } else {
           this.questionIndex = Number.parseInt(params['questionPage']);
@@ -189,7 +189,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    * auswertungstabelle generieren und anzeigen
    */
   showResults() {
-    this.location.go('quiz/results') // change URL
+    this.location.go('quiz/auswertung') // change URL
     this.questionIndex = this.questionData.length;
     this.progress = this.toPercent (1);
     this.app.overwriteTitle("Auswertung");
