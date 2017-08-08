@@ -57,7 +57,7 @@
 					}
 				}
 			},
-			"018-215-02": {
+			"018-112-01": {
 				"context": "",
 				"frage" : "Sollte das Kindergeld von 184 Euro auf 186 Euro und der Kinderfreibetrag von 2184 auf 2220 Euro erhöht werden (Juni 2015)?",
 				"choice" : -1,
@@ -196,47 +196,56 @@
 }
 				}
 			},
-			"018-046-06": {
+			"018-241-01": {
 				"context": "",
 				"frage" : "Sollten die Renten in Ost und West durch steuerfinanzierte Zuschüsse angeglichen werden?",
 				"choice" : -1,
 				"short" : "Ost-Renten angleichen",
 				"subtext" : "",
-				"link": "https://wahlbilanz.de/abstimmungen/018-046-06/",
+				"link": "https://wahlbilanz.de/abstimmungen/018-241-01/",
 				"results": {
+
     "cdu/csu": {
       "enthaltung": 0,
-      "gesamt": 311,
-      "ja": 283,
-      "nein": 0,
-      "nichtabgegeben": 28,
+      "gesamt": 309,
+      "ja": 0,
+      "nein": 259,
+      "nichtabgegeben": 50,
       "ungueltig": 0
     },
     "die.linke": {
       "enthaltung": 0,
       "gesamt": 64,
-      "ja": 0,
-      "nein": 49,
-      "nichtabgegeben": 15,
+      "ja": 53,
+      "nein": 0,
+      "nichtabgegeben": 11,
       "ungueltig": 0
     },
-    "file": "20140703_6_xls-data.xls",
+    "file": "20170623_1_xls-data.xls",
+    "fraktionslos": {
+      "enthaltung": 0,
+      "gesamt": 1,
+      "ja": 0,
+      "nein": 0,
+      "nichtabgegeben": 1,
+      "ungueltig": 0
+    },
     "gruenen": {
       "enthaltung": 54,
       "gesamt": 63,
       "ja": 0,
-      "nein": 1,
-      "nichtabgegeben": 8,
+      "nein": 0,
+      "nichtabgegeben": 9,
       "ungueltig": 0
     },
     "spd": {
-      "enthaltung": 0,
+      "enthaltung": 4,
       "gesamt": 193,
-      "ja": 183,
-      "nein": 0,
-      "nichtabgegeben": 10,
+      "ja": 0,
+      "nein": 149,
+      "nichtabgegeben": 40,
       "ungueltig": 0
-}
+	}
 				}
 			},
 			"018-209-05": {
