@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, Input, ViewChild } from '@angular/core';
 import { QuizComponent } from '../quiz/quiz.component';
-declare var d3: any;
+//declare var d3: any;
 
 @Component({
   selector: 'app-party-votes',
