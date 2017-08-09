@@ -97,7 +97,7 @@
             "subtext": "",
             "fragen": {
                 "018-200-01": {
-                    "context": "Ein Gesetzentwurf plant eine umfangreiche Arzneimittelreform. er Entwurf verlangt unter anderem (i) Verschreibungen von Arzneimitteln nur nach direktem Arzt-Patienten-Kontakt, (ii) eine unabhängige ethische Abwägung jeder klinischen Studie, (iii) eine Registrierungspflicht von klinischen Studien bei einer Ethikkommission auf Bundesebene.",
+                    "context": "Ein Gesetzentwurf plant eine umfangreiche Arzneimittelreform. Der Entwurf verlangt unter anderem (i) Verschreibungen von Arzneimitteln nur nach direktem Arzt-Patienten-Kontakt; (ii) eine unabhängige ethische Abwägung jeder klinischen Studie; (iii) eine Registrierungspflicht von klinischen Studien bei einer Ethikkommission auf Bundesebene.",
                     "frage": "Stimmst du dieser umfassenden Reform zu?",
                     "short": "Arzneimittelrechtliche Reform",
                     "subtext": "",
