@@ -308,6 +308,60 @@
         },
         {
             "topic": [
+                "Freihandelsabkommen"
+            ],
+            "titel": "Freihandelsabkommen",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "018-190-04": {
+                    "context": "Internationale Abkommen vereinfachen den Handelsverkehr. Der Inhalt des geplanten Kanada-EU-Freihandelabkommens CETA ist geheim.",
+                    "frage": "Sollte CETA weiterverfolgt werden? (September 2016)",
+                    "short": "CETA weitermachen",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-190-04/",
+                    "invert": false
+                },
+                "018-054-03": {
+                    "context": "Sogenannte Schiedsgerichte dienen dem Schutz von Investoren. Investoren und Firmen können Staaten vor Schiedsgerichten auf Schadenersatz verklagen, falls diese z.B. Gesetze erlassen, die den Wert von Investitionen schmälern.",
+                    "frage": "Sollte sich die Bundesregierung dafür einsetzen, dass Schiedsgerichte kein Teil von CETA werden? Sollte sich die Bundesregierung gegen Schiedsgerichte in CETA einsetzen?",
+                    "short": "Keine Schiedsgerichte in CETA",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-054-03/",
+                    "invert": false
+                }
+            }
+        },
+        {
+            "topic": [
+                ""
+            ],
+            "titel": "",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "": {
+                    "context": "",
+                    "frage": "",
+                    "short": "",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "invert": false
+                },
+                "": {
+                    "context": "",
+                    "frage": "",
+                    "short": "",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "invert": false
+                }
+            }
+        },
+        {
+            "topic": [
                 ""
             ],
             "titel": "",
