@@ -397,6 +397,76 @@
         },
         {
             "topic": [
+                "Finanzen"
+            ],
+            "titel": "Finanzen",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "018-221-01": {
+                    "context": "Die NATO erwartet von ihren Partnern Verteidigungsausgaben von 2% des Bruttoinlandsprodukts. Für Deutschland würde sich eine Erhöhung des Verteidigungsetats von derzeit 34,3 Milliarden Euro auf mehr als 60 Milliarden Euro im Jahr 2020 ergeben.",
+                    "frage": "Sollte der Deutsche Bundestag diese Forderung explizit ablehnen?",
+                    "short": "Bundeswehr-Etat auf 2% BIP",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-221-01/",
+                    "invert": false
+                },
+                "018-018-01": {
+                    "context": "",
+                    "frage": "Sollten die Diäten der Bundestagsabgeordneten von 8.252 Euro auf 9.082 Euro erhöht werden?",
+                    "short": "Diäten erhöhen",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-018-01/",
+                    "invert": false
+                },
+                "018-118-01": {
+                    "context": "",
+                    "frage": "Sollte Griechenland ein Kreditpaket mit vielen Auflagen im Umfang von 86 Milliarden Euro gewährt werden? (Anteil Deutschlands: 23,2 Mrd €, August 2015)",
+                    "short": "Kreditpaket Griechenland",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-118-01/",
+                    "invert": false
+                },
+                "018-098-03": {
+                    "context": "",
+                    "frage": "Sollte auf deutschen Autobahnen eine Maut für PKWs eingeführt werden?",
+                    "short": "PKW-Maut",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-098-03/",
+                    "invert": false
+                }
+            }
+        },
+        {
+            "topic": [
+                ""
+            ],
+            "titel": "",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "": {
+                    "context": "",
+                    "frage": "",
+                    "short": "",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "invert": false
+                },
+                "": {
+                    "context": "",
+                    "frage": "",
+                    "short": "",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "invert": false
+                }
+            }
+        },
+        {
+            "topic": [
                 ""
             ],
             "titel": "",
