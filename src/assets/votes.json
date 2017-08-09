@@ -335,27 +335,35 @@
         },
         {
             "topic": [
-                ""
+                "Energie"
             ],
-            "titel": "",
+            "titel": "Energie I",
             "beschreibung": "",
             "bild": "",
             "subtext": "",
             "fragen": {
-                "": {
-                    "context": "",
-                    "frage": "",
-                    "short": "",
+                "018-033-01": {
+                    "context": "Deutschland kooperiert mit Indien und Brasilien im Bereich der Nutzung von Kernenergie.",
+                    "frage": "Sollte diese Kooperation gekündigt werden?",
+                    "short": "Kooperation bei Kernenergie stoppen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-033-01/",
                     "invert": false
                 },
-                "": {
-                    "context": "",
-                    "frage": "",
-                    "short": "",
+                "018-115-06": {
+                    "context": "Die EU-Kommision hat die Förderung eines britischen Atomkraftwerkes (Hinkley-Point C) beschlossen.",
+                    "frage": "Sollte sich Deutschland dagegen wehren?",
+                    "short": "Atomkraft-Subventionen in GB verhindern",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-115-06/",
+                    "invert": false
+                },
+                "018-167-01": {
+                    "context": "Mit der Fracking-Technologie kann aus bestimmten Gesteinschichten Öl und Gas gewonnen werden. Fracking birgt dabei Risiken für Umwelt und Gesundheit.",
+                    "frage": "Sollte Fracking verboten werden?",
+                    "short": " Fracking verbieten",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-167-01/",
                     "invert": false
                 }
             }
