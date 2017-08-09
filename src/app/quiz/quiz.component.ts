@@ -54,13 +54,22 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
       this.getQuestionDataFromLocalStorage();
     }
 
-    this.app.log('retrieving newest questions');
+    this.question = {
+			'titel': 'Quiz wird geladen',
+			'beschreibung': 'Das kein unter Umstaenden eine Sekunde dauern...'
+		};
+		
+    /*this.app.log('retrieving newest questions');
     this.qserv.getData().subscribe((data) => {
       this.app.log('retrieved data:', data);
       if (!Array.isArray(data)) {
         this.app.log('error retrieving data!')
         // TODO: what are we supposed to do here?
         // at least show some warning...
+				this.question = {
+					'titel': 'Es ist ein Fehler aufgetreten!',
+					'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Versuch es spaeter noch einmal!'
+				};
       } else {
         this.questionData = data;
         // for every question -> extract the actual question ids, that makes it easier to iterate over questions in the HTML
@@ -78,25 +87,76 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
         }
       }
       // show first question
-      //this.showQuestion(0); //happens in ngOnInit
-    });
-  }
-
-  ngOnInit() {
+      this.showQuestion(0); //happens in ngOnInit
+    });*/
+		
+		
+		// initial card:
+		let initialCard = 0;
+		
     this.route.params.subscribe(params => {
       try {
         if(params['questionPage']=='auswertung'){
-          this.showResults();
+					initialCard = -1;
         } else {
-          this.questionIndex = Number.parseInt(params['questionPage']);
-          this.showQuestion(this.questionIndex);
+					initialCard = Number.parseInt(params['questionPage']);
         }
       } catch (e) {
         console.log('keine question id angegeben ')
         // show first question
-        this.showQuestion(0);
+				initialCard = 0;
       }
     });
+		
+		if (Number.isNaN(initialCard)) {
+			initialCard = 0;
+		}
+		
+		this.app.log('retrieving newest questions');
+    this.qserv.getData().subscribe((data) => {
+      this.app.log('retrieved data:', data);
+      if (!Array.isArray(data)) {
+        this.app.log('error retrieving data!')
+        // TODO: what are we supposed to do here?
+        // at least show some warning...
+				this.question = {
+					'titel': 'Es ist ein Fehler aufgetreten!',
+					'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Versuch es spaeter noch einmal!'
+				};
+      } else {
+        this.questionData = data;
+        // for every question -> extract the actual question ids, that makes it easier to iterate over questions in the HTML
+        for (const q of this.questionData) {
+          q['fragenIds'] = [];
+          for (const f in q['fragen']) {
+            if (q['fragen'].hasOwnProperty(f)) {
+              // -1 means -> not answered yet
+              if (!this.answers.hasOwnProperty(f)) {
+                this.answers[f] = -1;
+              }
+              q['fragenIds'].push(f);
+            }
+          }
+        }
+      }
+      
+      console.log (initialCard);
+      
+      if (initialCard < 0) {
+          this.showResults();
+			} else {
+				this.showQuestion(initialCard);
+			}
+			
+    });
+		
+		
+		
+		
+  }
+
+  ngOnInit() {
+		
 
   }
   ngAfterContentInit() {
@@ -143,17 +203,24 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    */
   showQuestion(n) {
     this.questionIndex = n;
-    this.location.go('quiz/' + n) // die entsprechende URL im adressfeld anzeigen und auf history-stack pushen
 
     // there is no question with negative index...
     if (this.questionIndex < 0) {
       this.questionIndex = 0;
     }
+    
+    console.log (this.questionIndex);
+    console.log (this.questionData);
 
     // if n is bigger than the number of questions -> show results
-    if (this.questionIndex >= this.questionData.length) {
+    if (this.questionIndex >= this.questionData.length && this.questionData.length > 0) {
       this.showResults();
+		} else if (this.questionData.length == 0) {
+			this.resultsVisible = false;
+			this.progress = this.toPercent (0);
+      this.actualQuestions = [];
     } else { // otherwise show question n
+			this.location.go('quiz/' + this.questionIndex) // die entsprechende URL im adressfeld anzeigen und auf history-stack pushen
       this.app.overwriteTitle('Quiz');
       this.resultsVisible = false;
       this.progress = this.toPercent (n / this.questionData.length);
