@@ -370,27 +370,27 @@
         },
         {
             "topic": [
-                ""
+                "Energie"
             ],
-            "titel": "",
-            "beschreibung": "",
+            "titel": "Energie II",
+            "beschreibung": "Erneuerbare Energien wie Wind- und Solarenergie machen derzeit einen Anteil von 33% an der Stromversorgung in Deutschland aus. Bei ihrer Produktion wird kein CO2 in die Atmosphäre freigesetzt. Sie stellen jedoch hohe Anforderungen an das Stromnetz und verursachen meist höhere Kosten. Der Bundestag hat sich mit mehreren Anträgen und Gesetzesvorschlägen zum Thema beschäftigt.",
             "bild": "",
             "subtext": "",
             "fragen": {
-                "": {
-                    "context": "",
-                    "frage": "",
-                    "short": "",
+                "018-184-01": {
+                    "context": "Bisher wurden alle Produzenten erneuerbarer Energien durch das <abbr title='Erneuerbare-Energien-Gesetz'>EEG</abbr> gefördert. Durch die Einfuehrung einer Obergrenze soll der Wettbewerb zwischen den Produzenten angeregt werden und die EEG-Umlage fuer die Verbraucher sinken. Damit fällt die garantierte Vergütung für erneuerbare Energien aber weg.",
+                    "frage": "Sollte es eine Obergrenze für die EEG-Umlage geben?",
+                    "short": "EEG-Förderung begrenzen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-184-01/",
                     "invert": false
                 },
-                "": {
-                    "context": "",
-                    "frage": "",
-                    "short": "",
+                "018-044-05": {
+                    "context": "Windenergieanlagen verursachen Lärm. Die Topografie der Bundesländer unterscheidet sich.",
+                    "frage": "Sollten Mindestabstände zwischen Windenergieanlagen und Wohnungen durch die Bundesländer (statt Bundesweit) geregelt werden?",
+                    "short": "Windräder Ländersache",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-044-05/",
                     "invert": false
                 }
             }
