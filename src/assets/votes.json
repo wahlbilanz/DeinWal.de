@@ -1,5 +1,386 @@
 [
 	{
+		"topic": ["Familie"],
+		"titel": "Familie",
+		"beschreibung": "",
+		"bild": "",
+		"subtext": "",
+		"fragen": {
+			"018-244-01" : {
+				"context": "",
+				"frage" : "Sollten gleichgeschlechtliche Paare ein Recht auf Eheschließung bekommen, gleich dem zwischen Mann und Frau?",
+				"choice" : -1,
+				"short" : "Ehe für alle",
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-244-01/",
+				"results": {
+					"cdu/csu": {
+					"enthaltung": 4,
+					"gesamt": 309,
+					"ja": 75,
+					"nein": 225,
+					"nichtabgegeben": 5,
+					"ungueltig": 0
+					},
+					"die.linke": {
+					"enthaltung": 0,
+					"gesamt": 64,
+					"ja": 63,
+					"nein": 0,
+					"nichtabgegeben": 1,
+					"ungueltig": 0
+					},
+					"file": "20170630_1_xls-data.xls",
+					"fraktionslos": {
+					"enthaltung": 0,
+					"gesamt": 1,
+					"ja": 0,
+					"nein": 1,
+					"nichtabgegeben": 0,
+					"ungueltig": 0
+					},
+					"gruenen": {
+					"enthaltung": 0,
+					"gesamt": 63,
+					"ja": 63,
+					"nein": 0,
+					"nichtabgegeben": 0,
+					"ungueltig": 0
+					},
+					"spd": {
+					"enthaltung": 0,
+					"gesamt": 193,
+					"ja": 192,
+					"nein": 0,
+					"nichtabgegeben": 1,
+					"ungueltig": 0
+					}
+				}
+			},
+			"018-112-01": {
+				"context": "",
+				"frage" : "Sollte das Kindergeld von 184 Euro auf 186 Euro und der Kinderfreibetrag von 2184 auf 2220 Euro erhöht werden (Juni 2015)?",
+				"choice" : -1,
+				"short" : "Kindergeld erhöhen",
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-112-01/",
+				"results": {
+					"cdu/csu": {
+					"enthaltung": 0,
+					"gesamt": 311,
+					"ja": 1,
+					"nein": 297,
+					"nichtabgegeben": 13,
+					"ungueltig": 0
+					},
+					"die.linke": {
+					"enthaltung": 0,
+					"gesamt": 64,
+					"ja": 56,
+					"nein": 0,
+					"nichtabgegeben": 8,
+					"ungueltig": 0
+					},
+					"file": "20150618_1_xls-data.xls",
+					"gruenen": {
+					"enthaltung": 0,
+					"gesamt": 63,
+					"ja": 58,
+					"nein": 0,
+					"nichtabgegeben": 5,
+					"ungueltig": 0
+					},
+					"spd": {
+					"enthaltung": 2,
+					"gesamt": 193,
+					"ja": 1,
+					"nein": 176,
+					"nichtabgegeben": 14,
+					"ungueltig": 0
+					}
+				}
+			},
+			"018-133-01": {
+				"context": "Das Betreuungsgeld wurde an Familien mit Kindern zwischen 2 und 3 Jahren gezahlt, die diese Kinder nicht in öffentlichen Kitas betreuen ließen. Das Bundesverfassungsgericht hat das Betreuungsgeldgesetz im Juli 2015 gekippt. Damit werden die geplanten 1 Milliarde Euro Betreuungsgeld nicht ausgegeben.",
+				"frage" : "Sollen diese Mittel für den Kitaausbau genutzt werden?",
+				"choice" : -1,
+				"short" : "Betreuungsgeld für Kitaausbau nutzen",
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-133-01/",
+				"results": {
+    "cdu/csu": {
+      "enthaltung": 0,
+      "gesamt": 310,
+      "ja": 291,
+      "nein": 0,
+      "nichtabgegeben": 19,
+      "ungueltig": 0
+    },
+    "die.linke": {
+      "enthaltung": 0,
+      "gesamt": 64,
+      "ja": 0,
+      "nein": 60,
+      "nichtabgegeben": 4,
+      "ungueltig": 0
+    },
+    "file": "20151105_1_xls-data.xls",
+    "gruenen": {
+      "enthaltung": 56,
+      "gesamt": 63,
+      "ja": 0,
+      "nein": 0,
+      "nichtabgegeben": 7,
+      "ungueltig": 0
+    },
+    "spd": {
+      "enthaltung": 0,
+      "gesamt": 193,
+      "ja": 170,
+      "nein": 0,
+      "nichtabgegeben": 23,
+      "ungueltig": 0
+}
+				}
+			}
+		}
+	},
+	
+	{
+		"topic": ["Arbeit"],
+		"titel": "Arbeit",
+		"beschreibung": "",
+		"bild": "",
+		"subtext": "",
+		"fragen": {
+			"018-046-06" : {
+				"context": "Immer mehr neue Arbeitsverträge sind nur befristet. ",
+				"frage" : "Sollten sachgrundlose Befristungen abgeschafft werden? ",
+				"choice" : -1,
+				"short" : "sachgrundlose Befristung abschaffen",
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-046-06/",
+				"results": {
+    "cdu/csu": {
+      "enthaltung": 0,
+      "gesamt": 311,
+      "ja": 0,
+      "nein": 286,
+      "nichtabgegeben": 25,
+      "ungueltig": 0
+    },
+    "die.linke": {
+      "enthaltung": 0,
+      "gesamt": 64,
+      "ja": 57,
+      "nein": 0,
+      "nichtabgegeben": 7,
+      "ungueltig": 0
+    },
+    "file": "20140703_3_xls-data.xls",
+    "gruenen": {
+      "enthaltung": 0,
+      "gesamt": 63,
+      "ja": 60,
+      "nein": 0,
+      "nichtabgegeben": 3,
+      "ungueltig": 0
+    },
+    "spd": {
+      "enthaltung": 0,
+      "gesamt": 193,
+      "ja": 1,
+      "nein": 181,
+      "nichtabgegeben": 11,
+      "ungueltig": 0
+}
+				}
+			},
+			"018-241-01": {
+				"context": "",
+				"frage" : "Sollten die Renten in Ost und West durch steuerfinanzierte Zuschüsse angeglichen werden?",
+				"choice" : -1,
+				"short" : "Ost-Renten angleichen",
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-241-01/",
+				"results": {
+
+    "cdu/csu": {
+      "enthaltung": 0,
+      "gesamt": 309,
+      "ja": 0,
+      "nein": 259,
+      "nichtabgegeben": 50,
+      "ungueltig": 0
+    },
+    "die.linke": {
+      "enthaltung": 0,
+      "gesamt": 64,
+      "ja": 53,
+      "nein": 0,
+      "nichtabgegeben": 11,
+      "ungueltig": 0
+    },
+    "file": "20170623_1_xls-data.xls",
+    "fraktionslos": {
+      "enthaltung": 0,
+      "gesamt": 1,
+      "ja": 0,
+      "nein": 0,
+      "nichtabgegeben": 1,
+      "ungueltig": 0
+    },
+    "gruenen": {
+      "enthaltung": 54,
+      "gesamt": 63,
+      "ja": 0,
+      "nein": 0,
+      "nichtabgegeben": 9,
+      "ungueltig": 0
+    },
+    "spd": {
+      "enthaltung": 4,
+      "gesamt": 193,
+      "ja": 0,
+      "nein": 149,
+      "nichtabgegeben": 40,
+      "ungueltig": 0
+	}
+				}
+			},
+			"018-209-05": {
+				"context": "",
+				"frage" : "Sollten zuständige Fahnder zur Bekämpfung von Schwarzarbeit neue Befugnisse und Mittel (z.B. Zugriff auf das Fahrzeugregister des Kraftfahrtbundesamtes, ein neues zentrales Informationssystem) erhalten? ",
+				"choice" : -1,
+				"short" : "Bekämpfung Schwarzarbeit",
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-209-05/",
+				"results": {
+    "cdu/csu": {
+      "enthaltung": 0,
+      "gesamt": 310,
+      "ja": 283,
+      "nein": 0,
+      "nichtabgegeben": 27,
+      "ungueltig": 0
+    },
+    "die.linke": {
+      "enthaltung": 54,
+      "gesamt": 64,
+      "ja": 0,
+      "nein": 0,
+      "nichtabgegeben": 10,
+      "ungueltig": 0
+    },
+    "file": "20161215_5_xls-data.xls",
+    "gruenen": {
+      "enthaltung": 0,
+      "gesamt": 63,
+      "ja": 51,
+      "nein": 0,
+      "nichtabgegeben": 12,
+      "ungueltig": 0
+    },
+    "spd": {
+      "enthaltung": 0,
+      "gesamt": 193,
+      "ja": 175,
+      "nein": 0,
+      "nichtabgegeben": 18,
+      "ungueltig": 0
+}
+				}
+			},
+			"018-046-02": {
+				"context": "",
+				"frage" : "Sollte ein flächendeckender Mindestlohn in Höhe von 8,50€ eingeführt werden?",
+				"choice" : -1,
+				"short" : "8,50 € Mindestlohn",
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-046-02/",
+				"results": {
+    "cdu/csu": {
+      "enthaltung": 2,
+      "gesamt": 311,
+      "ja": 286,
+      "nein": 5,
+      "nichtabgegeben": 18,
+      "ungueltig": 0
+    },
+    "die.linke": {
+      "enthaltung": 59,
+      "gesamt": 64,
+      "ja": 0,
+      "nein": 0,
+      "nichtabgegeben": 5,
+      "ungueltig": 0
+    },
+    "file": "20140703_2_xls-data.xls",
+    "gruenen": {
+      "enthaltung": 0,
+      "gesamt": 63,
+      "ja": 61,
+      "nein": 0,
+      "nichtabgegeben": 2,
+      "ungueltig": 0
+    },
+    "spd": {
+      "enthaltung": 0,
+      "gesamt": 193,
+      "ja": 188,
+      "nein": 0,
+      "nichtabgegeben": 5,
+      "ungueltig": 0
+}
+				}
+			},
+			"018-046-01": {
+				"context": "",
+				"frage" : "Sollte ein flächendeckender Mindestlohn in Höhe von 10,00 € eingeführt werden? ",
+				"choice" : -1,
+				"short" : "10,00 € Mindestlohn",
+				"subtext" : "",
+				"link": "https://wahlbilanz.de/abstimmungen/018-046-01/",
+				"results": {
+    "cdu/csu": {
+      "enthaltung": 0,
+      "gesamt": 311,
+      "ja": 0,
+      "nein": 294,
+      "nichtabgegeben": 17,
+      "ungueltig": 0
+    },
+    "die.linke": {
+      "enthaltung": 0,
+      "gesamt": 64,
+      "ja": 59,
+      "nein": 0,
+      "nichtabgegeben": 5,
+      "ungueltig": 0
+    },
+    "file": "20140703_1_xls-data.xls",
+    "gruenen": {
+      "enthaltung": 0,
+      "gesamt": 63,
+      "ja": 61,
+      "nein": 0,
+      "nichtabgegeben": 2,
+      "ungueltig": 0
+    },
+    "spd": {
+      "enthaltung": 0,
+      "gesamt": 193,
+      "ja": 0,
+      "nein": 187,
+      "nichtabgegeben": 6,
+      "ungueltig": 0
+}
+				}
+			}
+		}
+	},
+	
+	{
 		"topic": ["Gesundheit", "Ernährung", "Landwirtschaft", "Verbraucherschutz"],
 		"titel": "Gentechnik in der Landwirtschaft",
 		"beschreibung": "Mithilfe von Gentechnik werden Lebewesen künstlich verändert, so dass sie Beispielsweise einen höheren Ertrag liefern oder Resistenzen gegenüber Schädlingen und schlechten Umweltbedingungen aufweisen.",
