@@ -127,26 +127,33 @@
 				},
 				{
 						"topic": [
-								""
+							"Gesellschaft"
 						],
-						"titel": "",
+						"titel": "Gesellschaft",
 						"beschreibung": "",
 						"bild": "",
 						"subtext": "",
 						"fragen": {
-								"": {
-										"context": "",
-										"frage": "",
-										"short": "",
+							"018-131-01": {
+									"context": "Telekommunikationsdaten (zum Beispiel Rufnummern, Zeit und Ort eines Gesprächs, IP-Adressen) können bei der Aufklärung von Straftaten helfen.",
+									"frage": "Sollten die Diensteanbieter zur Speicherung dieser Daten für 4 Wochen (Mobilfunk) bzw. 10 Wochen (Internet) verpflichtet werden?",
+									"short": "Vorratsdatenspeicherung",
 										"subtext": "",
-										"link": ""
-								},
-								"": {
-										"context": "",
-										"frage": "",
-										"short": "",
+										"link": "https://wahlbilanz.de/abstimmungen/018-131-01/"
+							},
+							"018-134-03": {
+								"context": "Sterbehilfe wird als geschäftsmäßig bezeichnet, wenn sie als Service angeboten wird (zum Beispiel von Vereinen, eventuell auch kommerziell). Hilfe von Angehörige oder Maßnahmen von Medizinern (Abschalten von Lebenserhaltenden Maschinen) gehören nicht dazu.",
+								"frage": "Sollte die geschäftsmäßige Sterbehilfe unter Strafe gestellt werden?",
+								"short": "Geschäftsmäßige Sterbehilfe verbieten",
+								"subtext": "",
+								"link": "https://wahlbilanz.de/abstimmungen/018-134-03/"
+							},
+							"018-221-03": {
+									"context": "Die Mietpreisbremse soll große Preissprünge bei Neuvermietungen vermeiden.",
+									"frage": "Sollte die Mietpreisbremse auch nach umfassenden Modernisierungen greifen?",
+									"short": "Mietpreisbremse bei Modernisierung",
 										"subtext": "",
-										"link": ""
+										"link": "https://wahlbilanz.de/abstimmungen/018-221-03/"
 								}
 						}
 				},
