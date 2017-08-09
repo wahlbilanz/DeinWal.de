@@ -3,11 +3,6 @@ import { ActivatedRoute } from '@angular/router'
 import { Location } from '@angular/common';
 import { QuestiondataService } from '../questiondata.service';
 import { AppComponent } from '../app.component';
-/*import {Http, Headers} from '@angular/http';
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/observable/of';
-import 'rxjs/add/operator/share';
-import 'rxjs/add/operator/map';*/
 
 
 @Component({
@@ -61,60 +56,33 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			'beschreibung': 'Das kein unter Umstaenden eine Sekunde dauern...'
 		};
 		
-    /*this.app.log('retrieving newest questions');
-    this.qserv.getData().subscribe((data) => {
-      this.app.log('retrieved data:', data);
-      if (!Array.isArray(data)) {
-        this.app.log('error retrieving data!')
-        // TODO: what are we supposed to do here?
-        // at least show some warning...
-				this.question = {
-					'titel': 'Es ist ein Fehler aufgetreten!',
-					'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Versuch es spaeter noch einmal!'
-				};
-      } else {
-        this.questionData = data;
-        // for every question -> extract the actual question ids, that makes it easier to iterate over questions in the HTML
-        for (const q of this.questionData) {
-          q['fragenIds'] = [];
-          for (const f in q['fragen']) {
-            if (q['fragen'].hasOwnProperty(f)) {
-              // -1 means -> not answered yet
-              if (!this.answers.hasOwnProperty(f)) {
-                this.answers[f] = -1;
-              }
-              q['fragenIds'].push(f);
-            }
-          }
-        }
-      }
-      // show first question
-      this.showQuestion(0); //happens in ngOnInit
-    });*/
 		
-		
-		// initial card:
-		let initialCard = 0;
-		
+	// initial card:
+	let initialCard = 0;
+	
+	// parse route/url
     this.route.params.subscribe(params => {
       try {
-        if(params['questionPage']=='auswertung'){
-					initialCard = -1;
+    	// requested auswertung?
+        if (params['questionPage']=='auswertung') {
+        	initialCard = -1;
         } else {
-					initialCard = Number.parseInt(params['questionPage']);
+        	initialCard = Number.parseInt(params['questionPage']);
         }
       } catch (e) {
+        // if there was an error or nothing is given: show first question
         console.log('keine question id angegeben ');
-        // show first question
-				initialCard = 0;
+        initialCard = 0;
       }
     });
-		
-		if (Number.isNaN(initialCard)) {
-			initialCard = 0;
-		}
-		
-		this.app.log('retrieving newest questions');
+	
+    // is card number not parseable? -> first question
+	if (Number.isNaN(initialCard)) {
+		initialCard = 0;
+	}
+	
+	// retrieve newest question
+	this.app.log('retrieving newest questions');
     this.qserv.getData().subscribe((data) => {
       this.app.log('retrieved data:', data);
       try {
@@ -122,63 +90,38 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
       	this.questionResults = data.results;
       	
       	for (const q of this.questionData) {
-            q['fragenIds'] = [];
-            for (const f in q['fragen']) {
-              if (q['fragen'].hasOwnProperty(f)) {
-                // -1 means -> not answered yet
-                if (!this.answers.hasOwnProperty(f)) {
-                  this.answers[f] = -1;
-                }
-                q['fragenIds'].push(f);
-              }
-            }
-          }
-      	
-      	
-      	
+	        q['fragenIds'] = [];
+	        for (const f in q['fragen']) {
+	          if (q['fragen'].hasOwnProperty(f)) {
+	            // -1 means -> not answered yet
+	            if (!this.answers.hasOwnProperty(f)) {
+	              this.answers[f] = -1;
+	            }
+	            q['fragenIds'].push(f);
+	          }
+	        }
+        }
       } catch (e) {
+    	// unexpected votes format?
       	console.log('could not parse votes.json', e);
+    	// show error
 		this.question = {
 			'titel': 'Es ist ein Fehler aufgetreten!',
 			'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Versuch es spaeter noch einmal!'
 		};
-      	
       }
       
       
-      /*
-      if (!Array.isArray(data)) {
-        this.app.log('error retrieving data!')
-        // TODO: what are we supposed to do here?
-        // at least show some warning...
-				this.question = {
-					'titel': 'Es ist ein Fehler aufgetreten!',
-					'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Versuch es spaeter noch einmal!'
-				};
-      } else {
-        this.questionData = data;
-        // for every question -> extract the actual question ids, that makes it easier to iterate over questions in the HTML
-        
-      }*/
-      
-      //console.log (initialCard);
-      
       if (initialCard < 0) {
-          this.showResults();
-			} else {
-				this.showQuestion(initialCard);
-			}
-			
+    	  this.showResults();
+      } else {
+    	  this.showQuestion(initialCard);
+      }
+      
     });
-		
-		
-		
-		
   }
 
   ngOnInit() {
-		
-
   }
   ngAfterContentInit() {
     this.checkSave ();
