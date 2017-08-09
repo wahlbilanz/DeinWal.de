@@ -12,7 +12,6 @@
                 "018-244-01": {
                     "context": "",
                     "frage": "Sollten gleichgeschlechtliche Paare ein Recht auf Eheschließung bekommen, gleich dem zwischen Mann und Frau?",
-                    "choice": -1,
                     "short": "Ehe für alle",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-244-01/"
@@ -20,7 +19,6 @@
                 "018-112-01": {
                     "context": "",
                     "frage": "Sollte das Kindergeld von 184 Euro auf 186 Euro und der Kinderfreibetrag von 2184 auf 2220 Euro erhöht werden (Juni 2015)?",
-                    "choice": -1,
                     "short": "Kindergeld erhöhen",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-112-01/"
@@ -28,7 +26,6 @@
                 "018-133-01": {
                     "context": "Das Betreuungsgeld wurde an Familien mit Kindern zwischen 2 und 3 Jahren gezahlt, die diese Kinder nicht in öffentlichen Kitas betreuen ließen. Das Bundesverfassungsgericht hat das Betreuungsgeldgesetz im Juli 2015 gekippt. Damit werden die geplanten 1 Milliarde Euro Betreuungsgeld nicht ausgegeben.",
                     "frage": "Sollen diese Mittel für den Kitaausbau genutzt werden?",
-                    "choice": -1,
                     "short": "Betreuungsgeld für Kitaausbau nutzen",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-133-01/"
@@ -47,7 +44,6 @@
                 "018-046-06": {
                     "context": "Immer mehr neue Arbeitsverträge sind nur befristet. ",
                     "frage": "Sollten sachgrundlose Befristungen abgeschafft werden? ",
-                    "choice": -1,
                     "short": "sachgrundlose Befristung abschaffen",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-046-06/"
@@ -55,7 +51,6 @@
                 "018-241-01": {
                     "context": "",
                     "frage": "Sollten die Renten in Ost und West durch steuerfinanzierte Zuschüsse angeglichen werden?",
-                    "choice": -1,
                     "short": "Ost-Renten angleichen",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-241-01/"
@@ -63,7 +58,6 @@
                 "018-209-05": {
                     "context": "",
                     "frage": "Sollten zuständige Fahnder zur Bekämpfung von Schwarzarbeit neue Befugnisse und Mittel (z.B. Zugriff auf das Fahrzeugregister des Kraftfahrtbundesamtes, ein neues zentrales Informationssystem) erhalten? ",
-                    "choice": -1,
                     "short": "Bekämpfung Schwarzarbeit",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-209-05/"
@@ -71,7 +65,6 @@
                 "018-046-02": {
                     "context": "",
                     "frage": "Sollte ein flächendeckender Mindestlohn in Höhe von 8,50 € eingeführt werden?",
-                    "choice": -1,
                     "short": "8,50 € Mindestlohn",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-046-02/"
@@ -79,7 +72,6 @@
                 "018-046-01": {
                     "context": "",
                     "frage": "Sollte ein flächendeckender Mindestlohn in Höhe von 10,00 € eingeführt werden? ",
-                    "choice": -1,
                     "short": "10,00 € Mindestlohn",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-046-01/"
@@ -101,7 +93,6 @@
                 "018-020-01": {
                     "context": "Honig könnte Pollen von gentechnisch veränderten Pflanzen enthalten.",
                     "frage": "Sollte gentechnisch veränderter Honig für Verbraucher gekennzeichnet werden?",
-                    "choice": -1,
                     "short": "Gen-Honig kennzeichnen",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-020-01/",
@@ -110,7 +101,6 @@
                 "018-011-01": {
                     "context": "Die Maislinie 1507 wurde gentechnisch so verändert, dass sie ein Gift für bestimmte Insekten produziert und resistent gegen das Totalherbizid Glufosinat ist.",
                     "frage": "Soll die Maislinie 1507 fuer den Anbau in der EU zugelassen werden?",
-                    "choice": -1,
                     "short": "Maislinie 1507 zulassen",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-011-01/"
@@ -118,7 +108,6 @@
                 "018-036-03": {
                     "context": "Pollen können gentechnisch verändertes Erbgut unkontrolliert verbreiten, die langfristigen Auswirkungen sind schwer abschätzbar.",
                     "frage": "Sollte Gentechnik im Pflanzenbau generell verboten werden?",
-                    "choice": -1,
                     "short": "Gentechnik im Pflanzenbau verbieten",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-036-03/"
