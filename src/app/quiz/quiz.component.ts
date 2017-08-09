@@ -20,6 +20,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
   production;
   /** the whole question information as it will be retrieved from votes.json*/
   questionData = [];
+  /** the party results for all questions */
+  questionResults = {}
   /** currently visible question index*/
   questionIndex = 0;
   /** currently visible question -- basically equals `this.questionData[this.questionIndex]`*/
@@ -102,7 +104,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 					initialCard = Number.parseInt(params['questionPage']);
         }
       } catch (e) {
-        console.log('keine question id angegeben ')
+        console.log('keine question id angegeben ');
         // show first question
 				initialCard = 0;
       }
@@ -115,6 +117,36 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		this.app.log('retrieving newest questions');
     this.qserv.getData().subscribe((data) => {
       this.app.log('retrieved data:', data);
+      try {
+      	this.questionData = data.quiz;
+      	this.questionResults = data.results;
+      	
+      	for (const q of this.questionData) {
+            q['fragenIds'] = [];
+            for (const f in q['fragen']) {
+              if (q['fragen'].hasOwnProperty(f)) {
+                // -1 means -> not answered yet
+                if (!this.answers.hasOwnProperty(f)) {
+                  this.answers[f] = -1;
+                }
+                q['fragenIds'].push(f);
+              }
+            }
+          }
+      	
+      	
+      	
+      } catch (e) {
+      	console.log('could not parse votes.json', e);
+		this.question = {
+			'titel': 'Es ist ein Fehler aufgetreten!',
+			'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Versuch es spaeter noch einmal!'
+		};
+      	
+      }
+      
+      
+      /*
       if (!Array.isArray(data)) {
         this.app.log('error retrieving data!')
         // TODO: what are we supposed to do here?
@@ -126,21 +158,10 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
       } else {
         this.questionData = data;
         // for every question -> extract the actual question ids, that makes it easier to iterate over questions in the HTML
-        for (const q of this.questionData) {
-          q['fragenIds'] = [];
-          for (const f in q['fragen']) {
-            if (q['fragen'].hasOwnProperty(f)) {
-              // -1 means -> not answered yet
-              if (!this.answers.hasOwnProperty(f)) {
-                this.answers[f] = -1;
-              }
-              q['fragenIds'].push(f);
-            }
-          }
-        }
-      }
+        
+      }*/
       
-      console.log (initialCard);
+      //console.log (initialCard);
       
       if (initialCard < 0) {
           this.showResults();
@@ -271,7 +292,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
           if (this.answers[f] >= 0) {
             const opt = this.voteOptions;
             const answer = opt[this.answers[f]];
-            const results = q['fragen'][f]['results'];
+            const results = this.questionResults[f];
             nAnswered++;
             for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
               const tempPunkte = this.getZustimmungsPunkte(results[partyName], answer);
