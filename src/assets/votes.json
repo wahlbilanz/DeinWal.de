@@ -440,27 +440,27 @@
         },
         {
             "topic": [
-                ""
+                "Inneres"
             ],
-            "titel": "",
+            "titel": "Inneres",
             "beschreibung": "",
             "bild": "",
             "subtext": "",
             "fragen": {
-                "": {
-                    "context": "",
-                    "frage": "",
-                    "short": "",
+                "018-171-01": {
+                    "context": "Die Einstufung eines Landes als „sicherer Herkunftsstaat“ führt zu einer schnelleren Bearbeitung von Asylanträgen und im Falle einer Ablehnung des Asylantrags auch zu einer schnelleren Rückführung des Asylsuchenden.",
+                    "frage": "Sollten Algerien, Marokko und Tunesien als sichere Herkunftsstaaten eingestuft werden? (April 2016)",
+                    "short": "Algerien, Marokko und Tunesien sind sicher",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-171-01/",
                     "invert": false
                 },
-                "": {
-                    "context": "",
-                    "frage": "",
-                    "short": "",
+                "018-237-11": {
+                    "context": "Viele Hilfsorganisationen bezeichnen die Lage in Afghanistan als „nicht sicher“. WAS MEINT CDU?",
+                    "frage": "Sollten Abschiebungen nach Afghanistan ausgesetzt werden?",
+                    "short": "Abschiebestopp Afghanistan",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-237-11/",
                     "invert": false
                 }
             }
