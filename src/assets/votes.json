@@ -246,6 +246,119 @@
                     "invert": false
                 }
             }
+        },
+        {
+            "topic": [
+                "Bundeswehr"
+            ],
+            "titel": "Bundeswehr",
+            "beschreibung": "Die Bundeswehr ist derzeit an 19 Auslandseinsätzen beteiligt. Diese müssen üblicherweise regelmäßig vom Bundestag genehmigt werden. Diese Genehmigung beinhaltet eine genaue Missionbeschreibung und eine maximale Anzahl von Soldaten. Meistens kommen weniger Soldaten zum Einsatz. Hier ist nur eine kleine Auswahl der vielen Abstimmungen zum Thema.",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "018-161-01": {
+                    "context": "",
+                    "frage": "Sollte sich die Bundeswehr an der militärischen Ausbildungs- und Beratungsmission für Somalia beteiligen? (20 SoldatInnen)",
+                    "short": "Ausbildungsmission in Somalia",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-161-01/",
+                    "invert": false
+                },
+                "018-170-05": {
+                    "context": "",
+                    "frage": " Sollte sich die Bundeswehr an der Bekämpfung von Piraterie vor Somalia beteiligen? (bis zu 600 SoldatInnen)",
+                    "short": "Bekämpfung von Piraterie vor Somalia",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-170-05/",
+                    "invert": false
+                },
+                "018-144-01": {
+                    "context": "",
+                    "frage": "Sollten bewaffnete deutsche Streitkräfte zur Verhütung und Unterbindung terroristischer Handlungen durch die Terrororganisation IS eingesetzt werden? (bis zu 1200 SoldatInnen)",
+                    "short": "Bundeswehr gegen IS",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-144-01/",
+                    "invert": false
+                },
+                "018-017-01": {
+                    "context": "",
+                    "frage": "Sollten bewaffnete deutsche Streitkräfte Afghanistan bei der Aufrechterhaltung der Sicherheit unterstützen? (Bis zu 3300 SoldatInnen)",
+                    "short": "Bundeswehr in Afghanistan",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-017-01/",
+                    "invert": false
+                },
+                "018-179-02": {
+                    "context": "",
+                    "frage": "Sollte sich die Bundeswehr im Libanon mit Aufklärung, Überwachung, Sicherung, Ausbildung, Lufttransport einschließlich der Anwendung militärischer Gewalt beteiligen? (Bis zu 300 SoldatInnen)",
+                    "short": "Bundeswehr im Linbanon",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-179-02/",
+                    "invert": false
+                },
+                "018-039-01": {
+                    "context": "",
+                    "frage": "Sollte sich die Bundeswehr im Kosovo an der Aufrechterhaltung eines sicheren und stabilen Umfelds beteiligen? (Bis zu 1850 SoldatInnen)",
+                    "short": "Bundeswehr im Kosovo",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-039-01/",
+                    "invert": false
+                }
+            }
+        },
+        {
+            "topic": [
+                ""
+            ],
+            "titel": "",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "": {
+                    "context": "",
+                    "frage": "",
+                    "short": "",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "invert": false
+                },
+                "": {
+                    "context": "",
+                    "frage": "",
+                    "short": "",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "invert": false
+                }
+            }
+        },
+        {
+            "topic": [
+                ""
+            ],
+            "titel": "",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "": {
+                    "context": "",
+                    "frage": "",
+                    "short": "",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "invert": false
+                },
+                "": {
+                    "context": "",
+                    "frage": "",
+                    "short": "",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen//",
+                    "invert": false
+                }
+            }
         }
     ],
     "results": {  
