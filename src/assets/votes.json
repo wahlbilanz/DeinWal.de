@@ -14,21 +14,24 @@
                     "frage": "Sollten gleichgeschlechtliche Paare ein Recht auf Eheschließung bekommen, gleich dem zwischen Mann und Frau?",
                     "short": "Ehe für alle",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-244-01/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-244-01/",
+                    "invert": false
                 },
                 "018-112-01": {
                     "context": "",
                     "frage": "Sollte das Kindergeld von 184 Euro auf 186 Euro und der Kinderfreibetrag von 2184 auf 2220 Euro erhöht werden (Juni 2015)?",
                     "short": "Kindergeld erhöhen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-112-01/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-112-01/",
+                    "invert": false
                 },
                 "018-133-01": {
                     "context": "Das Betreuungsgeld wurde an Familien mit Kindern zwischen 2 und 3 Jahren gezahlt, die diese Kinder nicht in öffentlichen Kitas betreuen ließen. Das Bundesverfassungsgericht hat das Betreuungsgeldgesetz im Juli 2015 gekippt. Damit werden die geplanten 1 Milliarde Euro Betreuungsgeld nicht ausgegeben.",
                     "frage": "Sollen diese Mittel für den Kitaausbau genutzt werden?",
                     "short": "Betreuungsgeld für Kitaausbau nutzen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-133-01/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-133-01/",
+                    "invert": false
                 }
             }
         },
@@ -46,35 +49,40 @@
                     "frage": "Sollten sachgrundlose Befristungen abgeschafft werden? ",
                     "short": "sachgrundlose Befristung abschaffen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-046-06/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-046-06/",
+                    "invert": false
                 },
                 "018-241-01": {
                     "context": "",
                     "frage": "Sollten die Renten in Ost und West durch steuerfinanzierte Zuschüsse angeglichen werden?",
                     "short": "Ost-Renten angleichen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-241-01/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-241-01/",
+                    "invert": false
                 },
                 "018-209-05": {
                     "context": "",
                     "frage": "Sollten zuständige Fahnder zur Bekämpfung von Schwarzarbeit neue Befugnisse und Mittel (z.B. Zugriff auf das Fahrzeugregister des Kraftfahrtbundesamtes, ein neues zentrales Informationssystem) erhalten? ",
                     "short": "Bekämpfung Schwarzarbeit",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-209-05/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-209-05/",
+                    "invert": false
                 },
                 "018-046-02": {
                     "context": "",
                     "frage": "Sollte ein flächendeckender Mindestlohn in Höhe von 8,50 € eingeführt werden?",
                     "short": "8,50 € Mindestlohn",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-046-02/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-046-02/",
+                    "invert": false
                 },
                 "018-046-01": {
                     "context": "",
                     "frage": "Sollte ein flächendeckender Mindestlohn in Höhe von 10,00 € eingeführt werden? ",
                     "short": "10,00 € Mindestlohn",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-046-01/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-046-01/",
+                    "invert": false
                 }
             }
         },
@@ -93,35 +101,40 @@
                     "frage": "Stimmst du dieser umfassenden Reform zu?",
                     "short": "Arzneimittelrechtliche Reform",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-200-01/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-200-01/",
+                    "invert": false
                 },
                 "018-198-03": {
                     "context": "„Nichteinwilligungsfähige“ Personen sind nicht in der Lage das Wesen, die Bedeutung und die Tragweite einer Studie zu erkennen (zum Beispiel bei Demenz oder Alzheimer). Bei einer gruppennützigen Forschung hat der Teilnehmer nicht unbedingt einen Nutzen, aber andere mit der gleichen Krankheit können daraus profitieren.",
                     "frage": "Sollte die gruppennützige Forschung an einem nichteinwilligungsfähigen Patienten erlaubt werden, wenn dieser vorher (im Vollbesitz seiner geistigen Kräfte) eine Verfügung abgegeben hat?",
                     "short": "Studienteilnahme von Dementen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-198-03/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-198-03/",
+                    "invert": false
                 },
                 "018-061-01": {
                     "context": "Verschiedene Träger der Sozialhilfe übernehmen die häusliche Betreuung nicht, da  § 124 SGB XI unterschiedlich interpretiert wird.",
                     "frage": "Sollte die häusliche Betreuung explizit in diesem Gesetz genannt werden?",
                     "short": "Häusliche Betreuung",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-061-01/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-061-01/",
+                    "invert": false
                 },
                 "018-164-01": {
                     "context": "Korruption im Gesundheitswesen beeinträchtigt den Wettbewerb, verteuert medizinische Leistungen und untergräbt das Vertrauen von Patienten. Korruptionstatbestände des Strafgesetzbuches sind auf niedergelassene Vertragsärzte grundsätzlich nicht anwendbar.",
                     "frage": "Sollten neue Straftatbestände der Bestechlichkeit und Bestechung im Gesundheitswesen eingeführt werden?",
                     "short": "Korruption im Gesundheitswesen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-164-01/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-164-01/",
+                    "invert": false
                 },
                 "018-158-03": {
                     "context": "Es ist aktuell sehr umstritten ob der Breitband-Herbizidwirkstoff Glyphosat krebserregend wirkt oder nicht. Für die konventionelle Landwirtschaft ist er jedoch sehr wichtig.",
                     "frage": "Sollte Glyphosat verboten werden?",
                     "short": "Keine Neuzulassung von Glyphosat",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-158-03/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-158-03/",
+                    "invert": false
                 }
             }
         },
@@ -139,21 +152,24 @@
                     "frage": "Sollten die Diensteanbieter zur Speicherung dieser Daten für 4 Wochen (Mobilfunk) bzw. 10 Wochen (Internet) verpflichtet werden?",
                     "short": "Vorratsdatenspeicherung",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-131-01/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-131-01/",
+                    "invert": false
                 },
                 "018-134-03": {
                     "context": "Sterbehilfe wird als geschäftsmäßig bezeichnet, wenn sie als Service angeboten wird (zum Beispiel von Vereinen, eventuell auch kommerziell). Hilfe von Angehörige oder Maßnahmen von Medizinern (Abschalten von Lebenserhaltenden Maschinen) gehören nicht dazu.",
                     "frage": "Sollte die geschäftsmäßige Sterbehilfe unter Strafe gestellt werden?",
                     "short": "Geschäftsmäßige Sterbehilfe verbieten",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-134-03/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-134-03/",
+                    "invert": false
                 },
                 "018-221-03": {
                     "context": "Die Mietpreisbremse soll große Preissprünge bei Neuvermietungen vermeiden.",
                     "frage": "Sollte die Mietpreisbremse auch nach umfassenden Modernisierungen greifen?",
                     "short": "Mietpreisbremse bei Modernisierung",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-221-03/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-221-03/",
+                    "invert": false
                 }
             }
         },
@@ -175,21 +191,24 @@
                     "short": "Gen-Honig kennzeichnen",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-020-01/",
-                    "bemerkung": "In den Results wurde Ja und Nein ausgetauscht um es einfacher zu machen."
+                    "bemerkung": "In den Results wurde Ja und Nein ausgetauscht um es einfacher zu machen.",
+                    "invert": true
                 },
                 "018-011-01": {
                     "context": "Die Maislinie 1507 wurde gentechnisch so verändert, dass sie ein Gift für bestimmte Insekten produziert und resistent gegen das Totalherbizid Glufosinat ist.",
                     "frage": "Soll die Maislinie 1507 fuer den Anbau in der EU zugelassen werden?",
                     "short": "Maislinie 1507 zulassen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-011-01/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-011-01/",
+                    "invert": false
                 },
                 "018-036-03": {
                     "context": "Pollen können gentechnisch verändertes Erbgut unkontrolliert verbreiten, die langfristigen Auswirkungen sind schwer abschätzbar.",
                     "frage": "Sollte Gentechnik im Pflanzenbau generell verboten werden?",
                     "short": "Gentechnik im Pflanzenbau verbieten",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-036-03/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-036-03/",
+                    "invert": false
                 }
             }
         },
@@ -207,21 +226,24 @@
                     "frage": "Sollte es Bund und Ländern erlaubt sein bei der Förderung von Wissenschaft, Forschung und Lehre zusammenzuwirken?",
                     "short": "Zusammenarbeit Forschung Bund-Länder",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-066-03/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-066-03/",
+                    "invert": false
                 },
                 "018-066-08": {
                     "context": "",
                     "frage": "Sollte der Bund (statt der Länder) die Finanzierung des BAföG (abbr) übernehmen?",
                     "short": "BAföG-Finanzierung durch Bund",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-066-08/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-066-08/",
+                    "invert": false
                 },
                 "018-066-05": {
                     "context": "",
                     "frage": "Sollten die BAföG Bedarfssätze, Freibeträge und Höchstbeträge jährlich überprüft und an aktuelle Lebenshaltungskosten angepasst werden?",
                     "short": "BAföG jährlich anpassen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-066-05/"
+                    "link": "https://wahlbilanz.de/abstimmungen/018-066-05/",
+                    "invert": false
                 }
             }
         }

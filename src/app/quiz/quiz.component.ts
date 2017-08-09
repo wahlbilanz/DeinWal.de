@@ -41,6 +41,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
   speichernText = 'speichern';
   /** text fuer den speichern tooltip */
   speichernTooltip = 'Speichere deine Eingaben lokal in deinem Browser.';
+  /** possible parties */
+  parties = ['gruenen', 'cdu/csu', 'die.linke', 'spd'];
 
   constructor(private qserv: QuestiondataService, private app: AppComponent, private route: ActivatedRoute,private location: Location) {
     
@@ -98,6 +100,16 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	              this.answers[f] = -1;
 	            }
 	            q['fragenIds'].push(f);
+	            
+	            if (q['fragen'][f]["invert"]) {
+	            	let curResults = this.questionResults[f];
+	            	for (const party of this.parties) {
+		            	let tmp = curResults[party]['ja'];
+		            	curResults[party]['ja'] = curResults[party]['nein'];
+		            	curResults[party]['nein'] = tmp;
+	            	}
+		            this.questionResults[f] = curResults;
+	            }
 	          }
 	        }
         }
@@ -210,7 +222,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    * give n in [0,1] and get percent in [0.0, 100.0]
    * with nachkommastellen precision
    */
-  toPercent(n,nachkommastellen=0) {
+  toPercent(n,nachkommastellen=1) {
     let precision = [ 1, 10, 100, 1000, 1000, 10000] //10 ^ x-1
     return (Math.round(100 * precision[nachkommastellen] * n) / (precision[nachkommastellen])) + "%";
   }
@@ -340,11 +352,13 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
   saveQuestionDataToLocalStorage() {
     if (this.doSave) {
       localStorage.setItem('questionData', JSON.stringify(this.questionData));
+      localStorage.setItem('questionResults', JSON.stringify(this.questionResults));
       localStorage.setItem('answers', JSON.stringify(this.answers));
     }
   }
 
   getQuestionDataFromLocalStorage() {
+	this.questionResults = JSON.parse(localStorage.getItem('questionResults'));
     this.questionData = JSON.parse(localStorage.getItem('questionData'));
     this.answers = JSON.parse(localStorage.getItem('answers'));
     this.doSave = JSON.parse(localStorage.getItem('doSave'));
