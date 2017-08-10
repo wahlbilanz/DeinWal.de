@@ -14,13 +14,12 @@
         <header class="w3-container w3-light-grey w3-margin">
             <h3>{{question.titel}}</h3>
         </header>
-        <div class="question-description w3-margin"> 
-            {{question.beschreibung}}    
+        <div class="question-description w3-margin" [innerHTML]="question.beschreibung">
         </div>
         <div class="w3-light-grey w3-padding w3-padding-16 w3-margin" id="question-{{q}}" *ngFor="let q of actualQuestions">
         	<div class="q-text">
-	        	<span class="q-context">{{question.fragen[q].context}}</span>
-	        	<strong class="q-question">{{question.fragen[q].frage}}</strong>
+	        	<span class="q-context" [innerHTML]="question.fragen[q].context"></span>
+	        	<strong class="q-question" [innerHTML]="question.fragen[q].frage"></strong>
 	        	<div class="q-supplemental">{{question.fragen[q].subtext}} <a href="{{question.fragen[q].link}}">Mehr Informationen</a></div>
         	</div>
         	<div class="q-buttons w3-right">
