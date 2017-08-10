@@ -234,6 +234,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    */
   showResults() {
     this.location.go('quiz/auswertung') // change URL
+		window.scrollTo(0,0);
     this.questionIndex = this.questionData.length;
     this.progress = this.toPercent (1);
     this.app.overwriteTitle("Auswertung");
