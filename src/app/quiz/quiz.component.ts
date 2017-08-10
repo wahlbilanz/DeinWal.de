@@ -179,6 +179,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    */
   showQuestion(n) {
     this.questionIndex = n;
+		window.scrollTo(0,0);
 
     // there is no question with negative index...
     if (this.questionIndex < 0) {
