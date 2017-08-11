@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router'
 
 @Component({
   selector: 'app-faq',
@@ -8,11 +9,20 @@ import { Component, OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, D
 export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges {
   localStorageOn = 'gespeichert';
   
-  constructor() {
+  constructor(private router: Router) {
     this.updateLocalStorage ();
   }
 
   ngOnInit() {
+    this.router.events.subscribe(s => {
+      if (s instanceof NavigationEnd) {
+        const tree = this.router.parseUrl(this.router.url);
+        if (tree.fragment) {
+          const element = document.querySelector("#" + tree.fragment);
+          if (element) { element.scrollIntoView(element); }
+        }
+      }
+    });
   }
   ngAfterContentInit() {
     this.updateLocalStorage ();
