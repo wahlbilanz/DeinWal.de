@@ -12,10 +12,10 @@ export class QuestiondataService {
 	
 	getData() {
 		if (this.cachedData) {
-      console.log('using cached votes:', this.cachedData);
+      //console.log('using cached votes:', this.cachedData);
       return Observable.of(this.cachedData);
     } else {
-      console.log('votes not cached yet');
+      //console.log('votes not cached yet');
       return this.http.get("/assets/votes.json")
             .map(res => res.json())
             .do((data) => {

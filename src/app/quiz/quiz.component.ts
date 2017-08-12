@@ -49,7 +49,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
     this.checkSave ();
 
     if (this.doSave) {
-      this.app.log('restoring data from local storage');
+//      this.app.log('restoring data from local storage');
       this.getQuestionDataFromLocalStorage();
     }
 
@@ -84,9 +84,9 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	}
 	
 	// retrieve newest question
-	this.app.log('retrieving newest questions');
+//	this.app.log('retrieving newest questions');
     this.qserv.getData().subscribe((data) => {
-      this.app.log('retrieved data:', data);
+//      this.app.log('retrieved data:', data);
       try {
       	this.questionData = data.quiz;
       	this.questionResults = data.results;
@@ -186,8 +186,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
       this.questionIndex = 0;
     }
     
-    console.log (this.questionIndex);
-    console.log (this.questionData);
+//    console.log (this.questionIndex);
+//    console.log (this.questionData);
 
     // if n is bigger than the number of questions -> show results
     if (this.questionIndex >= this.questionData.length && this.questionData.length > 0) {
