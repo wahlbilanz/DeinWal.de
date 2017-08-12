@@ -43,11 +43,15 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
   speichernTooltip = 'Speichere deine Eingaben lokal in deinem Browser.';
   /** possible parties */
   parties = ['gruenen', 'cdu/csu', 'die.linke', 'spd'];
+  /** are those already up-to-date questions? */
+  updatedQuestions = false;
+  
 
   constructor (
 		  private qserv: QuestiondataService,
 		  private app: AppComponent,
 		  private route: ActivatedRoute,
+		  //private params: RouteParams,
 		  private location: Location
 		  ) {
     
@@ -62,80 +66,16 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			'titel': 'Quiz wird geladen',
 			'beschreibung': 'Das kein unter Umstaenden eine Sekunde dauern...'
 		};
-		
-		
-	// initial card:
-	let initialCard = 0;
-	
-	// parse route/url
-    this.route.params.subscribe(params => {
-      try {
-    	// requested auswertung?
-        if (params['questionPage']=='auswertung') {
-        	initialCard = -1;
-        } else {
-        	initialCard = Number.parseInt(params['questionPage']);
-        }
-      } catch (e) {
-        // if there was an error or nothing is given: show first question
-        console.log('keine question id angegeben ');
-        initialCard = 0;
-      }
-    });
-	
-    // is card number not parseable? -> first question
-	if (Number.isNaN(initialCard)) {
-		initialCard = 0;
-	}
-	
-	// retrieve newest question
-//	this.app.log('retrieving newest questions');
-    this.qserv.getData().subscribe((data) => {
-//      this.app.log('retrieved data:', data);
-      try {
-      	this.questionData = data.quiz;
-      	this.questionResults = data.results;
-      	
-      	for (const q of this.questionData) {
-	        q['fragenIds'] = [];
-	        for (const f in q['fragen']) {
-	          if (q['fragen'].hasOwnProperty(f)) {
-	            // -1 means -> not answered yet
-	            if (!this.answers.hasOwnProperty(f)) {
-	              this.answers[f] = -1;
-	            }
-	            q['fragenIds'].push(f);
-	            
-	            if (q['fragen'][f]["invert"]) {
-	            	let curResults = this.questionResults[f];
-	            	for (const party of this.parties) {
-		            	let tmp = curResults[party]['ja'];
-		            	curResults[party]['ja'] = curResults[party]['nein'];
-		            	curResults[party]['nein'] = tmp;
-	            	}
-		            this.questionResults[f] = curResults;
-	            }
-	          }
-	        }
-        }
-      } catch (e) {
-    	// unexpected votes format?
-      	console.log('could not parse votes.json', e);
-    	// show error
-		this.question = {
-			'titel': 'Es ist ein Fehler aufgetreten!',
-			'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Versuch es spaeter noch einmal!'
-		};
-      }
-      
-      
-      if (initialCard < 0) {
-    	  this.showResults();
-      } else {
-    	  this.showQuestion(initialCard);
-      }
-      
-    });
+    
+    this.updatedQuestions = false;
+    this.observeUrl ();
+    
+    /** the following unfortunatelly returns the wrong number?? */
+    /*this.location.subscribe ((ev:PopStateEvent) => {
+    	this.app.log ('browser back/forward detected');
+    	console.log (this.route.snapshot.params);
+    });*/
+    
   }
 
   ngOnInit() {
@@ -154,6 +94,97 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
   }
   ngOnChanges(changes) {
     this.checkSave ();
+  }
+  
+  
+  updateQuestions (initialCard) {
+	  this.qserv.getData().subscribe((data) => {
+//	      this.app.log('retrieved data:', data);
+	      try {
+	      	this.questionData = data.quiz;
+	      	this.questionResults = data.results;
+	      	
+	      	for (const q of this.questionData) {
+		        q['fragenIds'] = [];
+		        for (const f in q['fragen']) {
+		          if (q['fragen'].hasOwnProperty(f)) {
+		            // -1 means -> not answered yet
+		            if (!this.answers.hasOwnProperty(f)) {
+		              this.answers[f] = -1;
+		            }
+		            q['fragenIds'].push(f);
+		            
+		            if (q['fragen'][f]["invert"]) {
+		            	let curResults = this.questionResults[f];
+		            	for (const party of this.parties) {
+			            	let tmp = curResults[party]['ja'];
+			            	curResults[party]['ja'] = curResults[party]['nein'];
+			            	curResults[party]['nein'] = tmp;
+		            	}
+			            this.questionResults[f] = curResults;
+		            }
+		          }
+		        }
+	        }
+			this.updatedQuestions = true;
+	      } catch (e) {
+	    	// unexpected votes format?
+	      	console.log('could not parse votes.json', e);
+	    	// show error
+			this.question = {
+				'titel': 'Es ist ein Fehler aufgetreten!',
+				'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Versuch es spaeter noch einmal!'
+			};
+	      }
+	      
+	      
+	      if (initialCard < 0) {
+	    	  this.showResults();
+	      } else {
+	    	  this.showQuestion(initialCard);
+	      }
+	      
+	    });
+  }
+  
+  observeUrl () {
+	// parse route/url
+    this.route.params.subscribe(params => {
+    	console.log ("found params: ", params);
+      try {
+    	  let card = 0;
+    	// requested auswertung?
+        if (params['questionPage']=='auswertung') {
+        	card = -1;
+        } else {
+        	card = Number.parseInt(params['questionPage']);
+        }
+	
+	    // is card number not parseable? -> first question
+		if (Number.isNaN(card)) {
+			card = 0;
+	        this.location.replaceState ('quiz/0');
+	    	console.log ("replacing location to " + 'quiz/0');
+		} else {
+			
+			if (!this.updatedQuestions) {
+				this.updateQuestions (card);
+			} else if (card < 0) {
+	        	  this.showResults();
+	          } else {
+	        	  this.showQuestion(card);
+	          }
+			
+		}
+      } catch (e) {
+        // if there was an error or nothing is given: show first question
+        console.log('keine question id angegeben ');
+        //initialCard = 0;
+        this.location.replaceState ('quiz/0');
+    	console.log ("replacing location to " + 'quiz/0');
+      }
+		
+    });
   }
 
   /**
@@ -183,6 +214,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    * Zeige nur Question Nummer n
    */
   showQuestion(n) {
+	  console.log ("showing question " + n);
     this.questionIndex = n;
 		window.scrollTo(0,0);
 
@@ -196,17 +228,19 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 
     // if n is bigger than the number of questions -> show results
     if (this.questionIndex >= this.questionData.length && this.questionData.length > 0) {
+        this.location.replaceState ('quiz/auswertung'); // change URL
+    	console.log ("setting location to " + 'quiz/auswertung');
       this.showResults();
 		} else if (this.questionData.length == 0) {
 			this.resultsVisible = false;
 			this.progress = this.toPercent (0);
       this.actualQuestions = [];
     } else { // otherwise show question n
-			this.location.go('quiz/' + this.questionIndex) // die entsprechende URL im adressfeld anzeigen und auf history-stack pushen
       this.app.overwriteTitle('Quiz');
       this.resultsVisible = false;
       this.progress = this.toPercent (n / this.questionData.length);
       this.question = this.questionData[this.questionIndex];
+	  console.log ("question title " + this.question["titel"]);
       // get sub-questions
       this.actualQuestions = Object.keys(this.question['fragen']);
     }
@@ -218,7 +252,10 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    * jump a number of questions forward (n is positiv) or backward (n is negative)
    */
   nextQuestion(n) {
-    this.showQuestion(this.questionIndex + n);
+	let next = this.questionIndex + n;
+	this.location.go('quiz/' + next);
+	console.log ("setting location to " + 'quiz/' + next);
+    this.showQuestion(next); // die entsprechende URL im adressfeld anzeigen und auf history-stack pushen
   }
 
 
@@ -238,7 +275,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    * auswertungstabelle generieren und anzeigen
    */
   showResults() {
-    this.location.go('quiz/auswertung') // change URL
+	  console.log ("showing results");
+//    this.location.go('quiz/auswertung') // change URL
 		window.scrollTo(0,0);
     this.questionIndex = this.questionData.length;
     this.progress = this.toPercent (1);
