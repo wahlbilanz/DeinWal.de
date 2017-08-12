@@ -1,40 +1,79 @@
- <div class="w3-container padding" id="faq"> 
+ <div class="" id="faq"> 
   
-  <header class="w3-container">
+  <header class="w3-container" id="faqhead">
     <h1>FAQs - Häufig gestellte und ausgedachte Fragen</h1>
   </header>
   
-  <div class="w3-card-4 w3-margin">
+  
+		<ul class="w3-margin-top w3-margin-bottom w3-ul">
+			<li>
+				<a href="/faq#name">Wie kommt ihr auf den bescheuerten Namen?</a>
+			</li>
+			<li>
+				<a href="/faq#berechnung">Wie berechnet ihr die Auswertung?</a>
+			</li>
+			<li>
+				<a href="/faq#wenwaehlen">Also soll ich jetzt SPD, CDU, DIE LINKE oder Die Grünen wählen?</a>
+			</li>
+			<li>
+				<a href="/faq#speicherung">Was wird gespeichert?</a>
+			</li>
+			<li>
+				<a href="/faq#datennutzung">Was macht ihr mit meinen Daten?</a>
+			</li>
+			<li>
+				<a href="/faq#auswahl">Wie habt ihr die Fragen ausgewaehlt?</a>
+			</li>
+			<li>
+				<a href="/faq#technics">Wie habt ihr das technisch gelöst?</a>
+			</li>
+			<li>
+				<a href="/faq#fdpafd">Warum fehlen FDP, AfD, DIE PARTEI und weitere in der Auswertung?</a>
+			</li>
+			<li>
+				<a href="/faq#abstimmungxyz">Warum ist Abstimmung XYZ nicht dabei?</a>
+			</li>
+			<li>
+				<a href="/faq#behind">Wer steckt alles hinter DeinWal.de?</a>
+			</li>
+			<li>
+				<a href="/faq#finance">Wer finanziert das Projekt?</a>
+			</li>
+		</ul>
+  
+  
+  
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
-      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)">
-        <strong>Wie kommt ihr auf den bescheuerten Namen?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i>
-      </button>
+      <h4 id="name">
+        Wie kommt ihr auf den bescheuerten Namen?
+       <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true" alt></i></a></small></h4>
     </header>
-    <div class="w3-container" style="display: none">
-      <p> WahlWal.de war leider schon vergeben und WahlWachtel.de war irgendwie noch bescheuerter.</p>
+    <div class="w3-container">
+      <p>WahlWal.de war leider schon vergeben und WahlWachtel.de war irgendwie noch bescheuerter.</p>
     </div>
   </div>
   
-  <div class="w3-card-4 w3-margin">
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
-      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)">
-        <strong>Wie berechnet ihr die Auswertung?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i>
-      </button>
+      <h4 id="berechnung">
+        Wie berechnet ihr die Auswertung?
+       <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true" alt></i></a></small></h4>
     </header>
-    <div class="w3-container" style="display: none">
+    <div class="w3-container">
       <p>
       	Über das Rechenmodell für die Auswertung deiner Antworten haben wir lange nachgedacht. TODO... PDF zum herunterladen
       </p>
     </div>
   </div>
   
-  <div class="w3-card-4 w3-margin">
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
-      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)">
-        <strong>Also soll ich jetzt SPD, CDU, DIE LINKE oder Die Grünen wählen?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i>
-        </button>
+      <h4 id="wenwaehlen">
+        Also soll ich jetzt SPD, CDU, DIE LINKE oder Die Grünen wählen?
+			 <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true" alt></i></a></small></h4>
     </header>
-    <div class="w3-container" style="display: none">
+    <div class="w3-container">
       <p>
       	Das können wir dir leider nicht sagen... :(
       </p>
@@ -82,27 +121,11 @@
     </div>
   </div>
 
-  <div class="w3-card-4 w3-margin">
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
-      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Wie habt ihr die Fragen ausgewaehlt?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+      <h4 id="speicherung">Was wird gespeichert? <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true" alt></i></a></small></h4>
     </header>
-    <div class="w3-container" style="display: none">
-      <p>
-	      Auf <a href="https://wahlbilanz.de">wahlbilanz.de</a> haben wir die Abstimmungen im Bundestag der letzten Legislaturperiode zusammengetragen, analysiert und kategoriesiert.
-	      Wir haben die verschiedenen <a href="https://wahlbilanz.de/categories/">Kategorien</a> dann bewertet und potentielle Fragen und Themengebiete zusammengetragen.
-	      In einem aufwendigen und zähen Prozess wurden die Fragen ausgedünnt und formuliert.
-	      Dabei haben wir stets versucht Formulierungen zu finden, die leicht verständlich sind und euch nicht beeinflussen.
-	      Das war äussert kompliziert und ist uns vielleicht nicht immer zu 100% geglückt.
-	      <strong>Wenn du Verbesserungsvorschläge für eine Frage habt kannst du dich super gern <a routerLink="/impressum">bei uns melden</a>!</strong> 
-      </p>
-    </div>
-  </div>
-
-  <div class="w3-card-4 w3-margin">
-    <header class="w3-container w3-light-gray">
-      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Was wird gespeichert?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
-    </header>
-    <div class="w3-container" style="display: none">
+    <div class="w3-container">
       <p>
       	Das Speichern deiner Daten ist optional und standardmäßig ausgeschaltet.
       	Wenn "Speichern" aktiviert ist, bleiben deine Antworten erhalten, auch wenn du die Seite neu lädst oder deinen Rechner herunter fährst.
@@ -136,11 +159,11 @@
     </div>
   </div>
 
-  <div class="w3-card-4 w3-margin">
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
-      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Was macht ihr mit meinen Daten?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+      <h4 id="datennutzung">Was macht ihr mit meinen Daten? <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true" alt></i></a></small></h4>
     </header>
-    <div class="w3-container" style="display: none">
+    <div class="w3-container">
       <p>Das ist ja das coole: <strong>Wir haben fast keine Daten von dir!</strong></p>
       
       <p>
@@ -158,26 +181,27 @@
     </div>
   </div>
 
-  <div class="w3-card-4 w3-margin">
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
-    <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Wie habt ihr die Fragen ausgewählt?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
-   </header>
-    <div class="w3-container" style="display: none">
+      <h4 id="auswahl">Wie habt ihr die Fragen ausgewaehlt? <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true" alt></i></a></small></h4>
+    </header>
+    <div class="w3-container">
       <p>
 	      Auf <a href="https://wahlbilanz.de">wahlbilanz.de</a> haben wir die Abstimmungen im Bundestag der letzten Legislaturperiode zusammengetragen, analysiert und kategoriesiert.
 	      Wir haben die verschiedenen <a href="https://wahlbilanz.de/categories/">Kategorien</a> dann bewertet und potentielle Fragen und Themengebiete zusammengetragen.
 	      In einem aufwendigen und zähen Prozess wurden die Fragen ausgedünnt und formuliert.
-	      Dabei haben wir stets versucht Formulierungen zu finden, die euch nicht beeinflussen.
+	      Dabei haben wir stets versucht Formulierungen zu finden, die leicht verständlich sind und euch nicht beeinflussen.
 	      Das war äussert kompliziert und ist uns vielleicht nicht immer zu 100% geglückt.
-	      Wenn ihr verbesserungsvorschläge für eine Frage habt könnt ihr euch super gern <a routerLink="/impressum">bei uns melden</a>! 
-      </div>
+	      <strong>Wenn du Verbesserungsvorschläge für eine Frage habt kannst du dich super gern <a routerLink="/impressum">bei uns melden</a>!</strong> 
+      </p>
+    </div>
   </div>
 
-<div class="w3-card-4 w3-margin">
+<div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
-      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Wie habt ihr das technisch gelöst?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+      <h4 id="technics">Wie habt ihr das technisch gelöst? <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true" alt></i></a></small></h4>
     </header>
-    <div class="w3-container" style="display: none">
+    <div class="w3-container">
       <p>
       	Die komplette Webseite ist mit <a href="https://angular.io/">Angular</a> entwickelt.
       	Angular ist ein Typescript-Framework mit dem sich clientseitige Web-Applikationen sowohl für den Desktop als auch für mobile Geräte entwickeln lassen.
@@ -192,23 +216,23 @@
     </div>
   </div>
 
-  <div class="w3-card-4 w3-margin">
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
-      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)">
-        <strong>Warum fehlen FDP, AfD, DIE PARTEI und weitere in der Auswertung?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i>
-        </button>
+      <h4 id="fdpafd">
+        Warum fehlen FDP, AfD, DIE PARTEI und weitere in der Auswertung?
+         <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true" alt></i></a></small></h4>
     </header>
-    <div class="w3-container" style="display: none">
+    <div class="w3-container">
       <p>Wir konnten nur Parteien berücksichtigen, die in den 18. Bundestag gewählt wurden. Das sind CDU, CSU, die Grünen, die Linke und SPD. Von den anderen Parteien gibt es logischerweise keine Abstimmungsergebnisse mit denen man sich vergleichen könnte.</p>
     </div>
   </div>
 
 
-  <div class="w3-card-4 w3-margin">
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
-      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)"><strong>Warum ist Abstimmung XYZ nicht dabei?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+      <h4 id="abstimmungxyz">Warum ist Abstimmung XYZ nicht dabei? <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true" alt></i></a></small></h4>
     </header>
-    <div class="w3-container" style="display: none">
+    <div class="w3-container">
       <p>
       	Die Auswahl der spezifischen Fragen war sehr aufwendig und hat uns viel Zeit und Energie gekostet.
       	Nicht jede Abstimmung eignet sich für dieses Projekt.
@@ -226,13 +250,13 @@
     </div>
   </div>
 
-  <div class="w3-card-4 w3-margin">
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
-      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)">
-        <strong>Wer steckt alles hinter DeinWal.de?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i>
-        </button>
+      <h4 id="behind">
+        Wer steckt alles hinter DeinWal.de?
+			 <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true" alt></i></a></small></h4>
     </header>
-    <div class="w3-container" style="display: none">
+    <div class="w3-container">
       <p>
       	Das initiale Team hinter DeinWal.de bestand aus genau 2 Personen: <a href="https://binfalse.de">Martin</a> und <a href="https://github.com/tomthe">Tom</a>.
       </p>
@@ -251,13 +275,13 @@
     </div>
   </div>
 
-  <div class="w3-card-4 w3-margin">
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
-      <button class="w3-button w3-light-grey w3-hover-light-grey w3-block w3-left-align w3-xlarge" (click)="accordion($event)">
-        <strong>Wer finanziert das Projekt?</strong> <i class="fa fa-caret-down" aria-hidden="true"></i>
-        </button>
+      <h4 id="finance">
+        Wer finanziert das Projekt?
+			 <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true" alt></i></a></small></h4>
     </header>
-    <div class="w3-container" style="display: none">
+    <div class="w3-container">
       <p>
       	DeinWal.de wird (bisher) ausschliesslich von uns privat finanziert.
       	Martin hat die Domain gekauft und stellt den Webserver zur Verfügung.

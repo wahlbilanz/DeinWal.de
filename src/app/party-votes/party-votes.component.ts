@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, Input, ViewChild } from '@angular/core';
 import { QuizComponent } from '../quiz/quiz.component';
-declare var d3: any;
+//declare var d3: any;
 
 @Component({
   selector: 'app-party-votes',
@@ -37,7 +37,8 @@ export class PartyVotesComponent implements OnInit {
     this.id = this.qid + '-' + this.party;
     //console.log (this.questions.fragen[this.qid]);
     //console.log (this.party);
-    this.results = this.questions.fragen[this.qid].results[this.party];
+    //this.results = this.questions.fragen[this.qid].results[this.party];
+    this.results = this.quiz.questionResults[this.qid][this.party];
     
     
     this.nAbgeordnete = (this.results.ja + this.results.nein + this.results.enthaltung);
