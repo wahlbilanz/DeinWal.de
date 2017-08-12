@@ -164,7 +164,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
   choose(id, choice) {
     // unselect a previously selected answer
     if (this.answers[id] === choice) {
-      this.answers[id] = null;
+      this.answers[id] = -1;
     } else {
       // select this answer
       this.answers[id] = choice;
