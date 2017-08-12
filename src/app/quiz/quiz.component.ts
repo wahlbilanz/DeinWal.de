@@ -44,7 +44,12 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
   /** possible parties */
   parties = ['gruenen', 'cdu/csu', 'die.linke', 'spd'];
 
-  constructor(private qserv: QuestiondataService, private app: AppComponent, private route: ActivatedRoute,private location: Location) {
+  constructor (
+		  private qserv: QuestiondataService,
+		  private app: AppComponent,
+		  private route: ActivatedRoute,
+		  private location: Location
+		  ) {
     
     this.checkSave ();
 
