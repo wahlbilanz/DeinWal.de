@@ -288,6 +288,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 
     for (const q of this.questionData) {
       for (const f in q['fragen']) {
+				q['fragen'][f]['consent'] = [];
         if (q['fragen'].hasOwnProperty(f)) {
           if (this.answers[f] >= 0) {
             const opt = this.voteOptions;
@@ -299,6 +300,9 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
               q['fragen'][f][partyName] = this.toPercent(tempPunkte.punkteRelativ);
               nzustimmung[partyName] += tempPunkte.punkteRelativ;
               //this.app.log('---h3', partyName, tempPunkte);
+							if (tempPunkte.punkteRelativ >= 2/3) {
+								q['fragen'][f]['consent'].push (partyName);
+							}
             }
           } else {
             for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
@@ -306,6 +310,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
             }
           }
         }
+				console.log (f, q['fragen'][f]['consent']);
       }
     }
 
