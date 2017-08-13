@@ -47,6 +47,10 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	partypriority;
 	/** are those already up-to-date questions? */
 	updatedQuestions = false;
+	/** show details in the simple table? */
+	simpleDetails = {};
+	/** show details in the complex table? */
+	complexDetails = {};
 	
 
 	constructor (
@@ -60,6 +64,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		
 		this.checkSave ();
 		this.partypriority = this.parties;
+		this.simpleDetails = {};
 
 		if (this.doSave) {
 //			this.app.log('restoring data from local storage');
@@ -121,6 +126,9 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 									this.answers[f] = -1;
 								}
 								q['fragenIds'].push(f);
+								
+								this.simpleDetails[f] = false;
+								this.complexDetails[f] = false;
 								
 								if (q['fragen'][f]["invert"]) {
 									let curResults = this.questionResults[f];
@@ -406,6 +414,11 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			default:
 					return "unknown.png";
 		}
+	}
+	
+	
+	toggleSimpleDetails (qid) {
+		this.simpleDetails[qid] = !this.simpleDetails[qid];
 	}
 
 
