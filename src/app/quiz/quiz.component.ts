@@ -440,6 +440,21 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		}
 	}
 	
+	getPartyClass (name) {
+		switch(name) {
+			case "gruenen":
+				return "diegruenen";
+			case "cdu/csu":
+				return "cducsu";
+			case "die.linke":
+				return "dielinke";
+			case "spd":
+				return "spd";
+			default:
+					return "unknown";
+		}
+	}
+	
 	
 	toggleSimpleDetails (qid) {
 		this.simpleDetails[qid] = !this.simpleDetails[qid];

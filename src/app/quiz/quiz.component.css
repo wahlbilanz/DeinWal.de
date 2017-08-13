@@ -79,3 +79,44 @@ th small {
 	height: 10px;
 	float: left;
 }
+
+#party-bar-chart {
+	width: 100%;
+	display: inline-block;
+}
+.veritcal-bar {
+	height: 300px;
+	position: relative;
+	float: left;
+}
+
+.veritcal-bar-progress {
+	color: #fff;
+	width:100%;
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+}
+
+
+.diegruenen {
+	background-color: #19a329;
+}
+.cducsu {
+	background-color: #000;
+}
+.spd {
+	background-color: #ff481f;
+}
+.dielinke {
+	background-color: #e0001a;
+}
+.unknown {
+	background-color: #6d6d6d;
+}
+
+
+
+
+

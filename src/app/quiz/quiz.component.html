@@ -46,6 +46,13 @@
         <header class="w3-container w3-green w3-margin optional-margin">
             <h3>Auswertung </h3>
         </header>
+        <div class="w3-padding w3-center" id="party-bar-chart">
+        	<ng-container *ngFor="let party of partypriority">
+        	<div class="veritcal-bar w3-border" [style.width.%]="100 / (partypriority.length)">
+        		<div class="veritcal-bar-progress {{getPartyClass (party)}}" [style.height]="overallResult[party]">{{overallResult[party]}}<br>{{getProperPartyName (party)}}</div>
+        	</div>
+        	</ng-container>
+        </div>
         <div class="w3-margin">
 	        <h4>Welche Partei hat am ähnlichsten wie du abgestimmt?</h4>
 	        In der folgenden Tabelle siehst du wieviele Abgeordnete in den verschiedenen Parteien in deinem Sinne abgestimmt haben.
