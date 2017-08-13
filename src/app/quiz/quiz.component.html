@@ -53,7 +53,7 @@
         
         
 					<div id="tableswitcher">
-						<button class="w3-margin">Switch to complex table</button>
+						<button class="w3-button w3-indigo w3-hover-blue w3-margin">Switch to complex table</button>
 						
 						
 						<div id="complextable" class="w3-responsive w3-margin optional-margin">
@@ -72,7 +72,9 @@
 											
 										
 											<ng-container *ngFor="let party of partypriority">
-												<th class="w3-grey w3-right-align"><img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}"></th>
+												<th class="w3-grey w3-right-align">
+													<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+												</th>
 											</ng-container>
 										
 										</tr>

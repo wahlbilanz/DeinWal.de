@@ -47,6 +47,12 @@ th small {
     }
 }
 
+@media screen and (max-width: 570px) {
+    #tableswitcher{
+    	display: none;
+    }
+}
+
 /*.partyDetailsBar {
 	min-width
 }*/
