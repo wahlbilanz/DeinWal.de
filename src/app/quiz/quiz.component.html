@@ -116,7 +116,8 @@
 							<tbody>
 								<ng-container *ngFor="let quest of questionData; let i = index">
 									<tr class="auswertung-abschnitt">
-										<th class="w3-grey" colspan="2">{{quest.titel}}<button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button></th>
+										<th class="w3-grey">{{quest.titel}}<button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button></th>
+										<td class="w3-grey">Mehrheitlich wie du gestimmt</td>
 									</tr>
 									<ng-container *ngFor="let q of quest.fragenIds">
 										<tr class="auswertung-zeile" id="auswertung-{{q}}" *ngIf="answers[q] >= 0">
