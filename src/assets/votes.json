@@ -183,7 +183,7 @@
             "titel": "Gentechnik in der Landwirtschaft",
             "beschreibung": "Mithilfe von Gentechnik werden Lebewesen künstlich verändert, so dass sie Beispielsweise einen höheren Ertrag liefern oder Resistenzen gegenüber Schädlingen und schlechten Umweltbedingungen aufweisen.",
             "bild": "",
-            "subtext": "mehr informationen ueber gentechnik?",
+            "subtext": "",
             "fragen": {
                 "018-020-01": {
                     "context": "Honig könnte Pollen von gentechnisch veränderten Pflanzen enthalten.",
@@ -196,7 +196,7 @@
                 },
                 "018-011-01": {
                     "context": "Die Maislinie 1507 wurde gentechnisch so verändert, dass sie ein Gift für bestimmte Insekten produziert und resistent gegen das Totalherbizid Glufosinat ist.",
-                    "frage": "Soll die Maislinie 1507 fuer den Anbau in der EU zugelassen werden?",
+                    "frage": "Soll die Maislinie 1507 für den Anbau in der EU zugelassen werden?",
                     "short": "Maislinie 1507 zulassen",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-011-01/",
@@ -378,7 +378,7 @@
             "subtext": "",
             "fragen": {
                 "018-184-01": {
-                    "context": "Bisher wurden alle Produzenten erneuerbarer Energien durch das <abbr title='Erneuerbare-Energien-Gesetz'>EEG</abbr> gefördert. Durch die Einfuehrung einer Obergrenze soll der Wettbewerb zwischen den Produzenten angeregt werden und die EEG-Umlage fuer die Verbraucher sinken. Damit fällt die garantierte Vergütung für erneuerbare Energien aber weg.",
+                    "context": "Bisher wurden alle Produzenten erneuerbarer Energien durch das <abbr title='Erneuerbare-Energien-Gesetz'>EEG</abbr> gefördert. Durch die Einführung einer Obergrenze soll der Wettbewerb zwischen den Produzenten angeregt werden und die EEG-Umlage für die Verbraucher sinken. Damit fällt die garantierte Vergütung für erneuerbare Energien aber weg.",
                     "frage": "Sollte es eine Obergrenze für die EEG-Umlage geben?",
                     "short": "EEG-Förderung begrenzen",
                     "subtext": "",
