@@ -259,7 +259,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 //		console.log (this.questionData);
 
 		// if n is bigger than the number of questions -> show results
-		if (this.app.questionIndex >= this.questionData.length && this.questionData.length > 0) {
+		if (this.app.questionIndex > this.questionData.length && this.questionData.length > 0) {
 			//this.location.replaceState ('quiz/auswertung'); // change URL
 			this.router.navigate(['quiz', 'auswertung'], {replaceUrl:true});
 			console.log ("setting location to " + 'quiz/auswertung');
@@ -268,15 +268,44 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.resultsVisible = false;
 			this.progress = this.toPercent (0);
 			this.actualQuestions = [];
+		} else if (this.app.questionIndex == 0) {
+			this.resultsVisible = false;
+			this.router.navigate(['quiz', 0], {replaceUrl:true});
+			let themengebiete = "";
+			for (let q = 0; q < this.questionData.length; q++) {
+				themengebiete += this.questionData[q]['titel'];
+				if (q == this.questionData.length - 2) {
+					themengebiete += ' und ';
+				} else if (q < this.questionData.length - 2) {
+					themengebiete += ', ';
+				}
+			}
+			
+			this.question = {
+				'titel': 'Gleich geht\'s los!',
+				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du ueber Antraege und Gesetzentwuerfe aus dem Bundestag entscheiden. Oben links kannst du die Eingaben in deinem Browser-Profil speichern, dann gehen sie nicht verloren wenn du die Seite neu laedst oder kurz eine andere Seite besuchst. <br> <br> Mit den Knoepfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen. Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen oder das Quiz vorzeitig beenden und direkt zur Auswertung wechseln. Von der Auswertung kannst du natuerlich auch jeder Zeit wieder zurueck zu den Fragen! <br> <br> <strong>Aus ueber 200 real stattgefundenen Abstimmungen haben wir ' + Object.keys(this.answers).length + ' ausgewaehlt und in ' + this.questionData.length + ' Themengebiete unterteilt:</strong> ' + themengebiete + '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeit. Eine einzelne Abstimmung sieht wie folgt aus:',
+				'fragen': {
+					'example-1': {
+						'context': 'Eine Frage hat manchmal ein bisschen Kontext.',
+						'frage': 'Die eigentliche Frage ist aber immer fett gedruckt.',
+						'inverted': false,
+						'link': 'https://wahlbilanz.de',
+						'short': 'example',
+						'subtext': 'Ueber einen Link kannst du mehr zu einer Abstimmung erfahren:',
+					}
+				}
+			};
+			this.actualQuestions = ['example-1'];
 		} else { // otherwise show question n
 			this.router.navigate(['quiz', this.app.questionIndex], {replaceUrl:true});
 			this.app.overwriteTitle('Quiz');
 			this.resultsVisible = false;
 			this.progress = this.toPercent (n / this.questionData.length);
-			this.question = this.questionData[this.app.questionIndex];
+			this.question = this.questionData[this.app.questionIndex - 1];
 			console.log ("question title " + this.question["titel"]);
 			// get sub-questions
 			this.actualQuestions = Object.keys(this.question['fragen']);
+			console.log (this.question);
 		}
 	}
 
@@ -314,7 +343,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 //		this.location.go('quiz/auswertung') // change URL
 		this.router.navigate(['quiz', 'auswertung'], {replaceUrl:true});
 		window.scrollTo(0,0);
-		this.app.questionIndex = this.questionData.length;
+		this.app.questionIndex = this.questionData.length + 1;
 		this.progress = this.toPercent (1);
 		this.app.overwriteTitle("Auswertung");
 
