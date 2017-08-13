@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import { Location } from '@angular/common';
 import { QuestiondataService } from '../questiondata.service';
 import { AppComponent } from '../app.component';
@@ -51,6 +51,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		  private qserv: QuestiondataService,
 		  private app: AppComponent,
 		  private route: ActivatedRoute,
+				private router: Router,
 		  //private params: RouteParams,
 		  private location: Location
 		  ) {
@@ -253,7 +254,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
    */
   nextQuestion(n) {
 	let next = this.questionIndex + n;
-	this.location.go('quiz/' + next);
+	//this.location.go('quiz/' + next);
+	this.router.navigate(['quiz', next]);
 	console.log ("setting location to " + 'quiz/' + next);
     this.showQuestion(next); // die entsprechende URL im adressfeld anzeigen und auf history-stack pushen
   }
