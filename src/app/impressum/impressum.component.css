@@ -3,3 +3,6 @@
 	margin: 5px auto;
 }
 
+.acknowledge a {
+    text-decoration: none;
+}

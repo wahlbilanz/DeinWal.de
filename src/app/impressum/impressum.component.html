@@ -10,6 +10,10 @@
 			Das Projekt DeinWal.de wurde von <a href="https://binfalse.de">Martin Scharm</a> und <a href="https://github.com/tomthe">Tom Theile</a> ins Leben gerufen.
 			Generell ist aber jeder zum Mitmachen eingeladen. Die Seite ist open source bei GitHub veröffentlicht: <a href="https://github.com/wahlbilanz/DeinWal.de">https://github.com/wahlbilanz/DeinWal.de</a>.
 		</p>
+		
+		<p>Wir möchten uns bei allen Helfern für die vielen Diskussionen und Vorschläge bedanken! Insbesondere bei
+		<ng-container *ngFor="let a of ack; let i = index"><span class='acknowledge'><ng-container *ngIf="!a.link">{{a.name}}</ng-container><ng-container *ngIf="a.link"><a href='{{a.link}}' target="_blank">{{a.name}}</a></ng-container><ng-container *ngIf="i < ack.length - 2">, </ng-container><ng-container *ngIf="i == ack.length - 2"> und </ng-container></span></ng-container>.
+		</p>
 	</div>
 	
 	<div class="w3-padding w3-light-grey w3-padding-16 w3-margin">
