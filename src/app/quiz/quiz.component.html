@@ -14,7 +14,7 @@
         <header class="w3-container w3-light-grey w3-margin optional-margin">
             <h3>{{question.titel}}</h3>
         </header>
-        <div class="question-description w3-margin optional-margin" [innerHTML]="question.beschreibung">
+        <div class="question-description w3-margin" [innerHTML]="question.beschreibung">
         </div>
         <div class="w3-light-grey w3-padding w3-padding-16 w3-margin optional-margin" id="question-{{q}}" *ngFor="let q of actualQuestions">
         	<div class="q-text">
@@ -39,7 +39,7 @@
         <header class="w3-container w3-green w3-margin optional-margin">
             <h3>Auswertung </h3>
         </header>
-        <div class="w3-margin optional-margin">
+        <div class="w3-margin">
 	        <h4>Welche Partei hat am ähnlichsten wie du abgestimmt?</h4>
 	        In der folgenden Tabelle siehst du wieviele Abgeordnete in den verschiedenen Parteien in deinem Sinne abgestimmt haben:
         </div>
@@ -130,7 +130,7 @@
         
         
         
-        <div class="w3-margin optional-margin">
+        <div class="w3-margin">
 	        Bitte beachte, dass die Auswertung dir nur zeigt welche Parteien so ähnlich abgestimmt haben wie du.
 	        <strong>
 	        	DeinWal.de kann auf gar keinen Fall die einzige Quelle sein, die du für deine Entscheidung zur Bundestagswahl nutzt!
