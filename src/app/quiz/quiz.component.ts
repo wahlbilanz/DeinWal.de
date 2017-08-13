@@ -43,6 +43,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	speichernTooltip = 'Speichere deine Eingaben lokal in deinem Browser.';
 	/** possible parties */
 	parties = ['gruenen', 'cdu/csu', 'die.linke', 'spd'];
+	/** sequence of parties in auswertung */
+	partypriority;
 	/** are those already up-to-date questions? */
 	updatedQuestions = false;
 	
@@ -57,6 +59,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			) {
 		
 		this.checkSave ();
+		this.partypriority = this.parties;
 
 		if (this.doSave) {
 //			this.app.log('restoring data from local storage');
@@ -329,6 +332,9 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.overallResult['gruenen'] = this.toPercent(nzustimmung['gruenen'] / nAnswered);
 			this.overallResult['die.linke'] = this.toPercent(nzustimmung['die.linke'] / nAnswered);
 			this.overallResult['cdu/csu'] = this.toPercent(nzustimmung['cdu/csu'] / nAnswered);
+			
+			// TODO: set party priority
+			
 		}
 		this.resultsVisible = true;
 	}
@@ -362,6 +368,35 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 
 
 
+	getProperPartyName (nonproper) {
+		switch(nonproper) {
+			case "gruenen":
+				return "Bündnis 90/Die Grünen";
+			case "cdu/csu":
+				return "CDU/CSU";
+			case "die.linke":
+				return "Die Linke";
+			case "spd":
+				return "SPD";
+			default:
+					return "unknown";
+		}
+	}
+	
+	getPartyLogo (name) {
+		switch(name) {
+			case "gruenen":
+				return "diegruenen.png";
+			case "cdu/csu":
+				return "cducsu.png";
+			case "die.linke":
+				return "dielinke.png";
+			case "spd":
+				return "spd.png";
+			default:
+					return "unknown.png";
+		}
+	}
 
 
 	// below is local storage stuff

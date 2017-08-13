@@ -44,6 +44,8 @@
 	        In der folgenden Tabelle siehst du wieviele Abgeordnete in den verschiedenen Parteien in deinem Sinne abgestimmt haben:
         </div>
         <div class="w3-responsive w3-margin">
+        
+        
 					<div id="tableswitcher">
 						<button>Switch to complex table</button>
 						<div id="complextable">
@@ -52,10 +54,11 @@
 									<tr>
 										<th class="w3-left-align">Abstimmung</th>
 										<th class="w3-center">Deine Antwort</th>
-										<th class="w3-right-align">Die Grünen</th>
-										<th class="w3-right-align">CDU</th>
-										<th class="w3-right-align">DIE LINKE</th>
-										<th class="w3-right-align">SPD</th>
+										
+										<ng-container *ngFor="let party of partypriority">
+											<th class="w3-right-align"><img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}"></th>
+										</ng-container>
+										
 								</thead>
 								<tbody>
 									<ng-container *ngFor="let quest of questionData; let i = index">
@@ -66,10 +69,11 @@
 											<tr class="auswertung-zeile" id="auswertung-{{q}}">
 												<td class="w3-left-align">{{quest.fragen[q].short}}</td>
 												<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{voteOptions[answers[q]]}}</td>
-												<td class="w3-right-align w3-tooltip">{{quest.fragen[q]['gruenen']}}<span style="position:absolute;z-index:1;right:-30%;top:2.3em" class="w3-text"><app-party-votes class="w3-tag" [party]="'gruenen'" [qid]="q" [questions]="quest" [choice]="answers[q]"></app-party-votes></span></td>
-												<td class="w3-right-align w3-tooltip">{{quest.fragen[q]['cdu/csu']}}<span style="position:absolute;z-index:1;right:-30%;top:2.4em" class="w3-text"><app-party-votes class="w3-tag" [party]="'cdu/csu'" [qid]="q" [questions]="quest" [choice]="answers[q]"></app-party-votes></span></td>
-												<td class="w3-right-align w3-tooltip">{{quest.fragen[q]['die.linke']}}<span style="position:absolute;z-index:1;right:-25%;top:2.5em" class="w3-text"><app-party-votes class="w3-tag" [party]="'die.linke'" [qid]="q" [questions]="quest" [choice]="answers[q]"></app-party-votes></span></td>
-												<td class="w3-right-align w3-tooltip">{{quest.fragen[q]['spd']}}<span style="position:absolute;z-index:1;right:0;top:2.6em" class="w3-text"><app-party-votes class="w3-tag" [party]="'spd'" [qid]="q" [questions]="quest" [choice]="answers[q]"></app-party-votes></span></td>
+												
+												<ng-container *ngFor="let party of partypriority">
+													<td class="w3-right-align w3-tooltip">{{quest.fragen[q][party]}}<span style="position:absolute;z-index:1;right:-30%;top:2.3em" class="w3-text"><app-party-votes class="w3-tag" [party]="party" [qid]="q" [questions]="quest" [choice]="answers[q]"></app-party-votes></span></td>
+												</ng-container>
+												
 											</tr>
 										</ng-container>
 									</ng-container>
@@ -88,6 +92,9 @@
 							</table>
 						</div>
 	        </div>
+	        
+	        
+	        
 	        <div id="easytable">
 						<table id="easyauswertungstabelle" class="w3-table w3-bordered w3-hoverable">
 							<thead class="w3-dark-grey">
@@ -104,7 +111,7 @@
 											<td class="w3-left-align">{{quest.fragen[q].short}}</td>
 											<td class="w3-left-align">
 												<ng-container *ngFor="let party of quest.fragen[q].consent">
-													{{party}}
+													<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
 												</ng-container>
 											</td>
 										</tr>
@@ -114,6 +121,9 @@
 	        	</table>
 	        </div>
         </div> 
+        
+        
+        
         <div class="w3-margin">
 	        Bitte beachte, dass die Auswertung dir nur zeigt welche Parteien so ähnlich abgestimmt haben wie du.
 	        <strong>
