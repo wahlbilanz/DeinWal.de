@@ -8,7 +8,7 @@
 			<button class="w3-button w3-hover-green" (click)="toggleSave()" [class.w3-pale-green]="!doSave && !saveImpossible" [class.w3-green]="doSave && !saveImpossible" [class.w3-dark-grey]="saveImpossible" [class.w3-hover-red]="saveImpossible"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
 		</span>
         <div class="question-tags w3-right w3-margin optional-margin">
-        	<span class="question-tag" *ngFor="let t of question.topic"><a href="https://wahlbilanz.de/categories/#{{t}}">{{t}}</a></span>
+        	<span class="question-tag" *ngFor="let t of question.topic"><a href="https://wahlbilanz.de/tags/#{{t}}">{{t}}</a> </span>
         </div>
 	    <div style="clear:both"></div>
         <header class="w3-container w3-light-grey w3-margin optional-margin">

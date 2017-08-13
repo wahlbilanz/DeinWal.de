@@ -2,7 +2,9 @@
     "quiz": [
         {
             "topic": [
-                "Familie"
+                "Familie",
+								"Gleichstellung",
+								"Kinder"
             ],
             "titel": "Familie",
             "beschreibung": "",
@@ -37,7 +39,10 @@
         },
         {
             "topic": [
-                "Arbeit"
+                "Arbeit",
+								"Befristung",
+								"Mindestlohn",
+								"Rente"
             ],
             "titel": "Arbeit",
             "beschreibung": "",
@@ -89,7 +94,9 @@
         {
             "topic": [
                 "Gesundheit",
-                "Verbraucherschutz"
+                "Verbraucherschutz",
+								"Arzneimittel",
+								"Pflege"
             ],
             "titel": "Gesundheit und Verbraucherschutz",
             "beschreibung": "",
@@ -140,7 +147,9 @@
         },
         {
             "topic": [
-                "Gesellschaft"
+								"Miete",
+                "Vorratsdatenspeicherung",
+								"Suizid"
             ],
             "titel": "Gesellschaft",
             "beschreibung": "",
@@ -175,9 +184,10 @@
         },
         {
             "topic": [
+                "Landwirtschaft",
                 "Gesundheit",
                 "Ernährung",
-                "Landwirtschaft",
+								"Umwelt",
                 "Verbraucherschutz"
             ],
             "titel": "Gentechnik in der Landwirtschaft",
@@ -214,7 +224,10 @@
         },
         {
             "topic": [
-                "Bildung"
+                "BAföG",
+								"Bund-Länder",
+								"Forschung",
+								"Ausbildung"
             ],
             "titel": "Bildung",
             "beschreibung": "Bildung ist bislang Ländersache. In den letzten Jahren gab es mehrere Versuche, den Bund einzubeziehen.",
@@ -308,7 +321,9 @@
         },
         {
             "topic": [
-                "Freihandelsabkommen"
+                "Freihandel",
+								"CETA",
+								"Schiedsgericht"
             ],
             "titel": "Freihandelsabkommen",
             "beschreibung": "",
@@ -335,7 +350,9 @@
         },
         {
             "topic": [
-                "Energie"
+                "Fossile Energie",
+                "Fracking",
+                "Kernenergie"
             ],
             "titel": "Energie I",
             "beschreibung": "",
@@ -370,7 +387,8 @@
         },
         {
             "topic": [
-                "Energie"
+								"Erneuerbare-Energien",
+								"Windenergie"
             ],
             "titel": "Energie II",
             "beschreibung": "Erneuerbare Energien wie Wind- und Solarenergie machen derzeit einen Anteil von 33% an der Stromversorgung in Deutschland aus. Bei ihrer Produktion wird kein CO2 in die Atmosphäre freigesetzt. Sie stellen jedoch hohe Anforderungen an das Stromnetz und verursachen meist höhere Kosten. Der Bundestag hat sich mit mehreren Anträgen und Gesetzesvorschlägen zum Thema beschäftigt.",
@@ -397,7 +415,9 @@
         },
         {
             "topic": [
-                "Finanzen"
+                "Finanzhilfe",
+								"Haushalt",
+								"Maut"
             ],
             "titel": "Finanzen",
             "beschreibung": "",
@@ -440,7 +460,8 @@
         },
         {
             "topic": [
-                "Inneres"
+                "Asyl",
+								"Bleiberecht"
             ],
             "titel": "Inneres",
             "beschreibung": "",
