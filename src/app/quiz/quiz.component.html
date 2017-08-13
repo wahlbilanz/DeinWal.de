@@ -30,7 +30,8 @@
 	        <div style="clear:both"></div>
         </div>
 	    <button class="w3-button w3-grey w3-hover-light-gray w3-left w3-ripple w3-large w3-margin-left optional-margin" (click)="nextQuestion(-1)" *ngIf="getQuestionIndex () > 0"><i class="fa fa-chevron-left" aria-hidden="true"></i><span class='mobile-not'> vorherige Frage</span></button>
-	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large w3-margin-right optional-margin" (click)="nextQuestion(1)" *ngIf="getQuestionIndex () <= questionData.length - 1"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class='mobile-not'> nächste Frage</span></button>
+	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large w3-margin-right optional-margin" (click)="nextQuestion(1)" *ngIf="getQuestionIndex () == 0"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class='mobile-not'> erste Frage</span></button>
+	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large w3-margin-right optional-margin" (click)="nextQuestion(1)" *ngIf="getQuestionIndex () <= questionData.length - 1 && getQuestionIndex () > 0"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class='mobile-not'> nächste Frage</span></button>
 	    <button class="w3-button w3-grey w3-hover-light-gray w3-right w3-ripple w3-large w3-margin-right" (click)="showResults()"><i class="fa fa-line-chart" aria-hidden="true"></i> Auswertung</button>
      </div>
 </div>
