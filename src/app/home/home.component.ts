@@ -12,6 +12,10 @@ export class HomeComponent implements OnInit {
   constructor(private qserv: QuestiondataService, private app: AppComponent) {
 		this.qserv.getData ().subscribe((data) => { this.app.log('preloaded votes.json from home component :)'); });
 	}
+	
+	getQuestionIndex () {
+		return this.app.questionIndex;
+	}
 
   ngOnInit() {
   }

@@ -9,6 +9,8 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+	
+	questionIndex = 0;
   
   // setup route-listener to update title of the page 
   constructor(router:Router, private titleService:Title) {
