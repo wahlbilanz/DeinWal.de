@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges } from '@angular/core';
+import { Component, OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges, HostListener} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router'
 import { Location } from '@angular/common';
 import { QuestiondataService } from '../questiondata.service';
@@ -53,7 +53,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	complexDetails = {};
 	/** which table to show */
 	showComplexTable = false;
-	
+	/** is this a touch device? then we shouldn't do hover stuff...*/
+	touchDevice = false;
 
 	constructor (
 			private qserv: QuestiondataService,
@@ -67,6 +68,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		this.checkSave ();
 		this.partypriority = this.parties;
 		this.simpleDetails = {};
+		
+		this.touchDevice = false;
 
 		if (this.doSave) {
 //			this.app.log('restoring data from local storage');
@@ -86,6 +89,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.app.log ('browser back/forward detected');
 			console.log (this.route.snapshot.params);
 		});*/
+		
 		
 	}
 
@@ -454,7 +458,13 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 					return "unknown";
 		}
 	}
-	
+
+	  @HostListener('touchstart', ['$event'])
+	  @HostListener('touchend', ['$event'])
+	  @HostListener('touchcancel', ['$event'])
+	  handleTouch(ev){
+		  this.touchDevice = true;
+	  }
 	
 	toggleSimpleDetails (qid) {
 		this.simpleDetails[qid] = !this.simpleDetails[qid];
