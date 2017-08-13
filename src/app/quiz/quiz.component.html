@@ -109,6 +109,10 @@
 											</tr>
 											<tr class="auswertung-detail" id="auswertung-complex-detail-{{q}}" *ngIf="complexDetails[q]">
 												<td class="w3-left-align w3-white w3-border-black w3-leftbar" colspan="6">
+													<div class="w3-margin-bottom">
+														<span class="q-context" [innerHTML]="quest.fragen[q].context"></span>
+														<strong class="q-question" [innerHTML]="quest.fragen[q].frage"></strong>
+													</div>
 													Deine Antwort: 
 													<span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">
 														{{voteOptions[answers[q]]}}
@@ -189,6 +193,10 @@
 								</tr>
 								<tr class="auswertung-detail" id="auswertung-detail-{{q}}" *ngIf="simpleDetails[q]">
 									<td class="w3-left-align w3-white w3-border-black w3-leftbar" colspan="2">
+										<div class="w3-margin-bottom">
+											<span class="q-context" [innerHTML]="quest.fragen[q].context"></span>
+											<strong class="q-question" [innerHTML]="quest.fragen[q].frage"></strong>
+										</div>
 										Deine Antwort: 
 										<span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">
 											{{voteOptions[answers[q]]}}
