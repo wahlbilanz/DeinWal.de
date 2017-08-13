@@ -33,7 +33,7 @@
                     "short": "Betreuungsgeld für Kitaausbau nutzen",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-133-01/",
-                    "invert": false
+                    "invert": true
                 }
             }
         },
@@ -49,21 +49,21 @@
             "bild": "",
             "subtext": "",
             "fragen": {
-                "018-046-06": {
+                "018-241-01": {
                     "context": "Immer mehr neue Arbeitsverträge sind nur befristet. ",
                     "frage": "Sollten sachgrundlose Befristungen abgeschafft werden? ",
                     "short": "sachgrundlose Befristung abschaffen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-046-06/",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-241-01/",
                     "invert": false
                 },
-                "018-241-01": {
+                "018-046-06": {
                     "context": "",
                     "frage": "Sollten die Renten in Ost und West durch steuerfinanzierte Zuschüsse angeglichen werden?",
                     "short": "Ost-Renten angleichen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-241-01/",
-                    "invert": false
+                    "link": "https://wahlbilanz.de/abstimmungen/018-046-06/",
+                    "invert": true
                 },
                 "018-209-05": {
                     "context": "",
@@ -344,7 +344,7 @@
                     "short": "Keine Schiedsgerichte in CETA",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-054-03/",
-                    "invert": false
+                    "invert": true
                 }
             }
         },
@@ -373,7 +373,7 @@
                     "short": "Atomkraft-Subventionen in GB verhindern",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-115-06/",
-                    "invert": false
+                    "invert": true
                 },
                 "018-167-01": {
                     "context": "Mit der Fracking-Technologie kann aus bestimmten Gesteinschichten Öl und Gas gewonnen werden. Fracking birgt dabei Risiken für Umwelt und Gesundheit.",

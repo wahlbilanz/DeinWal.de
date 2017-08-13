@@ -20,7 +20,7 @@
         	<div class="q-text">
 	        	<span class="q-context" [innerHTML]="question.fragen[q].context"></span>
 	        	<strong class="q-question" [innerHTML]="question.fragen[q].frage"></strong>
-	        	<div class="q-supplemental">{{question.fragen[q].subtext}} <a href="{{question.fragen[q].link}}">Mehr Informationen</a></div>
+	        	<div class="q-supplemental">{{question.fragen[q].subtext}} <a href="{{question.fragen[q].link}}" target="_blank">Mehr Informationen</a></div>
         	</div>
         	<div class="q-buttons w3-right">
 		        <button class="w3-button w3-ripple active w3-large" [class.w3-hover-green]="!touchDevice" [class.w3-pale-green]="answers[q]!=1" [class.w3-green]="answers[q]==1" (click)="choose(q,1)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Ja</button>
