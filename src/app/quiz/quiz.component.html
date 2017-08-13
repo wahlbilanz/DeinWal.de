@@ -48,7 +48,9 @@
         </header>
         <div class="w3-margin">
 	        <h4>Welche Partei hat am ähnlichsten wie du abgestimmt?</h4>
-	        In der folgenden Tabelle siehst du wieviele Abgeordnete in den verschiedenen Parteien in deinem Sinne abgestimmt haben:
+	        In der folgenden Tabelle siehst du wieviele Abgeordnete in den verschiedenen Parteien in deinem Sinne abgestimmt haben.
+	        Wenn du auf den Knopf mit dem <button class="w3-button"><i class="fa fa-caret-down" aria-hidden="true"></i></button> Symbol neben einer Abstimmung klickst erfährst du mehr Details.
+	        Du kannst deine Entscheidungen in einem Themengebiet über den Knopf <button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button> nochmal bearbeiten.
         </div>
         
         			<div id="notableswitcher" class="w3-margin">
@@ -92,7 +94,9 @@
 												<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{voteOptions[answers[q]]}}</td>
 												
 												<ng-container *ngFor="let party of partypriority">
-													<td class="w3-right-align w3-tooltip">{{quest.fragen[q][party]}}<span style="position:absolute;z-index:1;right:-30%;top:2.3em" class="w3-text"><app-party-votes class="w3-tag" [party]="party" [qid]="q" [questions]="quest" [choice]="answers[q]"></app-party-votes></span></td>
+													<td class="w3-right-align w3-tooltip">
+														{{quest.fragen[q][party]}}
+													</td>
 												</ng-container>
 												
 											</tr>
@@ -115,11 +119,12 @@
 																	<div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
 																</div><br>
 																Ja: {{questionResults[q][party].ja}} &mdash; Nein: {{questionResults[q][party].nein}} &mdash; Enthaltung: {{questionResults[q][party].enthaltung}}<br>
-																Score: {{quest.fragen[q]["score"][party]}}
+																Score: {{quest.fragen[q]["score"][party]}}<br>
 															</td>
 														</tr>
 														</ng-container>
 													</table>
+													<a href="{{quest.fragen[q].link}}">Mehr Informationen zu dieser Abstimmung</a>
 												</td>
 											</tr>
 										</ng-container>
@@ -134,11 +139,11 @@
 											
 							</tr>
 							<tr class="auswertung-zeile">
-								<td class="w3-left-align">Gesamtergebnis:</td>
+								<th class="w3-left-align">Gesamtergebnis:</th>
 								<td class="w3-center"></td>
 								
 								<ng-container *ngFor="let party of partypriority">
-									<td class="w3-right-align">{{overallResult[party]}}</td>
+									<th class="w3-right-align">{{overallResult[party]}}</th>
 								</ng-container>
 								
 							</tr>
@@ -197,6 +202,7 @@
 											</tr>
 											</ng-container>
 										</table>
+										<a href="{{quest.fragen[q].link}}">Mehr Informationen zu dieser Abstimmung</a>
 									</td>
 								</tr>
 							</ng-container>
