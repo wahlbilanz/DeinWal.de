@@ -83,7 +83,13 @@
 										</ng-container>
 									</ng-container>
 							<tr class="auswertung-abschnitt">
-								<th colspan="6" class="w3-grey w3-left-align">Gesamt</th>
+								<th colspan="2" class="w3-grey w3-left-align">Gesamt</th>
+											
+										
+											<ng-container *ngFor="let party of partypriority">
+												<th class="w3-grey w3-right-align"><img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}"></th>
+											</ng-container>
+											
 							</tr>
 							<tr class="auswertung-zeile">
 								<td class="w3-left-align">Gesamtergebnis:</td>
@@ -116,8 +122,10 @@
 										<tr class="auswertung-zeile" id="auswertung-{{q}}" *ngIf="answers[q] >= 0">
 											<td class="w3-left-align">{{quest.fragen[q].short}}</td>
 											<td class="w3-left-align">
-												<ng-container *ngFor="let party of quest.fragen[q].consent">
-													<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+												<ng-container *ngFor="let party of partypriority">
+													<ng-container *ngIf="quest.fragen[q].consent.indexOf (party) > -1">
+														<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+													</ng-container>
 												</ng-container>
 											</td>
 										</tr>
