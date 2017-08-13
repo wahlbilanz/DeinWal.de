@@ -82,11 +82,12 @@
 							</tr>
 							<tr class="auswertung-zeile">
 								<td class="w3-left-align">Gesamtergebnis:</td>
-										<td class="w3-center"></td>
-										<td class="w3-right-align">{{overallResult['gruenen']}}</td>
-								<td class="w3-right-align">{{overallResult['cdu/csu']}}</td>
-								<td class="w3-right-align">{{overallResult['die.linke']}}</td>
-								<td class="w3-right-align">{{overallResult['spd']}}</td>
+								<td class="w3-center"></td>
+								
+								<ng-container *ngFor="let party of partypriority">
+									<td class="w3-right-align">{{overallResult[party]}}</td>
+								</ng-container>
+								
 							</tr>
 								</tbody>
 							</table>

@@ -333,7 +333,17 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.overallResult['die.linke'] = this.toPercent(nzustimmung['die.linke'] / nAnswered);
 			this.overallResult['cdu/csu'] = this.toPercent(nzustimmung['cdu/csu'] / nAnswered);
 			
-			// TODO: set party priority
+			// set party priority
+			for (let i = 0; i < this.partypriority.length; i++) {
+				for (let j = i+1; j < this.partypriority.length; j++) {
+					if (nzustimmung[this.partypriority[i]] < nzustimmung[this.partypriority[j]]) {
+						// swap those two in the sequence
+						const tmp = this.partypriority[i];
+						this.partypriority[i] = this.partypriority[j];
+						this.partypriority[j] = tmp;
+					}
+				}
+			}
 			
 		}
 		this.resultsVisible = true;
