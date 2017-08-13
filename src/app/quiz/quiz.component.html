@@ -48,6 +48,8 @@
         
 					<div id="tableswitcher">
 						<button>Switch to complex table</button>
+						
+						
 						<div id="complextable">
 							<table id="auswertungstabelle" class="w3-table w3-bordered w3-hoverable">
 								<thead class="w3-dark-grey">
@@ -55,15 +57,18 @@
 										<th class="w3-left-align">Abstimmung</th>
 										<th class="w3-center">Deine Antwort</th>
 										
-										<ng-container *ngFor="let party of partypriority">
-											<th class="w3-right-align"><img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}"></th>
-										</ng-container>
-										
+										<th class="w3-center" colspan="4">Uebereinstimmung mit den Parteien</th>
 								</thead>
 								<tbody>
 									<ng-container *ngFor="let quest of questionData; let i = index">
 										<tr class="auswertung-abschnitt">
-											<th class="w3-grey" colspan="6">{{quest.titel}}<button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button></th>
+											<th class="w3-grey" colspan="2">{{quest.titel}}<button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button></th>
+											
+										
+											<ng-container *ngFor="let party of partypriority">
+												<th class="w3-grey w3-right-align"><img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}"></th>
+											</ng-container>
+										
 										</tr>
 										<ng-container *ngFor="let q of quest.fragenIds">
 											<tr class="auswertung-zeile" id="auswertung-{{q}}">
