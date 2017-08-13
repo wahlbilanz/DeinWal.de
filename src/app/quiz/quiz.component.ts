@@ -243,6 +243,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.progress = this.toPercent (0);
 			this.actualQuestions = [];
 		} else { // otherwise show question n
+			this.router.navigate(['quiz', this.app.questionIndex], {replaceUrl:true});
 			this.app.overwriteTitle('Quiz');
 			this.resultsVisible = false;
 			this.progress = this.toPercent (n / this.questionData.length);
@@ -285,6 +286,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	showResults() {
 		console.log ("showing results");
 //		this.location.go('quiz/auswertung') // change URL
+		this.router.navigate(['quiz', 'auswertung'], {replaceUrl:true});
 		window.scrollTo(0,0);
 		this.app.questionIndex = this.questionData.length;
 		this.progress = this.toPercent (1);
