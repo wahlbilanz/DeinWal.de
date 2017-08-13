@@ -51,12 +51,16 @@
 	        In der folgenden Tabelle siehst du wieviele Abgeordnete in den verschiedenen Parteien in deinem Sinne abgestimmt haben:
         </div>
         
-        
+        			<div id="notableswitcher" class="w3-margin">
+        				Dies ist eine reduzierte Auswertungstabelle.
+        				Eine komplexere Auswertung ist leider nur für größere Bildschirme verfügbar. 
+        			</div>
 					<div id="tableswitcher">
-						<button class="w3-button w3-indigo w3-hover-blue w3-margin">Switch to complex table</button>
+						<button class="w3-button w3-indigo w3-hover-blue w3-margin" (click)="toggleComplexTable()" *ngIf="!showComplexTable">Zeige komplexe Auswertung</button>
+						<button class="w3-button w3-hover-indigo w3-blue w3-margin" (click)="toggleComplexTable()" *ngIf="showComplexTable">Zeige einfache Auswertung</button>
 						
 						
-						<div id="complextable" class="w3-responsive w3-margin optional-margin">
+						<div id="complextable" class="w3-responsive w3-margin optional-margin" *ngIf="showComplexTable">
 							<table id="auswertungstabelle" class="w3-table w3-bordered w3-hoverable">
 								<thead class="w3-dark-grey">
 									<tr>
@@ -115,7 +119,7 @@
 	        
 	        
 	        
-	        <div id="easytable" class="w3-responsive w3-margin optional-margin">
+	        <div id="easytable" class="w3-responsive w3-margin optional-margin" *ngIf="!showComplexTable">
 						<table id="easyauswertungstabelle" class="w3-table w3-bordered">
 							<thead class="w3-dark-grey">
 								<tr>

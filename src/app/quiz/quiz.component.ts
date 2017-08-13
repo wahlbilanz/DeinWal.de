@@ -51,6 +51,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	simpleDetails = {};
 	/** show details in the complex table? */
 	complexDetails = {};
+	/** which table to show */
+	showComplexTable = false;
 	
 
 	constructor (
@@ -430,7 +432,12 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	toggleSimpleDetails (qid) {
 		this.simpleDetails[qid] = !this.simpleDetails[qid];
 	}
-
+	
+	
+	toggleComplexTable() {
+		this.showComplexTable = !this.showComplexTable;
+	}
+	
 
 	// below is local storage stuff
 

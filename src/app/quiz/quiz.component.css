@@ -52,7 +52,11 @@ th small {
     	display: none;
     }
 }
-
+@media screen and (min-width: 570px) {
+	#notableswitcher {
+    	display: none;
+    }
+}
 /*.partyDetailsBar {
 	min-width
 }*/
