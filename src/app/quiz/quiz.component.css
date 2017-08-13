@@ -120,5 +120,7 @@ th small {
 }
 
 
-
+#progressbar {
+ min-width: 25px;
+}
 

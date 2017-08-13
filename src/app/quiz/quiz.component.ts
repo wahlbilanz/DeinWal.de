@@ -283,7 +283,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			
 			this.question = {
 				'titel': 'Gleich geht\'s los!',
-				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du ueber Anträge und Gesetzentwürfe aus dem Bundestag entscheiden. Oben links kannst du die Eingaben in deinem Browser-Profil speichern, dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst. <br> <br> Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen. Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen oder das Quiz vorzeitig beenden und direkt zur Auswertung wechseln. Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen! Ganz unten zeigt die ein grüner Fortschrittsbalken wie weit du bist. <br> <br> <strong>Aus über 200 real stattgefundenen Abstimmungen haben wir ' + Object.keys(this.answers).length + ' ausgewählt und in ' + this.questionData.length + ' Themengebiete unterteilt:</strong> ' + themengebiete + '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeit. Eine einzelne Abstimmung sieht wie folgt aus:',
+				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du ueber Anträge und Gesetzentwürfe aus dem Bundestag entscheiden. Oben links kannst du die Eingaben in deinem Browser-Profil speichern, dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst. <br> <br> Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen. Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen oder das Quiz vorzeitig beenden und direkt zur Auswertung wechseln. Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen! Ganz unten zeigt dir ein grüner Fortschrittsbalken wie weit du bist. <br> <br> <strong>Aus über 200 real stattgefundenen Abstimmungen haben wir ' + Object.keys(this.answers).length + ' ausgewählt und in ' + this.questionData.length + ' Themengebiete unterteilt:</strong> ' + themengebiete + '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeit. Eine einzelne Abstimmung sieht wie folgt aus:',
 				'fragen': {
 					'example-1': {
 						'context': 'Eine Frage hat manchmal ein bisschen Kontext.',
@@ -302,7 +302,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.router.navigate(['quiz', this.app.questionIndex], {replaceUrl:true});
 			this.app.overwriteTitle('Quiz');
 			this.resultsVisible = false;
-			this.progress = this.toPercent (n / this.questionData.length);
+			this.progress = this.toPercent (n / (this.questionData.length + 1));
 			this.question = this.questionData[this.app.questionIndex - 1];
 			console.log ("question title " + this.question["titel"]);
 			// get sub-questions
