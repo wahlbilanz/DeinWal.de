@@ -84,13 +84,43 @@
 										</tr>
 										<ng-container *ngFor="let q of quest.fragenIds">
 											<tr class="auswertung-zeile" id="auswertung-{{q}}">
-												<td class="w3-left-align">{{quest.fragen[q].short}}</td>
+												<td class="w3-left-align">
+													{{quest.fragen[q].short}}
+													<button class="w3-button" (click)="toggleComplexDetails(q)" *ngIf="!complexDetails[q]"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+													<button class="w3-button" (click)="toggleComplexDetails(q)" *ngIf="complexDetails[q]"><i class="fa fa-caret-up" aria-hidden="true"></i></button>
+												</td>
 												<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{voteOptions[answers[q]]}}</td>
 												
 												<ng-container *ngFor="let party of partypriority">
 													<td class="w3-right-align w3-tooltip">{{quest.fragen[q][party]}}<span style="position:absolute;z-index:1;right:-30%;top:2.3em" class="w3-text"><app-party-votes class="w3-tag" [party]="party" [qid]="q" [questions]="quest" [choice]="answers[q]"></app-party-votes></span></td>
 												</ng-container>
 												
+											</tr>
+											<tr class="auswertung-detail" id="auswertung-complex-detail-{{q}}" *ngIf="complexDetails[q]">
+												<td class="w3-left-align w3-white w3-border-black w3-leftbar" colspan="6">
+													Deine Antwort: 
+													<span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">
+														{{voteOptions[answers[q]]}}
+													</span> <br>
+													<table class="w3-margin-top partyDetailsTable">
+														<ng-container *ngFor="let party of partypriority">
+														<tr>
+															<td class="partyDetailsImage">
+																<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+															</td>
+															<td class="partyDetailsBar">
+																<div class="stackedbar">
+																	<div class="stackedbarbar w3-green" [style.width.%]="questionResults[q][party].ja * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
+																	<div class="stackedbarbar w3-red" [style.width.%]="questionResults[q][party].nein * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
+																	<div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
+																</div><br>
+																Ja: {{questionResults[q][party].ja}} &mdash; Nein: {{questionResults[q][party].nein}} &mdash; Enthaltung: {{questionResults[q][party].enthaltung}}<br>
+																Score: {{quest.fragen[q]["score"][party]}}
+															</td>
+														</tr>
+														</ng-container>
+													</table>
+												</td>
 											</tr>
 										</ng-container>
 									</ng-container>
@@ -120,58 +150,58 @@
 	        
 	        
 	        <div id="easytable" class="w3-responsive w3-margin optional-margin" *ngIf="!showComplexTable">
-						<table id="easyauswertungstabelle" class="w3-table w3-bordered">
-							<thead class="w3-dark-grey">
-								<tr>
-									<th class="w3-center" colspan="2">Deine Auswertung</th>
-							</thead>
-							<tbody>
-								<ng-container *ngFor="let quest of questionData; let i = index">
-									<tr class="auswertung-abschnitt">
-										<th class="w3-grey">{{quest.titel}}<button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button></th>
-										<td class="w3-grey">Mehrheitlich wie du gestimmt</td>
-									</tr>
-									<ng-container *ngFor="let q of quest.fragenIds">
-										<tr class="auswertung-zeile" id="auswertung-{{q}}" *ngIf="answers[q] >= 0">
-											<td class="w3-left-align">{{quest.fragen[q].short}} 
-												<button class="w3-button" (click)="toggleSimpleDetails(q)" *ngIf="!simpleDetails[q]"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
-												<button class="w3-button" (click)="toggleSimpleDetails(q)" *ngIf="simpleDetails[q]"><i class="fa fa-caret-up" aria-hidden="true"></i></button>
-											</td>
-											<td class="w3-left-align">
-												<ng-container *ngFor="let party of partypriority">
-													<ng-container *ngIf="quest.fragen[q].consent.indexOf (party) > -1">
-														<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
-													</ng-container>
-												</ng-container>
-											</td>
-										</tr>
-											<tr class="auswertung-detail" id="auswertung-detail-{{q}}" *ngIf="simpleDetails[q]">
-												<td class="w3-left-align w3-white w3-border-black w3-leftbar" colspan="2">
-												Deine Antwort: 
-												<span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">
-													{{voteOptions[answers[q]]}}
-												</span> <br>
-												<table class="w3-margin-top partyDetailsTable">
-													<ng-container *ngFor="let party of partypriority">
-													<tr>
-														<td class="partyDetailsImage">
-															<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
-														</td>
-														<td class="partyDetailsBar">
-															<div class="stackedbar">
-																<div class="stackedbarbar w3-green" [style.width.%]="questionResults[q][party].ja * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
-																<div class="stackedbarbar w3-red" [style.width.%]="questionResults[q][party].nein * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
-																<div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
-															</div>
-														</td>
-													</tr>
-													</ng-container>
-												</table>
+				<table id="easyauswertungstabelle" class="w3-table w3-bordered">
+					<thead class="w3-dark-grey">
+						<tr>
+							<th class="w3-center" colspan="2">Deine Auswertung</th>
+					</thead>
+					<tbody>
+						<ng-container *ngFor="let quest of questionData; let i = index">
+							<tr class="auswertung-abschnitt">
+								<th class="w3-grey">{{quest.titel}}<button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button></th>
+								<td class="w3-grey">Mehrheitlich wie du gestimmt</td>
+							</tr>
+							<ng-container *ngFor="let q of quest.fragenIds">
+								<tr class="auswertung-zeile" id="auswertung-{{q}}" *ngIf="answers[q] >= 0">
+									<td class="w3-left-align">{{quest.fragen[q].short}} 
+										<button class="w3-button" (click)="toggleSimpleDetails(q)" *ngIf="!simpleDetails[q]"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+										<button class="w3-button" (click)="toggleSimpleDetails(q)" *ngIf="simpleDetails[q]"><i class="fa fa-caret-up" aria-hidden="true"></i></button>
+									</td>
+									<td class="w3-left-align">
+										<ng-container *ngFor="let party of partypriority">
+											<ng-container *ngIf="quest.fragen[q].consent.indexOf (party) > -1">
+												<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+											</ng-container>
+										</ng-container>
+									</td>
+								</tr>
+								<tr class="auswertung-detail" id="auswertung-detail-{{q}}" *ngIf="simpleDetails[q]">
+									<td class="w3-left-align w3-white w3-border-black w3-leftbar" colspan="2">
+										Deine Antwort: 
+										<span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">
+											{{voteOptions[answers[q]]}}
+										</span> <br>
+										<table class="w3-margin-top partyDetailsTable">
+											<ng-container *ngFor="let party of partypriority">
+											<tr>
+												<td class="partyDetailsImage">
+													<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+												</td>
+												<td class="partyDetailsBar">
+													<div class="stackedbar">
+														<div class="stackedbarbar w3-green" [style.width.%]="questionResults[q][party].ja * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
+														<div class="stackedbarbar w3-red" [style.width.%]="questionResults[q][party].nein * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
+														<div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
+													</div>
 												</td>
 											</tr>
-									</ng-container>
-								</ng-container>
-							</tbody>
+											</ng-container>
+										</table>
+									</td>
+								</tr>
+							</ng-container>
+						</ng-container>
+					</tbody>
 	        	</table>
 	        </div>
         

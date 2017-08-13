@@ -321,6 +321,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		for (const q of this.questionData) {
 			for (const f in q['fragen']) {
 				q['fragen'][f]['consent'] = [];
+				q['fragen'][f]['score'] = {};
 				if (q['fragen'].hasOwnProperty(f)) {
 					if (this.answers[f] >= 0) {
 						const opt = this.voteOptions;
@@ -331,6 +332,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 						for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
 							const tempPunkte = this.getZustimmungsPunkte(results[partyName], answer);
 							q['fragen'][f][partyName] = this.toPercent(tempPunkte.punkteRelativ);
+							q['fragen'][f]['score'][partyName] = tempPunkte.scoreDescription;
 							nzustimmung[partyName] += tempPunkte.punkteRelativ;
 							//this.app.log('---h3', partyName, tempPunkte);
 							if (tempPunkte.punkteRelativ >= 2/3) {
@@ -381,19 +383,29 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		const opt = this.voteOptions;
 		let nAbgegebeneStimmen = partyResults[opt[0]] + partyResults[opt[1]] + partyResults[opt[2]];
 		let punkte = 0;
+		let description = "";
 		if (answer === 'enthaltung') { // Enthaltung
 			punkte = partyResults[opt[0]] + 0.5 * partyResults[opt[1]] + 0.5 * partyResults[opt[2]];
+			description = "(Enthaltung + 1/2 Ja + 1/2 Nein) / Gesamt = ("
+				+ partyResults[opt[0]] + " + " + 0.5 * partyResults[opt[1]] + " + " + 0.5 * partyResults[opt[2]] + ") / " + nAbgegebeneStimmen
+				+ " = " + this.toPercent (punkte / nAbgegebeneStimmen);
 		} else if (answer === 'ja') { // ja
 			punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[1]];
+			description = "(Ja + 1/2 Enthaltung) / Gesamt = ("
+				+ partyResults[opt[1]] + " + " + 0.5 * partyResults[opt[0]] + ") / " + nAbgegebeneStimmen
+				+ " = " + this.toPercent (punkte / nAbgegebeneStimmen);
 		} else if (answer === 'nein') { // nein
 			punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[2]];
+			description = "(Nein + 1/2 Enthaltung) / Gesamt = ("
+				+ partyResults[opt[2]] + " + " + 0.5 * partyResults[opt[0]] + ") / " + nAbgegebeneStimmen
+				+ " = " + this.toPercent (punkte / nAbgegebeneStimmen);
 		} else {
 			// wenn der Benutzer gar keine Antwort ausgewaehlt hat
 			// sowol punkte als auch nAbgegebeneStimmen auf 0 setzen, damit sie nicht ins gesamtergebnis reinzaehlen:
 			punkte = 0;
 			nAbgegebeneStimmen = 0;
 		}
-		return { 'punkteRelativ': (punkte / nAbgegebeneStimmen), 'punkteAbsolut': punkte, 'nAbgegebeneStimmen': nAbgegebeneStimmen };
+		return { 'punkteRelativ': (punkte / nAbgegebeneStimmen), 'punkteAbsolut': punkte, 'nAbgegebeneStimmen': nAbgegebeneStimmen, 'scoreDescription':description  };
 	}
 
 
@@ -431,6 +443,11 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	
 	toggleSimpleDetails (qid) {
 		this.simpleDetails[qid] = !this.simpleDetails[qid];
+	}
+	
+	
+	toggleComplexDetails (qid) {
+		this.complexDetails[qid] = !this.complexDetails[qid];
 	}
 	
 	
