@@ -114,7 +114,7 @@
 	        
 	        
 	        <div id="easytable" class="w3-responsive w3-margin optional-margin">
-						<table id="easyauswertungstabelle" class="w3-table w3-bordered w3-hoverable">
+						<table id="easyauswertungstabelle" class="w3-table w3-bordered">
 							<thead class="w3-dark-grey">
 								<tr>
 									<th class="w3-center" colspan="2">Deine Auswertung</th>
@@ -140,8 +140,27 @@
 											</td>
 										</tr>
 											<tr class="auswertung-detail" id="auswertung-detail-{{q}}" *ngIf="simpleDetails[q]">
-												<td class="w3-left-align w3-black" colspan="2">
-												Deine Antwort: <span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{voteOptions[answers[q]]}}</span>
+												<td class="w3-left-align w3-white w3-border-black w3-leftbar" colspan="2">
+												Deine Antwort: 
+												<span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">
+													{{voteOptions[answers[q]]}}
+												</span> <br>
+												<table class="w3-margin-top partyDetailsTable">
+													<ng-container *ngFor="let party of partypriority">
+													<tr>
+														<td class="partyDetailsImage">
+															<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+														</td>
+														<td class="partyDetailsBar">
+															<div class="stackedbar">
+																<div class="stackedbarbar w3-green" [style.width.%]="questionResults[q][party].ja * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
+																<div class="stackedbarbar w3-red" [style.width.%]="questionResults[q][party].nein * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
+																<div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
+															</div>
+														</td>
+													</tr>
+													</ng-container>
+												</table>
 												</td>
 											</tr>
 									</ng-container>

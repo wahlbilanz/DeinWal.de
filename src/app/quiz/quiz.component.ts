@@ -139,9 +139,18 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 									}
 									this.questionResults[f] = curResults;
 								}
+								
+								for (const party of this.parties) {
+									this.questionResults[f][party]["relevant"] = 0;
+									for (const opt of this.voteOptions) {
+										this.questionResults[f][party]["relevant"] += this.questionResults[f][party][opt];
+									}
+								}
 							}
 						}
 					}
+					
+					
 					this.updatedQuestions = true;
 				} catch (e) {
 					// unexpected votes format?
@@ -315,6 +324,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 						const opt = this.voteOptions;
 						const answer = opt[this.answers[f]];
 						const results = this.questionResults[f];
+						console.log (f, this.questionResults[f]);
 						nAnswered++;
 						for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
 							const tempPunkte = this.getZustimmungsPunkte(results[partyName], answer);

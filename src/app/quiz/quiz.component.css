@@ -47,3 +47,25 @@ th small {
     }
 }
 
+/*.partyDetailsBar {
+	min-width
+}*/
+.partyDetailsTable {
+	width: 100%;
+}
+.partyDetailsImage {
+	width: 70px;
+}
+
+.stackedbar {
+    height: 10px;
+    width: 100%;
+    margin: 5px 0;
+    padding: 0;
+}
+
+
+.stackedbarbar {
+	height: 10px;
+	float: left;
+}
