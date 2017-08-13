@@ -244,7 +244,7 @@
                 },
                 "018-066-08": {
                     "context": "",
-                    "frage": "Sollte der Bund (statt der Länder) die Finanzierung des BAföG (abbr) übernehmen?",
+                    "frage": "Sollte der Bund (statt der Länder) die Finanzierung des <abbr title='Bundesausbildungsförderungsgesetz'>BAföG</abbr> übernehmen?",
                     "short": "BAföG-Finanzierung durch Bund",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-066-08/",
@@ -271,7 +271,7 @@
             "fragen": {
                 "018-161-01": {
                     "context": "",
-                    "frage": "Sollte sich die Bundeswehr an der militärischen Ausbildungs- und Beratungsmission für Somalia beteiligen? (20 SoldatInnen)",
+                    "frage": "Sollte sich die Bundeswehr an der militärischen Ausbildungs- und Beratungsmission für Somalia beteiligen? (bis zu 20 SoldatInnen)",
                     "short": "Ausbildungsmission in Somalia",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-161-01/",
@@ -295,7 +295,7 @@
                 },
                 "018-017-01": {
                     "context": "",
-                    "frage": "Sollten bewaffnete deutsche Streitkräfte Afghanistan bei der Aufrechterhaltung der Sicherheit unterstützen? (Bis zu 3300 SoldatInnen)",
+                    "frage": "Sollten bewaffnete deutsche Streitkräfte Afghanistan bei der Aufrechterhaltung der Sicherheit unterstützen? (bis zu 3300 SoldatInnen)",
                     "short": "Bundeswehr in Afghanistan",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-017-01/",
@@ -303,7 +303,7 @@
                 },
                 "018-179-02": {
                     "context": "",
-                    "frage": "Sollte sich die Bundeswehr im Libanon mit Aufklärung, Überwachung, Sicherung, Ausbildung, Lufttransport einschließlich der Anwendung militärischer Gewalt beteiligen? (Bis zu 300 SoldatInnen)",
+                    "frage": "Sollte sich die Bundeswehr im Libanon mit Aufklärung, Überwachung, Sicherung, Ausbildung, Lufttransport einschließlich der Anwendung militärischer Gewalt beteiligen? (bis zu 300 SoldatInnen)",
                     "short": "Bundeswehr im Linbanon",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-179-02/",
@@ -311,7 +311,7 @@
                 },
                 "018-039-01": {
                     "context": "",
-                    "frage": "Sollte sich die Bundeswehr im Kosovo an der Aufrechterhaltung eines sicheren und stabilen Umfelds beteiligen? (Bis zu 1850 SoldatInnen)",
+                    "frage": "Sollte sich die Bundeswehr im Kosovo an der Aufrechterhaltung eines sicheren und stabilen Umfelds beteiligen? (bis zu 1850 SoldatInnen)",
                     "short": "Bundeswehr im Kosovo",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-039-01/",
@@ -340,7 +340,7 @@
                 },
                 "018-054-03": {
                     "context": "Sogenannte Schiedsgerichte dienen dem Schutz von Investoren. Investoren und Firmen können Staaten vor Schiedsgerichten auf Schadenersatz verklagen, falls diese z.B. Gesetze erlassen, die den Wert von Investitionen schmälern.",
-                    "frage": "Sollte sich die Bundesregierung dafür einsetzen, dass Schiedsgerichte kein Teil von CETA werden? Sollte sich die Bundesregierung gegen Schiedsgerichte in CETA einsetzen?",
+                    "frage": "Sollte sich die Bundesregierung gegen Schiedsgerichte in CETA einsetzen?",
                     "short": "Keine Schiedsgerichte in CETA",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-054-03/",
@@ -391,7 +391,7 @@
 								"Windenergie"
             ],
             "titel": "Energie II",
-            "beschreibung": "Erneuerbare Energien wie Wind- und Solarenergie machen derzeit einen Anteil von 33% an der Stromversorgung in Deutschland aus. Bei ihrer Produktion wird kein CO2 in die Atmosphäre freigesetzt. Sie stellen jedoch hohe Anforderungen an das Stromnetz und verursachen meist höhere Kosten. Der Bundestag hat sich mit mehreren Anträgen und Gesetzesvorschlägen zum Thema beschäftigt.",
+            "beschreibung": "Erneuerbare Energien wie Wind- und Solarenergie machen derzeit einen Anteil von 33% an der Stromversorgung in Deutschland aus. Bei ihrer Produktion wird kein CO<sub>2</sub> in die Atmosphäre freigesetzt. Sie stellen jedoch hohe Anforderungen an das Stromnetz und verursachen meist höhere Kosten.",
             "bild": "",
             "subtext": "",
             "fragen": {
