@@ -51,6 +51,9 @@ th small {
     #tableswitcher{
     	display: none;
     }
+	.mobile-not {
+		display: none;
+	}
 }
 @media screen and (min-width: 570px) {
 	#notableswitcher {
@@ -115,7 +118,6 @@ th small {
 .unknown {
 	background-color: #6d6d6d;
 }
-
 
 
 
