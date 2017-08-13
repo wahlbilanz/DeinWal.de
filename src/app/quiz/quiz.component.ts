@@ -78,7 +78,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 
 		this.question = {
 			'titel': 'Quiz wird geladen',
-			'beschreibung': 'Das kein unter Umstaenden eine Sekunde dauern...'
+			'beschreibung': 'Das kann unter Umständen eine Sekunde dauern...'
 		};
 		
 		this.updatedQuestions = false;
@@ -164,7 +164,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 					// show error
 					this.question = {
 						'titel': 'Es ist ein Fehler aufgetreten!',
-						'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Versuch es spaeter noch einmal!'
+						'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Versuch es später noch einmal!'
 					};
 				}
 				
@@ -283,7 +283,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			
 			this.question = {
 				'titel': 'Gleich geht\'s los!',
-				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du ueber Antraege und Gesetzentwuerfe aus dem Bundestag entscheiden. Oben links kannst du die Eingaben in deinem Browser-Profil speichern, dann gehen sie nicht verloren wenn du die Seite neu laedst oder kurz eine andere Seite besuchst. <br> <br> Mit den Knoepfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen. Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen oder das Quiz vorzeitig beenden und direkt zur Auswertung wechseln. Von der Auswertung kannst du natuerlich auch jeder Zeit wieder zurueck zu den Fragen! <br> <br> <strong>Aus ueber 200 real stattgefundenen Abstimmungen haben wir ' + Object.keys(this.answers).length + ' ausgewaehlt und in ' + this.questionData.length + ' Themengebiete unterteilt:</strong> ' + themengebiete + '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeit. Eine einzelne Abstimmung sieht wie folgt aus:',
+				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du ueber Anträge und Gesetzentwürfe aus dem Bundestag entscheiden. Oben links kannst du die Eingaben in deinem Browser-Profil speichern, dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst. <br> <br> Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen. Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen oder das Quiz vorzeitig beenden und direkt zur Auswertung wechseln. Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen! Ganz unten zeigt die ein grüner Fortschrittsbalken wie weit du bist. <br> <br> <strong>Aus über 200 real stattgefundenen Abstimmungen haben wir ' + Object.keys(this.answers).length + ' ausgewählt und in ' + this.questionData.length + ' Themengebiete unterteilt:</strong> ' + themengebiete + '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeit. Eine einzelne Abstimmung sieht wie folgt aus:',
 				'fragen': {
 					'example-1': {
 						'context': 'Eine Frage hat manchmal ein bisschen Kontext.',
@@ -291,11 +291,13 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 						'inverted': false,
 						'link': 'https://wahlbilanz.de',
 						'short': 'example',
-						'subtext': 'Ueber einen Link kannst du mehr zu einer Abstimmung erfahren:',
+						'subtext': 'Über einen Link kannst du mehr zu einer Abstimmung erfahren:',
 					}
 				}
 			};
 			this.actualQuestions = ['example-1'];
+			this.progress = this.toPercent (0);
+			
 		} else { // otherwise show question n
 			this.router.navigate(['quiz', this.app.questionIndex], {replaceUrl:true});
 			this.app.overwriteTitle('Quiz');
