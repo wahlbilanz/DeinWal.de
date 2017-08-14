@@ -109,8 +109,88 @@
     </header>
     <div class="w3-container">
       <p>
-      	Über das Rechenmodell für die Auswertung deiner Antworten haben wir lange nachgedacht. TODO... PDF zum herunterladen
+      	Über die Mathematik hinter der Auswertung haben wir lange nachgedacht vieles ausprobiert.
+      	Die Berechnung soll leicht verständlich sein, damit jeder die Möglichkeit hat die Ergebnisse selbst nachzuvollziehen.
+      	Wir haben unser Modell an das <a href="http://www.bpb.de/system/files/dokument_pdf/Rechenmodell%20des%20Wahl-O-Mat.pdf" target="_blank">Rechenmodell des Wahl-O-Mats</a> angelehnt.
+      	Auf der <a routerLink="/quiz/auswertung">Auswertungsseite</a> könnt ihr zwischen einer einfachen und einer komplexen Ansicht wechseln.
       </p>
+      
+      <h5>Berechnung der Aehnlichkeit bei einer einzelnen Abstimmung</h5>
+      <p>
+				Die Prozentangaben in der komplexen Tabelle geben die Aehnlichkeit deiner Entscheidung mit dem Abstimmungsergebnis einer Partei an.
+				<code>100%</code> bedeutet, dass die Partei geschlossen genau wie du gestimmt hat. 
+				<code>0%</code> bedeutet, dass die Partei komplett anderer Meinung war.
+				Die Berechnung der Prozentzahlen dazwischen ist ein bisschen komplizierter, da die Parteien nicht zwingend geschlossen abstimmen.
+				Fuer die Berechnung der Aehnlichkeit einer Partei mit deiner Antwort zaehlen folgende Werte:
+      </p>
+      
+			<table class="w3-table w3-border">
+				<tr>
+					<th>Deine Stimme</th>
+					<th>Aehnlichkeit zu einer Partei</th>
+				</tr>
+				<tr>
+					<td class="w3-center w3-green">Ja</td>
+					<td>Anzahl <span class="w3-green w3-padding-small">Ja</span> plus <code>1/2</code> <span class="w3-blue w3-padding-small">Enthalten</span> der Partei</td>
+				</tr>
+				<tr>
+					<td class="w3-center w3-red">Nein</td>
+					<td>Anzahl <span class="w3-red w3-padding-small">Nein</span> plus <code>1/2</code> <span class="w3-blue w3-padding-small">Enthalten</span> der Partei</td>
+				</tr>
+				<tr>
+					<td class="w3-center w3-blue">Enthalten</td>
+					<td>Anzahl <span class="w3-blue w3-padding-small">Enthalten</span> plus <code>1/2</code> <span class="w3-green w3-padding-small">Ja</span> plus <code>1/2</code> <span class="w3-red w3-padding-small">Nein</span> der Partei</td>
+				</tr>
+			</table>
+				
+      <p>
+				Eine uebereinstimmende Antwort eines Abgeordneten mit deiner Antwort zaehlt also voll.
+				Wenn sich einer von euch (du oder der Abgeornete) enthaelt waehrend der andere mit Ja oder Nein stimmt zaehlt das halbe Gewicht.
+				Wenn eine Partei also mit <code>60%</code> Ja, <code>10%</code> Nein und <code>30%</code> Enthalten abgestimmt hat, ergeben sich folgende Aehnlichkeiten:
+			</p>
+				
+				<ul>
+					<li>
+						<strong>Wenn du Ja stimmst:</strong> <code>60% + 1/2 · 30% = 75%</code>
+					</li>
+					<li>
+						<strong>Wenn du Nein stimmst:</strong> <code>10% + 1/2 · 30% = 25%</code>
+					</li>
+					<li>
+						<strong>Wenn du dich enthaeltst:</strong> <code>30% + 1/2 · 60% + 1/2 · 10% = 70%</code>
+					</li>
+				</ul>
+			
+			<p>
+				Diese Berechnung ist weitestgehend konform mit dem Rechenmodell des Wahl-O-Mat.
+      </p>
+      
+      
+      
+      <h5>Uebereinstimmungen in der einfachen Auswertungstabelle</h5>
+      
+      <p>
+				Die einfache Auswertungstabelle ist fuer mobile Geraete optimiert.
+				Sie enthaelt nicht so viele Informationen, sondern listet bei jeder Abstimmungen nur die Parteien auf, die mehrheitlich wie du gestimmt haben.
+				Mehrheitlich bedeutet hier mindestens <code>66,66%</code> Aehnlichkeit nach oben beschriebener Berechnung.
+				Das entspricht also etwa einer qualifizierten <code>2/3</code>-Aehnlichkeits-Mehrheit.
+      </p>
+      
+      <h5>Berechnung der Gesamtergebnisse in den Tabellen</h5>
+      
+      <p>
+				Das Gesamtergebnis in der einfachen Auswertungstabelle ist die Summer der mehrheitlichen Uebereinstimmungen einer Partei mit deinen Entscheidungen.
+				Du kannst es einfach nachpruefen, indem du zaehlst wie haeufig ein Partei-Logo in der Tabelle auftaucht.
+			</p>
+			
+      <p>
+				Das Gesamtergebnis in der komplexen Auswertungstabelle entspricht dem arithmetischen Mittel (Durchschnitt) der Aehnlichkeiten in den einzelnen Abstimmungen.
+				Hier spielen einzelne Abgeordnete keine Rolle mehr.
+				Ein Abstimmungsergebnis, bei dem die mehrere Abgeordnete keine Stimme abgegeben haben, werden also nicht benachteiligt.
+				Zum Beispiel, angenommen eine Partei hat bei drei Abstimmungen <code>40%</code>, <code>50%</code> und <code>90%</code> so aehnlich wie du abgestimmt, dann ergibt sich ein Gesamtergebnis von <code>(40 + 50 + 90) / 3 = 60%</code> Aehnlichkeit.
+				Die ist dann auch die Aehnlichkeit, die wir im Balkendiagram oben auf der Aauswertungsseite benutzen.
+			</p>
+			
     </div>
   </div>
   
