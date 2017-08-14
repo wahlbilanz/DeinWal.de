@@ -66,8 +66,8 @@
         				Eine komplexere Auswertung ist leider nur für größere Bildschirme verfügbar. 
         			</div>
 					<div id="tableswitcher">
-						<button class="w3-button w3-indigo w3-hover-blue w3-margin" (click)="toggleComplexTable()" *ngIf="!showComplexTable">Zeige komplexe Auswertung</button>
-						<button class="w3-button w3-hover-indigo w3-blue w3-margin" (click)="toggleComplexTable()" *ngIf="showComplexTable">Zeige einfache Auswertung</button>
+						<button class="w3-button w3-indigo w3-hover-blue w3-margin" (click)="toggleComplexTable()" *ngIf="!showComplexTable">Zeige komplexe Ansicht</button>
+						<button class="w3-button w3-hover-indigo w3-blue w3-margin" (click)="toggleComplexTable()" *ngIf="showComplexTable">Zeige einfache Ansicht</button>
 						
 						
 						<div id="complextable" class="w3-responsive w3-margin optional-margin" *ngIf="showComplexTable">
@@ -223,6 +223,18 @@
 								</tr>
 							</ng-container>
 						</ng-container>
+							<tr class="auswertung-abschnitt">
+								<th colspan="2" class="w3-grey w3-center">Gesamt</th>
+							</tr>
+							<tr class="auswertung-zeile">
+								<th colspan="2" class="w3-center">
+											<ng-container *ngFor="let party of partypriority">
+												<span class='w3-margin optional-margin'>
+													{{overallResult.consent[party]}} x <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+												</span>
+											</ng-container>
+								</th>
+							</tr>
 					</tbody>
 	        	</table>
 	        </div>

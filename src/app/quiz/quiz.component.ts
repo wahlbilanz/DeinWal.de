@@ -349,7 +349,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		this.progress = this.toPercent (1);
 		this.app.overwriteTitle("Auswertung");
 
-		this.overallResult = { 'gruenen': '-', 'cdu/csu': '-', 'die.linke': '-', 'spd': '-' };
+		this.overallResult = { 'gruenen': '-', 'cdu/csu': '-', 'die.linke': '-', 'spd': '-', 'consent': {} };
 		const nzustimmung = { 'gruenen': 0.0, 'cdu/csu': 0.0, 'die.linke': 0.0, 'spd': 0.0 };
 		let nAnswered = 0;
 
@@ -365,6 +365,9 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 						console.log (f, this.questionResults[f]);
 						nAnswered++;
 						for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
+							if (!this.overallResult['consent'][partyName]) {
+								this.overallResult['consent'][partyName] = 0;
+							}
 							const tempPunkte = this.getZustimmungsPunkte(results[partyName], answer);
 							q['fragen'][f][partyName] = this.toPercent(tempPunkte.punkteRelativ);
 							q['fragen'][f]['score'][partyName] = tempPunkte.scoreDescription;
@@ -372,6 +375,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 							//this.app.log('---h3', partyName, tempPunkte);
 							if (tempPunkte.punkteRelativ >= 2/3) {
 								q['fragen'][f]['consent'].push (partyName);
+								this.overallResult['consent'][partyName]++;
 							}
 						}
 					} else {
@@ -380,7 +384,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 						}
 					}
 				}
-				console.log (f, q['fragen'][f]['consent']);
+				console.log (f, q['fragen'][f]['score']);
 			}
 		}
 
