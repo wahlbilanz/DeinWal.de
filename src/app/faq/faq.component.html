@@ -13,10 +13,19 @@
 				<a href="/faq#name">Wie kommt ihr auf den bescheuerten Namen?</a>
 			</li>
 			<li>
+				<a href="/faq#auswahl">Wie habt ihr die Fragen ausgewaehlt?</a>
+			</li>
+			<li>
 				<a href="/faq#berechnung">Wie berechnet ihr die Auswertung?</a>
 			</li>
 			<li>
 				<a href="/faq#wenwaehlen">Also soll ich jetzt SPD, CDU, DIE LINKE oder Die Grünen wählen?</a>
+			</li>
+			<li>
+				<a href="/faq#fdpafd">Warum fehlen FDP, AfD, DIE PARTEI und weitere in der Auswertung?</a>
+			</li>
+			<li>
+				<a href="/faq#abstimmungxyz">Warum ist Abstimmung XYZ nicht dabei?</a>
 			</li>
 			<li>
 				<a href="/faq#speicherung">Was wird gespeichert?</a>
@@ -25,16 +34,7 @@
 				<a href="/faq#datennutzung">Was macht ihr mit meinen Daten?</a>
 			</li>
 			<li>
-				<a href="/faq#auswahl">Wie habt ihr die Fragen ausgewaehlt?</a>
-			</li>
-			<li>
 				<a href="/faq#technics">Wie habt ihr das technisch gelöst?</a>
-			</li>
-			<li>
-				<a href="/faq#fdpafd">Warum fehlen FDP, AfD, DIE PARTEI und weitere in der Auswertung?</a>
-			</li>
-			<li>
-				<a href="/faq#abstimmungxyz">Warum ist Abstimmung XYZ nicht dabei?</a>
 			</li>
 			<li>
 				<a href="/faq#behind">Wer steckt alles hinter DeinWal.de?</a>
@@ -82,6 +82,22 @@
     </header>
     <div class="w3-container">
       <p>WahlWal.de war leider schon vergeben und WahlWachtel.de war irgendwie noch bescheuerter.</p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
+    <header class="w3-container w3-light-gray">
+      <h4 id="auswahl">Wie habt ihr die Fragen ausgewaehlt? <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></small></h4>
+    </header>
+    <div class="w3-container">
+      <p>
+	      Auf <a href="https://wahlbilanz.de" target="_blank">wahlbilanz.de</a> haben wir die Abstimmungen im Bundestag der letzten Legislaturperiode zusammengetragen, analysiert und kategoriesiert.
+	      Wir haben die verschiedenen <a href="https://wahlbilanz.de/categories/" target="_blank">Kategorien</a> dann bewertet und potentielle Fragen und Themengebiete zusammengetragen.
+	      In einem aufwendigen und zähen Prozess wurden die Fragen ausgedünnt und formuliert.
+	      Dabei haben wir stets versucht Formulierungen zu finden, die leicht verständlich sind und euch nicht beeinflussen.
+	      Das war äussert kompliziert und ist uns vielleicht nicht immer zu 100% geglückt.
+	      <strong>Wenn du Verbesserungsvorschläge für eine Frage hast kannst du dich super gern <a routerLink="/impressum">bei uns melden</a>!</strong> 
+      </p>
     </div>
   </div>
   
@@ -154,6 +170,40 @@
 
   <div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
+      <h4 id="fdpafd">
+        Warum fehlen FDP, AfD, DIE PARTEI und weitere in der Auswertung?
+         <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></small></h4>
+    </header>
+    <div class="w3-container">
+      <p>Wir konnten nur Parteien berücksichtigen, die in den 18. Bundestag gewählt wurden. Das sind CDU, CSU, die Grünen, die Linke und SPD. Von den anderen Parteien gibt es logischerweise keine Abstimmungsergebnisse mit denen man sich vergleichen könnte.</p>
+    </div>
+  </div>
+
+
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
+    <header class="w3-container w3-light-gray">
+      <h4 id="abstimmungxyz">Warum ist Abstimmung XYZ nicht dabei? <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></small></h4>
+    </header>
+    <div class="w3-container">
+      <p>
+      	Die Auswahl der spezifischen Fragen war sehr aufwendig und hat uns viel Zeit und Energie gekostet.
+      	Nicht jede Abstimmung eignet sich für dieses Projekt.
+      	Wenn eine Partei in einem Antrag bspw. viele verschiedene Forderungen stellt ist es manchmal unmöglich diesen Antrag in eine einfache Frage für DeinWal.de zu übersetzen.
+      	Wir können aber auch nicht einzelne Aspeckte herausziehen, da wir nicht wissen wie die Abgeordneten zu diesem speziellen Aspekt abgestimmt hätten.  
+      	Insgesamt sollten es natürlich auch nicht zu viele Abstimmungen sein.
+      	Im Bundestag liefen mehr als 200 Abstimmungen &mdash; wenn ihr die alle abarbeiten müsstet säßt ihr hier eine ganze Weile und würdet wahrscheinlich irgendwann frustriert aufgeben.
+      	Zumal einige Fragen auch viel Hintergrundwissen abverlangen.
+      </p>
+      <p>
+      	Wenn du trotzdem der Meinung bist, dass eine bestimmte Frage unbedingt bei DeinWal.de auftauchen sollte, kannst du gern versuchen uns davon zu überzeugen!
+      	Schreib uns eine Mail (siehe <a routerLink="/impressum">Impressum</a>) oder <a href="https://github.com/wahlbilanz/DeinWal.de//issues/new" target="_blank">mach ein Ticket bei GitHub auf</a>.
+      	Wir werden dir dann erklaeren warum es die Frage nicht geschafft hat, oder überlegen sie doch noch aufzunehmen :) 
+      </p>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
+    <header class="w3-container w3-light-gray">
       <h4 id="speicherung">Was wird gespeichert? <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></small></h4>
     </header>
     <div class="w3-container">
@@ -213,22 +263,6 @@
     </div>
   </div>
 
-  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
-    <header class="w3-container w3-light-gray">
-      <h4 id="auswahl">Wie habt ihr die Fragen ausgewaehlt? <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></small></h4>
-    </header>
-    <div class="w3-container">
-      <p>
-	      Auf <a href="https://wahlbilanz.de" target="_blank">wahlbilanz.de</a> haben wir die Abstimmungen im Bundestag der letzten Legislaturperiode zusammengetragen, analysiert und kategoriesiert.
-	      Wir haben die verschiedenen <a href="https://wahlbilanz.de/categories/" target="_blank">Kategorien</a> dann bewertet und potentielle Fragen und Themengebiete zusammengetragen.
-	      In einem aufwendigen und zähen Prozess wurden die Fragen ausgedünnt und formuliert.
-	      Dabei haben wir stets versucht Formulierungen zu finden, die leicht verständlich sind und euch nicht beeinflussen.
-	      Das war äussert kompliziert und ist uns vielleicht nicht immer zu 100% geglückt.
-	      <strong>Wenn du Verbesserungsvorschläge für eine Frage habt kannst du dich super gern <a routerLink="/impressum">bei uns melden</a>!</strong> 
-      </p>
-    </div>
-  </div>
-
 <div class="w3-card-4 w3-margin-top w3-margin-bottom">
     <header class="w3-container w3-light-gray">
       <h4 id="technics">Wie habt ihr das technisch gelöst? <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></small></h4>
@@ -244,40 +278,6 @@
       <p>
       	<strong>Die Webseite ist übrigens Open Source:</strong>
       	Auf <a href="https://github.com/wahlbilanz/DeinWal.de" target="_blank">github.com/wahlbilanz/DeinWal.de</a> könnt ihr die Webseite angucken, forken, Verbesserungsvorschläge einreichen und mitmachen!
-      </p>
-    </div>
-  </div>
-
-  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
-    <header class="w3-container w3-light-gray">
-      <h4 id="fdpafd">
-        Warum fehlen FDP, AfD, DIE PARTEI und weitere in der Auswertung?
-         <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></small></h4>
-    </header>
-    <div class="w3-container">
-      <p>Wir konnten nur Parteien berücksichtigen, die in den 18. Bundestag gewählt wurden. Das sind CDU, CSU, die Grünen, die Linke und SPD. Von den anderen Parteien gibt es logischerweise keine Abstimmungsergebnisse mit denen man sich vergleichen könnte.</p>
-    </div>
-  </div>
-
-
-  <div class="w3-card-4 w3-margin-top w3-margin-bottom">
-    <header class="w3-container w3-light-gray">
-      <h4 id="abstimmungxyz">Warum ist Abstimmung XYZ nicht dabei? <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></small></h4>
-    </header>
-    <div class="w3-container">
-      <p>
-      	Die Auswahl der spezifischen Fragen war sehr aufwendig und hat uns viel Zeit und Energie gekostet.
-      	Nicht jede Abstimmung eignet sich für dieses Projekt.
-      	Wenn eine Partei in einem Antrag bspw. viele verschiedene Forderungen stellt ist es manchmal unmöglich diesen Antrag in eine einfache Frage für DeinWal.de zu übersetzen.
-      	Wir können aber auch nicht einzelne Aspeckte herausziehen, da wir nicht wissen wie die Abgeordneten zu diesem speziellen Aspekt abgestimmt hätten.  
-      	Insgesamt sollten es natürlich auch nicht zu viele Abstimmungen sein.
-      	Im Bundestag liefen mehr als 200 Abstimmungen &mdash; wenn ihr die alle abarbeiten müsstet säßt ihr hier eine ganze Weile und würdet wahrscheinlich irgendwann frustriert aufgeben.
-      	Zumal einige Fragen auch viel Hintergrundwissen abverlangen.
-      </p>
-      <p>
-      	Wenn du trotzdem der Meinung bist, dass eine bestimmte Frage unbedingt bei DeinWal.de auftauchen sollte, kannst du gern versuchen uns davon zu überzeugen!
-      	Schreib uns eine Mail (siehe <a routerLink="/impressum">Impressum</a>) oder <a href="https://github.com/wahlbilanz/DeinWal.de//issues/new" target="_blank">mach ein Ticket bei GitHub auf</a>.
-      	Wir werden dir dann erklaeren warum es die Frage nicht geschafft hat, oder überlegen sie doch noch aufzunehmen :) 
       </p>
     </div>
   </div>
