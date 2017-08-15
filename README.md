@@ -3,7 +3,7 @@
 ![Dein Wal](https://deinwal.de/assets/wal.png)
 
 Dies ist der Source-Code zu der [DeinWal.de Webseite](https://deinwal.de).
-Mit dieser Webseite kannst du du prüfen, welche Partei wie du denkt.
+Mit dieser Webseite kannst du prüfen, welche Partei wie du denkt.
 
 
 
@@ -11,7 +11,7 @@ Mit dieser Webseite kannst du du prüfen, welche Partei wie du denkt.
 ## Mitmachen
 
 Jeder ist eingeladen die Webseite zu verbessern!
-Wenn du schon Programmiererfahrun hast, dann guck mal in das `src` Verzeichnis, dort befinden sich die Quelldateien der Webseite.
+Wenn du schon Programmiererfahrung hast, dann guck mal in das `src` Verzeichnis, dort befinden sich die Quelldateien der Webseite.
 Die Webseite ist mit [Angular](https://angular.io/) entwickelt.
 Angular ist ein Typescript-Framework mit dem sich clientseitige Web-Applikationen sowohl für den Desktop als auch für mobile Geräte entwickeln lassen.
 Das Layout haben wir mit dem [W3.CSS Framework](https://www.w3schools.com/w3css/default.asp) gestaltet.
@@ -41,5 +41,5 @@ Der Code zur Webseite ist unter der [GPLv3 Lizenz](http://www.gnu.org/licenses/)
 	You should have received a copy of the GNU General Public License
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Der komplette Lizenztext ist in der Datei [LICENSE](LICENSE) zu finden.
+Der komplette Lizenztext ist in der Datei [LICENSE](https://github.com/binfalse/DeinWal.de/blob/master/LICENSE) zu finden.
 
