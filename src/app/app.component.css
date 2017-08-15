@@ -1,0 +1,15 @@
+
+@media screen and (max-width: 410px) {
+	#menu-zum {
+		display: none;	
+	}
+}
+@media screen and (max-width: 370px) {
+	.w3-bar-item {
+		padding: 8px !important;
+	}
+}
+.disappear {
+	color: black;
+	font-size: 1px;
+}

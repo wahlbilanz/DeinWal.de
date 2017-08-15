@@ -229,8 +229,8 @@
 							<tr class="auswertung-zeile">
 								<th colspan="2" class="w3-center">
 											<ng-container *ngFor="let party of partypriority">
-												<span class='w3-margin optional-margin'>
-													{{overallResult.consent[party]}} x <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+												<span class='w3-margin optional-margin consent-result'>
+													{{overallResult.consent[party]}}&nbsp;x&nbsp;<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
 												</span>
 											</ng-container>
 								</th>

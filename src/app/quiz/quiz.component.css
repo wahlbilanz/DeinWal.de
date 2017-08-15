@@ -124,3 +124,6 @@ th small {
  min-width: 25px;
 }
 
+.consent-result {
+	white-space: nowrap;
+}

@@ -230,6 +230,10 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	 * select an answer
 	 */
 	choose(id, choice) {
+		if (id === 'example') {
+			return;
+		}
+		
 		// unselect a previously selected answer
 		if (this.answers[id] === choice) {
 			this.answers[id] = -1;
@@ -283,7 +287,20 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			
 			this.question = {
 				'titel': 'Gleich geht\'s los!',
-				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du ueber Anträge und Gesetzentwürfe aus dem Bundestag entscheiden. Oben links kannst du die Eingaben in deinem Browser-Profil speichern, dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst. <br> <br> Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen. Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen oder das Quiz vorzeitig beenden und direkt zur Auswertung wechseln. Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen! Ganz unten zeigt dir ein grüner Fortschrittsbalken wie weit du bist. <br> <br> <strong>Aus über 200 real stattgefundenen Abstimmungen haben wir ' + Object.keys(this.answers).length + ' ausgewählt und in ' + this.questionData.length + ' Themengebiete unterteilt:</strong> ' + themengebiete + '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeit. Eine einzelne Abstimmung sieht wie folgt aus:',
+				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du ueber Anträge und Gesetzentwürfe aus dem Bundestag entscheiden. '
+					+ '<strong>Oben links kannst du die Eingaben in deinem Browser-Profil speichern,</strong> '
+					+ 'dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst. <br> <br> '
+					+ 'Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen. '
+					+ 'Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen oder das Quiz '
+					+ 'vorzeitig beenden und direkt zur Auswertung wechseln. '
+					+ 'Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen! '
+					+ 'Ganz unten zeigt dir ein grüner Fortschrittsbalken wie weit du bist. <br> <br> '
+					+ '<strong>Aus über 200&nbsp;real stattgefundenen Abstimmungen haben wir '
+					+ (Object.keys(this.answers).length + 1 /*cause that's the answer! and who's checking that anyway...*/) + '&nbsp;Fragen ausgewählt und in '
+					+ this.questionData.length + '&nbsp;Themengebiete unterteilt:</strong> '
+					+ themengebiete
+					+ '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeit. '
+					+ 'Eine einzelne Abstimmung sieht wie folgt aus:',
 				'fragen': {
 					'example-1': {
 						'context': 'Eine Frage hat manchmal ein bisschen Kontext.',
