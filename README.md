@@ -21,6 +21,10 @@ Solltest du kein Programmierer sein, kannst du uns troztdem gern dein Feedback s
 Eröffne zum Beispiel ein [neues Ticket im GitHub-Projekt](https://github.com/wahlbilanz/DeinWal.de/issues/new) oder [schick uns eine Mail](https://deinwal.de/impressum).
 
 
+## Noch Fragen?
+
+Na dann schau vielleicht ins [FAQ auf DeinWal.de](https://deinwal.de/faq) oder [nimm mit uns Kontakt auf](https://deinwal.de/impressum)!
+
 ## Lizenz
 
 Der Code zur Webseite ist unter der [GPLv3 Lizenz](http://www.gnu.org/licenses/) frei verwendbar:
