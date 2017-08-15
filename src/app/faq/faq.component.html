@@ -55,7 +55,8 @@
         <div class="w3-container">
             <p>
             <strong>Auf DeinWal.de hast du den Wal! (Oder die Wahl?)</strong>
-            Dein Wal gibt dir die Möglichkeit deine Einstellung zu verschiedenen Themen mit den Entscheidungen der Parteien zu vergleichen.
+            Dein Wal gibt dir die Möglichkeit deine Einstellung zu verschiedenen Themen mit den Entscheidungen der Parteien im Bundestag zu vergleichen.
+            In einem Quiz kannst du die Entscheidungen der Parteien nachspielen
             </p>
 
             <p>
@@ -66,7 +67,14 @@
 
             <p>
             In der Auswertung kannst du dann sehen, welche Partei am häufigsten in deinem Sinne abgestimmt hat.
-            Solltest du schon eine Partei favorisieren, kannst du in der Auswertung gut überprüfen, ob sich deine Präferenz bestätigt und bei welchen Themen die Meinung der Partei abweicht. 
+            Solltest du schon eine Partei favorisieren, kannst du auch gut überprüfen, ob sich deine Präferenz bestätigt und bei welchen Themen eure Meinungen abweichen. 
+            </p>
+            
+            <p>
+            Dein Wal achtet dabei besonders auf deine Privatsphäre!
+            Nachdem du die Seite einmal geladen hast, wird nichts mehr über das Internet kommuniziert.
+            Du kannst das Internet dann quasi aus machen und alles funktioniert reibungslos weiter!
+            Das unterscheidet deinen Wal von den meisten anderen Seiten, die deine Daten immer wieder an den Server zurücksenden.
             </p>
 
         </div>
@@ -90,8 +98,9 @@
             <h4 id="auswahl">Wie habt ihr die Fragen ausgewaehlt? <small class="w3-margin-left"><a title="nach oben" href="/faq#faqhead"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></small></h4>
         </header>
         <div class="w3-container">
-            <p>
-            Auf <a href="https://wahlbilanz.de" target="_blank">wahlbilanz.de</a> haben wir die Abstimmungen im Bundestag der letzten Legislaturperiode zusammengetragen, analysiert und kategoriesiert.
+        	<p>
+        	Alle Fragen beruhen auf real stattgefundenen Abstimmungen im Bundestag der letzten Legislaturperiode (2013 - 2017).
+            Auf <a href="https://wahlbilanz.de" target="_blank">wahlbilanz.de</a> haben wir die Abstimmungen zusammengetragen, analysiert und kategoriesiert.
             Wir haben die verschiedenen <a href="https://wahlbilanz.de/categories/" target="_blank">Kategorien</a> dann bewertet und potentielle Fragen und Themengebiete zusammengetragen.
             In einem aufwendigen und zähen Prozess wurden die Fragen ausgedünnt und formuliert.
             Dabei haben wir stets versucht Formulierungen zu finden, die leicht verständlich sind und euch nicht beeinflussen.
@@ -111,96 +120,99 @@
             <p>
             Über die Mathematik hinter der Auswertung haben wir lange nachgedacht vieles ausprobiert.
             Die Berechnung soll leicht verständlich sein, damit jeder die Möglichkeit hat die Ergebnisse selbst nachzuvollziehen.
-            Wir haben unser Modell an das <a href="http://www.bpb.de/system/files/dokument_pdf/Rechenmodell%20des%20Wahl-O-Mat.pdf" target="_blank">Rechenmodell des Wahl-O-Mats</a> angelehnt.
+            Unser Modell berechnet Ähnlichkeiten und ist an das
+            <a href="http://www.bpb.de/system/files/dokument_pdf/Rechenmodell%20des%20Wahl-O-Mat.pdf" target="_blank">Rechenmodell des Wahl-O-Mats</a> angelehnt.
             Auf der <a routerLink="/quiz/auswertung">Auswertungsseite</a> könnt ihr zwischen einer einfachen und einer komplexen Ansicht wechseln.
             </p>
 
-            <h5>Berechnung der Aehnlichkeit bei einer einzelnen Abstimmung</h5>
+            <h5>Berechnung der Ähnlichkeit bei einer einzelnen Abstimmung</h5>
             <p>
-            Die Prozentangaben in der komplexen Tabelle geben die Aehnlichkeit deiner Entscheidung mit dem Abstimmungsergebnis einer Partei an.
-            <code>100%</code> bedeutet, dass die Partei geschlossen genau wie du gestimmt hat. 
-            <code>0%</code> bedeutet, dass die Partei komplett anderer Meinung war.
+            Die Prozentangaben in der komplexen Ansicht geben die Ähnlichkeit deiner Entscheidung mit dem Abstimmungsergebnis einer Partei an.
+            <code>100%</code>&nbsp;bedeutet dabei, dass die Partei geschlossen genau wie du gestimmt hat. 
+            <code>0%</code>&nbsp;bedeutet, dass die Partei komplett anderer Meinung war.
             Die Berechnung der Prozentzahlen dazwischen ist ein bisschen komplizierter, da die Parteien nicht zwingend geschlossen abstimmen.
-            Fuer die Berechnung der Aehnlichkeit einer Partei mit deiner Antwort zaehlen folgende Werte:
+            Für die Berechnung der Ähnlichkeit einer Partei mit deiner Antwort zählen folgende Werte:
             </p>
 
             <table class="w3-table w3-border">
                 <tr>
                     <th>Deine Stimme</th>
-                    <th>Aehnlichkeit zu einer Partei</th>
+                    <th>Ähnlichkeit zu einer Partei</th>
                 </tr>
                 <tr>
                     <td class="w3-center w3-green">Ja</td>
-                    <td>Anzahl <span class="w3-green w3-padding-small">Ja</span> plus <code>1/2</code> <span class="w3-blue w3-padding-small">Enthalten</span> der Partei</td>
+                    <td>Anzahl <span class="w3-green w3-padding-small">Ja</span> plus <code>1/2</code>&nbsp;<span class="w3-blue w3-padding-small">Enthalten</span> der Partei</td>
                 </tr>
                 <tr>
                     <td class="w3-center w3-red">Nein</td>
-                    <td>Anzahl <span class="w3-red w3-padding-small">Nein</span> plus <code>1/2</code> <span class="w3-blue w3-padding-small">Enthalten</span> der Partei</td>
+                    <td>Anzahl <span class="w3-red w3-padding-small">Nein</span> plus <code>1/2</code>&nbsp;<span class="w3-blue w3-padding-small">Enthalten</span> der Partei</td>
                 </tr>
                 <tr>
                     <td class="w3-center w3-blue">Enthalten</td>
-                    <td>Anzahl <span class="w3-blue w3-padding-small">Enthalten</span> plus <code>1/2</code> <span class="w3-green w3-padding-small">Ja</span> plus <code>1/2</code> <span class="w3-red w3-padding-small">Nein</span> der Partei</td>
+                    <td>Anzahl <span class="w3-blue w3-padding-small">Enthalten</span> plus <code>1/2</code>&nbsp;<span class="w3-green w3-padding-small">Ja</span> plus <code>1/2</code>&nbsp;<span class="w3-red w3-padding-small">Nein</span> der Partei</td>
                 </tr>
             </table>
 
             <p>
-            Eine uebereinstimmende Antwort eines Abgeordneten mit deiner Antwort zaehlt also voll.
-            Wenn sich einer von euch (du oder der Abgeornete) enthaelt waehrend der andere mit Ja oder Nein stimmt zaehlt das halbe Gewicht.
-            Wenn eine Partei also mit <code>60%</code> Ja, <code>10%</code> Nein und <code>30%</code> Enthalten abgestimmt hat, ergeben sich folgende Aehnlichkeiten:
+            Eine übereinstimmende Antwort eines Abgeordneten mit deiner Antwort hat also volles Gewicht in der Berechnung.
+            Enthält sich einer von euch (du oder der Abgeornete), während der andere mit Ja oder Nein stimmt, zählt die Stimme mit halben Gewicht.<br>
+            Beispiel: Wenn eine Partei mit <code>60%</code>&nbsp;Ja, <code>10%</code>&nbsp;Nein und <code>30%</code>&nbsp;Enthalten abgestimmt hat, ergeben sich folgende Ähnlichkeiten:
             </p>
 
             <ul>
                 <li>
-                    <strong>Wenn du Ja stimmst:</strong> <code>60% + 1/2 · 30% = 75%</code>
+                    <strong>Wenn du Ja stimmst:</strong> <code class="w3-padding-small">60% + 1/2 · 30% = 75%</code>
                 </li>
                 <li>
-                    <strong>Wenn du Nein stimmst:</strong> <code>10% + 1/2 · 30% = 25%</code>
+                    <strong>Wenn du Nein stimmst:</strong> <code class="w3-padding-small">10% + 1/2 · 30% = 25%</code>
                 </li>
                 <li>
-                    <strong>Wenn du dich enthaeltst:</strong> <code>30% + 1/2 · 60% + 1/2 · 10% = 70%</code>
+                    <strong>Wenn du dich enthaeltst:</strong> <code class="w3-padding-small">30% + 1/2 · 60% + 1/2 · 10% = 70%</code>
                 </li>
             </ul>
 
             <p>
-            Diese Berechnung ist weitestgehend konform mit dem Rechenmodell des Wahl-O-Mat.
+            Diese Berechnung ist damit weitestgehend konform mit dem Rechenmodell des Wahl-O-Mat.
             </p>
 
 
 
-            <h5>Uebereinstimmungen in der einfachen Auswertungstabelle</h5>
+            <h5>Übereinstimmungen in der einfachen Ansicht</h5>
 
             <p>
-            Die einfache Auswertungstabelle ist fuer mobile Geraete optimiert.
-            Sie enthaelt nicht so viele Informationen, sondern listet bei jeder Abstimmungen nur die Parteien auf, die mehrheitlich wie du gestimmt haben.
-            Mehrheitlich bedeutet hier mindestens <code>66,66%</code> Aehnlichkeit nach oben beschriebener Berechnung.
-            Das entspricht also etwa einer qualifizierten <code>2/3</code>-Aehnlichkeits-Mehrheit.
+            Die einfache Auswertungstabelle ist für mobile Geraete optimiert.
+            Sie enthält nicht so viele Informationen, sondern listet für jede Abstimmung nur die Parteien auf, die mehrheitlich wie du gestimmt haben.
+            Mehrheitlich bedeutet hier mindestens <code>66,66%</code> Ähnlichkeit eurer Antworten nach oben beschriebener Berechnung.
+            Das entspricht also etwa einer qualifizierten <code>2/3</code>-Ähnlichkeits-Mehrheit.
             </p>
 
-            <h5>Berechnung der Gesamtergebnisse in den Tabellen</h5>
+            <h5>Berechnung der Gesamtergebnisse in den Auswertungstabellen</h5>
 
             <p>
-            Das Gesamtergebnis in der einfachen Auswertungstabelle ist die Summer der mehrheitlichen Uebereinstimmungen einer Partei mit deinen Entscheidungen.
-            Du kannst es einfach nachpruefen, indem du zaehlst wie haeufig ein Partei-Logo in der Tabelle auftaucht.
+            Das Gesamtergebnis unter der Tabelle der einfachen Ansicht ist die Summer der mehrheitlichen Übereinstimmungen einer Partei mit deinen Entscheidungen.
+            Es zeigt also, wie oft die jeweilige Partei mehrheitlichen in deinem Sinne abgestimmt hat.
+            Du kannst es einfach nachprüfen, indem du zählst wie häufig ein Partei-Logo in der Tabelle auftaucht.
             </p>
 
             <p>
-            Das Gesamtergebnis in der komplexen Auswertungstabelle entspricht dem arithmetischen Mittel (Durchschnitt) der Aehnlichkeiten in den einzelnen Abstimmungen.
-            Hier spielen einzelne Abgeordnete keine Rolle mehr.
-            Ein Abstimmungsergebnis, bei dem die mehrere Abgeordnete keine Stimme abgegeben haben, werden also nicht benachteiligt.
-            Zum Beispiel, angenommen eine Partei hat bei drei Abstimmungen <code>40%</code>, <code>50%</code> und <code>90%</code> so aehnlich wie du abgestimmt, dann ergibt sich ein Gesamtergebnis von <code>(40 + 50 + 90) / 3 = 60%</code> Aehnlichkeit.
-            Die ist dann auch die Aehnlichkeit, die wir im Balkendiagram oben auf der Aauswertungsseite benutzen.
+            Das Gesamtergebnis in der komplexen Auswertungstabelle entspricht dem arithmetischen Mittel (Durchschnitt) der Ähnlichkeiten in den einzelnen Abstimmungen.
+            Hier geht es nicht mehr um einzelne Abgeordnete.
+            Ein Abstimmungsergebnis, bei dem die mehrere Abgeordnete keine Stimme abgegeben haben, wird also nicht benachteiligt.<br>
+            Beispiel: Angenommen eine Partei hat bei drei Abstimmungen <code>40%</code>, <code>50%</code> und <code>90%</code> so ähnlich wie du abgestimmt,
+            dann ergibt sich ein Gesamtergebnis von <code class="w3-padding-small">(40% + 50% + 90%) / 3 = 60%</code> Ähnlichkeit für die Partei.
+            Die ist dann auch die Ähnlichkeit, die wir im Balkendiagram oben auf der Auswertungsseite benutzen.
             </p>
 
             <h5>Sonstige Besonderheiten</h5>
 
             <p>
-            Eine Frage, die nicht beantwortet wurde, wird in der Berechnung nicht beruecksichtigt &mdash; weder positiv noch negativ.
-            Wir haben lange ueberlegt, ob und wie Fragen unterschiedlich gewichtet werden koennen (so wie bspw. im Wahl-O-Mat), uns aber letztendlich dagegen entschieden.
-            Die Dokumentation des Rechenmodells ist auch so schon kompliziert genug... ;-)
+            Eine Frage, die nicht beantwortet wurde, wird in der Berechnung nicht berücksichtigt &mdash; weder positiv noch negativ.
+            Wir haben lange überlegt, ob und wie Fragen unterschiedlich gewichtet werden können (so wie bspw. im Wahl-O-Mat), uns schließlich aber dagegen entschieden.
+            Die Dokumentation des Rechenmodells ist so schon kompliziert genug... ;-)
             </p>
 
             <p>
-            Falls etwas in der Berechnung unklar sein sollte, koennt ihr euch gern <a routerLink="/impressum">bei uns melden</a>!
+            Falls etwas in der Berechnung unklar sein sollte, könnt ihr euch gern <a routerLink="/impressum">bei uns melden</a>!
             </p>
 
         </div>
