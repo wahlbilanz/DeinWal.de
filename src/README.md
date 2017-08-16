@@ -41,5 +41,5 @@ Um ein release zu kompilieren rufst du einfach wieder den build-Befehl auf:
 
 Ein weiterer Docker-Container mit nginx kann das Projekt dann ganz einfach ausliefern:
 
-    docker run --rm -it -p 80:80 -v /PATH/TO/PROJECT/dist:/usr/share/nginx/html:ro nginx
+    docker run --rm -it -p 80:80 -v /PATH/TO/PROJECT/nginx.conf:/etc/nginx/conf.d/default.conf:ro -v /PATH/TO/PROJECT/dist:/usr/share/nginx/html:ro nginx
 
