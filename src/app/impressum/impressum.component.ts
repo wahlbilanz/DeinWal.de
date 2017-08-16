@@ -18,9 +18,13 @@ export class ImpressumComponent implements OnInit {
       this.contactlink = 'm' + tmp + 'o:' + this.addr;
 		this.ack = this.shuffle ([
 			/*{
-				'name': '',
-				'link': ''
+			'name': '',
+			'link': ''
 			},*/
+			{
+				'name': 'Michael Rennecke',
+				'link': 'https://blog.0rpheus.net/'
+			},
 			{
 				'name': 'Dagmar Waltemath',
 				'link': ''
