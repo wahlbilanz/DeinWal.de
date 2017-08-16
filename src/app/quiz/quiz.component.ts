@@ -183,7 +183,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	observeUrl () {
 		// parse route/url
 		this.route.params.subscribe(params => {
-			console.log ("found params: ", params);
+			//console.log ("found params: ", params);
 			try {
 				let card = 0;
 				// requested auswertung?
@@ -198,7 +198,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 					card = 0;
 					//this.location.replaceState ('quiz/0');
 					this.router.navigate(['quiz', 0], {replaceUrl:true});
-					console.log ("replacing location to " + 'quiz/0');
+					//console.log ("replacing location to " + 'quiz/0');
 				} else {
 					if (!this.updatedQuestions) {
 						this.updateQuestions (card);
@@ -211,11 +211,11 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 				}
 			} catch (e) {
 				// if there was an error or nothing is given: show first question
-				console.log('keine question id angegeben ');
+				//console.log('keine question id angegeben ');
 				//initialCard = 0;
 				//this.location.replaceState ('quiz/0');
 				this.router.navigate(['quiz', 0], {replaceUrl:true});
-				console.log ("replacing location to " + 'quiz/0');
+				//console.log ("replacing location to " + 'quiz/0');
 			}
 		
 		});
@@ -252,7 +252,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	 * Zeige nur Question Nummer n
 	 */
 	showQuestion(n) {
-		console.log ("showing question " + n);
+		//console.log ("showing question " + n);
 		this.app.questionIndex = n;
 		window.scrollTo(0,0);
 
@@ -268,7 +268,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		if (this.app.questionIndex > this.questionData.length && this.questionData.length > 0) {
 			//this.location.replaceState ('quiz/auswertung'); // change URL
 			this.router.navigate(['quiz', 'auswertung'], {replaceUrl:true});
-			console.log ("setting location to " + 'quiz/auswertung');
+			//console.log ("setting location to " + 'quiz/auswertung');
 			this.showResults();
 		} else if (this.questionData.length == 0) {
 			this.resultsVisible = false;
@@ -323,10 +323,10 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.resultsVisible = false;
 			this.progress = this.toPercent (n / (this.questionData.length + 1));
 			this.question = this.questionData[this.app.questionIndex - 1];
-			console.log ("question title " + this.question["titel"]);
+			//console.log ("question title " + this.question["titel"]);
 			// get sub-questions
 			this.actualQuestions = Object.keys(this.question['fragen']);
-			console.log (this.question);
+			//console.log (this.question);
 		}
 	}
 
@@ -339,7 +339,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		let next = this.app.questionIndex + n;
 		//this.location.go('quiz/' + next);
 		this.router.navigate(['quiz', next]);
-		console.log ("setting location to " + 'quiz/' + next);
+		//console.log ("setting location to " + 'quiz/' + next);
 		this.showQuestion(next); // die entsprechende URL im adressfeld anzeigen und auf history-stack pushen
 	}
 
@@ -360,7 +360,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	 * auswertungstabelle generieren und anzeigen
 	 */
 	showResults() {
-		console.log ("showing results");
+		//console.log ("showing results");
 //		this.location.go('quiz/auswertung') // change URL
 		this.router.navigate(['quiz', 'auswertung'], {replaceUrl:true});
 		window.scrollTo(0,0);
@@ -381,7 +381,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 						const opt = this.voteOptions;
 						const answer = opt[this.answers[f]];
 						const results = this.questionResults[f];
-						console.log (f, this.questionResults[f]);
+						//console.log (f, this.questionResults[f]);
 						nAnswered++;
 						for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
 							if (!this.overallResult['consent'][partyName]) {
@@ -403,7 +403,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 						}
 					}
 				}
-				console.log (f, q['fragen'][f]['score']);
+				//console.log (f, q['fragen'][f]['score']);
 			}
 		}
 
