@@ -53,10 +53,12 @@
         		<div class="veritcal-bar-progress {{getPartyClass (party)}}" [style.height]="overallResult[party]">{{overallResult[party]}}<br>{{getProperPartyName (party)}}</div>
         	</div>
         	</ng-container>
+        	<div class="w3-border w3-dark-grey" id="party-bar-podest" [style.height]="auswertungspodesthoehe">
+        	</div>
         </div>
         <div class="w3-margin">
 	        <h4>Welche Partei hat am ähnlichsten wie du abgestimmt?</h4>
-	        In der folgenden Tabelle siehst du wieviele Abgeordnete in den verschiedenen Parteien in deinem Sinne abgestimmt haben.
+	        In der folgenden Tabelle siehst du wieviele Abgeordnete der verschiedenen Parteien in deinem Sinne abgestimmt haben.
 	        Wenn du auf den Knopf mit dem <button class="w3-button"><i class="fa fa-caret-down" aria-hidden="true"></i></button> Symbol neben einer Abstimmung klickst erfährst du mehr Details.
 	        Du kannst deine Entscheidungen in einem Themengebiet über den Knopf <button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button> nochmal bearbeiten.
         </div>

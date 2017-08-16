@@ -29,7 +29,7 @@
                 },
                 "018-133-01": {
                     "context": "Das Betreuungsgeld wurde an Familien mit Kindern zwischen 2 und 3 Jahren gezahlt, die diese Kinder nicht in öffentlichen Kitas betreuen ließen. Das Bundesverfassungsgericht hat das Betreuungsgeldgesetz im Juli 2015 gekippt. Damit werden die geplanten 1 Milliarde Euro Betreuungsgeld nicht ausgegeben.",
-                    "frage": "Sollen diese Mittel für den Kitaausbau genutzt werden?",
+                    "frage": "Sollten diese Mittel für den Kitaausbau genutzt werden?",
                     "short": "Betreuungsgeld für Kitaausbau nutzen",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-133-01/",
@@ -206,7 +206,7 @@
                 },
                 "018-011-01": {
                     "context": "Die Maislinie 1507 wurde gentechnisch so verändert, dass sie ein Gift für bestimmte Insekten produziert und resistent gegen das Totalherbizid Glufosinat ist.",
-                    "frage": "Soll die Maislinie 1507 für den Anbau in der EU zugelassen werden?",
+                    "frage": "Sollte die Maislinie 1507 für den Anbau in der EU zugelassen werden?",
                     "short": "Maislinie 1507 zulassen",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-011-01/",
@@ -236,7 +236,7 @@
             "fragen": {
                 "018-066-03": {
                     "context": "",
-                    "frage": "Sollte es Bund und Ländern erlaubt sein bei der Förderung von Wissenschaft, Forschung und Lehre zusammenzuwirken?",
+                    "frage": "Sollte es Bund und Ländern erlaubt sein, bei der Förderung von Wissenschaft, Forschung und Lehre zusammenzuwirken?",
                     "short": "Zusammenarbeit Forschung Bund-Länder",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-066-03/",
@@ -326,18 +326,10 @@
 								"Schiedsgericht"
             ],
             "titel": "Freihandelsabkommen",
-            "beschreibung": "",
+            "beschreibung": "Unter dem Namen CETA wird seit 2009 ein umfassendes Wirtschafts- und Handelsabkommen zwischen der EU und Kanada verhandelt.",
             "bild": "",
             "subtext": "",
             "fragen": {
-                "018-190-04": {
-                    "context": "Internationale Abkommen vereinfachen den Handelsverkehr. Der Inhalt des geplanten Kanada-EU-Freihandelabkommens CETA ist geheim.",
-                    "frage": "Sollte CETA weiterverfolgt werden? (September 2016)",
-                    "short": "CETA weitermachen",
-                    "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-190-04/",
-                    "invert": false
-                },
                 "018-054-03": {
                     "context": "Sogenannte Schiedsgerichte dienen dem Schutz von Investoren. Investoren und Firmen können Staaten vor Schiedsgerichten auf Schadenersatz verklagen, falls diese z.B. Gesetze erlassen, die den Wert von Investitionen schmälern.",
                     "frage": "Sollte sich die Bundesregierung gegen Schiedsgerichte in CETA einsetzen?",
@@ -345,6 +337,14 @@
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-054-03/",
                     "invert": true
+                },
+                "018-190-04": {
+                    "context": "Internationale Abkommen vereinfachen den Handelsverkehr. Der Inhalt des geplanten Kanada-EU-Freihandelabkommens ist geheim.",
+                    "frage": "Sollte CETA weiterverfolgt werden? (September 2016)",
+                    "short": "CETA weitermachen",
+                    "subtext": "",
+                    "link": "https://wahlbilanz.de/abstimmungen/018-190-04/",
+                    "invert": false
                 }
             }
         },

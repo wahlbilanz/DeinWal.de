@@ -127,3 +127,10 @@ th small {
 .consent-result {
 	white-space: nowrap;
 }
+
+#party-bar-podest {
+	width: 100%;
+	float: left;
+	
+}
+

@@ -55,7 +55,9 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	showComplexTable = false;
 	/** is this a touch device? then we shouldn't do hover stuff...*/
 	touchDevice = false;
-
+	/** wie hoch soll das auswertungspodest sein? -- wenn eine partei nur wenige stimmen hat, ist der name schwer zu lesen, daher hab ich mal ein podest eingefuehrt */
+	auswertungspodesthoehe = "0em";
+	
 	constructor (
 			private qserv: QuestiondataService,
 			private app: AppComponent,
@@ -287,7 +289,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			
 			this.question = {
 				'titel': 'Gleich geht\'s los!',
-				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du ueber Anträge und Gesetzentwürfe aus dem Bundestag entscheiden. '
+				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du über Anträge und Gesetzentwürfe aus dem Bundestag entscheiden. '
 					+ '<strong>Oben links kannst du die Eingaben in deinem Browser-Profil speichern,</strong> '
 					+ 'dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst. <br> <br> '
 					+ 'Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen. '
@@ -421,6 +423,19 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 						this.partypriority[j] = tmp;
 					}
 				}
+			}
+			
+			if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.04) {
+				this.auswertungspodesthoehe = "3em";
+			}
+			else if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.09) {
+				this.auswertungspodesthoehe = "2em";
+			}
+			else if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.15) {
+				this.auswertungspodesthoehe = "1em";
+			}
+			else {
+				this.auswertungspodesthoehe = "0em";
 			}
 			
 		}
