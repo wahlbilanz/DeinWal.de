@@ -18,7 +18,7 @@ Das Layout haben wir mit dem [W3.CSS Framework](https://www.w3schools.com/w3css/
 In der [Readme im `src` Verzeichnis](https://github.com/wahlbilanz/DeinWal.de/tree/master/src#readme) haben wir auch erklärt, wie die Webseite kompiliert und getestet werden kann.
 
 Solltest du kein Programmierer sein, kannst du uns troztdem gern dein Feedback schicken!
-Eröffne zum Beispiel ein [neues Ticket im GitHub-Projekt](https://github.com/wahlbilanz/DeinWal.de/issues/new) oder [schick uns eine Mail](https://deinwal.de/impressum).
+Erstelle zum Beispiel ein [neues Ticket im GitHub-Projekt](https://github.com/wahlbilanz/DeinWal.de/issues/new) oder [schick uns eine Mail](https://deinwal.de/impressum).
 
 
 ## Noch Fragen?
