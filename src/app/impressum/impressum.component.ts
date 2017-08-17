@@ -22,6 +22,10 @@ export class ImpressumComponent implements OnInit {
 			'link': ''
 			},*/
 			{
+				'name': 'Markus Wolfien',
+				'link': 'https://www.sbi.uni-rostock.de/team/single/markus-wolfien/'
+			},
+			{
 				'name': 'Michael Rennecke',
 				'link': 'https://blog.0rpheus.net/'
 			},
