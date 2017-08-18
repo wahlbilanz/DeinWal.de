@@ -301,7 +301,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 					+ (Object.keys(this.answers).length + 1 /*cause that's the answer! and who's checking that anyway...*/) + '&nbsp;Fragen ausgewählt und in '
 					+ this.questionData.length + '&nbsp;Themengebiete unterteilt:</strong> '
 					+ themengebiete
-					+ '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeit. '
+					+ '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeigt. '
 					+ 'Eine einzelne Abstimmung sieht wie folgt aus:',
 				'fragen': {
 					'example-1': {
