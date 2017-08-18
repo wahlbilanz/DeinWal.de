@@ -482,7 +482,7 @@
                     "short": "Abschiebestopp Afghanistan",
                     "subtext": "",
                     "link": "https://wahlbilanz.de/abstimmungen/018-237-11/",
-                    "invert": false
+                    "invert": true
                 }
             }
         }
