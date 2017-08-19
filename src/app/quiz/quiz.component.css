@@ -134,3 +134,8 @@ th small {
 	
 }
 
+.myQuestions .q-text button {
+	text-decoration: underline;
+}
+
+

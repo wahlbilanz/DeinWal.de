@@ -22,7 +22,7 @@
 	        	<strong class="q-question" [innerHTML]="question.fragen[q].frage"></strong><br>
 	        	<button class="w3-button w3-light-grey w3-hover-grey" (click)="toggleMoreInfos (q)" *ngIf="!moreInfos[q]">Mehr Informationen</button>
 	        	<button class="w3-button w3-grey" (click)="toggleMoreInfos (q)" *ngIf="moreInfos[q]">Weniger Informationen</button>
-	        	<div class="q-supplemental w3-white w3-border-black w3-leftbar w3-padding" *ngIf="moreInfos[q]">
+	        	<div class="q-supplemental w3-white w3-border-black w3-leftbar w3-padding w3-margin-bottom" *ngIf="moreInfos[q]">
 	        	<ul>
 	        		<ng-container *ngFor="let mi of question.fragen[q].moreInfos">
 	        			<li>

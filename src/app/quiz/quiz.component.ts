@@ -258,6 +258,11 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		//console.log ("showing question " + n);
 		this.app.questionIndex = n;
 		window.scrollTo(0,0);
+		
+		// alle more-infos wieder einklappen
+		for (const q in this.moreInfos) {
+			this.moreInfos[q] = false;
+		}
 
 		// there is no question with negative index...
 		if (this.app.questionIndex < 0) {
