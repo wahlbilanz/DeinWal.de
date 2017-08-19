@@ -34,7 +34,7 @@ export class ImpressumComponent implements OnInit {
 				'link': ''
 			},
 			{
-				'name': 'Daniela Hunsicker',
+				'name': 'Daniela Theile',
 				'link': ''
 			},
 			{
