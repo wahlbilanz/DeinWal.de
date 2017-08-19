@@ -457,8 +457,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		let description = "";
 		if (answer === 'enthaltung') { // Enthaltung
 			punkte = partyResults[opt[0]] + 0.5 * partyResults[opt[1]] + 0.5 * partyResults[opt[2]];
-			description = "(Enthaltung + 1/2 · Ja + 1/2 · Nein) / Gesamt = ("
-				+ partyResults[opt[0]] + " + " + 0.5 * partyResults[opt[1]] + " + " + 0.5 * partyResults[opt[2]] + ") / " + nAbgegebeneStimmen
+			description = "(1/2 · Ja + 1/2 · Nein + Enthaltung) / Gesamt = ("
+				+ 0.5 * partyResults[opt[1]] + " + " + 0.5 * partyResults[opt[2]] + " + " + partyResults[opt[0]] + ") / " + nAbgegebeneStimmen
 				+ " = " + this.toPercent (punkte / nAbgegebeneStimmen);
 		} else if (answer === 'ja') { // ja
 			punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[1]];
