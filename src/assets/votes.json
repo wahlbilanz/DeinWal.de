@@ -3,8 +3,8 @@
         {
             "topic": [
                 "Familie",
-								"Gleichstellung",
-								"Kinder"
+                "Gleichstellung",
+                "Kinder"
             ],
             "titel": "Familie",
             "beschreibung": "",
@@ -16,7 +16,24 @@
                     "frage": "Sollten gleichgeschlechtliche Paare ein Recht auf Eheschließung bekommen, gleich dem zwischen Mann und Frau?",
                     "short": "Ehe für alle",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-244-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 30. Juni 2017",
+                            "link": ""
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/7125767"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag-2013-2017/abstimmungen/ehe-fur-alle"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-244-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-112-01": {
@@ -24,7 +41,28 @@
                     "frage": "Sollte das Kindergeld von 184 Euro auf 186 Euro und der Kinderfreibetrag von 2184 auf 2220 Euro erhöht werden (Juni 2015)?",
                     "short": "Kindergeld erhöhen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-112-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 18. Juni 2015",
+                            "link": ""
+                        },
+                        {
+                            "text": "Wikipedia zu Kindergeld",
+                            "link": "https://de.wikipedia.org/wiki/Kindergeld_(Deutschland)"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/5266118"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/ruckwirkende-erhohung-von-kinderfreibetrag-und-kindergeld"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-112-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-133-01": {
@@ -32,7 +70,24 @@
                     "frage": "Sollten diese Mittel für den Kitaausbau genutzt werden?",
                     "short": "Betreuungsgeld für Kitaausbau nutzen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-133-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 5. November 2015",
+                            "link": ""
+                        },
+                        {
+                            "text": "Wikipedia zu Betreuungsgeld",
+                            "link": "https://de.wikipedia.org/wiki/Betreuungsgeld"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/6101941"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-133-01/"
+                        }
+                    ],
                     "invert": true
                 }
             }
@@ -40,9 +95,9 @@
         {
             "topic": [
                 "Arbeit",
-								"Befristung",
-								"Mindestlohn",
-								"Rente"
+                "Befristung",
+                "Mindestlohn",
+                "Rente"
             ],
             "titel": "Arbeit",
             "beschreibung": "",
@@ -54,7 +109,24 @@
                     "frage": "Sollten sachgrundlose Befristungen abgeschafft werden? ",
                     "short": "sachgrundlose Befristung abschaffen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-241-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 23. Juni 2017",
+                            "link": ""
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/7123040"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag-2013-2017/abstimmungen/abschaffung-der-sachgrundlosen-befristung"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-241-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-046-06": {
@@ -62,7 +134,24 @@
                     "frage": "Sollten die Renten in Ost und West durch steuerfinanzierte Zuschüsse angeglichen werden?",
                     "short": "Ost-Renten angleichen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-046-06/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 3. Juli 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/3595536"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/angleichung-der-renten-ostdeutschland-westniveau"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-046-06/"
+                        }
+                    ],
                     "invert": true
                 },
                 "018-209-05": {
@@ -70,7 +159,28 @@
                     "frage": "Sollten zuständige Fahnder zur Bekämpfung von Schwarzarbeit neue Befugnisse und Mittel (z.B. Zugriff auf das Fahrzeugregister des Kraftfahrtbundesamtes, ein neues zentrales Informationssystem) erhalten? ",
                     "short": "Bekämpfung Schwarzarbeit",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-209-05/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 15. Dezember 2016",
+                            "link": ""
+                        },
+                        {
+                            "text": "Wikipedia zu Schwarzarbeit",
+                            "link": "https://de.wikipedia.org/wiki/Schwarzarbeit"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/7045777"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/bekampfung-der-schwarzarbeit"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-209-05/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-046-02": {
@@ -78,7 +188,24 @@
                     "frage": "Sollte ein flächendeckender Mindestlohn in Höhe von 8,50 € eingeführt werden?",
                     "short": "8,50 € Mindestlohn",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-046-02/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 3. Juli 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/3594346"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/flachendeckender-mindestlohn-von-850-euro"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-046-02/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-046-01": {
@@ -86,7 +213,20 @@
                     "frage": "Sollte ein flächendeckender Mindestlohn in Höhe von 10,00 € eingeführt werden? ",
                     "short": "10,00 € Mindestlohn",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-046-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 3. Juli 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/3594346"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-046-01/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -95,8 +235,8 @@
             "topic": [
                 "Gesundheit",
                 "Verbraucherschutz",
-								"Arzneimittel",
-								"Pflege"
+                "Arzneimittel",
+                "Pflege"
             ],
             "titel": "Gesundheit und Verbraucherschutz",
             "beschreibung": "",
@@ -108,7 +248,24 @@
                     "frage": "Stimmst du dieser umfassenden Reform zu?",
                     "short": "Arzneimittelrechtliche Reform",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-200-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 11. November 2016",
+                            "link": ""
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/7030393"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/arzneimittelreform"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-200-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-198-03": {
@@ -116,7 +273,28 @@
                     "frage": "Sollte die gruppennützige Forschung an einem nichteinwilligungsfähigen Patienten erlaubt werden, wenn dieser vorher (im Vollbesitz seiner geistigen Kräfte) eine Verfügung abgegeben hat?",
                     "short": "Studienteilnahme von Dementen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-198-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 9. November 2016",
+                            "link": ""
+                        },
+                        {
+                            "text": "Wikipedia zu Demenz",
+                            "link": "https://de.wikipedia.org/wiki/Demenz"
+                        },
+                        {
+                            "text": "Wikipedia zur Alzheimer-Krankheit",
+                            "link": "https://de.wikipedia.org/wiki/Alzheimer-Krankheit"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/7028839"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-198-03/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-061-01": {
@@ -124,7 +302,20 @@
                     "frage": "Sollte die häusliche Betreuung explizit in diesem Gesetz genannt werden?",
                     "short": "Häusliche Betreuung",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-061-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 17. Oktober 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/3992934"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-061-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-164-01": {
@@ -132,7 +323,24 @@
                     "frage": "Sollten neue Straftatbestände der Bestechlichkeit und Bestechung im Gesundheitswesen eingeführt werden?",
                     "short": "Korruption im Gesundheitswesen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-164-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 14. April 2016",
+                            "link": ""
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/6754002"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/bekampfung-von-korruption-im-gesundheitswesen"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-164-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-158-03": {
@@ -140,16 +348,37 @@
                     "frage": "Sollte Glyphosat verboten werden?",
                     "short": "Keine Neuzulassung von Glyphosat",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-158-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 25. Februar 2016",
+                            "link": ""
+                        },
+                        {
+                            "text": "Wikipedia zu Glyphosat",
+                            "link": "https://de.wikipedia.org/wiki/Glyphosat"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/6594920"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/neuzulassung-von-glyphosat-verhindern"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-158-03/"
+                        }
+                    ],
                     "invert": false
                 }
             }
         },
         {
             "topic": [
-								"Miete",
+                "Miete",
                 "Vorratsdatenspeicherung",
-								"Suizid"
+                "Suizid"
             ],
             "titel": "Gesellschaft",
             "beschreibung": "",
@@ -161,7 +390,28 @@
                     "frage": "Sollten die Diensteanbieter zur Speicherung dieser Daten für 4 Wochen (Mobilfunk) bzw. 10 Wochen (Internet) verpflichtet werden?",
                     "short": "Vorratsdatenspeicherung",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-131-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 16. Oktober 2015",
+                            "link": ""
+                        },
+                        {
+                            "text": "Wikipedia zu Vorratsdatenspeicherung",
+                            "link": "https://de.wikipedia.org/wiki/Vorratsdatenspeicherung"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/5978201"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/vorratsdatenspeicherung"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-131-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-134-03": {
@@ -169,7 +419,28 @@
                     "frage": "Sollte die geschäftsmäßige Sterbehilfe unter Strafe gestellt werden?",
                     "short": "Geschäftsmäßige Sterbehilfe verbieten",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-134-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 6. November 2015",
+                            "link": ""
+                        },
+                        {
+                            "text": "Wikipedia zur Sterbehilfe",
+                            "link": "https://de.wikipedia.org/wiki/Sterbehilfe"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/6104955"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/verbot-von-geschaftsmassiger-sterbehilfe"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-134-03/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-221-03": {
@@ -177,7 +448,28 @@
                     "frage": "Sollte die Mietpreisbremse auch nach umfassenden Modernisierungen greifen?",
                     "short": "Mietpreisbremse bei Modernisierung",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-221-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 9. März 2017",
+                            "link": ""
+                        },
+                        {
+                            "text": "Was sind Modernisierungen? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Modernisierung_(Mietrecht)"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/7082528"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag-2013-2017/abstimmungen/verbesserung-der-mietpreisbremse"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-221-03/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -187,7 +479,7 @@
                 "Landwirtschaft",
                 "Gesundheit",
                 "Ernährung",
-								"Umwelt",
+                "Umwelt",
                 "Verbraucherschutz"
             ],
             "titel": "Gentechnik in der Landwirtschaft",
@@ -200,7 +492,24 @@
                     "frage": "Sollte gentechnisch veränderter Honig für Verbraucher gekennzeichnet werden?",
                     "short": "Gen-Honig kennzeichnen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-020-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 13. März 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/3209932"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/kennzeichnungspflicht-von-gen-honig"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-020-01/"
+                        }
+                    ],
                     "bemerkung": "In den Results wurde Ja und Nein ausgetauscht um es einfacher zu machen.",
                     "invert": true
                 },
@@ -209,7 +518,28 @@
                     "frage": "Sollte die Maislinie 1507 für den Anbau in der EU zugelassen werden?",
                     "short": "Maislinie 1507 zulassen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-011-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 30. Januar 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Wikipedia zum Mais 1507",
+                            "link": "https://de.wikipedia.org/wiki/Transgener_Mais#Mais_1507"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/3086800"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/anbau-von-genmais-der-eu-verhindern"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-011-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-036-03": {
@@ -217,7 +547,28 @@
                     "frage": "Sollte Gentechnik im Pflanzenbau generell verboten werden?",
                     "short": "Gentechnik im Pflanzenbau verbieten",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-036-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 22. Mai 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Was sind Pollen? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Pollen"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/3440339"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/nationale-ausnahmeregelungen-beim-anbau-von-gentechnik"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-036-03/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -225,9 +576,9 @@
         {
             "topic": [
                 "BAföG",
-								"Bund-Länder",
-								"Forschung",
-								"Ausbildung"
+                "Bund-Länder",
+                "Forschung",
+                "Ausbildung"
             ],
             "titel": "Bildung",
             "beschreibung": "Bildung ist bislang Ländersache. In den letzten Jahren gab es mehrere Versuche, den Bund einzubeziehen.",
@@ -239,7 +590,24 @@
                     "frage": "Sollte es Bund und Ländern erlaubt sein, bei der Förderung von Wissenschaft, Forschung und Lehre zusammenzuwirken?",
                     "short": "Zusammenarbeit Forschung Bund-Länder",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-066-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 13. November 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/4105669"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/lockerung-des-kooperationsverbotes-bei-hochschulfinanzierung"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-066-03/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-066-08": {
@@ -247,7 +615,20 @@
                     "frage": "Sollte der Bund (statt der Länder) die Finanzierung des <abbr title='Bundesausbildungsförderungsgesetz'>BAföG</abbr> übernehmen?",
                     "short": "BAföG-Finanzierung durch Bund",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-066-08/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 13. November 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/4105994"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-066-08/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-066-05": {
@@ -255,7 +636,20 @@
                     "frage": "Sollten die BAföG Bedarfssätze, Freibeträge und Höchstbeträge jährlich überprüft und an aktuelle Lebenshaltungskosten angepasst werden?",
                     "short": "BAföG jährlich anpassen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-066-05/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 13. November 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/4105994"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-066-05/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -274,7 +668,24 @@
                     "frage": "Sollte sich die Bundeswehr an der militärischen Ausbildungs- und Beratungsmission für Somalia beteiligen? (bis zu 20 SoldatInnen)",
                     "short": "Ausbildungsmission in Somalia",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-161-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 17. März 2016",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zu Somalia (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Somalia"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/6677978"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-161-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-170-05": {
@@ -282,7 +693,32 @@
                     "frage": " Sollte sich die Bundeswehr an der Bekämpfung von Piraterie vor Somalia beteiligen? (bis zu 600 SoldatInnen)",
                     "short": "Bekämpfung von Piraterie vor Somalia",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-170-05/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 12. Mai 2016",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zu Somalia (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Somalia"
+                        },
+                        {
+                            "text": "Was ist Piraterie? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Piraterie"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/6831995"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/verlangerung-des-bundeswehreinsatzes-somalia-0"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-170-05/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-144-01": {
@@ -290,7 +726,28 @@
                     "frage": "Sollten bewaffnete deutsche Streitkräfte zur Verhütung und Unterbindung terroristischer Handlungen durch die Terrororganisation IS eingesetzt werden? (bis zu 1200 SoldatInnen)",
                     "short": "Bundeswehr gegen IS",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-144-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 4. Dezember 2015",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zur Terrororganisation IS (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Islamischer_Staat_(Organisation)"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/6248696"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/einsatz-deutscher-streitkrafte-gegen-den-syrien"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-144-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-017-01": {
@@ -298,7 +755,28 @@
                     "frage": "Sollten bewaffnete deutsche Streitkräfte Afghanistan bei der Aufrechterhaltung der Sicherheit unterstützen? (bis zu 3300 SoldatInnen)",
                     "short": "Bundeswehr in Afghanistan",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-017-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 20. Februar 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zu Afghanistan (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Afghanistan"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/3146784"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/fortsetzung-des-afghanistan-einsatzes-isaf"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-017-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-179-02": {
@@ -306,7 +784,28 @@
                     "frage": "Sollte sich die Bundeswehr im Libanon mit Aufklärung, Überwachung, Sicherung, Ausbildung, Lufttransport einschließlich der Anwendung militärischer Gewalt beteiligen? (bis zu 300 SoldatInnen)",
                     "short": "Bundeswehr im Libanon",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-179-02/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 23. Juni 2016",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zum Libanon (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Libanon"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/6947253"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/verlangerung-des-bundeswehreinsatzes-im-libanon-unifil"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-179-02/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-039-01": {
@@ -314,7 +813,24 @@
                     "frage": "Sollte sich die Bundeswehr im Kosovo an der Aufrechterhaltung eines sicheren und stabilen Umfelds beteiligen? (bis zu 1850 SoldatInnen)",
                     "short": "Bundeswehr im Kosovo",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-039-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 5. Juni 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zum Kosovo (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Kosovo"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/verlangerung-des-bundeswehreinsatzes-im-kosovo-kfor"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-039-01/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -322,8 +838,8 @@
         {
             "topic": [
                 "Freihandel",
-								"CETA",
-								"Schiedsgericht"
+                "CETA",
+                "Schiedsgericht"
             ],
             "titel": "Freihandelsabkommen",
             "beschreibung": "Unter dem Namen CETA wird seit 2009 ein umfassendes Wirtschafts- und Handelsabkommen zwischen der EU und Kanada verhandelt.",
@@ -333,17 +849,63 @@
                 "018-054-03": {
                     "context": "Sogenannte Schiedsgerichte dienen dem Schutz von Investoren. Investoren und Firmen können Staaten vor Schiedsgerichten auf Schadenersatz verklagen, falls diese z.B. Gesetze erlassen, die den Wert von Investitionen schmälern.",
                     "frage": "Sollte sich die Bundesregierung gegen Schiedsgerichte in CETA einsetzen?",
-                    "short": "Keine Schiedsgerichte in CETA",
+                    "short": "Keine Schiedsgerichte",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-054-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 25. September 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zu CETA (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Comprehensive_Economic_and_Trade_Agreement"
+                        },
+                        {
+                            "text": "Informationen zur Schiedsgerichtsbarkeit (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Schiedsgerichtsbarkeit"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/3909293"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/ablehnung-von-schiedsgerichten-bei-ttip-und-ceta"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-054-03/"
+                        }
+                    ],
                     "invert": true
                 },
                 "018-190-04": {
                     "context": "Internationale Abkommen vereinfachen den Handelsverkehr. Der Inhalt des geplanten Kanada-EU-Freihandelabkommens ist geheim.",
-                    "frage": "Sollte CETA weiterverfolgt werden? (September 2016)",
+                    "frage": "Sollte CETA weiterverfolgt werden?",
                     "short": "CETA weitermachen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-190-04/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 22. September 2016",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zu CETA (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Comprehensive_Economic_and_Trade_Agreement"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/7006363"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/ceta-weiterverfolgen"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-190-04/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -364,7 +926,28 @@
                     "frage": "Sollte diese Kooperation gekündigt werden?",
                     "short": "Kooperation bei Kernenergie stoppen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-033-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 8. Mai 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zur Kernenergie (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Kernenergie"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/3391056"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/kundigung-der-bilateralen-kooperationen-im-bereich-der-nutzung-atomarer"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-033-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-115-06": {
@@ -372,7 +955,32 @@
                     "frage": "Sollte sich Deutschland dagegen wehren?",
                     "short": "Atomkraft-Subventionen in GB verhindern",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-115-06/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 2. Juli 2015",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zur Kernenergie (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Kernenergie"
+                        },
+                        {
+                            "text": "Informationen zum Hinkley Point C (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Kernkraftwerk_Hinkley_Point#Hinkley_Point_C"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/5350865"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/neubausubventionen-fur-atomkraftwerke-der-eu-verhindern"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-115-06/"
+                        }
+                    ],
                     "invert": true
                 },
                 "018-167-01": {
@@ -380,15 +988,36 @@
                     "frage": "Sollte Fracking verboten werden?",
                     "short": " Fracking verbieten",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-167-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 28. April 2016",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zu Fracking (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Hydraulic_Fracturing"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/6791896"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/fracking-verbot"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-167-01/"
+                        }
+                    ],
                     "invert": false
                 }
             }
         },
         {
             "topic": [
-								"Erneuerbare-Energien",
-								"Windenergie"
+                "Erneuerbare-Energien",
+                "Windenergie"
             ],
             "titel": "Energie II",
             "beschreibung": "Erneuerbare Energien wie Wind- und Solarenergie machen derzeit einen Anteil von 33% an der Stromversorgung in Deutschland aus. Bei ihrer Produktion wird kein CO<sub>2</sub> in die Atmosphäre freigesetzt. Sie stellen jedoch hohe Anforderungen an das Stromnetz und verursachen meist höhere Kosten.",
@@ -400,7 +1029,28 @@
                     "frage": "Sollte es eine Obergrenze für die EEG-Umlage geben?",
                     "short": "EEG-Förderung begrenzen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-184-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 8. Juli 2016",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zur EEG-Umlage (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Erneuerbare-Energien-Gesetz#EEG-Umlage"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/6970752"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/reform-des-erneuerbare-energien-gesetzes-eeg"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-184-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-044-05": {
@@ -408,7 +1058,28 @@
                     "frage": "Sollten Mindestabstände zwischen Windenergieanlagen und Wohnungen durch die Bundesländer (statt Bundesweit) geregelt werden?",
                     "short": "Windräder Ländersache",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-044-05/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 27. Juni 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zu Windkraftanlagen (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Windkraftanlage"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/3570316"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/landeroffnungsklausel-zur-vorgabe-von-mindestabstanden-zwischen"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-044-05/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -416,8 +1087,8 @@
         {
             "topic": [
                 "Finanzhilfe",
-								"Haushalt",
-								"Maut"
+                "Haushalt",
+                "Maut"
             ],
             "titel": "Finanzen",
             "beschreibung": "",
@@ -429,7 +1100,40 @@
                     "frage": "Sollte der Deutsche Bundestag diese Forderung explizit ablehnen?",
                     "short": "Bundeswehr-Etat auf 2% BIP",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-221-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 9. März 2017",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zum Bruttoinlandsprodukt (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Bruttoinlandsprodukt"
+                        },
+                        {
+                            "text": "Informationen zur NATO (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/NATO"
+                        },
+                        {
+                            "text": "Verteilung des Bruttoinlandsprodukts (Bundeszentrale für politische Bildung)",
+                            "link": "https://www.bpb.de/fsd/3D-GLOBUS/bip.html"
+                        },
+                        {
+                            "text": "Bruttoinlandsprodukt pro Kopf (Bundeszentrale für politische Bildung)",
+                            "link": "https://www.bpb.de/wissen/Y2ZKS2,0,Bruttoinlandsprodukt_pro_Kopf.html"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/7082496"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag-2013-2017/abstimmungen/keine-erhohung-der-verteidigungsausgaben-auf-2-prozent-des-bip"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-221-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-018-01": {
@@ -437,7 +1141,28 @@
                     "frage": "Sollten die Diäten der Bundestagsabgeordneten von 8.252 Euro auf 9.082 Euro erhöht werden?",
                     "short": "Diäten erhöhen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-018-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 21. Februar 2014",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zu Diäten in der Politik (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Di%C3%A4ten_(Politik)"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/3147885"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/diatenerhohung"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-018-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-118-01": {
@@ -445,15 +1170,61 @@
                     "frage": "Sollte Griechenland ein Kreditpaket mit vielen Auflagen im Umfang von 86 Milliarden Euro gewährt werden? (Anteil Deutschlands: 23,2 Mrd €, August 2015)",
                     "short": "Kreditpaket Griechenland",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-118-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 19. August 2015",
+                            "link": ""
+                        },
+                        {
+                            "text": "Informationen zu Griechenland (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Griechenland"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/5629217"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/gewahrung-eines-86-mrd-euro-kreditpakets-fur-griechenland"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-118-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-098-03": {
                     "context": "",
-                    "frage": "Sollte auf deutschen Autobahnen eine Maut für PKWs eingeführt werden?",
+                    "frage": "Sollte auf deutschen Autobahnen eine Maut für <abbr title='Personenkraftwagen'>PKWs</abbr> eingeführt werden?",
                     "short": "PKW-Maut",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-098-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 27. März 2015",
+                            "link": ""
+                        },
+                        {
+                            "text": "Was ist eine Maut? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Maut"
+                        },
+                        {
+                            "text": "Informationen zur PKW-Maut in Deutschland (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Pkw-Maut_in_Deutschland"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/4814406"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/pkw-maut"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-098-03/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -461,7 +1232,7 @@
         {
             "topic": [
                 "Asyl",
-								"Bleiberecht"
+                "Bleiberecht"
             ],
             "titel": "Inneres",
             "beschreibung": "",
@@ -473,7 +1244,44 @@
                     "frage": "Sollten Algerien, Marokko und Tunesien als sichere Herkunftsstaaten eingestuft werden? (April 2016)",
                     "short": "Algerien, Marokko und Tunesien sind sicher",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-171-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 13. Mai 2016",
+                            "link": ""
+                        },
+                        {
+                            "text": "Was bedeutet Asyl?  (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Asyl"
+                        },
+                        {
+                            "text": "Anzahl der Asylanträge (Erstanträge) in Deutschland von Juli 2016 bis Juli 2017 (statista)",
+                            "link": "https://de.statista.com/statistik/daten/studie/151124/umfrage/asylantraege-in-deutschland/"
+                        },
+                        {
+                            "text": "Informationen zu Algerien (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Algerien"
+                        },
+                        {
+                            "text": "Informationen zu Marokko (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Marokko"
+                        },
+                        {
+                            "text": "Informationen zu Tunesien (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Tunesien"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/6833341"
+                        },
+                        {
+                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
+                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/einstufung-von-algerien-marokko-und-tunesien-als-sichere-herkunftsstaaten"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-171-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-237-11": {
@@ -481,7 +1289,28 @@
                     "frage": "Sollten Abschiebungen nach Afghanistan ausgesetzt werden?",
                     "short": "Abschiebestopp Afghanistan",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-237-11/",
+                    "moreInfos": [
+                        {
+                            "text": "Datum der Abstimmung: 1. Juni 2017",
+                            "link": ""
+                        },
+                        {
+                            "text": "Was bedeutet Abschiebung? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Abschiebung_(Recht)"
+                        },
+                        {
+                            "text": "Informationen zu Afghanistan (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Afghanistan"
+                        },
+                        {
+                            "text": "Debatte im Bundestag",
+                            "link": "https://dbtg.tv/fvid/7115290"
+                        },
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-237-11/"
+                        }
+                    ],
                     "invert": true
                 }
             }

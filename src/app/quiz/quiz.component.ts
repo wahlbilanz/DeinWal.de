@@ -57,6 +57,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	touchDevice = false;
 	/** wie hoch soll das auswertungspodest sein? -- wenn eine partei nur wenige stimmen hat, ist der name schwer zu lesen, daher hab ich mal ein podest eingefuehrt */
 	auswertungspodesthoehe = "0em";
+	/** which divs with moreInfos to show?1 */
+	moreInfos = {};
 	
 	constructor (
 			private qserv: QuestiondataService,
@@ -137,6 +139,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 								
 								this.simpleDetails[f] = false;
 								this.complexDetails[f] = false;
+								this.moreInfos[f] = false;
 								
 								if (q['fragen'][f]["invert"]) {
 									let curResults = this.questionResults[f];
@@ -545,6 +548,11 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	
 	toggleComplexTable() {
 		this.showComplexTable = !this.showComplexTable;
+	}
+	
+	toggleMoreInfos (qid)
+	{
+		this.moreInfos[qid] = !this.moreInfos[qid];
 	}
 	
 
