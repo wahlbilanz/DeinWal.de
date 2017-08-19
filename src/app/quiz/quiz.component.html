@@ -20,7 +20,7 @@
         	<div class="q-text">
 	        	<span class="q-context" [innerHTML]="question.fragen[q].context"></span>
 	        	<strong class="q-question" [innerHTML]="question.fragen[q].frage"></strong><br>
-	        	<button (click)="toggleMoreInfos (q)">Mehr Informationen</button>
+	        	<button class="w3-button w3-light-grey w3-hover-grey" (click)="toggleMoreInfos (q)">Mehr Informationen</button>
 	        	<div class="q-supplemental" *ngIf="moreInfos[q]">
 	        	<ul>
 	        		<ng-container *ngFor="let mi of question.fragen[q].moreInfos">
