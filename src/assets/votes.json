@@ -3,8 +3,8 @@
         {
             "topic": [
                 "Familie",
-								"Gleichstellung",
-								"Kinder"
+                "Gleichstellung",
+                "Kinder"
             ],
             "titel": "Familie",
             "beschreibung": "",
@@ -16,7 +16,12 @@
                     "frage": "Sollten gleichgeschlechtliche Paare ein Recht auf Eheschließung bekommen, gleich dem zwischen Mann und Frau?",
                     "short": "Ehe für alle",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-244-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-244-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-112-01": {
@@ -24,7 +29,12 @@
                     "frage": "Sollte das Kindergeld von 184 Euro auf 186 Euro und der Kinderfreibetrag von 2184 auf 2220 Euro erhöht werden (Juni 2015)?",
                     "short": "Kindergeld erhöhen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-112-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-112-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-133-01": {
@@ -32,7 +42,12 @@
                     "frage": "Sollten diese Mittel für den Kitaausbau genutzt werden?",
                     "short": "Betreuungsgeld für Kitaausbau nutzen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-133-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-133-01/"
+                        }
+                    ],
                     "invert": true
                 }
             }
@@ -40,9 +55,9 @@
         {
             "topic": [
                 "Arbeit",
-								"Befristung",
-								"Mindestlohn",
-								"Rente"
+                "Befristung",
+                "Mindestlohn",
+                "Rente"
             ],
             "titel": "Arbeit",
             "beschreibung": "",
@@ -54,7 +69,12 @@
                     "frage": "Sollten sachgrundlose Befristungen abgeschafft werden? ",
                     "short": "sachgrundlose Befristung abschaffen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-241-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-241-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-046-06": {
@@ -62,7 +82,12 @@
                     "frage": "Sollten die Renten in Ost und West durch steuerfinanzierte Zuschüsse angeglichen werden?",
                     "short": "Ost-Renten angleichen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-046-06/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-046-06/"
+                        }
+                    ],
                     "invert": true
                 },
                 "018-209-05": {
@@ -70,7 +95,12 @@
                     "frage": "Sollten zuständige Fahnder zur Bekämpfung von Schwarzarbeit neue Befugnisse und Mittel (z.B. Zugriff auf das Fahrzeugregister des Kraftfahrtbundesamtes, ein neues zentrales Informationssystem) erhalten? ",
                     "short": "Bekämpfung Schwarzarbeit",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-209-05/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-209-05/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-046-02": {
@@ -78,7 +108,12 @@
                     "frage": "Sollte ein flächendeckender Mindestlohn in Höhe von 8,50 € eingeführt werden?",
                     "short": "8,50 € Mindestlohn",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-046-02/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-046-02/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-046-01": {
@@ -86,7 +121,12 @@
                     "frage": "Sollte ein flächendeckender Mindestlohn in Höhe von 10,00 € eingeführt werden? ",
                     "short": "10,00 € Mindestlohn",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-046-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-046-01/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -95,8 +135,8 @@
             "topic": [
                 "Gesundheit",
                 "Verbraucherschutz",
-								"Arzneimittel",
-								"Pflege"
+                "Arzneimittel",
+                "Pflege"
             ],
             "titel": "Gesundheit und Verbraucherschutz",
             "beschreibung": "",
@@ -108,7 +148,12 @@
                     "frage": "Stimmst du dieser umfassenden Reform zu?",
                     "short": "Arzneimittelrechtliche Reform",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-200-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-200-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-198-03": {
@@ -116,7 +161,12 @@
                     "frage": "Sollte die gruppennützige Forschung an einem nichteinwilligungsfähigen Patienten erlaubt werden, wenn dieser vorher (im Vollbesitz seiner geistigen Kräfte) eine Verfügung abgegeben hat?",
                     "short": "Studienteilnahme von Dementen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-198-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-198-03/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-061-01": {
@@ -124,7 +174,12 @@
                     "frage": "Sollte die häusliche Betreuung explizit in diesem Gesetz genannt werden?",
                     "short": "Häusliche Betreuung",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-061-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-061-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-164-01": {
@@ -132,7 +187,12 @@
                     "frage": "Sollten neue Straftatbestände der Bestechlichkeit und Bestechung im Gesundheitswesen eingeführt werden?",
                     "short": "Korruption im Gesundheitswesen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-164-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-164-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-158-03": {
@@ -140,16 +200,21 @@
                     "frage": "Sollte Glyphosat verboten werden?",
                     "short": "Keine Neuzulassung von Glyphosat",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-158-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-158-03/"
+                        }
+                    ],
                     "invert": false
                 }
             }
         },
         {
             "topic": [
-								"Miete",
+                "Miete",
                 "Vorratsdatenspeicherung",
-								"Suizid"
+                "Suizid"
             ],
             "titel": "Gesellschaft",
             "beschreibung": "",
@@ -161,7 +226,12 @@
                     "frage": "Sollten die Diensteanbieter zur Speicherung dieser Daten für 4 Wochen (Mobilfunk) bzw. 10 Wochen (Internet) verpflichtet werden?",
                     "short": "Vorratsdatenspeicherung",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-131-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-131-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-134-03": {
@@ -169,7 +239,12 @@
                     "frage": "Sollte die geschäftsmäßige Sterbehilfe unter Strafe gestellt werden?",
                     "short": "Geschäftsmäßige Sterbehilfe verbieten",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-134-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-134-03/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-221-03": {
@@ -177,7 +252,12 @@
                     "frage": "Sollte die Mietpreisbremse auch nach umfassenden Modernisierungen greifen?",
                     "short": "Mietpreisbremse bei Modernisierung",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-221-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-221-03/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -187,7 +267,7 @@
                 "Landwirtschaft",
                 "Gesundheit",
                 "Ernährung",
-								"Umwelt",
+                "Umwelt",
                 "Verbraucherschutz"
             ],
             "titel": "Gentechnik in der Landwirtschaft",
@@ -200,7 +280,12 @@
                     "frage": "Sollte gentechnisch veränderter Honig für Verbraucher gekennzeichnet werden?",
                     "short": "Gen-Honig kennzeichnen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-020-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-020-01/"
+                        }
+                    ],
                     "bemerkung": "In den Results wurde Ja und Nein ausgetauscht um es einfacher zu machen.",
                     "invert": true
                 },
@@ -209,7 +294,12 @@
                     "frage": "Sollte die Maislinie 1507 für den Anbau in der EU zugelassen werden?",
                     "short": "Maislinie 1507 zulassen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-011-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-011-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-036-03": {
@@ -217,7 +307,12 @@
                     "frage": "Sollte Gentechnik im Pflanzenbau generell verboten werden?",
                     "short": "Gentechnik im Pflanzenbau verbieten",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-036-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-036-03/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -225,9 +320,9 @@
         {
             "topic": [
                 "BAföG",
-								"Bund-Länder",
-								"Forschung",
-								"Ausbildung"
+                "Bund-Länder",
+                "Forschung",
+                "Ausbildung"
             ],
             "titel": "Bildung",
             "beschreibung": "Bildung ist bislang Ländersache. In den letzten Jahren gab es mehrere Versuche, den Bund einzubeziehen.",
@@ -239,7 +334,12 @@
                     "frage": "Sollte es Bund und Ländern erlaubt sein, bei der Förderung von Wissenschaft, Forschung und Lehre zusammenzuwirken?",
                     "short": "Zusammenarbeit Forschung Bund-Länder",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-066-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-066-03/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-066-08": {
@@ -247,7 +347,12 @@
                     "frage": "Sollte der Bund (statt der Länder) die Finanzierung des <abbr title='Bundesausbildungsförderungsgesetz'>BAföG</abbr> übernehmen?",
                     "short": "BAföG-Finanzierung durch Bund",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-066-08/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-066-08/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-066-05": {
@@ -255,7 +360,12 @@
                     "frage": "Sollten die BAföG Bedarfssätze, Freibeträge und Höchstbeträge jährlich überprüft und an aktuelle Lebenshaltungskosten angepasst werden?",
                     "short": "BAföG jährlich anpassen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-066-05/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-066-05/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -274,7 +384,12 @@
                     "frage": "Sollte sich die Bundeswehr an der militärischen Ausbildungs- und Beratungsmission für Somalia beteiligen? (bis zu 20 SoldatInnen)",
                     "short": "Ausbildungsmission in Somalia",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-161-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-161-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-170-05": {
@@ -282,7 +397,12 @@
                     "frage": " Sollte sich die Bundeswehr an der Bekämpfung von Piraterie vor Somalia beteiligen? (bis zu 600 SoldatInnen)",
                     "short": "Bekämpfung von Piraterie vor Somalia",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-170-05/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-170-05/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-144-01": {
@@ -290,7 +410,12 @@
                     "frage": "Sollten bewaffnete deutsche Streitkräfte zur Verhütung und Unterbindung terroristischer Handlungen durch die Terrororganisation IS eingesetzt werden? (bis zu 1200 SoldatInnen)",
                     "short": "Bundeswehr gegen IS",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-144-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-144-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-017-01": {
@@ -298,7 +423,12 @@
                     "frage": "Sollten bewaffnete deutsche Streitkräfte Afghanistan bei der Aufrechterhaltung der Sicherheit unterstützen? (bis zu 3300 SoldatInnen)",
                     "short": "Bundeswehr in Afghanistan",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-017-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-017-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-179-02": {
@@ -306,7 +436,12 @@
                     "frage": "Sollte sich die Bundeswehr im Libanon mit Aufklärung, Überwachung, Sicherung, Ausbildung, Lufttransport einschließlich der Anwendung militärischer Gewalt beteiligen? (bis zu 300 SoldatInnen)",
                     "short": "Bundeswehr im Libanon",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-179-02/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-179-02/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-039-01": {
@@ -314,7 +449,12 @@
                     "frage": "Sollte sich die Bundeswehr im Kosovo an der Aufrechterhaltung eines sicheren und stabilen Umfelds beteiligen? (bis zu 1850 SoldatInnen)",
                     "short": "Bundeswehr im Kosovo",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-039-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-039-01/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -322,8 +462,8 @@
         {
             "topic": [
                 "Freihandel",
-								"CETA",
-								"Schiedsgericht"
+                "CETA",
+                "Schiedsgericht"
             ],
             "titel": "Freihandelsabkommen",
             "beschreibung": "Unter dem Namen CETA wird seit 2009 ein umfassendes Wirtschafts- und Handelsabkommen zwischen der EU und Kanada verhandelt.",
@@ -335,7 +475,12 @@
                     "frage": "Sollte sich die Bundesregierung gegen Schiedsgerichte in CETA einsetzen?",
                     "short": "Keine Schiedsgerichte in CETA",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-054-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-054-03/"
+                        }
+                    ],
                     "invert": true
                 },
                 "018-190-04": {
@@ -343,7 +488,12 @@
                     "frage": "Sollte CETA weiterverfolgt werden? (September 2016)",
                     "short": "CETA weitermachen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-190-04/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-190-04/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -364,7 +514,12 @@
                     "frage": "Sollte diese Kooperation gekündigt werden?",
                     "short": "Kooperation bei Kernenergie stoppen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-033-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-033-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-115-06": {
@@ -372,7 +527,12 @@
                     "frage": "Sollte sich Deutschland dagegen wehren?",
                     "short": "Atomkraft-Subventionen in GB verhindern",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-115-06/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-115-06/"
+                        }
+                    ],
                     "invert": true
                 },
                 "018-167-01": {
@@ -380,15 +540,20 @@
                     "frage": "Sollte Fracking verboten werden?",
                     "short": " Fracking verbieten",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-167-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-167-01/"
+                        }
+                    ],
                     "invert": false
                 }
             }
         },
         {
             "topic": [
-								"Erneuerbare-Energien",
-								"Windenergie"
+                "Erneuerbare-Energien",
+                "Windenergie"
             ],
             "titel": "Energie II",
             "beschreibung": "Erneuerbare Energien wie Wind- und Solarenergie machen derzeit einen Anteil von 33% an der Stromversorgung in Deutschland aus. Bei ihrer Produktion wird kein CO<sub>2</sub> in die Atmosphäre freigesetzt. Sie stellen jedoch hohe Anforderungen an das Stromnetz und verursachen meist höhere Kosten.",
@@ -400,7 +565,12 @@
                     "frage": "Sollte es eine Obergrenze für die EEG-Umlage geben?",
                     "short": "EEG-Förderung begrenzen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-184-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-184-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-044-05": {
@@ -408,7 +578,12 @@
                     "frage": "Sollten Mindestabstände zwischen Windenergieanlagen und Wohnungen durch die Bundesländer (statt Bundesweit) geregelt werden?",
                     "short": "Windräder Ländersache",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-044-05/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-044-05/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -416,8 +591,8 @@
         {
             "topic": [
                 "Finanzhilfe",
-								"Haushalt",
-								"Maut"
+                "Haushalt",
+                "Maut"
             ],
             "titel": "Finanzen",
             "beschreibung": "",
@@ -429,7 +604,12 @@
                     "frage": "Sollte der Deutsche Bundestag diese Forderung explizit ablehnen?",
                     "short": "Bundeswehr-Etat auf 2% BIP",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-221-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-221-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-018-01": {
@@ -437,7 +617,12 @@
                     "frage": "Sollten die Diäten der Bundestagsabgeordneten von 8.252 Euro auf 9.082 Euro erhöht werden?",
                     "short": "Diäten erhöhen",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-018-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-018-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-118-01": {
@@ -445,7 +630,12 @@
                     "frage": "Sollte Griechenland ein Kreditpaket mit vielen Auflagen im Umfang von 86 Milliarden Euro gewährt werden? (Anteil Deutschlands: 23,2 Mrd €, August 2015)",
                     "short": "Kreditpaket Griechenland",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-118-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-118-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-098-03": {
@@ -453,7 +643,12 @@
                     "frage": "Sollte auf deutschen Autobahnen eine Maut für PKWs eingeführt werden?",
                     "short": "PKW-Maut",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-098-03/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-098-03/"
+                        }
+                    ],
                     "invert": false
                 }
             }
@@ -461,7 +656,7 @@
         {
             "topic": [
                 "Asyl",
-								"Bleiberecht"
+                "Bleiberecht"
             ],
             "titel": "Inneres",
             "beschreibung": "",
@@ -473,7 +668,12 @@
                     "frage": "Sollten Algerien, Marokko und Tunesien als sichere Herkunftsstaaten eingestuft werden? (April 2016)",
                     "short": "Algerien, Marokko und Tunesien sind sicher",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-171-01/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-171-01/"
+                        }
+                    ],
                     "invert": false
                 },
                 "018-237-11": {
@@ -481,7 +681,12 @@
                     "frage": "Sollten Abschiebungen nach Afghanistan ausgesetzt werden?",
                     "short": "Abschiebestopp Afghanistan",
                     "subtext": "",
-                    "link": "https://wahlbilanz.de/abstimmungen/018-237-11/",
+                    "moreInfos": [
+                        {
+                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
+                            "link": "https://wahlbilanz.de/abstimmungen/018-237-11/"
+                        }
+                    ],
                     "invert": true
                 }
             }
