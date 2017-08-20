@@ -306,7 +306,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 					+ 'Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen! '
 					+ 'Ganz unten zeigt dir ein grüner Fortschrittsbalken wie weit du bist. <br> <br> '
 					+ '<strong>Aus über 200&nbsp;real stattgefundenen Abstimmungen haben wir '
-					+ (Object.keys(this.answers).length + 1 /*cause that's the answer! and who's checking that anyway...*/) + '&nbsp;Fragen ausgewählt und in '
+					+ (Object.keys(this.answers).length + 2 /*cause that's the answer! and who's checking that anyway...*/) + '&nbsp;Fragen ausgewählt und in '
 					+ this.questionData.length + '&nbsp;Themengebiete unterteilt:</strong> '
 					+ themengebiete
 					+ '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeigt. '

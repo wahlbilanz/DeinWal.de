@@ -275,55 +275,6 @@
             "bild": "",
             "subtext": "",
             "fragen": {
-                "018-200-01": {
-                    "context": "Ein Gesetzentwurf plant eine umfangreiche Arzneimittelreform. Der Entwurf verlangt unter anderem (i) Verschreibungen von Arzneimitteln nur nach direktem Arzt-Patienten-Kontakt; (ii) eine unabhängige ethische Abwägung jeder klinischen Studie; (iii) eine Registrierungspflicht von klinischen Studien bei einer Ethikkommission auf Bundesebene.",
-                    "frage": "Stimmst du dieser umfassenden Reform zu?",
-                    "short": "Arzneimittelrechtliche Reform",
-                    "subtext": "",
-                    "moreInfos": [
-                        {
-                            "text": "Datum der Abstimmung: 11. November 2016",
-                            "link": ""
-                        },
-                        {
-                            "text": "zu i) Eine Abgabe von Arzneimitteln, die zur Anwendung bei Menschen bestimmt sind, darf nur erfolgen, wenn vorher ein direkter Kontakt zwischen Arzt und Patienten erfolgte. Die oder der Verschreibende muss sich von dem Zustand des Patienten überzeugt haben. Hiervon darf nur in begründeten Ausnahmefällen abgewichen werden, insbesondere, wenn die Person dem Arzt aus einem vorangegangenen direkten Kontakt hinreichend bekannt ist und es sich lediglich um die Wiederholung oder die Fortsetzung der Behandlung handelt. Behandlungen und Diagnosen über das Telefon oder über das Internet reichen nicht aus, sondern bergen das Risiko von Fehldiagnosen und können so die Patientinnen und Patienten gefährden.",
-                            "link": ""
-                        },
-                        {
-                            "text": "zu iii) Ethik-Kommissionen der Länder müssen Anträge auf Genehmigung einer klinischen Prüfung beim Bundesinstitut für Arzneimittel und Medizinprodukte registrieren lassen.",
-                            "link": ""
-                        },
-                        {
-                            "text": "Was ist eine klinische Studie? (Wikipedia)",
-                            "link": "https://de.wikipedia.org/wiki/Klinische_Studie"
-                        },
-                        {
-                            "text": "Was ist eine Ethikkommission? (Wikipedia)",
-                            "link": "https://de.wikipedia.org/wiki/Ethikkommission"
-                        },
-                        {
-                            "text": "Was ist Telemedizin? (Wikipedia)",
-                            "link": "https://de.wikipedia.org/wiki/Telemedizin"
-                        },
-                        {
-                            "text": "Informationen zum Bundesinstitut für Arzneimittel und Medizinprodukte (Wikipedia)",
-                            "link": "https://de.wikipedia.org/wiki/Bundesinstitut_f%C3%BCr_Arzneimittel_und_Medizinprodukte"
-                        },
-                        {
-                            "text": "Debatte im Bundestag",
-                            "link": "https://dbtg.tv/fvid/7030393"
-                        },
-                        {
-                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
-                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/arzneimittelreform"
-                        },
-                        {
-                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
-                            "link": "https://wahlbilanz.de/abstimmungen/018-200-01/"
-                        }
-                    ],
-                    "invert": false
-                },
                 "018-198-03": {
                     "context": "„Nichteinwilligungsfähige“ Personen sind nicht in der Lage das Wesen, die Bedeutung und die Tragweite einer Studie zu erkennen (zum Beispiel bei Demenz oder Alzheimer). Bei einer gruppennützigen Forschung hat der Teilnehmer nicht unbedingt einen Nutzen, aber andere mit der gleichen Krankheit können daraus profitieren.",
                     "frage": "Sollte die gruppennützige Forschung an einem nichteinwilligungsfähigen Patienten erlaubt werden, wenn dieser vorher (im Vollbesitz seiner geistigen Kräfte) eine Verfügung abgegeben hat?",
