@@ -47,7 +47,7 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zu Kindergeld",
+                            "text": "Informationen zum Kindergeld (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Kindergeld_(Deutschland)"
                         },
                         {
@@ -76,7 +76,11 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zu Betreuungsgeld",
+                            "text": "Karlsruhe kippt das Betreuungsgeld (ZEIT ONLINE)",
+                            "link": "http://www.zeit.de/politik/deutschland/2015-07/bundesverfassungsgericht-kippt-betreuungsgeld"
+                        },
+                        {
+                            "text": "Informationen zum Betreuungsgeld (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Betreuungsgeld"
                         },
                         {
@@ -113,6 +117,14 @@
                         {
                             "text": "Datum der Abstimmung: 23. Juni 2017",
                             "link": ""
+                        },
+                        {
+                            "text": "Was ist ein befristetes Arbeitsverhältnis? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Befristetes_Arbeitsverh%C3%A4ltnis"
+                        },
+                        {
+                            "text": "Zahlen zu befristet Beschäftigten (Statistisches Bundesamt)",
+                            "link": "https://www.destatis.de/DE/ZahlenFakten/Indikatoren/QualitaetArbeit/Dimension4/4_2_BefristetBeschaeftigte.html"
                         },
                         {
                             "text": "Debatte im Bundestag",
@@ -165,8 +177,20 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zu Schwarzarbeit",
+                            "text": "Was ist Schwarzarbeit? (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Schwarzarbeit"
+                        },
+                        {
+                            "text": "Fragen und Antworten zu Schwarzarbeit (Zoll)",
+                            "link": "http://www.zoll.de/DE/Privatpersonen/Arbeit/Fragen-Antworten/fragen-antworten_node.html;jsessionid=308E9D4DBDD60AA9AA2666A8E469E2E8.live4401"
+                        },
+                        {
+                            "text": "Umfang der Schattenwirtschaft in Deutschland von 1995 bis 2015 (statista)",
+                            "link": "https://de.statista.com/statistik/daten/studie/20063/umfrage/entwicklung-des-umfangs-der-schattenwirtschaft-seit-1995/"
+                        },
+                        {
+                            "text": "Detaillierte Statistiken zu Bußgeldentscheidungen wegen Ordnungswidrigkeiten im Bereich der Schwarzarbeit (Bundesamt für Justiz)",
+                            "link": "https://www.bundesjustizamt.de/DE/Themen/Buergerdienste/GZR/Statistik/Statistik_node.html"
                         },
                         {
                             "text": "Debatte im Bundestag",
@@ -194,6 +218,10 @@
                             "link": ""
                         },
                         {
+                            "text": "Was ist ein Mindestlohn? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Mindestlohn"
+                        },
+                        {
                             "text": "Debatte im Bundestag",
                             "link": "https://dbtg.tv/fvid/3594346"
                         },
@@ -217,6 +245,10 @@
                         {
                             "text": "Datum der Abstimmung: 3. Juli 2014",
                             "link": ""
+                        },
+                        {
+                            "text": "Was ist ein Mindestlohn? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Mindestlohn"
                         },
                         {
                             "text": "Debatte im Bundestag",
@@ -254,6 +286,30 @@
                             "link": ""
                         },
                         {
+                            "text": "zu i) Eine Abgabe von Arzneimitteln, die zur Anwendung bei Menschen bestimmt sind, darf nur erfolgen, wenn vorher ein direkter Kontakt zwischen Arzt und Patienten erfolgte. Die oder der Verschreibende muss sich von dem Zustand des Patienten überzeugt haben. Hiervon darf nur in begründeten Ausnahmefällen abgewichen werden, insbesondere, wenn die Person dem Arzt aus einem vorangegangenen direkten Kontakt hinreichend bekannt ist und es sich lediglich um die Wiederholung oder die Fortsetzung der Behandlung handelt. Behandlungen und Diagnosen über das Telefon oder über das Internet reichen nicht aus, sondern bergen das Risiko von Fehldiagnosen und können so die Patientinnen und Patienten gefährden.",
+                            "link": ""
+                        },
+                        {
+                            "text": "zu iii) Ethik-Kommissionen der Länder müssen Anträge auf Genehmigung einer klinischen Prüfung beim Bundesinstitut für Arzneimittel und Medizinprodukte registrieren lassen.",
+                            "link": ""
+                        },
+                        {
+                            "text": "Was ist eine klinische Studie? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Klinische_Studie"
+                        },
+                        {
+                            "text": "Was ist eine Ethikkommission? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Ethikkommission"
+                        },
+                        {
+                            "text": "Was ist Telemedizin? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Telemedizin"
+                        },
+                        {
+                            "text": "Informationen zum Bundesinstitut für Arzneimittel und Medizinprodukte (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Bundesinstitut_f%C3%BCr_Arzneimittel_und_Medizinprodukte"
+                        },
+                        {
                             "text": "Debatte im Bundestag",
                             "link": "https://dbtg.tv/fvid/7030393"
                         },
@@ -279,11 +335,19 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zu Demenz",
+                            "text": "Gruppennützige Forschung kommt nicht dem Probanden selbst zugute, sondern Mitgliedern einer Gruppe, der er angehört.",
+                            "link": ""
+                        },
+                        {
+                            "text": "Ethik der klinischen Forschung (IMEW)",
+                            "link": "http://www.imew.de/de/imew-publikationen/imew-konkret/ethik-der-klinischen-forschung/"
+                        },
+                        {
+                            "text": "Informationen zu Demenz (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Demenz"
                         },
                         {
-                            "text": "Wikipedia zur Alzheimer-Krankheit",
+                            "text": "Informationen zur Alzheimer-Krankheit (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Alzheimer-Krankheit"
                         },
                         {
@@ -354,7 +418,7 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zu Glyphosat",
+                            "text": "Informationen zu Glyphosat (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Glyphosat"
                         },
                         {
@@ -396,7 +460,7 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zu Vorratsdatenspeicherung",
+                            "text": "Informationen zur Vorratsdatenspeicherung (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Vorratsdatenspeicherung"
                         },
                         {
@@ -425,7 +489,7 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zur Sterbehilfe",
+                            "text": "Informationen zur Sterbehilfe (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Sterbehilfe"
                         },
                         {
@@ -524,7 +588,7 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zum Mais 1507",
+                            "text": "Informationen zum Mais 1507 (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Transgener_Mais#Mais_1507"
                         },
                         {
