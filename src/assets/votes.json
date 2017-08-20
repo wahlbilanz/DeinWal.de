@@ -47,7 +47,7 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zu Kindergeld",
+                            "text": "Informationen zum Kindergeld (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Kindergeld_(Deutschland)"
                         },
                         {
@@ -76,7 +76,11 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zu Betreuungsgeld",
+                            "text": "Karlsruhe kippt das Betreuungsgeld (ZEIT ONLINE)",
+                            "link": "http://www.zeit.de/politik/deutschland/2015-07/bundesverfassungsgericht-kippt-betreuungsgeld"
+                        },
+                        {
+                            "text": "Informationen zum Betreuungsgeld (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Betreuungsgeld"
                         },
                         {
@@ -113,6 +117,14 @@
                         {
                             "text": "Datum der Abstimmung: 23. Juni 2017",
                             "link": ""
+                        },
+                        {
+                            "text": "Was ist ein befristetes Arbeitsverhältnis? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Befristetes_Arbeitsverh%C3%A4ltnis"
+                        },
+                        {
+                            "text": "Zahlen zu befristet Beschäftigten (Statistisches Bundesamt)",
+                            "link": "https://www.destatis.de/DE/ZahlenFakten/Indikatoren/QualitaetArbeit/Dimension4/4_2_BefristetBeschaeftigte.html"
                         },
                         {
                             "text": "Debatte im Bundestag",
@@ -165,8 +177,20 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zu Schwarzarbeit",
+                            "text": "Was ist Schwarzarbeit? (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Schwarzarbeit"
+                        },
+                        {
+                            "text": "Fragen und Antworten zu Schwarzarbeit (Zoll)",
+                            "link": "http://www.zoll.de/DE/Privatpersonen/Arbeit/Fragen-Antworten/fragen-antworten_node.html;jsessionid=308E9D4DBDD60AA9AA2666A8E469E2E8.live4401"
+                        },
+                        {
+                            "text": "Umfang der Schattenwirtschaft in Deutschland von 1995 bis 2015 (statista)",
+                            "link": "https://de.statista.com/statistik/daten/studie/20063/umfrage/entwicklung-des-umfangs-der-schattenwirtschaft-seit-1995/"
+                        },
+                        {
+                            "text": "Detaillierte Statistiken zu Bußgeldentscheidungen wegen Ordnungswidrigkeiten im Bereich der Schwarzarbeit (Bundesamt für Justiz)",
+                            "link": "https://www.bundesjustizamt.de/DE/Themen/Buergerdienste/GZR/Statistik/Statistik_node.html"
                         },
                         {
                             "text": "Debatte im Bundestag",
@@ -194,6 +218,10 @@
                             "link": ""
                         },
                         {
+                            "text": "Was ist ein Mindestlohn? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Mindestlohn"
+                        },
+                        {
                             "text": "Debatte im Bundestag",
                             "link": "https://dbtg.tv/fvid/3594346"
                         },
@@ -217,6 +245,10 @@
                         {
                             "text": "Datum der Abstimmung: 3. Juli 2014",
                             "link": ""
+                        },
+                        {
+                            "text": "Was ist ein Mindestlohn? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Mindestlohn"
                         },
                         {
                             "text": "Debatte im Bundestag",
@@ -243,31 +275,6 @@
             "bild": "",
             "subtext": "",
             "fragen": {
-                "018-200-01": {
-                    "context": "Ein Gesetzentwurf plant eine umfangreiche Arzneimittelreform. Der Entwurf verlangt unter anderem (i) Verschreibungen von Arzneimitteln nur nach direktem Arzt-Patienten-Kontakt; (ii) eine unabhängige ethische Abwägung jeder klinischen Studie; (iii) eine Registrierungspflicht von klinischen Studien bei einer Ethikkommission auf Bundesebene.",
-                    "frage": "Stimmst du dieser umfassenden Reform zu?",
-                    "short": "Arzneimittelrechtliche Reform",
-                    "subtext": "",
-                    "moreInfos": [
-                        {
-                            "text": "Datum der Abstimmung: 11. November 2016",
-                            "link": ""
-                        },
-                        {
-                            "text": "Debatte im Bundestag",
-                            "link": "https://dbtg.tv/fvid/7030393"
-                        },
-                        {
-                            "text": "Informationen und Ergebnisse von abgeordnetenwatch.de",
-                            "link": "https://www.abgeordnetenwatch.de/bundestag/abstimmungen/arzneimittelreform"
-                        },
-                        {
-                            "text": "Abstimmungsdetails und Ergebnisse bei WahlBilanz.de",
-                            "link": "https://wahlbilanz.de/abstimmungen/018-200-01/"
-                        }
-                    ],
-                    "invert": false
-                },
                 "018-198-03": {
                     "context": "„Nichteinwilligungsfähige“ Personen sind nicht in der Lage das Wesen, die Bedeutung und die Tragweite einer Studie zu erkennen (zum Beispiel bei Demenz oder Alzheimer). Bei einer gruppennützigen Forschung hat der Teilnehmer nicht unbedingt einen Nutzen, aber andere mit der gleichen Krankheit können daraus profitieren.",
                     "frage": "Sollte die gruppennützige Forschung an einem nichteinwilligungsfähigen Patienten erlaubt werden, wenn dieser vorher (im Vollbesitz seiner geistigen Kräfte) eine Verfügung abgegeben hat?",
@@ -279,11 +286,19 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zu Demenz",
+                            "text": "Gruppennützige Forschung kommt nicht dem Probanden selbst zugute, sondern Mitgliedern einer Gruppe, der er angehört.",
+                            "link": ""
+                        },
+                        {
+                            "text": "Ethik der klinischen Forschung (IMEW)",
+                            "link": "http://www.imew.de/de/imew-publikationen/imew-konkret/ethik-der-klinischen-forschung/"
+                        },
+                        {
+                            "text": "Informationen zu Demenz (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Demenz"
                         },
                         {
-                            "text": "Wikipedia zur Alzheimer-Krankheit",
+                            "text": "Informationen zur Alzheimer-Krankheit (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Alzheimer-Krankheit"
                         },
                         {
@@ -329,6 +344,14 @@
                             "link": ""
                         },
                         {
+                            "text": "Was ist Korruption? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Korruption"
+                        },
+                        {
+                            "text": "Wie funktioniert Ärzte-Korruption? (FAZ)",
+                            "link": "http://www.faz.net/aktuell/wirtschaft/wirtschaftspolitik/wie-funktioniert-aerzte-korruption-13725432.html"
+                        },
+                        {
                             "text": "Debatte im Bundestag",
                             "link": "https://dbtg.tv/fvid/6754002"
                         },
@@ -354,7 +377,7 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zu Glyphosat",
+                            "text": "Informationen zu Glyphosat (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Glyphosat"
                         },
                         {
@@ -396,8 +419,12 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zu Vorratsdatenspeicherung",
+                            "text": "Informationen zur Vorratsdatenspeicherung (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Vorratsdatenspeicherung"
+                        },
+                        {
+                            "text": "Was ist eine IP-Adresse? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/IP-Adresse"
                         },
                         {
                             "text": "Debatte im Bundestag",
@@ -425,7 +452,7 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zur Sterbehilfe",
+                            "text": "Informationen zur Sterbehilfe (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Sterbehilfe"
                         },
                         {
@@ -524,7 +551,7 @@
                             "link": ""
                         },
                         {
-                            "text": "Wikipedia zum Mais 1507",
+                            "text": "Informationen zum Mais 1507 (Wikipedia)",
                             "link": "https://de.wikipedia.org/wiki/Transgener_Mais#Mais_1507"
                         },
                         {
@@ -621,6 +648,10 @@
                             "link": ""
                         },
                         {
+                            "text": "Was ist BAföG? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Bundesausbildungsf%C3%B6rderungsgesetz"
+                        },
+                        {
                             "text": "Debatte im Bundestag",
                             "link": "https://dbtg.tv/fvid/4105994"
                         },
@@ -640,6 +671,10 @@
                         {
                             "text": "Datum der Abstimmung: 13. November 2014",
                             "link": ""
+                        },
+                        {
+                            "text": "Was ist BAföG? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Bundesausbildungsf%C3%B6rderungsgesetz"
                         },
                         {
                             "text": "Debatte im Bundestag",
@@ -936,6 +971,14 @@
                             "link": "https://de.wikipedia.org/wiki/Kernenergie"
                         },
                         {
+                            "text": "Informationen zu Indien (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Indien"
+                        },
+                        {
+                            "text": "Informationen zu Brasilien (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Brasilien"
+                        },
+                        {
                             "text": "Debatte im Bundestag",
                             "link": "https://dbtg.tv/fvid/3391056"
                         },
@@ -1145,6 +1188,14 @@
                         {
                             "text": "Datum der Abstimmung: 21. Februar 2014",
                             "link": ""
+                        },
+                        {
+                            "text": "Die Diäten werden in zwei Schritten zum 1. Juli 2014 und zum 1. Januar 2015 erhöht und an die Besoldung eines Richters an einem obersten Gerichtshof des Bundes angepasst. Die Diäten werden dann zudem jährlich korrigiert, basierend auf den Nominallöhnen (ermittelt durch das Statistischen Bundesamt).",
+                            "link": ""
+                        },
+                        {
+                            "text": "Was ist ein Nominallohn? (Wikipedia)",
+                            "link": "https://de.wikipedia.org/wiki/Nominallohn"
                         },
                         {
                             "text": "Informationen zu Diäten in der Politik (Wikipedia)",
