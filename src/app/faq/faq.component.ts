@@ -95,6 +95,11 @@ export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, Af
 			'pre': 'zum',
 			'name': 'Europapolitischen Wahlkompass',
 			'link': 'http://www.foederalist.eu/p/europapolitischer-wahlkompass-2017.html'
+		},
+    {
+			'pre': 'in den',
+			'name': 'Wahlprüfstein der mathematisch-naturwissenschaftlichen Fachgesellschaften',
+			'link': 'http://www.bundestagswahl.naturwissenschaften.mathematik.de/'
 		}
 	]);
 	
