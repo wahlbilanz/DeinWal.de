@@ -242,43 +242,16 @@
             Auf <a href="https://wahlbilanz.de/2017/06/ueber-fraktionsdisziplin-und-den-koalitionsvertrag/" target="_blank">wahlbilanz.de gibt es einen interessanten Artikel über Fraktionsdisziplin und den Koalitionsvertrag.</a> 
             </p>
             <p>
-            DeinWal.de kann und möchte dir also gar keine Empfehlung geben.
+            Dein Wal kann und möchte dir also gar keine Empfehlung geben.
             Du hast hier ausschliesslich die Möglichkeit die Entscheidungen der Parteien in der letzten Legislaturperiode mit deinen Einstellungen zu vergleichen.
             <strong>
-                DeinWal.de sollte auf gar keinen Fall die einzige Quelle sein, die du für deine Entscheidung zur Bundestagswahl nutzt!
+                Dein Wal sollte auf gar keinen Fall die einzige Quelle sein, die du für deine Entscheidung zur Bundestagswahl nutzt!
             </strong>
-            Guck am besten auch mal
+            Guck am besten auch mal (zufällige Reihenfolge):
             </p>
             <ul>
-                <li>
-                    in den <a href="https://www.wahl-o-mat.de/" target="_blank">Wahl-O-Mat</a>
-                </li>
-                <li>
-                    in die <a href="http://www.bundestagswahl-bw.de/wahlprogramme_btwahl2017.html" target="_blank">Wahlprogramme der verschiedenen Parteien</a> (<a href="https://github.com/barrierefreie/parteiprogramme">Barrierefreie Parteiprogramme</a>) 
-                </li>
-                <li>
-                    zu <a href="https://www.abgeordnetenwatch.de/" target="_blank">abgeordnetenwatch.de</a>
-                </li>
-                <li>
-                    auf <a href="http://www.wahlversprechen2013.de/" target="_blank">wahlversprechen2013</a>
-                </li>
-                <li>
-                    zum <a href="http://www.wahldatenhelfer.de/" target="_blank">Wahl.Daten.Helfer</a>
-                </li>
-                <li>
-                	zum <a href="http://steuer-o-mat.de/" target="_blank">Steuer-O-Mat</a>
-                </li>
-                <li>
-                	zum <a href="http://musik-o-mat.com/" target="_blank">Musik-O-Mat</a>
-                </li>
-                <li>
-                    zur <a href="https://wahl2017.gerritalex.de/" target="_blank">Wahlorientierungshilfe</a>
-                </li>
-                <li>
-                	zum <a href="http://wahlkompass-digitales.de/" target="_blank">Wahlkompass Digitales</a>
-                </li>
-                <li>
-                	in die <a href="https://www.bundeswahlleiter.de/info/presse/mitteilungen/bundestagswahl-2017/05_17_parteien_teilnahme.html" target="_blank">Übersicher aller zur Wahl stehenden Parteien</a>
+                <li *ngFor="let tool of othertools">
+                    {{tool.pre}} <a href="{{tool.link}}" target="_blank">{{tool.name}}</a>
                 </li>
             </ul>
         </div>
