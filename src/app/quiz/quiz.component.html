@@ -87,7 +87,7 @@
 
 
 
-<div class="myResult w3-card-4 w3-light-grey w3-padding-16 w3-animate-bottom optional-padding w3-margin-top" *ngIf="resultsVisible">
+<div class="myResult w3-card-4 w3-padding-16 w3-animate-bottom optional-padding w3-margin-top" *ngIf="resultsVisible">
     <div class="w3-container optional-padding">
         <header class="w3-container w3-dark-grey w3-margin optional-margin">
             <h3>Auswertung </h3>
@@ -239,7 +239,7 @@
 									</td>
 								</tr>
 								<tr class="auswertung-detail" id="auswertung-detail-{{q}}" *ngIf="simpleDetails[q]">
-									<td class="w3-left-align w3-white w3-border-black w3-leftbar" colspan="2">
+									<td class="w3-left-align w3-light-grey w3-border-black w3-leftbar" colspan="2">
 										<div class="w3-margin-bottom">
 											<span class="q-context" [innerHTML]="quest.fragen[q].context"></span>
 											<strong class="q-question" [innerHTML]="quest.fragen[q].frage"></strong>
