@@ -42,30 +42,30 @@
         	</div>
         	<div class="q-buttons w3-right">
         	
-		        <button class="w3-button w3-ripple active w3-large w3-border w3-border-black w3-hover-dark-grey"
+		        <button class="w3-button w3-ripple active w3-large w3-border w3-border-black w3-pale-green w3-hover-green"
 		        	(click)="choose(q,1)" *ngIf="answers[q]!=1">
 		        	<i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Ja
 		        </button>
-		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-dark-grey"
+		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-hover-pale-green w3-green"
 		        	(click)="choose(q,1)"*ngIf="answers[q]==1">
 		        	<i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Ja
 		        </button>
 		        
 		        
-		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-hover-dark-grey"
+		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-pale-red w3-hover-red"
 		        	(click)="choose(q,2)" *ngIf="answers[q]!=2">
 		        	<i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Nein
 		        </button>
-		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-dark-grey"
+		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-hover-pale-red w3-red"
 		        	(click)="choose(q,2)" *ngIf="answers[q]===2">
 		        	<i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Nein
 		        </button>
 		        
-		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-hover-dark-grey"
+		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-pale-blue w3-hover-blue"
 		        	(click)="choose(q,0)" *ngIf="answers[q]!=0">
 		        	<i class="fa fa-hand-peace-o" aria-hidden="true"></i> Enthalten
 		        </button>
-		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-dark-grey"
+		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-hover-pale-blue w3-blue"
 		        	(click)="choose(q,0)" *ngIf="answers[q]==0">
 		        	<i class="fa fa-hand-peace-o" aria-hidden="true"></i> Enthalten
 		        </button>
