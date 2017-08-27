@@ -87,9 +87,9 @@
 
 
 
-<div class="myResult w3-card-4 w3-light-grey w3-padding-16 w3-animate-bottom optional-padding" *ngIf="resultsVisible">
+<div class="myResult w3-card-4 w3-light-grey w3-padding-16 w3-animate-bottom optional-padding w3-margin-top" *ngIf="resultsVisible">
     <div class="w3-container optional-padding">
-        <header class="w3-container w3-green w3-margin optional-margin">
+        <header class="w3-container w3-dark-grey w3-margin optional-margin">
             <h3>Auswertung </h3>
         </header>
         <div class="w3-padding w3-center" id="party-bar-chart">
@@ -304,6 +304,6 @@
 
 <footer class="w3-bottom">
 	<div class="w3-light-grey">
-	  <div id="progressbar" class="w3-green w3-center" [style.width]="progress">{{progress}}</div>
+	  <div id="progressbar" class="w3-black w3-center" [style.width]="progress">{{progress}}</div>
 	</div>
 </footer>
