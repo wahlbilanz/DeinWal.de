@@ -6,3 +6,17 @@
 .acknowledge a {
     text-decoration: none;
 }
+
+@media screen and (max-width: 680px) {
+    .optional-margin {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .optional-padding{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
