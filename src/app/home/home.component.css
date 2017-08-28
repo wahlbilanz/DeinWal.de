@@ -1,6 +1,6 @@
 #home {
-	max-width: 1150px;
-	margin: 15px auto;
+	max-width: 950px;
+	margin: 5px auto;
 }
 #home-whale {
 	max-height: 90%;
@@ -13,4 +13,18 @@
 }
 #home-text {
 	padding: 20px;
+}
+
+@media screen and (max-width: 680px) {
+    .optional-margin {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .optional-padding{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }
