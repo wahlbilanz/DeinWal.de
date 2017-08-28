@@ -9,6 +9,16 @@
 		padding: 8px !important;
 	}
 }
+@media screen and (min-width: 570px) {
+	#top-icon {
+		max-height:3em;
+		vertical-align: middle;
+	}
+	.menu {
+		padding-top: 1em;
+		padding-bottom: 1.1em;
+	}
+}
 .disappear {
 	color: white;
 	font-size: 1px;
