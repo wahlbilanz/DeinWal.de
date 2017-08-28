@@ -533,6 +533,19 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 					return "unknown";
 		}
 	}
+	
+	getVoteOption (voteOption) {
+		switch(this.voteOptions[voteOption]) {
+			case "ja":
+				return "Ja";
+			case "nein":
+				return "Nein";
+			case "enthaltung":
+				return "Enthaltung"
+			default:
+					return "unknown";
+		}
+	}
 
 	  @HostListener('touchstart', ['$event'])
 	  @HostListener('touchend', ['$event'])

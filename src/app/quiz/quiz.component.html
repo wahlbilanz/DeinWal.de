@@ -116,7 +116,7 @@
 													<button class="w3-button" (click)="toggleComplexDetails(q)" *ngIf="!complexDetails[q]"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
 													<button class="w3-button" (click)="toggleComplexDetails(q)" *ngIf="complexDetails[q]"><i class="fa fa-caret-up" aria-hidden="true"></i></button>
 												</td>
-												<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{voteOptions[answers[q]]}}</td>
+												<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{getVoteOption(answers[q])}}</td>
 												
 												<ng-container *ngFor="let party of partypriority">
 													<td class="w3-right-align w3-tooltip">
@@ -133,7 +133,7 @@
 													</div>
 													Deine Antwort: 
 													<span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">
-														{{voteOptions[answers[q]]}}
+														{{getVoteOption(answers[q])}}
 													</span> <br>
 													<table class="w3-margin-top partyDetailsTable">
 														<ng-container *ngFor="let party of partypriority">
@@ -216,7 +216,7 @@
 										</div>
 										Deine Antwort: 
 										<span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">
-											{{voteOptions[answers[q]]}}
+											{{getVoteOption(answers[q])}}
 										</span> <br>
 										<table class="w3-margin-top partyDetailsTable">
 											<ng-container *ngFor="let party of partypriority">
