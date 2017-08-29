@@ -141,4 +141,9 @@ th small {
 	text-decoration: underline;
 }
 
-
+.transition{
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; /* Firefox 4 */
+    -webkit-transition: all 0.3s; /* Safari and Chrome */
+    -o-transition: all 0.3s; /* Opera */
+} 
