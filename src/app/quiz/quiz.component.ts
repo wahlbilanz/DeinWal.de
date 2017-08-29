@@ -535,6 +535,9 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	}
 	
 	getVoteOption (voteOption) {
+		if (voteOption == -1) {
+			return "-";
+		}
 		switch(this.voteOptions[voteOption]) {
 			case "ja":
 				return "Ja";
