@@ -45,6 +45,9 @@ th small {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+    .q-buttons .w3-button {
+    	padding: 8px 15px !important;
+    }
 }
 
 @media screen and (max-width: 570px) {
