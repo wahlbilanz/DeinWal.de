@@ -109,7 +109,7 @@
             "subtext": "",
             "fragen": {
                 "018-241-01": {
-                    "context": "Immer mehr neue Arbeitsverträge sind nur befristet. ",
+                    "context": "Viele neue Arbeitsverträge sind nur befristet. ",
                     "frage": "Sollten sachgrundlose Befristungen abgeschafft werden? ",
                     "short": "sachgrundlose Befristung abschaffen",
                     "subtext": "",
@@ -915,7 +915,7 @@
                     "invert": true
                 },
                 "018-190-04": {
-                    "context": "Internationale Abkommen vereinfachen den Handelsverkehr. Der Inhalt des geplanten Kanada-EU-Freihandelabkommens ist geheim.",
+                    "context": "Internationale Abkommen vereinfachen den Handelsverkehr.",
                     "frage": "Sollte CETA weiterverfolgt werden?",
                     "short": "CETA weitermachen",
                     "subtext": "",
