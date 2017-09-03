@@ -18,9 +18,15 @@ export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, Af
 
 	this.othertools = this.shuffle ([
 		/*{
-		'name': '',
-		'link': ''
+			'pre': 'in den',
+			'name': '',
+			'link': ''
 		},*/
+		{
+			'pre': 'zur',
+			'name': 'Initiative Informiert wählen',
+			'link': 'http://www.informiert-waehlen.de/'
+		},
 		{
 			'pre': 'in den',
 			'name': 'Wahl-O-Mat',
