@@ -159,7 +159,7 @@
 												
 											</tr>
 											<tr class="auswertung-detail" id="auswertung-complex-detail-{{q}}" *ngIf="complexDetails[q]">
-												<td class="w3-left-align w3-white w3-border-black w3-leftbar" colspan="6">
+												<td class="w3-left-align w3-border-black w3-leftbar w3-light-grey" colspan="6">
 													<div class="w3-margin-bottom">
 														<span class="q-context" [innerHTML]="quest.fragen[q].context"></span>
 														<strong class="q-question" [innerHTML]="quest.fragen[q].frage"></strong>
@@ -186,6 +186,7 @@
 														</tr>
 														</ng-container>
 													</table>
+													<span [innerHTML]="questionResults[q]['gesamt']"></span>
 												</td>
 											</tr>
 										</ng-container>
@@ -267,6 +268,7 @@
 											</tr>
 											</ng-container>
 										</table>
+										<span [innerHTML]="questionResults[q]['gesamt']"></span>
 									</td>
 								</tr>
 							</ng-container>
