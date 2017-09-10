@@ -59,6 +59,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	auswertungspodesthoehe = "0em";
 	/** which divs with moreInfos to show?1 */
 	moreInfos = {};
+	/** text to share on twitter etc*/
+	shareText = "https://deinwal.de";
 	
 	constructor (
 			private qserv: QuestiondataService,
@@ -445,8 +447,14 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			else {
 				this.auswertungspodesthoehe = "0em";
 			}
-			
+			this.shareText = "";
+			for (let i = 0; i < this.partypriority.length; i++) {
+				this.shareText += this.overallResult[this.partypriority[i]] +  " " + this.getProperPartyName (this.partypriority[i]) + " ";
+			}
+			this.shareText += " -- sagt #DeinWal";
 		}
+		
+		this.shareText = encodeURIComponent (this.shareText);
 		this.resultsVisible = true;
 	}
 

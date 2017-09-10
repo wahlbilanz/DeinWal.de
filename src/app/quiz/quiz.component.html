@@ -100,7 +100,16 @@
         	</ng-container>
         	<div class="w3-border w3-dark-grey" id="party-bar-podest" [style.height]="auswertungspodesthoehe">
         	</div>
+        	<div class="share-buttons">
+	        	<a href="https://twitter.com/intent/tweet?url=https://deinwal.de&amp;text={{shareText}}" class="twitter w3-button" title="Share on Twitter" target="_blank"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+	        	<a href="https://www.facebook.com/sharer/sharer.php?u=https://deinwal.de" class="facebook w3-button" title="Share on Facebook" target="_blank"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+	        	<a href="https://plus.google.com/share?url=https://deinwal.de" class="google-plus w3-button" title="Share on Google Plus" target="_blank"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+	        	<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://deinwal.de&amp;title={{shareText}}" class="linkedin w3-button" title="Share on LinkedIn" target="_blank"><i class="fa fa-linkedin"></i><span> LinkedIn</span></a>
+        	</div>
         </div>
+        
+        
+        
         <div class="w3-margin">
 	        <h4>Welche Partei hat am ähnlichsten wie du abgestimmt?</h4>
 	        In der folgenden Tabelle siehst du wieviele Abgeordnete der verschiedenen Parteien in deinem Sinne abgestimmt haben.
