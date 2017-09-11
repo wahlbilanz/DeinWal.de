@@ -42,30 +42,33 @@
         	</div>
         	<div class="q-buttons w3-right">
         	
-		        <button class="w3-button w3-ripple active w3-large w3-border w3-border-black w3-pale-green w3-hover-green"
+		        <button class="w3-button w3-ripple active w3-large w3-border w3-border-black w3-pale-green"
+		        	[class.w3-hover-green]="!touchDevice" [class.w3-hover-pale-green]="touchDevice"
 		        	(click)="choose(q,1)" *ngIf="answers[q]!=1">
 		        	<i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Ja
 		        </button>
-		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-hover-pale-green w3-green"
+		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-green w3-hover-green"
 		        	(click)="choose(q,1)"*ngIf="answers[q]==1">
 		        	<i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Ja
 		        </button>
 		        
 		        
-		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-pale-red w3-hover-red"
+		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-pale-red"
+		        	[class.w3-hover-red]="!touchDevice" [class.w3-hover-pale-red]="touchDevice"
 		        	(click)="choose(q,2)" *ngIf="answers[q]!=2">
 		        	<i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Nein
 		        </button>
-		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-hover-pale-red w3-red"
+		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-red w3-hover-red"
 		        	(click)="choose(q,2)" *ngIf="answers[q]===2">
 		        	<i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Nein
 		        </button>
 		        
-		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-pale-blue w3-hover-blue"
+		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-pale-blue"
+		        	[class.w3-hover-blue]="!touchDevice" [class.w3-hover-pale-blue]="touchDevice"
 		        	(click)="choose(q,0)" *ngIf="answers[q]!=0">
 		        	<i class="fa fa-hand-peace-o" aria-hidden="true"></i> Enthalten
 		        </button>
-		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-hover-pale-blue w3-blue"
+		        <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-blue w3-hover-blue"
 		        	(click)="choose(q,0)" *ngIf="answers[q]==0">
 		        	<i class="fa fa-hand-peace-o" aria-hidden="true"></i> Enthalten
 		        </button>
@@ -156,7 +159,7 @@
 												
 											</tr>
 											<tr class="auswertung-detail" id="auswertung-complex-detail-{{q}}" *ngIf="complexDetails[q]">
-												<td class="w3-left-align w3-white w3-border-black w3-leftbar" colspan="6">
+												<td class="w3-left-align w3-border-black w3-leftbar w3-light-grey" colspan="6">
 													<div class="w3-margin-bottom">
 														<span class="q-context" [innerHTML]="quest.fragen[q].context"></span>
 														<strong class="q-question" [innerHTML]="quest.fragen[q].frage"></strong>
@@ -183,6 +186,7 @@
 														</tr>
 														</ng-container>
 													</table>
+													<span [innerHTML]="questionResults[q]['gesamt']"></span>
 												</td>
 											</tr>
 										</ng-container>
@@ -264,6 +268,7 @@
 											</tr>
 											</ng-container>
 										</table>
+										<span [innerHTML]="questionResults[q]['gesamt']"></span>
 									</td>
 								</tr>
 							</ng-container>
@@ -304,6 +309,6 @@
 
 <footer class="w3-bottom">
 	<div class="w3-light-grey w3-border">
-	  <div id="progressbar" class="w3-dark-grey w3-center" [style.width]="progress">{{progress}}</div>
+	  <div id="progressbar" class="w3-dark-grey w3-center transition" [style.width]="progress">{{progress}}</div>
 	</div>
 </footer>

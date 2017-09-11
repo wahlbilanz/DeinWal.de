@@ -150,13 +150,25 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 									}
 									this.questionResults[f] = curResults;
 								}
+
+								for (const opt of this.voteOptions) {
+									this.questionResults[f]['gesamt' + opt] = 0;
+								}
 								
 								for (const party of this.parties) {
 									this.questionResults[f][party]["relevant"] = 0;
 									for (const opt of this.voteOptions) {
 										this.questionResults[f][party]["relevant"] += this.questionResults[f][party][opt];
+										this.questionResults[f]['gesamt' + opt] += this.questionResults[f][party][opt];
 									}
 								}
+
+								if (this.questionResults[f]['gesamtja'] > this.questionResults[f]['gesamtnein']) {
+									this.questionResults[f]['gesamt'] = "Vom Bundestag <strong>angenommen mit " + this.questionResults[f]['gesamtja'] + " Ja-Stimmen</strong> bei " + this.questionResults[f]['gesamtnein'] + " Nein-Stimmen und " + this.questionResults[f]['gesamtenthaltung'] + " Enthaltungen";
+								} else {
+									this.questionResults[f]['gesamt'] = "Vom Bundestag <strong>abgelehnt mit " + this.questionResults[f]['gesamtnein'] + " Nein-Stimmen</strong> bei " + this.questionResults[f]['gesamtja'] + " Ja-Stimmen und " + this.questionResults[f]['gesamtenthaltung'] + " Enthaltungen";
+								}
+								
 							}
 						}
 					}
@@ -535,6 +547,9 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	}
 	
 	getVoteOption (voteOption) {
+		if (voteOption == -1) {
+			return "-";
+		}
 		switch(this.voteOptions[voteOption]) {
 			case "ja":
 				return "Ja";

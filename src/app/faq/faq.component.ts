@@ -28,6 +28,11 @@ export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, Af
 			'link': 'http://wahlradar.org/'
 		},
 		{
+			'pre': 'zur',
+			'name': 'Initiative Informiert wählen',
+			'link': 'http://www.informiert-waehlen.de/'
+		},
+		{
 			'pre': 'in den',
 			'name': 'Wahl-O-Mat',
 			'link': 'https://www.wahl-o-mat.de/'
