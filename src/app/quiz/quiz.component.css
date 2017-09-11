@@ -147,3 +147,57 @@ th small {
     -webkit-transition: all 0.3s; /* Safari and Chrome */
     -o-transition: all 0.3s; /* Opera */
 } 
+
+
+
+.share-buttons {
+  padding-top: 1em;
+  border-top: 1px solid #ddd;
+}
+
+.twitter,
+.twitter:visited {
+  background-color: #77bcf1;
+  color: #fff;
+  border-color: #77bcf1;
+}
+.twitter:hover {
+    background-color: #fff !important;
+    color: #77bcf1 !important;
+    border-color: #77bcf1 !important;
+}
+.facebook,
+.facebook:visited {
+  background-color: #627aac;
+  color: #fff;
+  border-color: #627aac;
+}
+.facebook:hover {
+    background-color: #fff !important;
+    color: #627aac !important;
+    border-color: #627aac !important;
+}
+.linkedin,
+.linkedin:visited  {
+  background-color: #0073b0;
+  color: #fff;
+  border-color: #0073b0;
+}
+.linkedin:hover {
+    background-color: #fff !important;
+    color: #0073b0 !important;
+    border-color: #0073b0 !important;
+}
+.google-plus,
+.google-plus:visited {
+  background-color: #e36f60;
+  color: #fff;
+  border-color: #e36f60;
+}
+.google-plus:hover {
+  background-color: #fff !important;
+  color: #e36f60 !important;
+  border-color: #e36f60 !important;
+}
+
+
