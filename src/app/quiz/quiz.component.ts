@@ -60,7 +60,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	/** which divs with moreInfos to show?1 */
 	moreInfos = {};
 	/** text to share on twitter etc*/
-	shareText = "https://deinwal.de";
+	shareText = "#DeinWal";
 	
 	constructor (
 			private qserv: QuestiondataService,
