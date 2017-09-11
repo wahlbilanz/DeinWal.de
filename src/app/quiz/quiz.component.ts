@@ -60,7 +60,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	/** which divs with moreInfos to show?1 */
 	moreInfos = {};
 	/** text to share on twitter etc*/
-	shareText = "https://deinwal.de";
+	shareText = "Mit #DeinWal kannst du prüfen, welche Partei wie du denkt!";
 	
 	constructor (
 			private qserv: QuestiondataService,
@@ -428,7 +428,9 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 				//console.log (f, q['fragen'][f]['score']);
 			}
 		}
-
+		
+		this.shareText = "Mit #DeinWal kannst du prüfen, welche Partei wie du denkt!";
+		
 		if (nAnswered > 0) {
 			this.overallResult['spd'] = this.toPercent(nzustimmung['spd'] / nAnswered);
 			this.overallResult['gruenen'] = this.toPercent(nzustimmung['gruenen'] / nAnswered);
