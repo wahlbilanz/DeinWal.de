@@ -86,6 +86,15 @@ th small {
 	float: left;
 }
 
+.stackedbar .w3-green {
+	background-image: url('/assets/add/yes.png');
+}
+
+.stackedbar .w3-red {
+	background-image: url('/assets/add/no.png');
+}
+
+
 #party-bar-chart {
 	width: 100%;
 	display: inline-block;
