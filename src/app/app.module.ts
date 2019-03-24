@@ -2,7 +2,7 @@ import { QuestiondataService } from './questiondata.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+//import { HttpClientModule } from '@angular/httpclient';
 import { RouteReuseStrategy, ActivatedRouteSnapshot, DetachedRouteHandle } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { PartyVotesComponent } from './party-votes/party-votes.component';
 import { HomeComponent } from './home/home.component';
 import { CustomReuseStrategy } from './route.reuse';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
