@@ -10,13 +10,13 @@ export class QuestiondataService {
 	
 	cachedData = null;
 	
-	getData() {
+	getData(vote="bundestag2017") {
 		if (this.cachedData) {
       //console.log('using cached votes:', this.cachedData);
       return Observable.of(this.cachedData);
     } else {
       //console.log('votes not cached yet');
-      return this.http.get("/assets/votes.json")
+      return this.http.get("/assets/votes_" + vote + ".json")
             .map(res => res.json())
             .do((data) => {
               this.cachedData = data;
