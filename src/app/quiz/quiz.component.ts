@@ -17,12 +17,6 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	questionData = [];
 	/** the party results for all questions */
 	questionResults = {}
-	/** currently visible question index*/
-	//questionIndex = 0;
-	/** currently visible question -- basically equals `this.questionData[this.questionIndex]`*/
-	question = {};
-	/** actual questions in `question`*/
-	actualQuestions = [];
 	/** the usesr's answers to the questions, keys are the question ids, values are one of `voteOptions`*/
 	answers = {};
 	/** current progress in the quiz */
@@ -65,6 +59,12 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	themengebiete = "";
 	/** number of questions */
 	nQuestions = 0;
+	/** necessary to get the keys of an object in fe */
+	Object = Object;
+	/** extra alert slide to show notifications and errors */
+	alertSlide = {};
+	/** should we show the alert? */
+	alert = true;
 	
 	constructor (
 			private qserv: QuestiondataService,
@@ -75,6 +75,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			private location: Location
 			) {
 		
+		this.alert = true;
 		this.checkSave ();
 		this.partypriority = this.parties;
 		this.simpleDetails = {};
@@ -86,21 +87,13 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.getQuestionDataFromLocalStorage();
 		}
 
-		this.question = {
+		this.alertSlide = {
 			'titel': 'Quiz wird geladen',
 			'beschreibung': 'Das kann unter Umständen eine Sekunde dauern...'
 		};
 		
 		this.updatedQuestions = false;
 		this.observeUrl ();
-		
-		/** the following unfortunatelly returns the wrong number?? */
-		/*this.location.subscribe ((ev:PopStateEvent) => {
-			this.app.log ('browser back/forward detected');
-			console.log (this.route.snapshot.params);
-		});*/
-		
-		
 	}
 
 	ngOnInit() {
@@ -194,16 +187,16 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 					}
 					this.nQuestions = Object.keys(this.answers).length + 2; /*cause that's the answer! and who's checking that anyway...*/
 					
-					
 					this.updatedQuestions = true;
 				} catch (e) {
 					// unexpected votes format?
 					console.log('could not parse votes.json', e);
 					// show error
-					this.question = {
+					this.alertSlide = {
 						'titel': 'Es ist ein Fehler aufgetreten!',
 						'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Versuch es später noch einmal!'
 					};
+					this.alert = true;
 				}
 				
 				
@@ -212,7 +205,15 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 				} else {
 					this.showQuestion(initialCard);
 				}
+				this.alert = false;
 				
+			},
+			err => {
+				this.alertSlide = {
+					'titel': 'Es ist ein Fehler aufgetreten!',
+					'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Ist die <code>votes.js</code> korrektes JSON? Versuch es später noch einmal!'
+				};
+				this.alert = true;
 			});
 	}
 	
@@ -311,7 +312,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		} else if (this.questionData.length == 0) {
 			this.resultsVisible = false;
 			this.progress = this.toPercent (0);
-			this.actualQuestions = [];
+			//this.actualQuestions = [];
 			
 			
 			// extra intro behandlung ist disabled...
@@ -364,7 +365,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 					}
 				}
 			};
-			this.actualQuestions = ['example-1'];
+			//this.actualQuestions = ['example-1'];
 			this.progress = this.toPercent (0);
 			
 		} else { // otherwise show question n
@@ -372,10 +373,10 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.app.overwriteTitle('Quiz');
 			this.resultsVisible = false;
 			this.progress = this.toPercent (n / (this.questionData.length + 1));
-			this.question = this.questionData[this.app.questionIndex];
+			//this.question = this.questionData[this.app.questionIndex];
 			//console.log ("question title " + this.question["titel"]);
 			// get sub-questions
-			this.actualQuestions = Object.keys(this.question['fragen']);
+			//this.actualQuestions = Object.keys(this.question['fragen']);
 			//console.log (this.question);
 		}
 	}

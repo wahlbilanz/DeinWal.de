@@ -1,6 +1,32 @@
 
-<div class="myQuestions w3-card-4 w3-padding-16 w3-animate-zoom optional-padding w3-margin-top" *ngIf="!resultsVisible">
+<!-- alert slide! -->
+<div class="myQuestions w3-card-4 w3-padding-16 w3-animate-opacity optional-padding w3-margin-top" *ngIf="alert">
     <div class="w3-container optional-padding">
+      <span class="w3-tooltip w3-margin optional-margin">
+	<span style="position:absolute;left:0;top:1.8em;width:15em;" class="w3-text w3-tag w3-padding-16 w3-animate-opacity">{{speichernTooltip}}</span> 
+	
+	<button class="w3-button w3-hover-dark-grey" (click)="toggleSave()" *ngIf="!doSave && !saveImpossible"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
+	<button class="w3-button w3-dark-grey" (click)="toggleSave()" *ngIf="doSave && !saveImpossible"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
+	<button class="w3-button w3-dark-grey w3-hover-red" (click)="toggleSave()" *ngIf="saveImpossible"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
+	
+      </span>
+
+      <div style="clear:both"></div>
+	<header class="w3-container w3-dark-grey w3-margin optional-margin">
+	    <h3>{{alertSlide.titel}}</h3>
+	</header>
+	<div class="question-description w3-margin" [innerHTML]="alertSlide.beschreibung">
+	</div>
+  </div>
+</div>
+
+
+<!-- actual quiz slides -->
+<ng-container *ngFor="let question of questionData; let i = index">
+  <div class="myQuestions w3-card-4 w3-padding-16 w3-animate-opacity optional-padding w3-margin-top" *ngIf="i == app.questionIndex && !alert">
+    <div class="w3-container optional-padding">
+      
+      <!-- speichern? -->
       <span class="w3-tooltip w3-margin optional-margin">
 	<span style="position:absolute;left:0;top:1.8em;width:15em;" class="w3-text w3-tag w3-padding-16 w3-animate-opacity">{{speichernTooltip}}</span> 
 	
@@ -10,43 +36,50 @@
 	<button class="w3-button w3-dark-grey w3-hover-red" (click)="toggleSave()" *ngIf="saveImpossible"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
 	
       </span>
+      
+      <!-- tags -->
       <div class="question-tags w3-right w3-margin optional-margin">
 	<span class="question-tag" *ngFor="let t of question.topic"><a href="https://wahlbilanz.de/tags/#{{t}}">{{t}}</a> </span>
       </div>
       
+      <!-- quiz content -->
       <div style="clear:both"></div>
-        <header class="w3-container w3-dark-grey w3-margin optional-margin">
-            <h3>{{question.titel}}</h3>
-        </header>
-        <div class="question-description w3-margin" [innerHTML]="question.beschreibung" *ngIf="!question.intro">
-        </div>
-        <div class="question-description w3-margin" *ngIf="question.intro">
-          Auf den folgenden Quiz-Karten kannst du über Anträge und Gesetzentwürfe aus dem Bundestag entscheiden.
-          <strong>Oben links kannst du die Eingaben in deinem Browser-Profil speichern,</strong>
-          dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst.
-          <small>(<a [routerLink]="['/faq']" fragment="speicherung">Was wird wie gespeichert?</a>)</small>
-          
-          <br> <br>
-          
-           Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen.
-           Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen.
-           <strong>Eine unbeantwortete Frage hat einen anderen Einfluss auf das Ergebnis, als eine Enthaltung</strong> - siehe <a [routerLink]="['/faq']" fragment="berechnung">Berechnung der Auswertung?</a>.
-           
-           <br><br>
-           
-           Du kannst auch direkt zur Auswertung springen und das Quiz damit vorzeitig beenden.
-           Dann bleiben die &uuml;brigen Fragen einfach unbeantwortet.
-           Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen!
-           Ganz unten zeigt dir ein Fortschrittsbalken wie weit du bist.
-           
-           <br> <br>
-           
-           <strong>Aus über 200&nbsp;real stattgefundenen Abstimmungen haben wir {{ nQuestions }}&nbsp;Fragen ausgewählt und in {{ questionData.length - 1 }}&nbsp;Themengebiete unterteilt:</strong> 
-           {{ themengebiete }}.
-           Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeigt.
-           Eine einzelne Abstimmung sieht wie folgt aus:
-        </div>
-        <div class="w3-border w3-light-grey w3-padding w3-padding-16 w3-margin optional-margin" id="question-{{q}}" *ngFor="let q of actualQuestions">
+	<header class="w3-container w3-dark-grey w3-margin optional-margin">
+	    <h3>{{question.titel}}</h3>
+	</header>
+	<!-- if this is not the intro -> show question info -->
+	<div class="question-description w3-margin" [innerHTML]="question.beschreibung" *ngIf="!question.intro">
+	</div>
+	<!-- otherwise show intro -->
+	<div class="question-description w3-margin" *ngIf="question.intro">
+	  Auf den folgenden Quiz-Karten kannst du über Anträge und Gesetzentwürfe aus dem Bundestag entscheiden.
+	  <strong>Oben links kannst du die Eingaben in deinem Browser-Profil speichern,</strong>
+	  dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst.
+	  <small>(<a [routerLink]="['/faq']" fragment="speicherung">Was wird wie gespeichert?</a>)</small>
+	  
+	  <br> <br>
+	  
+	   Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen.
+	   Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen.
+	   <strong>Eine unbeantwortete Frage hat einen anderen Einfluss auf das Ergebnis, als eine Enthaltung</strong> - siehe <a [routerLink]="['/faq']" fragment="berechnung">Berechnung der Auswertung?</a>.
+	   
+	   <br><br>
+	   
+	   Du kannst auch direkt zur Auswertung springen und das Quiz damit vorzeitig beenden.
+	   Dann bleiben die &uuml;brigen Fragen einfach unbeantwortet.
+	   Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen!
+	   Ganz unten zeigt dir ein Fortschrittsbalken wie weit du bist.
+	   
+	   <br> <br>
+	   
+	   <strong>Aus über 200&nbsp;real stattgefundenen Abstimmungen haben wir {{ nQuestions }}&nbsp;Fragen ausgewählt und in {{ questionData.length - 1 }}&nbsp;Themengebiete unterteilt:</strong> 
+	   {{ themengebiete }}.
+	   Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeigt.
+	   Eine einzelne Abstimmung sieht wie folgt aus:
+	</div>
+	
+	<!-- show the actual questions -->
+	<div class="w3-border w3-light-grey w3-padding w3-padding-16 w3-margin optional-margin" id="question-{{q}}" *ngFor="let q of Object.keys(question['fragen'])">
 	  <div class="q-text">
 	    <span class="q-context" [innerHTML]="question.fragen[q].context"></span>
 	    <strong class="q-question" [innerHTML]="question.fragen[q].frage"></strong><br>
@@ -67,6 +100,8 @@
 	    </ul>
 	    </div>
 	  </div>
+	  
+	  <!-- voting buttons for this question -->
 	  <div class="q-buttons w3-right">
 	  
 	  
@@ -104,21 +139,24 @@
 		  
 	  </div>
 	  <div style="clear:both"></div>
-        </div>
+	  
+	<!-- card navigation -->
+	</div>
 	  <button class="w3-button w3-dark-grey w3-hover-black w3-left w3-ripple w3-large w3-margin-left optional-margin" (click)="nextQuestion(-1)" *ngIf="getQuestionIndex () > 0" title="vorherige Frage"><i class="fa fa-chevron-left" aria-hidden="true"></i><span class='mobile-not'> vorherige Frage</span></button>
 	  <button class="w3-button w3-dark-grey w3-hover-black w3-right w3-ripple w3-large w3-margin-right optional-margin" (click)="nextQuestion(1)" *ngIf="getQuestionIndex () == 0" title="erste Frage"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class='mobile-not'> erste Frage</span></button>
 	  <button class="w3-button w3-dark-grey w3-hover-black w3-right w3-ripple w3-large w3-margin-right optional-margin" (click)="nextQuestion(1)" *ngIf="getQuestionIndex () <= questionData.length - 1 && getQuestionIndex () > 0" title="nächste Frage"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class='mobile-not'> nächste Frage</span></button>
 	  <button class="w3-button w3-dark-grey w3-hover-black w3-right w3-ripple w3-large w3-margin-right" (click)="showResults()"><i class="fa fa-line-chart" aria-hidden="true" title="Auswertung"></i> Auswertung</button>
      </div>
-</div>
+  </div>
+</ng-container>
 
 
 
 
 
 
-
-<div class="myResult w3-card-4 w3-padding-16 w3-animate-bottom optional-padding w3-margin-top" *ngIf="resultsVisible">
+<!-- results -->
+<div class="myResult w3-card-4 w3-padding-16 w3-animate-bottom optional-padding w3-margin-top" *ngIf="resultsVisible && !alert">
   <div class="w3-container optional-padding">
     <header class="w3-container w3-dark-grey w3-margin optional-margin">
 	<h3>Auswertung </h3>
@@ -154,11 +192,14 @@
 	    Dies ist eine reduzierte Auswertungstabelle.
 	    Eine komplexere Auswertung ist leider nur für größere Bildschirme verfügbar. 
     </div>
+    
+    
     <div id="tableswitcher">
       <button class="w3-button w3-indigo w3-hover-blue w3-margin" (click)="toggleComplexTable()" *ngIf="!showComplexTable">Zeige komplexe Ansicht</button>
       <button class="w3-button w3-hover-indigo w3-blue w3-margin" (click)="toggleComplexTable()" *ngIf="showComplexTable">Zeige einfache Ansicht</button>
       
       
+      <!-- complex table -->
       <div id="complextable" class="w3-responsive w3-margin optional-margin" *ngIf="showComplexTable">
 	<table id="auswertungstabelle" class="w3-table w3-bordered w3-hoverable">
 	  <thead class="w3-dark-grey">
@@ -170,6 +211,7 @@
 	    </tr>
 	  </thead>
 	  <tbody>
+	    <!-- iterate topics -->
 	    <ng-container *ngFor="let quest of questionData; let i = index">
 	      <ng-container *ngIf="i != 0">
 		<tr class="auswertung-abschnitt">
@@ -183,6 +225,8 @@
 		    </th>
 		  </ng-container>
 		</tr>
+		
+		<!-- iterate questions in that topic -->
 		<ng-container *ngFor="let q of quest.fragenIds">
 		  <tr class="auswertung-zeile" id="auswertung-{{q}}">
 		    <td class="w3-left-align">
@@ -199,6 +243,8 @@
 		    </ng-container>
 		    
 		  </tr>
+		  
+		  <!-- show details for this question? -->
 		  <tr class="auswertung-detail" id="auswertung-complex-detail-{{q}}" *ngIf="complexDetails[q]">
 		    <td class="w3-left-align w3-border-black w3-leftbar w3-light-grey" colspan="6">
 		      <div class="w3-margin-bottom">
@@ -234,6 +280,7 @@
 	      </ng-container>
 	    </ng-container>
 	    
+	    <!-- summary at the bottom of complex table -->
 	    <tr class="auswertung-abschnitt">
 	      <th colspan="2" class="w3-grey w3-left-align">Gesamt</th>
 	      <ng-container *ngFor="let party of partypriority">
@@ -255,7 +302,9 @@
     </div>
 	    
 	    
-	    
+    
+    
+    <!-- simple table -->
     <div id="easytable" class="w3-responsive w3-margin optional-margin" *ngIf="!showComplexTable">
       <table id="easyauswertungstabelle" class="w3-table w3-bordered">
 	<thead class="w3-dark-grey">
@@ -264,6 +313,8 @@
 	  </tr>
 	</thead>
 	<tbody>
+	  
+	  <!-- iterate topics -->
 	  <ng-container *ngFor="let quest of questionData; let i = index">
 	    <ng-container *ngIf="i != 0">
 	      <tr class="auswertung-abschnitt">
@@ -272,6 +323,8 @@
 		</th>
 		<td class="w3-grey">Mehrheitlich wie du gestimmt</td>
 	      </tr>
+	      
+	      <!-- iterate questions in that topic -->
 	      <ng-container *ngFor="let q of quest.fragenIds">
 		<tr class="auswertung-zeile" id="auswertung-{{q}}" *ngIf="answers[q] >= 0">
 		  <td class="w3-left-align">{{quest.fragen[q].short}} 
@@ -290,6 +343,8 @@
 		    </ng-container>
 		  </td>
 		</tr>
+		  
+		<!-- show details for this question? -->
 		<tr class="auswertung-detail" id="auswertung-detail-{{q}}" *ngIf="simpleDetails[q]">
 		  <td class="w3-left-align w3-light-grey w3-border-black w3-leftbar" colspan="2">
 		    <div class="w3-margin-bottom">
@@ -323,6 +378,8 @@
 	    </ng-container>
 	  </ng-container>
 	  
+	  
+	  <!-- summary of the simple table -->
 	  <tr class="auswertung-abschnitt">
 	    <th colspan="2" class="w3-grey w3-center">Gesamt</th>
 	  </tr>
@@ -341,7 +398,7 @@
     </div>
     
     
-    
+    <!-- auswertungsdisclaimer -->
     <div class="w3-margin">
       Bitte beachte, dass die Auswertung dir nur zeigt welche Parteien so ähnlich abgestimmt haben wie du.
       <strong>
@@ -358,7 +415,7 @@
 </div>
 
 
-
+<!-- progressbar on the bottom of the page -->
 <footer class="w3-bottom">
   <div class="w3-light-grey w3-border">
     <div id="progressbar" class="w3-dark-grey w3-center transition" [style.width]="progress">{{progress}}</div>
