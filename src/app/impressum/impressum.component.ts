@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImpressumComponent implements OnInit {
 
+  creators = []
   addr = 'info <ät> deinWal [punkt] de ';
   ack = [];
   ackStr = "";
@@ -16,6 +17,20 @@ export class ImpressumComponent implements OnInit {
     this.addr = this.addr.replace(' <ät> ', '@').replace(' [punkt] ', '.');
     const tmp = 'ailt';
       this.contactlink = 'm' + tmp + 'o:' + this.addr;
+    
+    this.creators = this.shuffle ([
+      {
+        'name': 'Tom Theile',
+        'link': 'https://github.com/tomthe',
+        'job': 'Tom arbeitet als Entwicklungsingenieur bei <a href="http://ati-kueste.de/" target="_blank">ATI Küste GmbH</a>.'
+      },
+      {
+        'name': 'Martin Scharm',
+        'link': 'https://cv.binfalse.de',
+        'job': 'Martin hat am <a href="https://www.sbi.uni-rostock.de/" target="_blank">Lehrstuhl für Systembiologie</a> promoviert und arbeitet als Systemingenieur an der <a href="https://www.uni-rostock.de/" target="_blank">Universität Rostock</a>.'
+      }
+    ]);
+    
 		this.ack = this.shuffle ([
 			/*{
 			'name': '',
