@@ -67,7 +67,41 @@ export class ImpressumComponent implements OnInit {
 			{
 				'name': 'Ronja Steinbach',
 				'link': ''
-			}
+			},
+			{
+				'name': 'Daniel Werner',
+				'link': 'https://github.com/powerdan'
+			},
+			{
+				'name': 'Johannes Visintini',
+				'link': 'https://github.com/joker234'
+			},
+			{
+				'name': 'x29a',
+				'link': 'https://github.com/x29a'
+			},
+      {
+				'name': 'Matthias Vogelgesang',
+				'link': 'https://github.com/matze'
+			},
+      {
+				'name': 'Dennis',
+				'link': 'https://github.com/d-nnis'
+			},
+      {
+				'name': 'Niklas Kreer',
+				'link': 'https://github.com/nkreer'
+			},
+			/*
+      {
+				'name': '',
+				'link': ''
+			},
+      */
+      {
+        'name': 'Jörn Zaefferer',
+        'link': 'https://github.com/jzaefferer'
+      }
 		]);
    }
 
