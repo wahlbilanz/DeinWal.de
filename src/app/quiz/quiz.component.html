@@ -17,7 +17,33 @@
         <header class="w3-container w3-dark-grey w3-margin optional-margin">
             <h3>{{question.titel}}</h3>
         </header>
-        <div class="question-description w3-margin" [innerHTML]="question.beschreibung">
+        <div class="question-description w3-margin" [innerHTML]="question.beschreibung" *ngIf="!question.intro">
+        </div>
+        <div class="question-description w3-margin" *ngIf="question.intro">
+          Auf den folgenden Quiz-Karten kannst du über Anträge und Gesetzentwürfe aus dem Bundestag entscheiden.
+          <strong>Oben links kannst du die Eingaben in deinem Browser-Profil speichern,</strong>
+          dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst.
+          <small>(<a [routerLink]="['/faq']" fragment="speicherung">Was wird wie gespeichert?</a>)</small>
+          
+          <br> <br>
+          
+           Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen.
+           Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen.
+           <strong>Eine unbeantwortete Frage hat einen anderen Einfluss auf das Ergebnis, als eine Enthaltung</strong> - siehe <a [routerLink]="['/faq']" fragment="berechnung">Berechnung der Auswertung?</a>.
+           
+           <br><br>
+           
+           Du kannst auch direkt zur Auswertung springen und das Quiz damit vorzeitig beenden.
+           Dann bleiben die &uuml;brigen Fragen einfach unbeantwortet.
+           Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen!
+           Ganz unten zeigt dir ein Fortschrittsbalken wie weit du bist.
+           
+           <br> <br>
+           
+           <strong>Aus über 200&nbsp;real stattgefundenen Abstimmungen haben wir {{ nQuestions }}&nbsp;Fragen ausgewählt und in {{ questionData.length - 1 }}&nbsp;Themengebiete unterteilt:</strong> 
+           {{ themengebiete }}.
+           Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeigt.
+           Eine einzelne Abstimmung sieht wie folgt aus:
         </div>
         <div class="w3-border w3-light-grey w3-padding w3-padding-16 w3-margin optional-margin" id="question-{{q}}" *ngFor="let q of actualQuestions">
         	<div class="q-text">
@@ -140,64 +166,67 @@
 								</thead>
 								<tbody>
 									<ng-container *ngFor="let quest of questionData; let i = index">
-										<tr class="auswertung-abschnitt">
-											<th class="w3-grey" colspan="2">{{quest.titel}}<button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i + 1)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button></th>
-											
-										
-											<ng-container *ngFor="let party of partypriority">
-												<th class="w3-grey w3-right-align">
-													<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
-												</th>
-											</ng-container>
-										
-										</tr>
-										<ng-container *ngFor="let q of quest.fragenIds">
-											<tr class="auswertung-zeile" id="auswertung-{{q}}">
-												<td class="w3-left-align">
-													{{quest.fragen[q].short}}
-													<button class="w3-button" (click)="toggleComplexDetails(q)" *ngIf="!complexDetails[q]" title="Zeige zusätzliche Details in der folgenden Tabellenzeile"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
-													<button class="w3-button" (click)="toggleComplexDetails(q)" *ngIf="complexDetails[q]" title="Entferne zusätzliche Details in der folgenden Tabellenzeile"><i class="fa fa-caret-up" aria-hidden="true"></i></button>
-												</td>
-												<td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{getVoteOption(answers[q])}}</td>
-												
-												<ng-container *ngFor="let party of partypriority">
-													<td class="w3-right-align w3-tooltip">
-														{{quest.fragen[q][party]}}
-													</td>
-												</ng-container>
-												
-											</tr>
-											<tr class="auswertung-detail" id="auswertung-complex-detail-{{q}}" *ngIf="complexDetails[q]">
-												<td class="w3-left-align w3-border-black w3-leftbar w3-light-grey" colspan="6">
-													<div class="w3-margin-bottom">
-														<span class="q-context" [innerHTML]="quest.fragen[q].context"></span>
-														<strong class="q-question" [innerHTML]="quest.fragen[q].frage"></strong>
-													</div>
-													Deine Antwort: 
-													<span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">
-														{{getVoteOption(answers[q])}}
-													</span> <br>
-													<table class="w3-margin-top partyDetailsTable">
-														<ng-container *ngFor="let party of partypriority">
-														<tr>
-															<td class="partyDetailsImage">
-																<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis der {{getProperPartyName (party)}}: {{questionResults[q][party].ja}} Ja-Stimmen, {{questionResults[q][party].nein}} Nein-Stimmen, {{questionResults[q][party].enthaltung}} Enthaltungen">
-															</td>
-															<td class="partyDetailsBar">
-																<div class="stackedbar">
-																	<div class="stackedbarbar w3-green" [style.width.%]="questionResults[q][party].ja * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
-																	<div class="stackedbarbar w3-red" [style.width.%]="questionResults[q][party].nein * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
-																	<div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
-																</div><br>
-																Ja: {{questionResults[q][party].ja}} &mdash; Nein: {{questionResults[q][party].nein}} &mdash; Enthaltung: {{questionResults[q][party].enthaltung}}<br>
-																Score: {{quest.fragen[q]["score"][party]}}<br>
-															</td>
-														</tr>
-														</ng-container>
-													</table>
-													<span [innerHTML]="questionResults[q]['gesamt']"></span>
-												</td>
-											</tr>
+                    <ng-container *ngIf="i != 0">
+                      <tr class="auswertung-abschnitt">
+                        <th class="w3-grey" colspan="2">{{quest.titel}}<button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button></th>
+                        
+                      
+                        <ng-container *ngFor="let party of partypriority">
+                          <th class="w3-grey w3-right-align">
+                            <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+                          </th>
+                        </ng-container>
+                      
+                      </tr>
+                      <ng-container *ngFor="let q of quest.fragenIds">
+                        <tr class="auswertung-zeile" id="auswertung-{{q}}">
+                          <td class="w3-left-align">
+                            {{quest.fragen[q].short}}
+                            <button class="w3-button" (click)="toggleComplexDetails(q)" *ngIf="!complexDetails[q]" title="Zeige zusätzliche Details in der folgenden Tabellenzeile"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                            <button class="w3-button" (click)="toggleComplexDetails(q)" *ngIf="complexDetails[q]" title="Entferne zusätzliche Details in der folgenden Tabellenzeile"><i class="fa fa-caret-up" aria-hidden="true"></i></button>
+                          </td>
+                          <td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{getVoteOption(answers[q])}}</td>
+                          
+                          <ng-container *ngFor="let party of partypriority">
+                            <td class="w3-right-align w3-tooltip">
+                              {{quest.fragen[q][party]}}
+                            </td>
+                          </ng-container>
+                          
+                        </tr>
+                        <tr class="auswertung-detail" id="auswertung-complex-detail-{{q}}" *ngIf="complexDetails[q]">
+                          <td class="w3-left-align w3-border-black w3-leftbar w3-light-grey" colspan="6">
+                            <div class="w3-margin-bottom">
+                              <span class="q-context" [innerHTML]="quest.fragen[q].context"></span>
+                              <strong class="q-question" [innerHTML]="quest.fragen[q].frage"></strong>
+                            </div>
+                            Deine Antwort: 
+                            <span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">
+                              {{getVoteOption(answers[q])}}
+                            </span> <br>
+                            <table class="w3-margin-top partyDetailsTable">
+                              <ng-container *ngFor="let party of partypriority">
+                              <tr>
+                                <td class="partyDetailsImage">
+                                  <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis der {{getProperPartyName (party)}}: {{questionResults[q][party].ja}} Ja-Stimmen, {{questionResults[q][party].nein}} Nein-Stimmen, {{questionResults[q][party].enthaltung}} Enthaltungen">
+                                </td>
+                                <td class="partyDetailsBar">
+                                  <div class="stackedbar">
+                                    <div class="stackedbarbar w3-green" [style.width.%]="questionResults[q][party].ja * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
+                                    <div class="stackedbarbar w3-red" [style.width.%]="questionResults[q][party].nein * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
+                                    <div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
+                                  </div><br>
+                                  Ja: {{questionResults[q][party].ja}} &mdash; Nein: {{questionResults[q][party].nein}} &mdash; Enthaltung: {{questionResults[q][party].enthaltung}}<br>
+                                  Score: {{quest.fragen[q]["score"][party]}}<br>
+                                </td>
+                              </tr>
+                              </ng-container>
+                            </table>
+                            <span [innerHTML]="questionResults[q]['gesamt']"></span>
+                          </td>
+                        </tr>
+                        
+                      </ng-container>
 										</ng-container>
 									</ng-container>
 							<tr class="auswertung-abschnitt">
@@ -233,53 +262,55 @@
 					</thead>
 					<tbody>
 						<ng-container *ngFor="let quest of questionData; let i = index">
-							<tr class="auswertung-abschnitt">
-								<th class="w3-grey">{{quest.titel}}<button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i + 1)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button></th>
-								<td class="w3-grey">Mehrheitlich wie du gestimmt</td>
-							</tr>
-							<ng-container *ngFor="let q of quest.fragenIds">
-								<tr class="auswertung-zeile" id="auswertung-{{q}}" *ngIf="answers[q] >= 0">
-									<td class="w3-left-align">{{quest.fragen[q].short}} 
-										<button class="w3-button" (click)="toggleSimpleDetails(q)" *ngIf="!simpleDetails[q]" title="Zeige zusätzliche Details in der folgenden Tabellenzeile"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
-										<button class="w3-button" (click)="toggleSimpleDetails(q)" *ngIf="simpleDetails[q]" title="Entferne zusätzliche Details in der folgenden Tabellenzeile"><i class="fa fa-caret-up" aria-hidden="true"></i></button>
-									</td>
-									<td class="w3-left-align">
-										<ng-container *ngFor="let party of partypriority">
-											<ng-container *ngIf="quest.fragen[q].consent.indexOf (party) > -1">
-												<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
-											</ng-container>
-										</ng-container>
-									</td>
-								</tr>
-								<tr class="auswertung-detail" id="auswertung-detail-{{q}}" *ngIf="simpleDetails[q]">
-									<td class="w3-left-align w3-light-grey w3-border-black w3-leftbar" colspan="2">
-										<div class="w3-margin-bottom">
-											<span class="q-context" [innerHTML]="quest.fragen[q].context"></span>
-											<strong class="q-question" [innerHTML]="quest.fragen[q].frage"></strong>
-										</div>
-										Deine Antwort: 
-										<span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">
-											{{getVoteOption(answers[q])}}
-										</span> <br>
-										<table class="w3-margin-top partyDetailsTable">
-											<ng-container *ngFor="let party of partypriority">
-											<tr>
-												<td class="partyDetailsImage">
-													<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis der {{getProperPartyName (party)}}: {{questionResults[q][party].ja * 100 / questionResults[q][party].relevant}} Ja-Stimmen, {{questionResults[q][party].nein * 100 / questionResults[q][party].relevant}} Nein-Stimmen, {{questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant}} Enthaltungen">
-												</td>
-												<td class="partyDetailsBar">
-													<div class="stackedbar">
-														<div class="stackedbarbar w3-green" [style.width.%]="questionResults[q][party].ja * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
-														<div class="stackedbarbar w3-red" [style.width.%]="questionResults[q][party].nein * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
-														<div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
-													</div>
-												</td>
-											</tr>
-											</ng-container>
-										</table>
-										<span [innerHTML]="questionResults[q]['gesamt']"></span>
-									</td>
-								</tr>
+              <ng-container *ngIf="i != 0">
+                <tr class="auswertung-abschnitt">
+                  <th class="w3-grey">{{quest.titel}}<button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button></th>
+                  <td class="w3-grey">Mehrheitlich wie du gestimmt</td>
+                </tr>
+                <ng-container *ngFor="let q of quest.fragenIds">
+                  <tr class="auswertung-zeile" id="auswertung-{{q}}" *ngIf="answers[q] >= 0">
+                    <td class="w3-left-align">{{quest.fragen[q].short}} 
+                      <button class="w3-button" (click)="toggleSimpleDetails(q)" *ngIf="!simpleDetails[q]" title="Zeige zusätzliche Details in der folgenden Tabellenzeile"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                      <button class="w3-button" (click)="toggleSimpleDetails(q)" *ngIf="simpleDetails[q]" title="Entferne zusätzliche Details in der folgenden Tabellenzeile"><i class="fa fa-caret-up" aria-hidden="true"></i></button>
+                    </td>
+                    <td class="w3-left-align">
+                      <ng-container *ngFor="let party of partypriority">
+                        <ng-container *ngIf="quest.fragen[q].consent.indexOf (party) > -1">
+                          <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+                        </ng-container>
+                      </ng-container>
+                    </td>
+                  </tr>
+                  <tr class="auswertung-detail" id="auswertung-detail-{{q}}" *ngIf="simpleDetails[q]">
+                    <td class="w3-left-align w3-light-grey w3-border-black w3-leftbar" colspan="2">
+                      <div class="w3-margin-bottom">
+                        <span class="q-context" [innerHTML]="quest.fragen[q].context"></span>
+                        <strong class="q-question" [innerHTML]="quest.fragen[q].frage"></strong>
+                      </div>
+                      Deine Antwort: 
+                      <span class="w3-center w3-padding" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">
+                        {{getVoteOption(answers[q])}}
+                      </span> <br>
+                      <table class="w3-margin-top partyDetailsTable">
+                        <ng-container *ngFor="let party of partypriority">
+                        <tr>
+                          <td class="partyDetailsImage">
+                            <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis der {{getProperPartyName (party)}}: {{questionResults[q][party].ja * 100 / questionResults[q][party].relevant}} Ja-Stimmen, {{questionResults[q][party].nein * 100 / questionResults[q][party].relevant}} Nein-Stimmen, {{questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant}} Enthaltungen">
+                          </td>
+                          <td class="partyDetailsBar">
+                            <div class="stackedbar">
+                              <div class="stackedbarbar w3-green" [style.width.%]="questionResults[q][party].ja * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
+                              <div class="stackedbarbar w3-red" [style.width.%]="questionResults[q][party].nein * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
+                              <div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
+                            </div>
+                          </td>
+                        </tr>
+                        </ng-container>
+                      </table>
+                      <span [innerHTML]="questionResults[q]['gesamt']"></span>
+                    </td>
+                  </tr>
+                </ng-container>
 							</ng-container>
 						</ng-container>
 							<tr class="auswertung-abschnitt">

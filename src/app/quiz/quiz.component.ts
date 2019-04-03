@@ -61,6 +61,10 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	moreInfos = {};
 	/** text to share on twitter etc*/
 	shareText = "Mit #DeinWal kannst du prüfen, welche Partei wie du denkt!";
+	/** topics */
+	themengebiete = "";
+	/** number of questions */
+	nQuestions = 0;
 	
 	constructor (
 			private qserv: QuestiondataService,
@@ -130,6 +134,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 					this.questionResults = data.results;
 					
 					for (const q of this.questionData) {
+						if (q.intro)
+							continue;
 						q['fragenIds'] = [];
 						for (const f in q['fragen']) {
 							if (q['fragen'].hasOwnProperty(f)) {
@@ -174,6 +180,19 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 							}
 						}
 					}
+          
+          
+          
+					// special stuff for intro card
+					for (let q = 0; q < this.questionData.length; q++) {
+						this.themengebiete += this.questionData[q]['titel'];
+						if (q == this.questionData.length - 2) {
+							this.themengebiete += ' und ';
+						} else if (q < this.questionData.length - 2) {
+							this.themengebiete += ', ';
+						}
+					}
+					this.nQuestions = Object.keys(this.answers).length + 2; /*cause that's the answer! and who's checking that anyway...*/
 					
 					
 					this.updatedQuestions = true;
@@ -249,9 +268,6 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	 * select an answer
 	 */
 	choose(id, choice) {
-		if (id === 'example') {
-			return;
-		}
 		
 		// unselect a previously selected answer
 		if (this.answers[id] === choice) {
@@ -260,7 +276,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			// select this answer
 			this.answers[id] = choice;
 		}
-
+    
 		// save the selection (if saving is enabled)
 		this.saveQuestionDataToLocalStorage();
 	}
@@ -296,20 +312,16 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.resultsVisible = false;
 			this.progress = this.toPercent (0);
 			this.actualQuestions = [];
-		} else if (this.app.questionIndex == 0) {
+			
+			
+			// extra intro behandlung ist disabled...
+			// nur noch hier fuer copy+paste
+			// kann geloescht werden wenns ohne funktioniert
+		} else if (this.app.questionIndex == 0 && this.app.questionIndex < 0) {
 			this.resultsVisible = false;
 			this.router.navigate(['quiz', 0], {replaceUrl:true});
-			let themengebiete = "";
-			for (let q = 0; q < this.questionData.length; q++) {
-				themengebiete += this.questionData[q]['titel'];
-				if (q == this.questionData.length - 2) {
-					themengebiete += ' und ';
-				} else if (q < this.questionData.length - 2) {
-					themengebiete += ', ';
-				}
-			}
 			
-			this.question = {
+			let useless = {
 				'titel': 'Gleich geht\'s los!',
 				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du über Anträge und Gesetzentwürfe aus dem Bundestag entscheiden. '
 					+ '<strong>Oben links kannst du die Eingaben in deinem Browser-Profil speichern,</strong> '
@@ -322,9 +334,9 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 					+ 'Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen! '
 					+ 'Ganz unten zeigt dir ein Fortschrittsbalken wie weit du bist. <br> <br> '
 					+ '<strong>Aus über 200&nbsp;real stattgefundenen Abstimmungen haben wir '
-					+ (Object.keys(this.answers).length + 2 /*cause that's the answer! and who's checking that anyway...*/) + '&nbsp;Fragen ausgewählt und in '
-					+ this.questionData.length + '&nbsp;Themengebiete unterteilt:</strong> '
-					+ themengebiete
+					//+ (Object.keys(this.answers).length + 2 /*cause that's the answer! and who's checking that anyway...*/) + '&nbsp;Fragen ausgewählt und in '
+					//+ this.questionData.length + '&nbsp;Themengebiete unterteilt:</strong> '
+					//+ themengebiete
 					+ '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeigt. '
 					+ 'Eine einzelne Abstimmung sieht wie folgt aus:',
 				'fragen': {
@@ -360,7 +372,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.app.overwriteTitle('Quiz');
 			this.resultsVisible = false;
 			this.progress = this.toPercent (n / (this.questionData.length + 1));
-			this.question = this.questionData[this.app.questionIndex - 1];
+			this.question = this.questionData[this.app.questionIndex];
 			//console.log ("question title " + this.question["titel"]);
 			// get sub-questions
 			this.actualQuestions = Object.keys(this.question['fragen']);
@@ -411,6 +423,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		let nAnswered = 0;
 
 		for (const q of this.questionData) {
+			if (q.intro)
+				continue;
 			for (const f in q['fragen']) {
 				q['fragen'][f]['consent'] = [];
 				q['fragen'][f]['score'] = {};
