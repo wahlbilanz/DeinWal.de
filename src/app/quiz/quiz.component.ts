@@ -333,6 +333,20 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 						'link': 'https://wahlbilanz.de',
 						'short': 'example',
 						'subtext': 'Über einen Link kannst du mehr zu einer Abstimmung erfahren:',
+            'moreInfos': [
+                {
+                    'text': 'Hier gibt es ge­ge­be­nen­falls weitere Information und Links, wie zum Beispiel:',
+                    'link': ''
+                },
+                {
+                    'text': 'Blauwal von oben gesehen',
+                    'link': 'https://de.wikipedia.org/wiki/Datei:Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg'
+                },
+                {
+                    'text': 'Methanhydrat',
+                    'link': 'https://de.wikipedia.org/wiki/Methanhydrat'
+                },
+            ],
 					}
 				}
 			};
