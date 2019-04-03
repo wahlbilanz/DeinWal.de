@@ -17,12 +17,6 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	questionData = [];
 	/** the party results for all questions */
 	questionResults = {}
-	/** currently visible question index*/
-	//questionIndex = 0;
-	/** currently visible question -- basically equals `this.questionData[this.questionIndex]`*/
-	question = {};
-	/** actual questions in `question`*/
-	actualQuestions = [];
 	/** the usesr's answers to the questions, keys are the question ids, values are one of `voteOptions`*/
 	answers = {};
 	/** current progress in the quiz */
@@ -61,6 +55,16 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	moreInfos = {};
 	/** text to share on twitter etc*/
 	shareText = "Mit #DeinWal kannst du prüfen, welche Partei wie du denkt!";
+	/** topics */
+	themengebiete = "";
+	/** number of questions */
+	nQuestions = 0;
+	/** necessary to get the keys of an object in fe */
+	Object = Object;
+	/** extra alert slide to show notifications and errors */
+	alertSlide = {};
+	/** should we show the alert? */
+	alert = true;
 	
 	constructor (
 			private qserv: QuestiondataService,
@@ -71,6 +75,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			private location: Location
 			) {
 		
+		this.alert = true;
 		this.checkSave ();
 		this.partypriority = this.parties;
 		this.simpleDetails = {};
@@ -82,21 +87,13 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.getQuestionDataFromLocalStorage();
 		}
 
-		this.question = {
+		this.alertSlide = {
 			'titel': 'Quiz wird geladen',
 			'beschreibung': 'Das kann unter Umständen eine Sekunde dauern...'
 		};
 		
 		this.updatedQuestions = false;
 		this.observeUrl ();
-		
-		/** the following unfortunatelly returns the wrong number?? */
-		/*this.location.subscribe ((ev:PopStateEvent) => {
-			this.app.log ('browser back/forward detected');
-			console.log (this.route.snapshot.params);
-		});*/
-		
-		
 	}
 
 	ngOnInit() {
@@ -130,6 +127,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 					this.questionResults = data.results;
 					
 					for (const q of this.questionData) {
+						if (q.intro)
+							continue;
 						q['fragenIds'] = [];
 						for (const f in q['fragen']) {
 							if (q['fragen'].hasOwnProperty(f)) {
@@ -174,17 +173,30 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 							}
 						}
 					}
-					
+          
+          
+          
+					// special stuff for intro card
+					for (let q = 0; q < this.questionData.length; q++) {
+						this.themengebiete += this.questionData[q]['titel'];
+						if (q == this.questionData.length - 2) {
+							this.themengebiete += ' und ';
+						} else if (q < this.questionData.length - 2) {
+							this.themengebiete += ', ';
+						}
+					}
+					this.nQuestions = Object.keys(this.answers).length + 2; /*cause that's the answer! and who's checking that anyway...*/
 					
 					this.updatedQuestions = true;
 				} catch (e) {
 					// unexpected votes format?
 					console.log('could not parse votes.json', e);
 					// show error
-					this.question = {
+					this.alertSlide = {
 						'titel': 'Es ist ein Fehler aufgetreten!',
 						'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Versuch es später noch einmal!'
 					};
+					this.alert = true;
 				}
 				
 				
@@ -193,7 +205,15 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 				} else {
 					this.showQuestion(initialCard);
 				}
+				this.alert = false;
 				
+			},
+			err => {
+				this.alertSlide = {
+					'titel': 'Es ist ein Fehler aufgetreten!',
+					'beschreibung': 'Die Quiz-Daten konnten leider nicht geladen werden. Ist die <code>votes.js</code> korrektes JSON? Versuch es später noch einmal!'
+				};
+				this.alert = true;
 			});
 	}
 	
@@ -249,9 +269,6 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	 * select an answer
 	 */
 	choose(id, choice) {
-		if (id === 'example') {
-			return;
-		}
 		
 		// unselect a previously selected answer
 		if (this.answers[id] === choice) {
@@ -260,7 +277,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			// select this answer
 			this.answers[id] = choice;
 		}
-
+    
 		// save the selection (if saving is enabled)
 		this.saveQuestionDataToLocalStorage();
 	}
@@ -295,34 +312,32 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		} else if (this.questionData.length == 0) {
 			this.resultsVisible = false;
 			this.progress = this.toPercent (0);
-			this.actualQuestions = [];
-		} else if (this.app.questionIndex == 0) {
+			//this.actualQuestions = [];
+			
+			
+			// extra intro behandlung ist disabled...
+			// nur noch hier fuer copy+paste
+			// kann geloescht werden wenns ohne funktioniert
+		} else if (this.app.questionIndex == 0 && this.app.questionIndex < 0) {
 			this.resultsVisible = false;
 			this.router.navigate(['quiz', 0], {replaceUrl:true});
-			let themengebiete = "";
-			for (let q = 0; q < this.questionData.length; q++) {
-				themengebiete += this.questionData[q]['titel'];
-				if (q == this.questionData.length - 2) {
-					themengebiete += ' und ';
-				} else if (q < this.questionData.length - 2) {
-					themengebiete += ', ';
-				}
-			}
 			
-			this.question = {
+			let useless = {
 				'titel': 'Gleich geht\'s los!',
 				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du über Anträge und Gesetzentwürfe aus dem Bundestag entscheiden. '
 					+ '<strong>Oben links kannst du die Eingaben in deinem Browser-Profil speichern,</strong> '
-					+ 'dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst. <br> <br> '
+					+ 'dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst. <small>(<a href="/faq#speicherung">Was wird wie gespeichert?</a>)</small><br> <br> '
 					+ 'Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen. '
-					+ 'Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen oder das Quiz '
-					+ 'vorzeitig beenden und direkt zur Auswertung wechseln. '
+					+ 'Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen. '
+          + '<strong>Eine unbeantwortete Frage hat einen anderen Einfluss auf das Ergebnis, als eine Enthaltung</strong> - siehe <a href="/faq#berechnung">Berechnung der Auswertung?</a>.<br><br>'
+          + 'Du kannst auch direkt zur Auswertung springen und das Quiz damit vorzeitig beenden. '
+          + 'Dann bleiben die &uuml;brigen Fragen einfach unbeantwortet. '
 					+ 'Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen! '
-					+ 'Ganz unten zeigt dir ein grüner Fortschrittsbalken wie weit du bist. <br> <br> '
+					+ 'Ganz unten zeigt dir ein Fortschrittsbalken wie weit du bist. <br> <br> '
 					+ '<strong>Aus über 200&nbsp;real stattgefundenen Abstimmungen haben wir '
-					+ (Object.keys(this.answers).length + 2 /*cause that's the answer! and who's checking that anyway...*/) + '&nbsp;Fragen ausgewählt und in '
-					+ this.questionData.length + '&nbsp;Themengebiete unterteilt:</strong> '
-					+ themengebiete
+					//+ (Object.keys(this.answers).length + 2 /*cause that's the answer! and who's checking that anyway...*/) + '&nbsp;Fragen ausgewählt und in '
+					//+ this.questionData.length + '&nbsp;Themengebiete unterteilt:</strong> '
+					//+ themengebiete
 					+ '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeigt. '
 					+ 'Eine einzelne Abstimmung sieht wie folgt aus:',
 				'fragen': {
@@ -333,10 +348,24 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 						'link': 'https://wahlbilanz.de',
 						'short': 'example',
 						'subtext': 'Über einen Link kannst du mehr zu einer Abstimmung erfahren:',
+            'moreInfos': [
+                {
+                    'text': 'Hier gibt es ge­ge­be­nen­falls weitere Information und Links, wie zum Beispiel:',
+                    'link': ''
+                },
+                {
+                    'text': 'Blauwal von oben gesehen',
+                    'link': 'https://de.wikipedia.org/wiki/Datei:Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg'
+                },
+                {
+                    'text': 'Methanhydrat',
+                    'link': 'https://de.wikipedia.org/wiki/Methanhydrat'
+                },
+            ],
 					}
 				}
 			};
-			this.actualQuestions = ['example-1'];
+			//this.actualQuestions = ['example-1'];
 			this.progress = this.toPercent (0);
 			
 		} else { // otherwise show question n
@@ -344,10 +373,10 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.app.overwriteTitle('Quiz');
 			this.resultsVisible = false;
 			this.progress = this.toPercent (n / (this.questionData.length + 1));
-			this.question = this.questionData[this.app.questionIndex - 1];
+			//this.question = this.questionData[this.app.questionIndex];
 			//console.log ("question title " + this.question["titel"]);
 			// get sub-questions
-			this.actualQuestions = Object.keys(this.question['fragen']);
+			//this.actualQuestions = Object.keys(this.question['fragen']);
 			//console.log (this.question);
 		}
 	}
@@ -395,6 +424,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		let nAnswered = 0;
 
 		for (const q of this.questionData) {
+			if (q.intro)
+				continue;
 			for (const f in q['fragen']) {
 				q['fragen'][f]['consent'] = [];
 				q['fragen'][f]['score'] = {};
