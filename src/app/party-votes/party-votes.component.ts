@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, Input, ViewChild } from '@angular/core';
-import { QuizComponent } from '../quiz/quiz.component';
+import { BundestagsWal2017 } from '../2017-btw/btw17.component';
 //declare var d3: any;
 
 @Component({
@@ -30,7 +30,7 @@ export class PartyVotesComponent implements OnInit {
   
   id = 'unknown';
 
-  constructor(private quiz: QuizComponent) {
+  constructor(private quiz: BundestagsWal2017) {
   }
 
   ngOnInit () {

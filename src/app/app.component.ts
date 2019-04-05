@@ -11,6 +11,7 @@ import { Router, NavigationEnd } from '@angular/router';
 export class AppComponent {
 	
 	questionIndex = 0;
+  currentQuiz = "";
   
   // setup route-listener to update title of the page 
   constructor(router:Router, private titleService:Title) {

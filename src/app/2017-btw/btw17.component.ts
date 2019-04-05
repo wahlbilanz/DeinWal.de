@@ -7,10 +7,14 @@ import { AppComponent } from '../app.component';
 
 @Component({
 	selector: 'app-quiz',
-	templateUrl: './quiz.component.html',
-	styleUrls: ['./quiz.component.css']
+	templateUrl: './btw17.component.html',
+	styleUrls: ['./btw17.component.css']
 })
-export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges {
+export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges {
+  
+  routeId = "bundestagswal2017";
+  
+  
 	/** is this production or debug mode?*/
 	production;
 	/** the whole question information as it will be retrieved from votes.json*/
@@ -233,8 +237,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 				// is card number not parseable? -> first question
 				if (Number.isNaN(card)) {
 					card = 0;
-					//this.location.replaceState ('quiz/0');
-					this.router.navigate(['quiz', 0], {replaceUrl:true});
+					this.router.navigate(['bundestagswal2017', 0], {replaceUrl:true});
 					//console.log ("replacing location to " + 'quiz/0');
 				} else {
 					if (!this.updatedQuestions) {
@@ -250,8 +253,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 				// if there was an error or nothing is given: show first question
 				//console.log('keine question id angegeben ');
 				//initialCard = 0;
-				//this.location.replaceState ('quiz/0');
-				this.router.navigate(['quiz', 0], {replaceUrl:true});
+				this.router.navigate(['bundestagswal2017', 0], {replaceUrl:true});
 				//console.log ("replacing location to " + 'quiz/0');
 			}
 		
@@ -286,6 +288,9 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	 * Zeige nur Question Nummer n
 	 */
 	showQuestion(n) {
+    
+		this.app.currentQuiz = this.routeId;
+    
 		//console.log ("showing question " + n);
 		this.app.questionIndex = n;
 		window.scrollTo(0,0);
@@ -306,7 +311,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 		// if n is bigger than the number of questions -> show results
 		if (this.app.questionIndex > this.questionData.length && this.questionData.length > 0) {
 			//this.location.replaceState ('quiz/auswertung'); // change URL
-			this.router.navigate(['quiz', 'auswertung'], {replaceUrl:true});
+			this.router.navigate(['bundestagswal2017', 'auswertung'], {replaceUrl:true});
 			//console.log ("setting location to " + 'quiz/auswertung');
 			this.showResults();
 		} else if (this.questionData.length == 0) {
@@ -320,7 +325,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			// kann geloescht werden wenns ohne funktioniert
 		} else if (this.app.questionIndex == 0 && this.app.questionIndex < 0) {
 			this.resultsVisible = false;
-			this.router.navigate(['quiz', 0], {replaceUrl:true});
+			this.router.navigate(['bundestagswal2017', 0], {replaceUrl:true});
 			
 			let useless = {
 				'titel': 'Gleich geht\'s los!',
@@ -369,8 +374,8 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 			this.progress = this.toPercent (0);
 			
 		} else { // otherwise show question n
-			this.router.navigate(['quiz', this.app.questionIndex], {replaceUrl:true});
-			this.app.overwriteTitle('Quiz');
+			this.router.navigate(['bundestagswal2017', this.app.questionIndex], {replaceUrl:true});
+			this.app.overwriteTitle('Quiz zur Bundestagswahl 2017');
 			this.resultsVisible = false;
 			this.progress = this.toPercent (n / (this.questionData.length + 1));
 			//this.question = this.questionData[this.app.questionIndex];
@@ -389,7 +394,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	nextQuestion(n) {
 		let next = this.app.questionIndex + n;
 		//this.location.go('quiz/' + next);
-		this.router.navigate(['quiz', next]);
+		this.router.navigate(['bundestagswal2017', next]);
 		//console.log ("setting location to " + 'quiz/' + next);
 		this.showQuestion(next); // die entsprechende URL im adressfeld anzeigen und auf history-stack pushen
 	}
@@ -413,7 +418,7 @@ export class QuizComponent implements OnInit, AfterContentInit, AfterViewInit, A
 	showResults() {
 		//console.log ("showing results");
 //		this.location.go('quiz/auswertung') // change URL
-		this.router.navigate(['quiz', 'auswertung'], {replaceUrl:true});
+		this.router.navigate(['bundestagswal2017', 'auswertung'], {replaceUrl:true});
 		window.scrollTo(0,0);
 		this.app.questionIndex = this.questionData.length + 1;
 		this.progress = this.toPercent (1);

@@ -7,7 +7,7 @@ import { RouteReuseStrategy, ActivatedRouteSnapshot, DetachedRouteHandle } from 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { QuizComponent } from './quiz/quiz.component';
+import { BundestagsWal2017 } from './2017-btw/btw17.component';
 import { FaqComponent } from './faq/faq.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { PartyVotesComponent } from './party-votes/party-votes.component';
@@ -18,7 +18,7 @@ import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
-    QuizComponent,
+    BundestagsWal2017,
     FaqComponent,
     ImpressumComponent,
     PartyVotesComponent,
