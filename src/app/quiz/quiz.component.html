@@ -107,32 +107,32 @@
 	  
 	    <button class="w3-button w3-ripple active w3-large w3-border w3-border-black w3-pale-green"
 		    [class.w3-hover-green]="!touchDevice" [class.w3-hover-pale-green]="touchDevice"
-		    (click)="choose(q,1)" *ngIf="answers[q]!=1">
+		    (click)="choose(q,1)" *ngIf="answers[q]!=1" title="Daf&uuml;r stimmen">
 		    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Ja
 	    </button>
 	    <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-green w3-hover-green"
-		    (click)="choose(q,1)"*ngIf="answers[q]==1">
+		    (click)="choose(q,1)"*ngIf="answers[q]==1" title="Stimme zur&uuml;ck ziehen">
 		    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Ja
 	    </button>
 	    
 	    
 	    <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-pale-red"
 		    [class.w3-hover-red]="!touchDevice" [class.w3-hover-pale-red]="touchDevice"
-		    (click)="choose(q,2)" *ngIf="answers[q]!=2">
+		    (click)="choose(q,2)" *ngIf="answers[q]!=2" title="Dagegen stimmen">
 		    <i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Nein
 	    </button>
 	    <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-red w3-hover-red"
-		    (click)="choose(q,2)" *ngIf="answers[q]===2">
+		    (click)="choose(q,2)" *ngIf="answers[q]===2" title="Stimme zur&uuml;ck ziehen">
 		    <i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Nein
 	    </button>
 	    
 	    <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-pale-blue"
 		    [class.w3-hover-blue]="!touchDevice" [class.w3-hover-pale-blue]="touchDevice"
-		    (click)="choose(q,0)" *ngIf="answers[q]!=0">
+		    (click)="choose(q,0)" *ngIf="answers[q]!=0" title="Enthaltung ekl&auml;ren">
 		    <i class="fa fa-hand-peace-o" aria-hidden="true"></i> Enthalten
 	    </button>
 	    <button class="w3-button w3-ripple w3-large w3-border w3-border-black w3-blue w3-hover-blue"
-		    (click)="choose(q,0)" *ngIf="answers[q]==0">
+		    (click)="choose(q,0)" *ngIf="answers[q]==0" title="Stimme zur&uuml;ck ziehen">
 		    <i class="fa fa-hand-peace-o" aria-hidden="true"></i> Enthalten
 	    </button>
 		  
@@ -145,7 +145,7 @@
 	  <button class="w3-button w3-dark-grey w3-hover-black w3-left w3-ripple w3-large w3-margin-left optional-margin" (click)="nextQuestion(-1)" *ngIf="getQuestionIndex () > 0" title="vorherige Frage"><i class="fa fa-chevron-left" aria-hidden="true"></i><span class='mobile-not'> vorherige Frage</span></button>
 	  <button class="w3-button w3-dark-grey w3-hover-black w3-right w3-ripple w3-large w3-margin-right optional-margin" (click)="nextQuestion(1)" *ngIf="getQuestionIndex () == 0" title="erste Frage"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class='mobile-not'> erste Frage</span></button>
 	  <button class="w3-button w3-dark-grey w3-hover-black w3-right w3-ripple w3-large w3-margin-right optional-margin" (click)="nextQuestion(1)" *ngIf="getQuestionIndex () <= questionData.length - 1 && getQuestionIndex () > 0" title="nächste Frage"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class='mobile-not'> nächste Frage</span></button>
-	  <button class="w3-button w3-dark-grey w3-hover-black w3-right w3-ripple w3-large w3-margin-right" (click)="showResults()"><i class="fa fa-line-chart" aria-hidden="true" title="Auswertung"></i> Auswertung</button>
+	  <button class="w3-button w3-dark-grey w3-hover-black w3-right w3-ripple w3-large w3-margin-right" (click)="showResults()" title="Auswertung"><i class="fa fa-line-chart" aria-hidden="true"></i> Auswertung</button>
      </div>
   </div>
 </ng-container>
@@ -161,6 +161,8 @@
     <header class="w3-container w3-dark-grey w3-margin optional-margin">
 	<h3>Auswertung </h3>
     </header>
+    
+    <!-- auswertungsbars -->
     <div class="w3-padding w3-center" id="party-bar-chart">
       <ng-container *ngFor="let party of partypriority">
 	<div class="veritcal-bar w3-border" [style.width.%]="100 / (partypriority.length)">
