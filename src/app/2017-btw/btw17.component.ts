@@ -136,6 +136,12 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 						q['fragenIds'] = [];
 						for (const f in q['fragen']) {
 							if (q['fragen'].hasOwnProperty(f)) {
+                
+                // enforce a space after the context of every question.
+                // to make sure there is a space between context and actual question
+                if (q['fragen'][f]['context'].length > 0 && q['fragen'][f]['context'].substr(q['fragen'][f]['context'].length - 1))
+                  q['fragen'][f]['context'] = q['fragen'][f]['context'] + " ";
+                
 								// -1 means -> not answered yet
 								if (!this.answers.hasOwnProperty(f)) {
 									this.answers[f] = -1;
