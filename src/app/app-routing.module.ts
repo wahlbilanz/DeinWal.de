@@ -17,6 +17,16 @@ const routes: Routes = [
     data: {title: 'Home'}
   },
   {
+    path: 'europawal2019',
+    component: BundestagsWal2017,
+    data: {title: 'Quiz zur Europawahl 2019'}
+  },
+  {
+    path: 'europawal2019/:questionPage',
+    component: BundestagsWal2017,
+    data: {title: 'Quiz zur Europawahl 2019'}
+  },
+  {
     path: 'bundestagswal2017',
     component: BundestagsWal2017,
     data: {title: 'Quiz zur Bundestagswahl 2017'}
