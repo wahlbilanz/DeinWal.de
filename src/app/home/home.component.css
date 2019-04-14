@@ -11,6 +11,9 @@
 #home-whale object {
 	width: 100%;
 }
+#home-whale div {
+   margin-bottom: 3em;
+}
 #home-text {
 	padding: 20px;
 }
