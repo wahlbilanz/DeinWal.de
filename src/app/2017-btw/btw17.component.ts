@@ -474,10 +474,10 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 		this.shareText = "Mit #DeinWal kannst du prüfen, welche Partei wie du denkt!";
 		
 		if (nAnswered > 0) {
-			this.overallResult['spd'] = this.toPercent(nzustimmung['spd'] / nAnswered);
-			this.overallResult['gruenen'] = this.toPercent(nzustimmung['gruenen'] / nAnswered);
-			this.overallResult['die.linke'] = this.toPercent(nzustimmung['die.linke'] / nAnswered);
-			this.overallResult['cdu/csu'] = this.toPercent(nzustimmung['cdu/csu'] / nAnswered);
+			this.overallResult['spd'] = this.toPercent(nzustimmung['spd'] / nAnswered, 0);
+			this.overallResult['gruenen'] = this.toPercent(nzustimmung['gruenen'] / nAnswered, 0);
+			this.overallResult['die.linke'] = this.toPercent(nzustimmung['die.linke'] / nAnswered, 0);
+			this.overallResult['cdu/csu'] = this.toPercent(nzustimmung['cdu/csu'] / nAnswered, 0);
 			
 			// set party priority
 			for (let i = 0; i < this.partypriority.length; i++) {
