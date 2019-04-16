@@ -1,7 +1,7 @@
  <div class="w3-bar w3-dark-grey">
   <a routerLink="/home" class="w3-bar-item w3-button"><img src="/assets/wal-thumb.png" id="top-icon"> DeinWal.de</a>
   <ng-container *ngIf="currentQuiz">
-    <a routerLink="/bundestagswal2017/{{questionIndex}}" class="w3-bar-item w3-button menu"><span id='menu-zum'>zum </span>Quiz</a>
+    <a routerLink="/{{currentQuiz}}/{{questionIndex}}" class="w3-bar-item w3-button menu"><span id='menu-zum'>zum </span>Quiz</a>
   </ng-container>
   <a routerLink="/faq" class="w3-bar-item w3-button menu">FAQs</a>
   <a routerLink="/impressum" class="w3-bar-item w3-button menu">Impressum</a>

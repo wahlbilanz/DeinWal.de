@@ -1,0 +1,117 @@
+{ 
+    "quiz": [
+            {
+              "intro": true,
+                "topic": [
+                    "deinwal"
+                ],
+            "titel": "Gleich geht's los!",
+            "beschreibung": "you'd never see this.",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+              "example": {
+                "context": "Eine Frage hat manchmal ein bisschen Kontext.",
+                "frage": "Die eigentliche Frage ist aber immer fett gedruckt.",
+                "inverted": false,
+                "link": "https://wahlbilanz.de",
+                "short": "example",
+                "subtext": "Über einen Link kannst du mehr zu einer Abstimmung erfahren:",
+                "moreInfos": [
+                    {
+                        "text": "Hier gibt es ge­ge­be­nen­falls weitere Information und Links, wie zum Beispiel:",
+                        "link": ""
+                    },
+                    {
+                        "text": "Blauwal von oben gesehen",
+                        "link": "https://de.wikipedia.org/wiki/Datei:Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg"
+                    },
+                    {
+                        "text": "Methanhydrat",
+                        "link": "https://de.wikipedia.org/wiki/Methanhydrat"
+                    }
+                ]
+              }
+            }
+        },
+        {
+            "titel": "Finanzen",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "2436eb70-9eb4-4cb6-999f-b6d2ad59782e": {
+                    "context": "Der europäische Struktur- und Investitionsfonds soll die Wirtschaft in den Jahren 2015 bis 2017 mit 315 Milliarden Euro foerdern. Insbesondere sollen Infrastrukturprojekte wie Straßen und Brücken, aber auch kleine und mittlere Unternehmen gefördert werden.",
+                    "frage": "Stimmst du der Einrichtung eines europäischen Struktur- und Investitionsfonds zu?",
+                    "short": "Europ. Struktur- und Investitionsfonds",
+                    "subtext": "",
+                    "moreInfos": [
+                    ],
+                    "invert": false
+                }
+            }
+        },
+        {
+            "titel": "Finanzen",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "2436eb70-9eb4-4cb6-999f-b6d2ad59782e": {
+                    "context": "Der europäische Struktur- und Investitionsfonds soll die Wirtschaft in den Jahren 2015 bis 2017 mit 315 Milliarden Euro foerdern. Insbesondere sollen Infrastrukturprojekte wie Straßen und Brücken, aber auch kleine und mittlere Unternehmen gefördert werden.",
+                    "frage": "Stimmst du der Einrichtung eines europäischen Struktur- und Investitionsfonds zu?",
+                    "short": "Europ. Struktur- und Investitionsfonds",
+                    "subtext": "",
+                    "moreInfos": [
+                    ],
+                    "invert": false
+                }
+            }
+        }
+    ],
+    "results": {  
+        "2436eb70-9eb4-4cb6-999f-b6d2ad59782e": {
+            "cdu/csu": {
+                "enthaltung": 4,
+                "gesamt": 309,
+                "ja": 75,
+                "nein": 225,
+                "nichtabgegeben": 5,
+                "ungueltig": 0
+            },
+            "die.linke": {
+                "enthaltung": 0,
+                "gesamt": 64,
+                "ja": 63,
+                "nein": 0,
+                "nichtabgegeben": 1,
+                "ungueltig": 0
+            },
+            "file": "20170630_1_xls-data.xls",
+            "fraktionslos": {
+                "enthaltung": 0,
+                "gesamt": 1,
+                "ja": 0,
+                "nein": 1,
+                "nichtabgegeben": 0,
+                "ungueltig": 0
+            },
+            "gruenen": {
+                "enthaltung": 0,
+                "gesamt": 63,
+                "ja": 63,
+                "nein": 0,
+                "nichtabgegeben": 0,
+                "ungueltig": 0
+            },
+            "spd": {
+                "enthaltung": 0,
+                "gesamt": 193,
+                "ja": 192,
+                "nein": 0,
+                "nichtabgegeben": 1,
+                "ungueltig": 0
+            }
+        }
+    }
+}

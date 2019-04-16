@@ -7,12 +7,12 @@ import { AppComponent } from '../app.component';
 
 @Component({
 	selector: 'app-quiz',
-	templateUrl: './btw17.component.html',
-	styleUrls: ['./btw17.component.css']
+	templateUrl: './eu19.component.html',
+	styleUrls: ['./eu19.component.css']
 })
-export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges {
+export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges {
   
-  routeId = "bundestagswal2017";
+  routeId = "europawal2019";
   
   
 	/** is this production or debug mode?*/
@@ -80,7 +80,6 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 			) {
 		if (!this.app.questionIndex.hasOwnProperty(this.routeId))
       this.app.questionIndex[this.routeId] = 0;
-		
 		this.alert = true;
 		this.checkSave ();
 		this.partypriority = this.parties;
@@ -127,7 +126,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	
 	updateQuestions (initialCard) {
 		this.qserv.getData(this.routeId).subscribe((data) => {
-//				this.app.log('retrieved data:', data);
+				this.app.log('retrieved data:', data);
 				try {
 					this.questionData = data.quiz;
 					this.questionResults = data.results;
@@ -177,9 +176,9 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 								}
 
 								if (this.questionResults[f]['gesamtja'] > this.questionResults[f]['gesamtnein']) {
-									this.questionResults[f]['gesamt'] = "Vom Bundestag <strong>angenommen mit " + this.questionResults[f]['gesamtja'] + " Ja-Stimmen</strong> bei " + this.questionResults[f]['gesamtnein'] + " Nein-Stimmen und " + this.questionResults[f]['gesamtenthaltung'] + " Enthaltungen";
+									this.questionResults[f]['gesamt'] = "Vom Parlament <strong>angenommen mit " + this.questionResults[f]['gesamtja'] + " Ja-Stimmen</strong> bei " + this.questionResults[f]['gesamtnein'] + " Nein-Stimmen und " + this.questionResults[f]['gesamtenthaltung'] + " Enthaltungen";
 								} else {
-									this.questionResults[f]['gesamt'] = "Vom Bundestag <strong>abgelehnt mit " + this.questionResults[f]['gesamtnein'] + " Nein-Stimmen</strong> bei " + this.questionResults[f]['gesamtja'] + " Ja-Stimmen und " + this.questionResults[f]['gesamtenthaltung'] + " Enthaltungen";
+									this.questionResults[f]['gesamt'] = "Vom Parlament <strong>abgelehnt mit " + this.questionResults[f]['gesamtnein'] + " Nein-Stimmen</strong> bei " + this.questionResults[f]['gesamtja'] + " Ja-Stimmen und " + this.questionResults[f]['gesamtenthaltung'] + " Enthaltungen";
 								}
 								
 							}
@@ -219,6 +218,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 				}
 				this.alert = false;
 				
+      console.log (this.questionData)
 			},
 			err => {
 				this.alertSlide = {
@@ -227,6 +227,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 				};
 				this.alert = true;
 			});
+      
 	}
 	
 	observeUrl () {
@@ -245,7 +246,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 				// is card number not parseable? -> first question
 				if (Number.isNaN(card)) {
 					card = 0;
-					this.router.navigate(['bundestagswal2017', 0], {replaceUrl:true});
+					this.router.navigate(['europawal2019', 0], {replaceUrl:true});
 					//console.log ("replacing location to " + 'quiz/0');
 				} else {
 					if (!this.updatedQuestions) {
@@ -261,7 +262,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 				// if there was an error or nothing is given: show first question
 				//console.log('keine question id angegeben ');
 				//initialCard = 0;
-				this.router.navigate(['bundestagswal2017', 0], {replaceUrl:true});
+				this.router.navigate(['europawal2019', 0], {replaceUrl:true});
 				//console.log ("replacing location to " + 'quiz/0');
 			}
 		
@@ -299,6 +300,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
     
 		this.app.currentQuiz = this.routeId;
     
+    
 		//console.log ("showing question " + n);
 		this.app.questionIndex[this.routeId] = n;
 		window.scrollTo(0,0);
@@ -313,77 +315,24 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 			this.app.questionIndex[this.routeId] = 0;
 		}
 		
-//		console.log (this.questionIndex[this.routeId]);
+		console.log ("show question:");
+		console.log (this.app.questionIndex[this.routeId]);
+		console.log (this.questionData.length);
 //		console.log (this.questionData);
 
 		// if n is bigger than the number of questions -> show results
 		if (this.app.questionIndex[this.routeId] > this.questionData.length && this.questionData.length > 0) {
 			//this.location.replaceState ('quiz/auswertung'); // change URL
-			this.router.navigate(['bundestagswal2017', 'auswertung'], {replaceUrl:true});
+			this.router.navigate(['europawal2019', 'auswertung'], {replaceUrl:true});
 			//console.log ("setting location to " + 'quiz/auswertung');
 			this.showResults();
 		} else if (this.questionData.length == 0) {
 			this.resultsVisible = false;
 			this.progress = this.toPercent (0);
 			//this.actualQuestions = [];
-			
-			
-			// extra intro behandlung ist disabled...
-			// nur noch hier fuer copy+paste
-			// kann geloescht werden wenns ohne funktioniert
-		} else if (this.app.questionIndex[this.routeId] == 0 && this.app.questionIndex[this.routeId] < 0) {
-			this.resultsVisible = false;
-			this.router.navigate(['bundestagswal2017', 0], {replaceUrl:true});
-			
-			let useless = {
-				'titel': 'Gleich geht\'s los!',
-				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du über Anträge und Gesetzentwürfe aus dem Bundestag entscheiden. '
-					+ '<strong>Oben links kannst du die Eingaben in deinem Browser-Profil speichern,</strong> '
-					+ 'dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst. <small>(<a href="/faq#speicherung">Was wird wie gespeichert?</a>)</small><br> <br> '
-					+ 'Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen. '
-					+ 'Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen. '
-          + '<strong>Eine unbeantwortete Frage hat einen anderen Einfluss auf das Ergebnis, als eine Enthaltung</strong> - siehe <a href="/faq#berechnung">Berechnung der Auswertung?</a>.<br><br>'
-          + 'Du kannst auch direkt zur Auswertung springen und das Quiz damit vorzeitig beenden. '
-          + 'Dann bleiben die &uuml;brigen Fragen einfach unbeantwortet. '
-					+ 'Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen! '
-					+ 'Ganz unten zeigt dir ein Fortschrittsbalken wie weit du bist. <br> <br> '
-					+ '<strong>Aus über 200&nbsp;real stattgefundenen Abstimmungen haben wir '
-					//+ (Object.keys(this.answers).length + 2 /*cause that's the answer! and who's checking that anyway...*/) + '&nbsp;Fragen ausgewählt und in '
-					//+ this.questionData.length + '&nbsp;Themengebiete unterteilt:</strong> '
-					//+ themengebiete
-					+ '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeigt. '
-					+ 'Eine einzelne Abstimmung sieht wie folgt aus:',
-				'fragen': {
-					'example-1': {
-						'context': 'Eine Frage hat manchmal ein bisschen Kontext.',
-						'frage': 'Die eigentliche Frage ist aber immer fett gedruckt.',
-						'inverted': false,
-						'link': 'https://wahlbilanz.de',
-						'short': 'example',
-						'subtext': 'Über einen Link kannst du mehr zu einer Abstimmung erfahren:',
-            'moreInfos': [
-                {
-                    'text': 'Hier gibt es ge­ge­be­nen­falls weitere Information und Links, wie zum Beispiel:',
-                    'link': ''
-                },
-                {
-                    'text': 'Blauwal von oben gesehen',
-                    'link': 'https://de.wikipedia.org/wiki/Datei:Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg'
-                },
-                {
-                    'text': 'Methanhydrat',
-                    'link': 'https://de.wikipedia.org/wiki/Methanhydrat'
-                },
-            ],
-					}
-				}
-			};
-			//this.actualQuestions = ['example-1'];
-			this.progress = this.toPercent (0);
-			
 		} else { // otherwise show question n
-			this.router.navigate(['bundestagswal2017', this.app.questionIndex[this.routeId]], {replaceUrl:true});
-			this.app.overwriteTitle('Quiz zur Bundestagswahl 2017');
+			this.router.navigate(['europawal2019', this.app.questionIndex[this.routeId]], {replaceUrl:true});
+			this.app.overwriteTitle('Quiz zur Europawahl 2019');
 			this.resultsVisible = false;
 			this.progress = this.toPercent (n / (this.questionData.length + 1));
 			//this.question = this.questionData[this.app.questionIndex[this.routeId]];
@@ -402,7 +351,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	nextQuestion(n) {
 		let next = this.app.questionIndex[this.routeId] + n;
 		//this.location.go('quiz/' + next);
-		this.router.navigate(['bundestagswal2017', next]);
+		this.router.navigate(['europawal2019', next]);
 		//console.log ("setting location to " + 'quiz/' + next);
 		this.showQuestion(next); // die entsprechende URL im adressfeld anzeigen und auf history-stack pushen
 	}
@@ -426,9 +375,9 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	showResults() {
 		//console.log ("showing results");
 //		this.location.go('quiz/auswertung') // change URL
-		this.router.navigate(['bundestagswal2017', 'auswertung'], {replaceUrl:true});
+		this.router.navigate(['europawal2019', 'auswertung'], {replaceUrl:true});
 		window.scrollTo(0,0);
-		this.app.questionIndex[this.routeId] = this.questionData.length + 1;
+		this.app.questionIndex = this.questionData.length + 1;
 		this.progress = this.toPercent (1);
 		this.app.overwriteTitle("Auswertung");
 

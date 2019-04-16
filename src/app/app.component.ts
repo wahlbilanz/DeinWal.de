@@ -10,7 +10,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class AppComponent {
 	
-	questionIndex = 0;
+	questionIndex = {};
   currentQuiz = "";
   
   // setup route-listener to update title of the page 
