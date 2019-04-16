@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { QuestiondataService } from '../questiondata.service';
 import { AppComponent } from '../app.component';
 
 @Component({
@@ -9,12 +8,11 @@ import { AppComponent } from '../app.component';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private qserv: QuestiondataService, private app: AppComponent) {
-		this.qserv.getData ().subscribe((data) => { this.app.log('preloaded votes.json from home component :)'); });
+  constructor(private app: AppComponent) {
 	}
 	
-	getQuestionIndex () {
-		return this.app.questionIndex;
+	getQuestionIndex (route) {
+		return this.app.questionIndex[route];
 	}
 
   ngOnInit() {

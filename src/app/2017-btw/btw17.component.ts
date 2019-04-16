@@ -317,7 +317,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 //		console.log (this.questionData);
 
 		// if n is bigger than the number of questions -> show results
-		if (this.app.questionIndex[this.routeId] > this.questionData.length && this.questionData.length > 0) {
+		if (this.app.questionIndex[this.routeId] >= this.questionData.length && this.questionData.length > 0) {
 			//this.location.replaceState ('quiz/auswertung'); // change URL
 			this.router.navigate(['bundestagswal2017', 'auswertung'], {replaceUrl:true});
 			//console.log ("setting location to " + 'quiz/auswertung');
@@ -385,7 +385,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 			this.router.navigate(['bundestagswal2017', this.app.questionIndex[this.routeId]], {replaceUrl:true});
 			this.app.overwriteTitle('Quiz zur Bundestagswahl 2017');
 			this.resultsVisible = false;
-			this.progress = this.toPercent (n / (this.questionData.length + 1));
+			this.progress = this.toPercent (n / (this.questionData.length));
 			//this.question = this.questionData[this.app.questionIndex[this.routeId]];
 			//console.log ("question title " + this.question["titel"]);
 			// get sub-questions

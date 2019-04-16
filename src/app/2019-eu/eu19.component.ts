@@ -201,7 +201,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 					this.updatedQuestions = true;
 				} catch (e) {
 					// unexpected votes format?
-					console.log('could not parse votes.json', e);
+					this.app.log('could not parse votes.json', e);
 					// show error
 					this.alertSlide = {
 						'titel': 'Es ist ein Fehler aufgetreten!',
@@ -218,7 +218,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 				}
 				this.alert = false;
 				
-      console.log (this.questionData)
+      this.app.log (this.questionData)
 			},
 			err => {
 				this.alertSlide = {
@@ -273,7 +273,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 	 * print answers in console
 	 */
 	debugAnswers() {
-		console.log(this.answers);
+		this.app.log(this.answers);
 	}
 
 	/**
@@ -301,7 +301,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 		this.app.currentQuiz = this.routeId;
     
     
-		//console.log ("showing question " + n);
+		//this.app.log ("showing question " + n);
 		this.app.questionIndex[this.routeId] = n;
 		window.scrollTo(0,0);
 		
@@ -315,16 +315,16 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			this.app.questionIndex[this.routeId] = 0;
 		}
 		
-		console.log ("show question:");
-		console.log (this.app.questionIndex[this.routeId]);
-		console.log (this.questionData.length);
-//		console.log (this.questionData);
+		this.app.log ("show question:");
+		this.app.log (this.app.questionIndex[this.routeId]);
+		this.app.log (this.questionData.length);
+//		this.app.log (this.questionData);
 
 		// if n is bigger than the number of questions -> show results
-		if (this.app.questionIndex[this.routeId] > this.questionData.length && this.questionData.length > 0) {
+		if (this.app.questionIndex[this.routeId] >= this.questionData.length && this.questionData.length > 0) {
 			//this.location.replaceState ('quiz/auswertung'); // change URL
 			this.router.navigate(['europawal2019', 'auswertung'], {replaceUrl:true});
-			//console.log ("setting location to " + 'quiz/auswertung');
+			//this.app.log ("setting location to " + 'quiz/auswertung');
 			this.showResults();
 		} else if (this.questionData.length == 0) {
 			this.resultsVisible = false;
@@ -334,12 +334,12 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			this.router.navigate(['europawal2019', this.app.questionIndex[this.routeId]], {replaceUrl:true});
 			this.app.overwriteTitle('Quiz zur Europawahl 2019');
 			this.resultsVisible = false;
-			this.progress = this.toPercent (n / (this.questionData.length + 1));
+			this.progress = this.toPercent (n / (this.questionData.length));
 			//this.question = this.questionData[this.app.questionIndex[this.routeId]];
-			//console.log ("question title " + this.question["titel"]);
+			//this.app.log ("question title " + this.question["titel"]);
 			// get sub-questions
 			//this.actualQuestions = Object.keys(this.question['fragen']);
-			//console.log (this.question);
+			//this.app.log (this.question);
 		}
 	}
 
@@ -352,7 +352,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 		let next = this.app.questionIndex[this.routeId] + n;
 		//this.location.go('quiz/' + next);
 		this.router.navigate(['europawal2019', next]);
-		//console.log ("setting location to " + 'quiz/' + next);
+		//this.app.log ("setting location to " + 'quiz/' + next);
 		this.showQuestion(next); // die entsprechende URL im adressfeld anzeigen und auf history-stack pushen
 	}
 
@@ -373,7 +373,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 	 * auswertungstabelle generieren und anzeigen
 	 */
 	showResults() {
-		//console.log ("showing results");
+		//this.app.log ("showing results");
 //		this.location.go('quiz/auswertung') // change URL
 		this.router.navigate(['europawal2019', 'auswertung'], {replaceUrl:true});
 		window.scrollTo(0,0);
@@ -396,7 +396,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 						const opt = this.voteOptions;
 						const answer = opt[this.answers[f]];
 						const results = this.questionResults[f];
-						//console.log (f, this.questionResults[f]);
+						//this.app.log (f, this.questionResults[f]);
 						nAnswered++;
 						for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
 							if (!this.overallResult['consent'][partyName]) {
@@ -418,7 +418,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 						}
 					}
 				}
-				//console.log (f, q['fragen'][f]['score']);
+				//this.app.log (f, q['fragen'][f]['score']);
 			}
 		}
 		
