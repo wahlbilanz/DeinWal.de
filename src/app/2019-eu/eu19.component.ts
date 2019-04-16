@@ -300,8 +300,6 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
     
 		this.app.currentQuiz = this.routeId;
     
-    
-		//this.app.log ("showing question " + n);
 		this.app.questionIndex[this.routeId] = n;
 		window.scrollTo(0,0);
 		
@@ -315,9 +313,9 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			this.app.questionIndex[this.routeId] = 0;
 		}
 		
-		this.app.log ("show question:");
-		this.app.log (this.app.questionIndex[this.routeId]);
-		this.app.log (this.questionData.length);
+//		this.app.log ("show question:");
+//		this.app.log (this.app.questionIndex[this.routeId]);
+//		this.app.log (this.questionData.length);
 //		this.app.log (this.questionData);
 
 		// if n is bigger than the number of questions -> show results
@@ -377,7 +375,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 //		this.location.go('quiz/auswertung') // change URL
 		this.router.navigate(['europawal2019', 'auswertung'], {replaceUrl:true});
 		window.scrollTo(0,0);
-		this.app.questionIndex = this.questionData.length + 1;
+		this.app.questionIndex[this.routeId] = this.questionData.length + 1;
 		this.progress = this.toPercent (1);
 		this.app.overwriteTitle("Auswertung");
 
