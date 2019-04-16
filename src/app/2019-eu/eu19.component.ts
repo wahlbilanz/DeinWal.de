@@ -40,7 +40,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 	/** text fuer den speichern tooltip */
 	speichernTooltip = 'Speichere deine Eingaben lokal in deinem Browser.';
 	/** possible parties */
-	parties = ['gruenen', 'cdu/csu', 'die.linke', 'spd'];
+	parties = [];
 	/** sequence of parties in auswertung */
 	partypriority;
 	/** are those already up-to-date questions? */
@@ -82,7 +82,6 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
       this.app.questionIndex[this.routeId] = 0;
 		this.alert = true;
 		this.checkSave ();
-		this.partypriority = this.parties;
 		this.simpleDetails = {};
 		
 		this.touchDevice = false;
@@ -130,6 +129,16 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 				try {
 					this.questionData = data.quiz;
 					this.questionResults = data.results;
+          
+          for (const r in this.questionResults) {
+            for (const p in this.questionResults[r]) {
+              if (p == "individual")
+                continue;
+              if (!this.parties.hasOwnProperty (p))
+                this.parties.push(p);
+            }
+            break;
+          }
 					
 					for (const q of this.questionData) {
 						if (q.intro)
@@ -218,7 +227,9 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 				}
 				this.alert = false;
 				
-      this.app.log (this.questionData)
+      //this.app.log (this.questionData)
+      this.app.log (this.parties);
+		this.partypriority = this.parties;
 			},
 			err => {
 				this.alertSlide = {
@@ -379,8 +390,16 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 		this.progress = this.toPercent (1);
 		this.app.overwriteTitle("Auswertung");
 
-		this.overallResult = { 'gruenen': '-', 'cdu/csu': '-', 'die.linke': '-', 'spd': '-', 'consent': {} };
-		const nzustimmung = { 'gruenen': 0.0, 'cdu/csu': 0.0, 'die.linke': 0.0, 'spd': 0.0 };
+		//this.overallResult = { 'gruenen': '-', 'cdu/csu': '-', 'die.linke': '-', 'spd': '-', 'consent': {} };
+		//const nzustimmung = { 'gruenen': 0.0, 'cdu/csu': 0.0, 'die.linke': 0.0, 'spd': 0.0 };
+    this.overallResult = {};
+    const nzustimmung = {};
+    
+    for (const p in this.parties) {
+      this.overallResult[p] = '-';
+      nzustimmung[p] = 0.0;
+    }
+    
 		let nAnswered = 0;
 
 		for (const q of this.questionData) {
@@ -396,7 +415,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 						const results = this.questionResults[f];
 						//this.app.log (f, this.questionResults[f]);
 						nAnswered++;
-						for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
+						for (const partyName of this.parties) {
 							if (!this.overallResult['consent'][partyName]) {
 								this.overallResult['consent'][partyName] = 0;
 							}
@@ -411,7 +430,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 							}
 						}
 					} else {
-						for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
+						for (const partyName of this.parties) {
 							q['fragen'][f][partyName] = '-';
 						}
 					}
@@ -423,10 +442,14 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 		this.shareText = "Mit #DeinWal kannst du prüfen, welche Partei wie du denkt!";
 		
 		if (nAnswered > 0) {
-			this.overallResult['spd'] = this.toPercent(nzustimmung['spd'] / nAnswered);
+      for (const partyName of this.parties) {
+        this.overallResult[partyName] = this.toPercent(nzustimmung[partyName] / nAnswered);
+      }
+      
+			/*this.overallResult['spd'] = this.toPercent(nzustimmung['spd'] / nAnswered);
 			this.overallResult['gruenen'] = this.toPercent(nzustimmung['gruenen'] / nAnswered);
 			this.overallResult['die.linke'] = this.toPercent(nzustimmung['die.linke'] / nAnswered);
-			this.overallResult['cdu/csu'] = this.toPercent(nzustimmung['cdu/csu'] / nAnswered);
+			this.overallResult['cdu/csu'] = this.toPercent(nzustimmung['cdu/csu'] / nAnswered);*/
 			
 			// set party priority
 			for (let i = 0; i < this.partypriority.length; i++) {
@@ -504,45 +527,108 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 
 	getProperPartyName (nonproper) {
 		switch(nonproper) {
-			case "gruenen":
+			case "GRUENE":
 				return "Bündnis 90/Die Grünen";
-			case "cdu/csu":
+			case "CDU/CSU":
 				return "CDU/CSU";
-			case "die.linke":
+			case "LINKE":
 				return "Die Linke";
-			case "spd":
+			case "SPD":
 				return "SPD";
+			case "FDP":
+				return "FDP";
+			case "OEDP":
+				return "&Ouml;DP";
+			case "BUENDNISC":
+				return "B&uml;ndnis C";
+			case "ALFA":
+				return "Alfa";
+			case "DIEPARTEI":
+				return "Die Partei";
+			case "AFD":
+				return "AfD";
+			case "NPD":
+				return "NPD";
+			case "BLAUE":
+				return "Blaue";
+			case "FREIEWAEHLER":
+				return "Freie W&auml;hler";
+			case "PIRATEN":
+				return "Piraten";
 			default:
+      this.app.log ("do not know party " + name);
 					return "unknown";
 		}
 	}
 	
 	getPartyLogo (name) {
 		switch(name) {
-			case "gruenen":
+			case "GRUENE":
 				return "diegruenen.png";
-			case "cdu/csu":
+			case "CDU/CSU":
 				return "cducsu.png";
-			case "die.linke":
+			case "LINKE":
 				return "dielinke.png";
-			case "spd":
+			case "SPD":
 				return "spd.png";
+			case "FDP":
+				return "fpd.png";
+			case "OEDP":
+				return "&Ouml;DP";
+			case "BUENDNISC":
+				return "B&uml;ndnis C";
+			case "ALFA":
+				return "Alfa";
+			case "DIEPARTEI":
+				return "Die Partei";
+			case "AFD":
+				return "AfD";
+			case "NPD":
+				return "NPD";
+			case "BLAUE":
+				return "Blaue";
+			case "FREIEWAEHLER":
+				return "Freie W&auml;hler";
+			case "PIRATEN":
+				return "Piraten";
 			default:
+      this.app.log ("do not know party " + name);
 					return "unknown.png";
 		}
 	}
 	
 	getPartyClass (name) {
 		switch(name) {
-			case "gruenen":
+			case "GRUENE":
 				return "diegruenen";
-			case "cdu/csu":
+			case "CDU/CSU":
 				return "cducsu";
-			case "die.linke":
+			case "LINKE":
 				return "dielinke";
-			case "spd":
+			case "SPD":
 				return "spd";
+			case "FDP":
+				return "fpd";
+			case "OEDP":
+				return "oedp";
+			case "BUENDNISC":
+				return "buendnisc";
+			case "ALFA":
+				return "alfa";
+			case "DIEPARTEI":
+				return "diepartei";
+			case "AFD":
+				return "afd";
+			case "NPD":
+				return "npd";
+			case "BLAUE":
+				return "blaue";
+			case "FREIEWAEHLER":
+				return "freiewaehler";
+			case "PIRATEN":
+				return "piraten";
 			default:
+      this.app.log ("do not know party " + name);
 					return "unknown";
 		}
 	}

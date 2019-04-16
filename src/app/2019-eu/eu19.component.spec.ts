@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BundestagsWal2017 } from './btw17.component';
+import { EuropaWal2019 } from './eu19.component';
 
-describe('BundestagsWal2017', () => {
-  let component: BundestagsWal2017;
-  let fixture: ComponentFixture<BundestagsWal2017>;
+describe('EuropaWal2019', () => {
+  let component: EuropaWal2019;
+  let fixture: ComponentFixture<EuropaWal2019>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BundestagsWal2017 ]
+      declarations: [ EuropaWal2019 ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BundestagsWal2017);
+    fixture = TestBed.createComponent(EuropaWal2019);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
