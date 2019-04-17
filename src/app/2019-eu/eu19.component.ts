@@ -80,6 +80,8 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			) {
 		if (!this.app.questionIndex.hasOwnProperty(this.routeId))
       this.app.questionIndex[this.routeId] = 0;
+		this.parties = [];
+		this.partypriority = this.parties;
 		this.alert = true;
 		this.checkSave ();
 		this.simpleDetails = {};
@@ -392,7 +394,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 
 		//this.overallResult = { 'gruenen': '-', 'cdu/csu': '-', 'die.linke': '-', 'spd': '-', 'consent': {} };
 		//const nzustimmung = { 'gruenen': 0.0, 'cdu/csu': 0.0, 'die.linke': 0.0, 'spd': 0.0 };
-    this.overallResult = {};
+    this.overallResult = {'consent': {}};
     const nzustimmung = {};
     
     for (const p in this.parties) {
@@ -419,6 +421,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 							if (!this.overallResult['consent'][partyName]) {
 								this.overallResult['consent'][partyName] = 0;
 							}
+              //console.log (results[partyName], answer)
 							const tempPunkte = this.getZustimmungsPunkte(results[partyName], answer);
 							q['fragen'][f][partyName] = this.toPercent(tempPunkte.punkteRelativ);
 							q['fragen'][f]['score'][partyName] = tempPunkte.scoreDescription;
@@ -538,21 +541,21 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			case "FDP":
 				return "FDP";
 			case "OEDP":
-				return "&Ouml;DP";
+				return "ÖDP";
 			case "BUENDNISC":
-				return "B&uml;ndnis C";
+				return "Bündnis C";
 			case "ALFA":
-				return "Alfa";
+				return "ALFA";
 			case "DIEPARTEI":
-				return "Die Partei";
+				return "Die PARTEI";
 			case "AFD":
 				return "AfD";
 			case "NPD":
 				return "NPD";
 			case "BLAUE":
-				return "Blaue";
+				return "Die Blauen";
 			case "FREIEWAEHLER":
-				return "Freie W&auml;hler";
+				return "Freie Wähler";
 			case "PIRATEN":
 				return "Piraten";
 			default:
@@ -572,25 +575,25 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			case "SPD":
 				return "spd.png";
 			case "FDP":
-				return "fpd.png";
+				return "fdp.png";
 			case "OEDP":
-				return "&Ouml;DP";
+				return "oedp.png";
 			case "BUENDNISC":
-				return "B&uml;ndnis C";
+				return "buendnisc.png";
 			case "ALFA":
-				return "Alfa";
+				return "alfa.png";
 			case "DIEPARTEI":
-				return "Die Partei";
+				return "diepartei.png";
 			case "AFD":
-				return "AfD";
+				return "afd.png";
 			case "NPD":
-				return "NPD";
+				return "npd.png";
 			case "BLAUE":
-				return "Blaue";
+				return "blaue.png";
 			case "FREIEWAEHLER":
-				return "Freie W&auml;hler";
+				return "freiewaehler.png";
 			case "PIRATEN":
-				return "Piraten";
+				return "piraten.png";
 			default:
       this.app.log ("do not know party " + name);
 					return "unknown.png";
