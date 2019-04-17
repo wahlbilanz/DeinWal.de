@@ -167,9 +167,9 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 								if (q['fragen'][f]["invert"]) {
 									let curResults = this.questionResults[f];
 									for (const party of this.parties) {
-										let tmp = curResults[party]['ja'];
-										curResults[party]['ja'] = curResults[party]['nein'];
-										curResults[party]['nein'] = tmp;
+										let tmp = curResults[party][this.voteOptions[1]];
+										curResults[party][this.voteOptions[1]] = curResults[party][this.voteOptions[2]];
+										curResults[party][this.voteOptions[2]] = tmp;
 									}
 									this.questionResults[f] = curResults;
 								}
@@ -186,10 +186,10 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 									}
 								}
 
-								if (this.questionResults[f]['gesamtja'] > this.questionResults[f]['gesamtnein']) {
-									this.questionResults[f]['gesamt'] = "Vom Parlament <strong>angenommen mit " + this.questionResults[f]['gesamtja'] + " Ja-Stimmen</strong> bei " + this.questionResults[f]['gesamtnein'] + " Nein-Stimmen und " + this.questionResults[f]['gesamtenthaltung'] + " Enthaltungen";
+								if (this.questionResults[f]['gesamt' + this.voteOptions[1]] > this.questionResults[f]['gesamt' + this.voteOptions[2]]) {
+									this.questionResults[f]['gesamt'] = "Vom Parlament <strong>angenommen mit " + this.questionResults[f]['gesamt' + this.voteOptions[1]] + " Ja-Stimmen</strong> bei " + this.questionResults[f]['gesamt' + this.voteOptions[2]] + " Nein-Stimmen und " + this.questionResults[f]['gesamt' + this.voteOptions[0]] + " Enthaltungen";
 								} else {
-									this.questionResults[f]['gesamt'] = "Vom Parlament <strong>abgelehnt mit " + this.questionResults[f]['gesamtnein'] + " Nein-Stimmen</strong> bei " + this.questionResults[f]['gesamtja'] + " Ja-Stimmen und " + this.questionResults[f]['gesamtenthaltung'] + " Enthaltungen";
+									this.questionResults[f]['gesamt'] = "Vom Parlament <strong>abgelehnt mit " + this.questionResults[f]['gesamt' + this.voteOptions[2]] + " Nein-Stimmen</strong> bei " + this.questionResults[f]['gesamt' + this.voteOptions[1]] + " Ja-Stimmen und " + this.questionResults[f]['gesamt' + this.voteOptions[0]] + " Enthaltungen";
 								}
 								
 							}
@@ -482,6 +482,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			this.shareText += " -- sagt #DeinWal";
 		}
     
+    // group consent parties and collect the consent keys
     for (const p in this.overallResult.consent) {
       if (!this.overallResult.groupedConsent.hasOwnProperty (this.overallResult.consent[p])) {
         this.overallResult.groupedConsent[this.overallResult.consent[p]] = [];
@@ -489,6 +490,8 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
       }
       this.overallResult.groupedConsent[this.overallResult.consent[p]].push (p);
     }
+    
+    // sort consent groups according to
 		
 		this.shareText = encodeURIComponent (this.shareText);
 		this.resultsVisible = true;
@@ -515,17 +518,17 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			punkte = partyResults[opt[0]] + 0.5 * partyResults[opt[1]] + 0.5 * partyResults[opt[2]];
 			description = "(1/2 · Ja + 1/2 · Nein + Enthaltung) / Gesamt = ("
 				+ 0.5 * partyResults[opt[1]] + " + " + 0.5 * partyResults[opt[2]] + " + " + partyResults[opt[0]] + ") / " + nAbgegebeneStimmen
-				+ " = " + this.toPercent (punkte / nAbgegebeneStimmen);
+				+ " = ";
 		} else if (answer === 'dafuer') { // ja
 			punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[1]];
 			description = "(Ja + 1/2 · Enthaltung) / Gesamt = ("
 				+ partyResults[opt[1]] + " + " + 0.5 * partyResults[opt[0]] + ") / " + nAbgegebeneStimmen
-				+ " = " + this.toPercent (punkte / nAbgegebeneStimmen);
+				+ " = ";
 		} else if (answer === 'dagegen') { // nein
 			punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[2]];
 			description = "(Nein + 1/2 · Enthaltung) / Gesamt = ("
 				+ partyResults[opt[2]] + " + " + 0.5 * partyResults[opt[0]] + ") / " + nAbgegebeneStimmen
-				+ " = " + this.toPercent (punkte / nAbgegebeneStimmen);
+				+ " = ";
 		} else {
 			// wenn der Benutzer gar keine Antwort ausgewaehlt hat
 			// sowol punkte als auch nAbgegebeneStimmen auf 0 setzen, damit sie nicht ins gesamtergebnis reinzaehlen:

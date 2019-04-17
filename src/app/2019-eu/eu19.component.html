@@ -202,13 +202,15 @@
       
       <!-- complex table -->
       <div id="complextable" class="w3-responsive w3-margin optional-margin" *ngIf="showComplexTable">
+        Die komplexe Tabelle zeigt die auf einen Blick, wie die Abstimmungsergebnisse der sieben &auml;hnlichsten Parteien in den einzelnen Themengebieten mit deinen Antworten &uuml;bereinstimmen.
+        Klapp' die Details auf, um auch die konkreten Ergebnisse der anderen Parteien zu sehen.
 	<table id="auswertungstabelle" class="w3-table w3-bordered w3-hoverable">
 	  <thead class="w3-dark-grey">
 	    <tr>
 	      <th class="w3-left-align">Abstimmung</th>
 	      <th class="w3-center">Deine Antwort</th>
 	      
-	      <th class="w3-center" colspan="16">Übereinstimmung mit den Parteien</th>
+	      <th class="w3-center" colspan="7">Übereinstimmung mit den Parteien</th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -220,10 +222,12 @@
 		    {{quest.titel}}<button class="w3-button w3-grey w3-left-align" (click)="showQuestion(i)"><small><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ändern</small></button>
 		  </th>
 		  
-		  <ng-container *ngFor="let party of partypriority">
-		    <th class="w3-grey w3-right-align">
-		      <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
-		    </th>
+		  <ng-container *ngFor="let party of partypriority; let i = index">
+          <ng-container *ngIf="i < 7">
+            <th class="w3-grey w3-right-align">
+              <img class="complex-logo-head" src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+            </th>
+		    </ng-container>
 		  </ng-container>
 		</tr>
 		
@@ -237,17 +241,19 @@
 		    </td>
 		    <td class="w3-center" [class.w3-green]="answers[q]==1" [class.w3-red]="answers[q]==2" [class.w3-blue]="answers[q]==0">{{getVoteOption(answers[q])}}</td>
 		    
-		    <ng-container *ngFor="let party of partypriority">
-		      <td class="w3-right-align w3-tooltip">
-			{{quest.fragen[q][party]}}
-		      </td>
+		    <ng-container *ngFor="let party of partypriority; let i = index">
+          <ng-container *ngIf="i < 7">
+            <td class="w3-right-align w3-tooltip">
+              {{quest.fragen[q][party]}}
+            </td>
+		    </ng-container>
 		    </ng-container>
 		    
 		  </tr>
 		  
 		  <!-- show details for this question? -->
 		  <tr class="auswertung-detail" id="auswertung-complex-detail-{{q}}" *ngIf="complexDetails[q]">
-		    <td class="w3-left-align w3-border-black w3-leftbar w3-light-grey" colspan="18">
+		    <td class="w3-left-align w3-border-black w3-leftbar w3-light-grey" colspan="9">
 		      <div class="w3-margin-bottom">
 			<span class="q-context" [innerHTML]="quest.fragen[q].context"></span>
 			<strong class="q-question" [innerHTML]="quest.fragen[q].frage"></strong>
@@ -260,7 +266,7 @@
 			<ng-container *ngFor="let party of partypriority">
 			  <tr [ngClass]="{'opaqueresult': questionResults[q][party].relevant < 1}">
 			    <td class="partyDetailsImage">
-			      <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis der {{getProperPartyName (party)}}: {{questionResults[q][party].ja}} Ja-Stimmen, {{questionResults[q][party].nein}} Nein-Stimmen, {{questionResults[q][party].enthaltung}} Enthaltungen">
+			      <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis {{getProperPartyName (party)}}: {{questionResults[q][party].dafuer}} Ja-Stimmen, {{questionResults[q][party].dagegen}} Nein-Stimmen, {{questionResults[q][party].enthalten}} Enthaltungen">
 			    </td>
 			    <td class="partyDetailsBar">
         <div *ngIf="questionResults[q][party].relevant > 0">
@@ -268,9 +274,9 @@
 				<div class="stackedbarbar w3-green" [style.width.%]="questionResults[q][party].dafuer * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
 				<div class="stackedbarbar w3-red" [style.width.%]="questionResults[q][party].dagegen * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
 				<div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthalten * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
-			      </div><br>
-			      Ja: {{questionResults[q][party].ja}} &mdash; Nein: {{questionResults[q][party].nein}} &mdash; Enthaltung: {{questionResults[q][party].enthaltung}}<br>
-			      Score: {{quest.fragen[q]["score"][party]}}<br>
+			      </div>
+			      Ja: {{questionResults[q][party].dafuer}} &mdash; Nein: {{questionResults[q][party].dagegen}} &mdash; Enthaltung: {{questionResults[q][party].enthalten}}<br>
+			      Score: {{quest.fragen[q]["score"][party]}} <strong>{{quest.fragen[q][party]}} wie du</strong><br>
             </div>
         <span *ngIf="questionResults[q][party].relevant == 0">nicht beteiligt</span>
 			    </td>
@@ -287,17 +293,21 @@
 	    <!-- summary at the bottom of complex table -->
 	    <tr class="auswertung-abschnitt">
 	      <th colspan="2" class="w3-grey w3-left-align">Gesamt</th>
-	      <ng-container *ngFor="let party of partypriority">
-		<th class="w3-grey w3-right-align"><img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}"></th>
-	      </ng-container>
+		    <ng-container *ngFor="let party of partypriority; let i = index">
+          <ng-container *ngIf="i < 7">
+            <th class="w3-grey w3-right-align"><img class="complex-logo-head" src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}"></th>
+          </ng-container>
+        </ng-container>
 	    </tr>
 	    
 	    <tr class="auswertung-zeile">
 	      <th class="w3-left-align">Gesamtergebnis:</th>
 	      <td class="w3-center"></td>
 	      
-	      <ng-container *ngFor="let party of partypriority">
-		<th class="w3-right-align">{{overallResult[party]}}</th>
+		    <ng-container *ngFor="let party of partypriority; let i = index">
+          <ng-container *ngIf="i < 7">
+            <th class="w3-right-align">{{overallResult[party]}}</th>
+          </ng-container>
 	      </ng-container>
 	    </tr>
 	  </tbody>
@@ -363,7 +373,7 @@
 		      <ng-container *ngFor="let party of partypriority">
 		      <tr [ngClass]="{'opaqueresult': questionResults[q][party].relevant < 1}">
 			<td class="partyDetailsImage">
-			  <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis der {{getProperPartyName (party)}}: {{questionResults[q][party].ja * 100 / questionResults[q][party].relevant}} Ja-Stimmen, {{questionResults[q][party].nein * 100 / questionResults[q][party].relevant}} Nein-Stimmen, {{questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant}} Enthaltungen">
+			  <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis {{getProperPartyName (party)}}: {{questionResults[q][party].dafuer}} Ja-Stimmen, {{questionResults[q][party].dagegen}} Nein-Stimmen, {{questionResults[q][party].enthalten}} Enthaltungen">
 			</td>
 			<td class="partyDetailsBar">
 			  <div class="stackedbar" *ngIf="questionResults[q][party].relevant > 0">
@@ -382,30 +392,32 @@
 	      </ng-container>
 	    </ng-container>
 	  </ng-container>
+	</tbody>
 	  
 	  
 	  <!-- summary of the simple table -->
-	  <tr class="auswertung-abschnitt">
-	    <th colspan="2" class="w3-grey optional-center">Gesamtergebnis</th>
-	  </tr>
-	  
-	  <tr class="w3-left-align auswertung-zeile">
-	    <th colspan="2" class="optional-center">
-        <ng-container *ngFor="let num of overallResult.groupedConsentKeys">
-          <div>
-          {{num}} &Uuml;bereinstimmung<ng-container *ngIf="num != 1">en</ng-container> mit:
-          </div>
-          <div>
-            <ng-container *ngFor="let party of partypriority">
-              <ng-container *ngIf="overallResult.groupedConsent[num].indexOf (party) > -1">
-                <img class='optional-margin partylogolist' src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}"> 
+    <tfoot>
+      <tr class="auswertung-abschnitt">
+        <th colspan="2" class="w3-grey optional-center">Gesamtergebnis</th>
+      </tr>
+      
+      <tr class="w3-left-align auswertung-zeile">
+        <th colspan="2" class="optional-center">
+          <ng-container *ngFor="let num of overallResult.groupedConsentKeys">
+            <div>
+            {{num}} &Uuml;bereinstimmung<ng-container *ngIf="num != 1">en</ng-container> mit:
+            </div>
+            <div>
+              <ng-container *ngFor="let party of partypriority">
+                <ng-container *ngIf="overallResult.groupedConsent[num].indexOf (party) > -1">
+                  <img class='optional-margin partylogolist' src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}"> 
+                </ng-container>
               </ng-container>
-            </ng-container>
-          </div>
-	      </ng-container>
-	    </th>
-	  </tr>
-	</tbody>
+            </div>
+          </ng-container>
+        </th>
+      </tr>
+    </tfoot>
       </table>
     </div>
     
