@@ -1,0 +1,182 @@
+{ 
+    "quiz": [
+            {
+              "intro": true,
+                "topic": [
+                    "deinwal"
+                ],
+            "titel": "Gleich geht's los!",
+            "beschreibung": "you'd never see this.",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+              "example": {
+                "context": "Eine Frage hat manchmal ein bisschen Kontext.",
+                "frage": "Die eigentliche Frage ist aber immer fett gedruckt.",
+                "inverted": false,
+                "link": "https://wahlbilanz.de",
+                "short": "example",
+                "subtext": "Über einen Link kannst du mehr zu einer Abstimmung erfahren:",
+                "moreInfos": [
+                    {
+                        "text": "Hier gibt es ge­ge­be­nen­falls weitere Information und Links, wie zum Beispiel:",
+                        "link": ""
+                    },
+                    {
+                        "text": "Blauwal von oben gesehen",
+                        "link": "https://de.wikipedia.org/wiki/Datei:Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg"
+                    },
+                    {
+                        "text": "Methanhydrat",
+                        "link": "https://de.wikipedia.org/wiki/Methanhydrat"
+                    }
+                ]
+              }
+            }
+        },
+        {
+            "titel": "Finanzen",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "2436eb70-9eb4-4cb6-999f-b6d2ad59782e": {
+                    "context": "Der europäische Struktur- und Investitionsfonds soll die Wirtschaft in den Jahren 2015 bis 2017 mit 315 Milliarden Euro foerdern. Insbesondere sollen Infrastrukturprojekte wie Straßen und Brücken, aber auch kleine und mittlere Unternehmen gefördert werden.",
+                    "frage": "Stimmst du der Einrichtung eines europäischen Struktur- und Investitionsfonds zu?",
+                    "short": "Europ. Struktur- und Investitionsfonds",
+                    "subtext": "",
+                    "moreInfos": [
+                    ],
+                    "invert": false
+                }
+            }
+        },
+        {
+            "titel": "Finanzen",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "2436eb70-9eb4-4cb6-999f-b6d2ad59782e": {
+                    "context": "Der europäische Struktur- und Investitionsfonds soll die Wirtschaft in den Jahren 2015 bis 2017 mit 315 Milliarden Euro foerdern. Insbesondere sollen Infrastrukturprojekte wie Straßen und Brücken, aber auch kleine und mittlere Unternehmen gefördert werden.",
+                    "frage": "Stimmst du der Einrichtung eines europäischen Struktur- und Investitionsfonds zu?",
+                    "short": "Europ. Struktur- und Investitionsfonds",
+                    "subtext": "",
+                    "moreInfos": [
+                    ],
+                    "invert": false
+                }
+            }
+        }
+    ],
+    "results": {  
+        "2436eb70-9eb4-4cb6-999f-b6d2ad59782e": {
+    "GRUENE": {
+      "dafuer": 6, 
+      "enthalten": 1, 
+      "gesamt": 11, 
+      "dagegen": 1, 
+      "abwesend": 3
+    }, 
+    "OEDP": {
+      "dafuer": 1, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 0, 
+      "abwesend": 0
+    }, 
+    "BUENDNISC": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 0, 
+      "abwesend": 1
+    }, 
+    "ALFA": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 5, 
+      "dagegen": 4, 
+      "abwesend": 1
+    }, 
+    "DIEPARTEI": {
+      "dafuer": 1, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 0, 
+      "abwesend": 0
+    }, 
+    "AFD": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 0, 
+      "abwesend": 1
+    }, 
+    "NPD": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 0, 
+      "abwesend": 1
+    }, 
+    "BLAUE": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 1, 
+      "abwesend": 0
+    }, 
+    "LINKE": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 7, 
+      "dagegen": 5, 
+      "abwesend": 2
+    }, 
+    "FDP": {
+      "dafuer": 2, 
+      "enthalten": 0, 
+      "gesamt": 3, 
+      "dagegen": 0, 
+      "abwesend": 1
+    }, 
+    "CDU/CSU": {
+      "dafuer": 31, 
+      "enthalten": 0, 
+      "gesamt": 34, 
+      "dagegen": 0, 
+      "abwesend": 3
+    }, 
+    "individual": {
+      "dafuer": 1, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 0, 
+      "abwesend": 0
+    }, 
+    "FREIEWAEHLER": {
+      "dafuer": 1, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 0, 
+      "abwesend": 0
+    }, 
+    "PIRATEN": {
+      "dafuer": 1, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 0, 
+      "abwesend": 0
+    }, 
+    "SPD": {
+      "dafuer": 24, 
+      "enthalten": 1, 
+      "gesamt": 27, 
+      "dagegen": 0, 
+      "abwesend": 2
+    }
+
+        }
+    }
+}

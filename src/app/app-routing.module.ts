@@ -1,5 +1,6 @@
 import { FaqComponent } from './faq/faq.component';
 import { BundestagsWal2017 } from './2017-btw/btw17.component';
+import { EuropaWal2019 } from './2019-eu/eu19.component';
 import { HomeComponent } from './home/home.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { NgModule } from '@angular/core';
@@ -18,12 +19,12 @@ const routes: Routes = [
   },
   {
     path: 'europawal2019',
-    component: BundestagsWal2017,
+    component: EuropaWal2019,
     data: {title: 'Quiz zur Europawahl 2019'}
   },
   {
     path: 'europawal2019/:questionPage',
-    component: BundestagsWal2017,
+    component: EuropaWal2019,
     data: {title: 'Quiz zur Europawahl 2019'}
   },
   {

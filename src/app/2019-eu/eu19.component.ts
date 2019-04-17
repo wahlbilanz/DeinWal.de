@@ -7,12 +7,12 @@ import { AppComponent } from '../app.component';
 
 @Component({
 	selector: 'app-quiz',
-	templateUrl: './btw17.component.html',
-	styleUrls: ['./btw17.component.css']
+	templateUrl: './eu19.component.html',
+	styleUrls: ['./eu19.component.css']
 })
-export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges {
+export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges {
   
-  routeId = "bundestagswal2017";
+  routeId = "europawal2019";
   
   
 	/** is this production or debug mode?*/
@@ -40,7 +40,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	/** text fuer den speichern tooltip */
 	speichernTooltip = 'Speichere deine Eingaben lokal in deinem Browser.';
 	/** possible parties */
-	parties = ['gruenen', 'cdu/csu', 'die.linke', 'spd'];
+	parties = [];
 	/** sequence of parties in auswertung */
 	partypriority;
 	/** are those already up-to-date questions? */
@@ -80,10 +80,8 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 			) {
 		if (!this.app.questionIndex.hasOwnProperty(this.routeId))
       this.app.questionIndex[this.routeId] = 0;
-		
 		this.alert = true;
 		this.checkSave ();
-		this.partypriority = this.parties;
 		this.simpleDetails = {};
 		
 		this.touchDevice = false;
@@ -127,10 +125,20 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	
 	updateQuestions (initialCard) {
 		this.qserv.getData(this.routeId).subscribe((data) => {
-//				this.app.log('retrieved data:', data);
+				this.app.log('retrieved data:', data);
 				try {
 					this.questionData = data.quiz;
 					this.questionResults = data.results;
+          
+          for (const r in this.questionResults) {
+            for (const p in this.questionResults[r]) {
+              if (p == "individual")
+                continue;
+              if (!this.parties.hasOwnProperty (p))
+                this.parties.push(p);
+            }
+            break;
+          }
 					
 					for (const q of this.questionData) {
 						if (q.intro)
@@ -177,9 +185,9 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 								}
 
 								if (this.questionResults[f]['gesamtja'] > this.questionResults[f]['gesamtnein']) {
-									this.questionResults[f]['gesamt'] = "Vom Bundestag <strong>angenommen mit " + this.questionResults[f]['gesamtja'] + " Ja-Stimmen</strong> bei " + this.questionResults[f]['gesamtnein'] + " Nein-Stimmen und " + this.questionResults[f]['gesamtenthaltung'] + " Enthaltungen";
+									this.questionResults[f]['gesamt'] = "Vom Parlament <strong>angenommen mit " + this.questionResults[f]['gesamtja'] + " Ja-Stimmen</strong> bei " + this.questionResults[f]['gesamtnein'] + " Nein-Stimmen und " + this.questionResults[f]['gesamtenthaltung'] + " Enthaltungen";
 								} else {
-									this.questionResults[f]['gesamt'] = "Vom Bundestag <strong>abgelehnt mit " + this.questionResults[f]['gesamtnein'] + " Nein-Stimmen</strong> bei " + this.questionResults[f]['gesamtja'] + " Ja-Stimmen und " + this.questionResults[f]['gesamtenthaltung'] + " Enthaltungen";
+									this.questionResults[f]['gesamt'] = "Vom Parlament <strong>abgelehnt mit " + this.questionResults[f]['gesamtnein'] + " Nein-Stimmen</strong> bei " + this.questionResults[f]['gesamtja'] + " Ja-Stimmen und " + this.questionResults[f]['gesamtenthaltung'] + " Enthaltungen";
 								}
 								
 							}
@@ -202,7 +210,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 					this.updatedQuestions = true;
 				} catch (e) {
 					// unexpected votes format?
-					console.log('could not parse votes.json', e);
+					this.app.log('could not parse votes.json', e);
 					// show error
 					this.alertSlide = {
 						'titel': 'Es ist ein Fehler aufgetreten!',
@@ -219,6 +227,9 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 				}
 				this.alert = false;
 				
+      //this.app.log (this.questionData)
+      this.app.log (this.parties);
+		this.partypriority = this.parties;
 			},
 			err => {
 				this.alertSlide = {
@@ -227,6 +238,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 				};
 				this.alert = true;
 			});
+      
 	}
 	
 	observeUrl () {
@@ -245,7 +257,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 				// is card number not parseable? -> first question
 				if (Number.isNaN(card)) {
 					card = 0;
-					this.router.navigate(['bundestagswal2017', 0], {replaceUrl:true});
+					this.router.navigate(['europawal2019', 0], {replaceUrl:true});
 					//console.log ("replacing location to " + 'quiz/0');
 				} else {
 					if (!this.updatedQuestions) {
@@ -261,7 +273,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 				// if there was an error or nothing is given: show first question
 				//console.log('keine question id angegeben ');
 				//initialCard = 0;
-				this.router.navigate(['bundestagswal2017', 0], {replaceUrl:true});
+				this.router.navigate(['europawal2019', 0], {replaceUrl:true});
 				//console.log ("replacing location to " + 'quiz/0');
 			}
 		
@@ -272,7 +284,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	 * print answers in console
 	 */
 	debugAnswers() {
-		console.log(this.answers);
+		this.app.log(this.answers);
 	}
 
 	/**
@@ -299,7 +311,6 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
     
 		this.app.currentQuiz = this.routeId;
     
-		//console.log ("showing question " + n);
 		this.app.questionIndex[this.routeId] = n;
 		window.scrollTo(0,0);
 		
@@ -313,84 +324,31 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 			this.app.questionIndex[this.routeId] = 0;
 		}
 		
-//		console.log (this.questionIndex[this.routeId]);
-//		console.log (this.questionData);
+//		this.app.log ("show question:");
+//		this.app.log (this.app.questionIndex[this.routeId]);
+//		this.app.log (this.questionData.length);
+//		this.app.log (this.questionData);
 
 		// if n is bigger than the number of questions -> show results
 		if (this.app.questionIndex[this.routeId] >= this.questionData.length && this.questionData.length > 0) {
 			//this.location.replaceState ('quiz/auswertung'); // change URL
-			this.router.navigate(['bundestagswal2017', 'auswertung'], {replaceUrl:true});
-			//console.log ("setting location to " + 'quiz/auswertung');
+			this.router.navigate(['europawal2019', 'auswertung'], {replaceUrl:true});
+			//this.app.log ("setting location to " + 'quiz/auswertung');
 			this.showResults();
 		} else if (this.questionData.length == 0) {
 			this.resultsVisible = false;
 			this.progress = this.toPercent (0);
 			//this.actualQuestions = [];
-			
-			
-			// extra intro behandlung ist disabled...
-			// nur noch hier fuer copy+paste
-			// kann geloescht werden wenns ohne funktioniert
-		} else if (this.app.questionIndex[this.routeId] == 0 && this.app.questionIndex[this.routeId] < 0) {
-			this.resultsVisible = false;
-			this.router.navigate(['bundestagswal2017', 0], {replaceUrl:true});
-			
-			let useless = {
-				'titel': 'Gleich geht\'s los!',
-				'beschreibung': 'Auf den folgenden Quiz-Karten kannst du über Anträge und Gesetzentwürfe aus dem Bundestag entscheiden. '
-					+ '<strong>Oben links kannst du die Eingaben in deinem Browser-Profil speichern,</strong> '
-					+ 'dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst. <small>(<a href="/faq#speicherung">Was wird wie gespeichert?</a>)</small><br> <br> '
-					+ 'Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen. '
-					+ 'Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen. '
-          + '<strong>Eine unbeantwortete Frage hat einen anderen Einfluss auf das Ergebnis, als eine Enthaltung</strong> - siehe <a href="/faq#berechnung">Berechnung der Auswertung?</a>.<br><br>'
-          + 'Du kannst auch direkt zur Auswertung springen und das Quiz damit vorzeitig beenden. '
-          + 'Dann bleiben die &uuml;brigen Fragen einfach unbeantwortet. '
-					+ 'Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen! '
-					+ 'Ganz unten zeigt dir ein Fortschrittsbalken wie weit du bist. <br> <br> '
-					+ '<strong>Aus über 200&nbsp;real stattgefundenen Abstimmungen haben wir '
-					//+ (Object.keys(this.answers).length + 2 /*cause that's the answer! and who's checking that anyway...*/) + '&nbsp;Fragen ausgewählt und in '
-					//+ this.questionData.length + '&nbsp;Themengebiete unterteilt:</strong> '
-					//+ themengebiete
-					+ '. Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeigt. '
-					+ 'Eine einzelne Abstimmung sieht wie folgt aus:',
-				'fragen': {
-					'example-1': {
-						'context': 'Eine Frage hat manchmal ein bisschen Kontext.',
-						'frage': 'Die eigentliche Frage ist aber immer fett gedruckt.',
-						'inverted': false,
-						'link': 'https://wahlbilanz.de',
-						'short': 'example',
-						'subtext': 'Über einen Link kannst du mehr zu einer Abstimmung erfahren:',
-            'moreInfos': [
-                {
-                    'text': 'Hier gibt es ge­ge­be­nen­falls weitere Information und Links, wie zum Beispiel:',
-                    'link': ''
-                },
-                {
-                    'text': 'Blauwal von oben gesehen',
-                    'link': 'https://de.wikipedia.org/wiki/Datei:Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg'
-                },
-                {
-                    'text': 'Methanhydrat',
-                    'link': 'https://de.wikipedia.org/wiki/Methanhydrat'
-                },
-            ],
-					}
-				}
-			};
-			//this.actualQuestions = ['example-1'];
-			this.progress = this.toPercent (0);
-			
 		} else { // otherwise show question n
-			this.router.navigate(['bundestagswal2017', this.app.questionIndex[this.routeId]], {replaceUrl:true});
-			this.app.overwriteTitle('Quiz zur Bundestagswahl 2017');
+			this.router.navigate(['europawal2019', this.app.questionIndex[this.routeId]], {replaceUrl:true});
+			this.app.overwriteTitle('Quiz zur Europawahl 2019');
 			this.resultsVisible = false;
 			this.progress = this.toPercent (n / (this.questionData.length));
 			//this.question = this.questionData[this.app.questionIndex[this.routeId]];
-			//console.log ("question title " + this.question["titel"]);
+			//this.app.log ("question title " + this.question["titel"]);
 			// get sub-questions
 			//this.actualQuestions = Object.keys(this.question['fragen']);
-			//console.log (this.question);
+			//this.app.log (this.question);
 		}
 	}
 
@@ -402,8 +360,8 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	nextQuestion(n) {
 		let next = this.app.questionIndex[this.routeId] + n;
 		//this.location.go('quiz/' + next);
-		this.router.navigate(['bundestagswal2017', next]);
-		//console.log ("setting location to " + 'quiz/' + next);
+		this.router.navigate(['europawal2019', next]);
+		//this.app.log ("setting location to " + 'quiz/' + next);
 		this.showQuestion(next); // die entsprechende URL im adressfeld anzeigen und auf history-stack pushen
 	}
 
@@ -424,16 +382,24 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	 * auswertungstabelle generieren und anzeigen
 	 */
 	showResults() {
-		//console.log ("showing results");
+		//this.app.log ("showing results");
 //		this.location.go('quiz/auswertung') // change URL
-		this.router.navigate(['bundestagswal2017', 'auswertung'], {replaceUrl:true});
+		this.router.navigate(['europawal2019', 'auswertung'], {replaceUrl:true});
 		window.scrollTo(0,0);
 		this.app.questionIndex[this.routeId] = this.questionData.length + 1;
 		this.progress = this.toPercent (1);
 		this.app.overwriteTitle("Auswertung");
 
-		this.overallResult = { 'gruenen': '-', 'cdu/csu': '-', 'die.linke': '-', 'spd': '-', 'consent': {} };
-		const nzustimmung = { 'gruenen': 0.0, 'cdu/csu': 0.0, 'die.linke': 0.0, 'spd': 0.0 };
+		//this.overallResult = { 'gruenen': '-', 'cdu/csu': '-', 'die.linke': '-', 'spd': '-', 'consent': {} };
+		//const nzustimmung = { 'gruenen': 0.0, 'cdu/csu': 0.0, 'die.linke': 0.0, 'spd': 0.0 };
+    this.overallResult = {};
+    const nzustimmung = {};
+    
+    for (const p in this.parties) {
+      this.overallResult[p] = '-';
+      nzustimmung[p] = 0.0;
+    }
+    
 		let nAnswered = 0;
 
 		for (const q of this.questionData) {
@@ -447,9 +413,9 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 						const opt = this.voteOptions;
 						const answer = opt[this.answers[f]];
 						const results = this.questionResults[f];
-						//console.log (f, this.questionResults[f]);
+						//this.app.log (f, this.questionResults[f]);
 						nAnswered++;
-						for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
+						for (const partyName of this.parties) {
 							if (!this.overallResult['consent'][partyName]) {
 								this.overallResult['consent'][partyName] = 0;
 							}
@@ -464,22 +430,26 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 							}
 						}
 					} else {
-						for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
+						for (const partyName of this.parties) {
 							q['fragen'][f][partyName] = '-';
 						}
 					}
 				}
-				//console.log (f, q['fragen'][f]['score']);
+				//this.app.log (f, q['fragen'][f]['score']);
 			}
 		}
 		
 		this.shareText = "Mit #DeinWal kannst du prüfen, welche Partei wie du denkt!";
 		
 		if (nAnswered > 0) {
-			this.overallResult['spd'] = this.toPercent(nzustimmung['spd'] / nAnswered, 0);
-			this.overallResult['gruenen'] = this.toPercent(nzustimmung['gruenen'] / nAnswered, 0);
-			this.overallResult['die.linke'] = this.toPercent(nzustimmung['die.linke'] / nAnswered, 0);
-			this.overallResult['cdu/csu'] = this.toPercent(nzustimmung['cdu/csu'] / nAnswered, 0);
+      for (const partyName of this.parties) {
+        this.overallResult[partyName] = this.toPercent(nzustimmung[partyName] / nAnswered);
+      }
+      
+			/*this.overallResult['spd'] = this.toPercent(nzustimmung['spd'] / nAnswered);
+			this.overallResult['gruenen'] = this.toPercent(nzustimmung['gruenen'] / nAnswered);
+			this.overallResult['die.linke'] = this.toPercent(nzustimmung['die.linke'] / nAnswered);
+			this.overallResult['cdu/csu'] = this.toPercent(nzustimmung['cdu/csu'] / nAnswered);*/
 			
 			// set party priority
 			for (let i = 0; i < this.partypriority.length; i++) {
@@ -557,45 +527,108 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 
 	getProperPartyName (nonproper) {
 		switch(nonproper) {
-			case "gruenen":
+			case "GRUENE":
 				return "Bündnis 90/Die Grünen";
-			case "cdu/csu":
+			case "CDU/CSU":
 				return "CDU/CSU";
-			case "die.linke":
+			case "LINKE":
 				return "Die Linke";
-			case "spd":
+			case "SPD":
 				return "SPD";
+			case "FDP":
+				return "FDP";
+			case "OEDP":
+				return "&Ouml;DP";
+			case "BUENDNISC":
+				return "B&uml;ndnis C";
+			case "ALFA":
+				return "Alfa";
+			case "DIEPARTEI":
+				return "Die Partei";
+			case "AFD":
+				return "AfD";
+			case "NPD":
+				return "NPD";
+			case "BLAUE":
+				return "Blaue";
+			case "FREIEWAEHLER":
+				return "Freie W&auml;hler";
+			case "PIRATEN":
+				return "Piraten";
 			default:
+      this.app.log ("do not know party " + name);
 					return "unknown";
 		}
 	}
 	
 	getPartyLogo (name) {
 		switch(name) {
-			case "gruenen":
+			case "GRUENE":
 				return "diegruenen.png";
-			case "cdu/csu":
+			case "CDU/CSU":
 				return "cducsu.png";
-			case "die.linke":
+			case "LINKE":
 				return "dielinke.png";
-			case "spd":
+			case "SPD":
 				return "spd.png";
+			case "FDP":
+				return "fpd.png";
+			case "OEDP":
+				return "&Ouml;DP";
+			case "BUENDNISC":
+				return "B&uml;ndnis C";
+			case "ALFA":
+				return "Alfa";
+			case "DIEPARTEI":
+				return "Die Partei";
+			case "AFD":
+				return "AfD";
+			case "NPD":
+				return "NPD";
+			case "BLAUE":
+				return "Blaue";
+			case "FREIEWAEHLER":
+				return "Freie W&auml;hler";
+			case "PIRATEN":
+				return "Piraten";
 			default:
+      this.app.log ("do not know party " + name);
 					return "unknown.png";
 		}
 	}
 	
 	getPartyClass (name) {
 		switch(name) {
-			case "gruenen":
+			case "GRUENE":
 				return "diegruenen";
-			case "cdu/csu":
+			case "CDU/CSU":
 				return "cducsu";
-			case "die.linke":
+			case "LINKE":
 				return "dielinke";
-			case "spd":
+			case "SPD":
 				return "spd";
+			case "FDP":
+				return "fpd";
+			case "OEDP":
+				return "oedp";
+			case "BUENDNISC":
+				return "buendnisc";
+			case "ALFA":
+				return "alfa";
+			case "DIEPARTEI":
+				return "diepartei";
+			case "AFD":
+				return "afd";
+			case "NPD":
+				return "npd";
+			case "BLAUE":
+				return "blaue";
+			case "FREIEWAEHLER":
+				return "freiewaehler";
+			case "PIRATEN":
+				return "piraten";
 			default:
+      this.app.log ("do not know party " + name);
 					return "unknown";
 		}
 	}
