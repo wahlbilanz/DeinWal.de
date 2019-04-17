@@ -28,7 +28,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 	/** auswertung anzeigen?*/
 	resultsVisible = false;
 	/** options for votes with: 0 => enthaltung; 1 => ja ; 2 => nein*/
-	voteOptions = ['enthaltung', 'ja', 'nein'];
+	voteOptions = ['enthalten', 'dafuer', 'dagegen'];
 	/** should we save the answers in the local storage*/
 	doSave: boolean = false; // if true: save choices in localStorage
 	/** saving is impossible if the users blocks local storage */
@@ -384,20 +384,16 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 	 * auswertungstabelle generieren und anzeigen
 	 */
 	showResults() {
-		//this.app.log ("showing results");
-//		this.location.go('quiz/auswertung') // change URL
 		this.router.navigate(['europawal2019', 'auswertung'], {replaceUrl:true});
 		window.scrollTo(0,0);
 		this.app.questionIndex[this.routeId] = this.questionData.length + 1;
 		this.progress = this.toPercent (1);
 		this.app.overwriteTitle("Auswertung");
 
-		//this.overallResult = { 'gruenen': '-', 'cdu/csu': '-', 'die.linke': '-', 'spd': '-', 'consent': {} };
-		//const nzustimmung = { 'gruenen': 0.0, 'cdu/csu': 0.0, 'die.linke': 0.0, 'spd': 0.0 };
     this.overallResult = {'consent': {}};
     const nzustimmung = {};
     
-    for (const p in this.parties) {
+    for (const p of this.parties) {
       this.overallResult[p] = '-';
       nzustimmung[p] = 0.0;
     }
@@ -415,18 +411,15 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 						const opt = this.voteOptions;
 						const answer = opt[this.answers[f]];
 						const results = this.questionResults[f];
-						//this.app.log (f, this.questionResults[f]);
 						nAnswered++;
 						for (const partyName of this.parties) {
 							if (!this.overallResult['consent'][partyName]) {
 								this.overallResult['consent'][partyName] = 0;
 							}
-              //console.log (results[partyName], answer)
 							const tempPunkte = this.getZustimmungsPunkte(results[partyName], answer);
-							q['fragen'][f][partyName] = this.toPercent(tempPunkte.punkteRelativ);
+              q['fragen'][f][partyName] = this.toPercent(tempPunkte.punkteRelativ);
 							q['fragen'][f]['score'][partyName] = tempPunkte.scoreDescription;
 							nzustimmung[partyName] += tempPunkte.punkteRelativ;
-							//this.app.log('---h3', partyName, tempPunkte);
 							if (tempPunkte.punkteRelativ >= 2/3) {
 								q['fragen'][f]['consent'].push (partyName);
 								this.overallResult['consent'][partyName]++;
@@ -438,9 +431,9 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 						}
 					}
 				}
-				//this.app.log (f, q['fragen'][f]['score']);
 			}
 		}
+    
 		
 		this.shareText = "Mit #DeinWal kannst du prüfen, welche Partei wie du denkt!";
 		
@@ -448,11 +441,6 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
       for (const partyName of this.parties) {
         this.overallResult[partyName] = this.toPercent(nzustimmung[partyName] / nAnswered);
       }
-      
-			/*this.overallResult['spd'] = this.toPercent(nzustimmung['spd'] / nAnswered);
-			this.overallResult['gruenen'] = this.toPercent(nzustimmung['gruenen'] / nAnswered);
-			this.overallResult['die.linke'] = this.toPercent(nzustimmung['die.linke'] / nAnswered);
-			this.overallResult['cdu/csu'] = this.toPercent(nzustimmung['cdu/csu'] / nAnswered);*/
 			
 			// set party priority
 			for (let i = 0; i < this.partypriority.length; i++) {
@@ -467,12 +455,21 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			}
 			
 			if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.04) {
-				this.auswertungspodesthoehe = "3em";
+				this.auswertungspodesthoehe = "6em";
 			}
 			else if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.09) {
-				this.auswertungspodesthoehe = "2em";
+				this.auswertungspodesthoehe = "5em";
 			}
 			else if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.15) {
+				this.auswertungspodesthoehe = "4em";
+			}
+			else if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.20) {
+				this.auswertungspodesthoehe = "3em";
+			}
+			else if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.25) {
+				this.auswertungspodesthoehe = "2em";
+			}
+			else if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.30) {
 				this.auswertungspodesthoehe = "1em";
 			}
 			else {
@@ -500,19 +497,23 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 	getZustimmungsPunkte(partyResults, answer) {
 		const opt = this.voteOptions;
 		let nAbgegebeneStimmen = partyResults[opt[0]] + partyResults[opt[1]] + partyResults[opt[2]];
+    // in der eu gibts parties mit nur einer person... wenn die mal nicht da ist -> keine abgegebene stimme -> division durch 0 -> :(
+    if (nAbgegebeneStimmen < 1) {
+      return { 'punkteRelativ': 0, 'punkteAbsolut': 0, 'nAbgegebeneStimmen': 0, 'scoreDescription': "nicht beteiligt"  };
+    }
 		let punkte = 0;
 		let description = "";
-		if (answer === 'enthaltung') { // Enthaltung
+		if (answer === 'enthalten') { // Enthaltung
 			punkte = partyResults[opt[0]] + 0.5 * partyResults[opt[1]] + 0.5 * partyResults[opt[2]];
 			description = "(1/2 · Ja + 1/2 · Nein + Enthaltung) / Gesamt = ("
 				+ 0.5 * partyResults[opt[1]] + " + " + 0.5 * partyResults[opt[2]] + " + " + partyResults[opt[0]] + ") / " + nAbgegebeneStimmen
 				+ " = " + this.toPercent (punkte / nAbgegebeneStimmen);
-		} else if (answer === 'ja') { // ja
+		} else if (answer === 'dafuer') { // ja
 			punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[1]];
 			description = "(Ja + 1/2 · Enthaltung) / Gesamt = ("
 				+ partyResults[opt[1]] + " + " + 0.5 * partyResults[opt[0]] + ") / " + nAbgegebeneStimmen
 				+ " = " + this.toPercent (punkte / nAbgegebeneStimmen);
-		} else if (answer === 'nein') { // nein
+		} else if (answer === 'dagegen') { // nein
 			punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[2]];
 			description = "(Nein + 1/2 · Enthaltung) / Gesamt = ("
 				+ partyResults[opt[2]] + " + " + 0.5 * partyResults[opt[0]] + ") / " + nAbgegebeneStimmen
@@ -641,11 +642,11 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			return "-";
 		}
 		switch(this.voteOptions[voteOption]) {
-			case "ja":
+			case "dafuer":
 				return "Ja";
-			case "nein":
+			case "dagegen":
 				return "Nein";
-			case "enthaltung":
+			case "enthalten":
 				return "Enthaltung"
 			default:
 					return "unknown";

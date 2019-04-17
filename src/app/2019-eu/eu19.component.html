@@ -363,11 +363,12 @@
 			  <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis der {{getProperPartyName (party)}}: {{questionResults[q][party].ja * 100 / questionResults[q][party].relevant}} Ja-Stimmen, {{questionResults[q][party].nein * 100 / questionResults[q][party].relevant}} Nein-Stimmen, {{questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant}} Enthaltungen">
 			</td>
 			<td class="partyDetailsBar">
-			  <div class="stackedbar">
-			    <div class="stackedbarbar w3-green" [style.width.%]="questionResults[q][party].ja * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
-			    <div class="stackedbarbar w3-red" [style.width.%]="questionResults[q][party].nein * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
-			    <div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthaltung * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
+			  <div class="stackedbar" *ngIf="questionResults[q][party].relevant > 0">
+			    <div class="stackedbarbar w3-green" [style.width.%]="questionResults[q][party].dafuer * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
+			    <div class="stackedbarbar w3-red" [style.width.%]="questionResults[q][party].dagegen * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
+			    <div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthalten * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
 			  </div>
+        <span *ngIf="questionResults[q][party].relevant == 0">Nicht beteiligt</span>
 			</td>
 		      </tr>
 		      </ng-container>

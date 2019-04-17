@@ -43,24 +43,16 @@
                 "2436eb70-9eb4-4cb6-999f-b6d2ad59782e": {
                     "context": "Der europäische Struktur- und Investitionsfonds soll die Wirtschaft in den Jahren 2015 bis 2017 mit 315 Milliarden Euro foerdern. Insbesondere sollen Infrastrukturprojekte wie Straßen und Brücken, aber auch kleine und mittlere Unternehmen gefördert werden.",
                     "frage": "Stimmst du der Einrichtung eines europäischen Struktur- und Investitionsfonds zu?",
-                    "short": "Europ. Struktur- und Investitionsfonds",
+                    "short": "Struktur- und Investitionsfonds",
                     "subtext": "",
                     "moreInfos": [
                     ],
                     "invert": false
-                }
-            }
-        },
-        {
-            "titel": "Finanzen",
-            "beschreibung": "",
-            "bild": "",
-            "subtext": "",
-            "fragen": {
-                "2436eb70-9eb4-4cb6-999f-b6d2ad59782e": {
-                    "context": "Der europäische Struktur- und Investitionsfonds soll die Wirtschaft in den Jahren 2015 bis 2017 mit 315 Milliarden Euro foerdern. Insbesondere sollen Infrastrukturprojekte wie Straßen und Brücken, aber auch kleine und mittlere Unternehmen gefördert werden.",
-                    "frage": "Stimmst du der Einrichtung eines europäischen Struktur- und Investitionsfonds zu?",
-                    "short": "Europ. Struktur- und Investitionsfonds",
+                },
+                "55617778-d77e-4532-be49-1cf9f1e168f4": {
+                    "context": "Mit einem europäischen Verteidigungsfonds sollen die EU-Staaten jährlich etwa 5,5 Milliarden zusammen tragen, um damit zum Beispiel gemeinsam Material zu kaufen und Waffenentwicklung zu betreiben. Die EU soll damit auch unabhängiger von dem Militär der USA werden.",
+                    "frage": "Stimmst du der Errichtung eines europäischen Verteidigungsfonds zu?",
+                    "short": "Verteidigungsfonds",
                     "subtext": "",
                     "moreInfos": [
                     ],
@@ -70,6 +62,117 @@
         }
     ],
     "results": {  
+      
+      "55617778-d77e-4532-be49-1cf9f1e168f4": {
+    "GRUENE": {
+      "dafuer": 3, 
+      "enthalten": 0, 
+      "gesamt": 11, 
+      "dagegen": 8, 
+      "abwesend": 0
+    }, 
+    "OEDP": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 0, 
+      "abwesend": 1
+    }, 
+    "BUENDNISC": {
+      "dafuer": 1, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 0, 
+      "abwesend": 0
+    }, 
+    "ALFA": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 5, 
+      "dagegen": 5, 
+      "abwesend": 0
+    }, 
+    "DIEPARTEI": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 1, 
+      "abwesend": 0
+    }, 
+    "AFD": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 1, 
+      "abwesend": 0
+    }, 
+    "NPD": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 1, 
+      "abwesend": 0
+    }, 
+    "BLAUE": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 1, 
+      "abwesend": 0
+    }, 
+    "LINKE": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 7, 
+      "dagegen": 5,
+      "abwesend": 2
+    }, 
+    "FDP": {
+      "dafuer": 2, 
+      "enthalten": 0, 
+      "gesamt": 3, 
+      "dagegen": 0, 
+      "abwesend": 1
+    }, 
+    "CDU/CSU": {
+      "dafuer": 30, 
+      "enthalten": 0, 
+      "gesamt": 34, 
+      "dagegen": 0, 
+      "abwesend": 4
+    }, 
+    "individual": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 1, 
+      "abwesend": 0
+    }, 
+    "FREIEWAEHLER": {
+      "dafuer": 1, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 0, 
+      "abwesend": 0
+    }, 
+    "PIRATEN": {
+      "dafuer": 0, 
+      "enthalten": 0, 
+      "gesamt": 1, 
+      "dagegen": 1, 
+      "abwesend": 0
+    }, 
+    "SPD": {
+      "dafuer": 0, 
+      "enthalten": 6, 
+      "gesamt": 27, 
+      "dagegen": 20, 
+      "abwesend": 1
+    }
+  }, 
+
+      
+      
         "2436eb70-9eb4-4cb6-999f-b6d2ad59782e": {
     "GRUENE": {
       "dafuer": 6, 
