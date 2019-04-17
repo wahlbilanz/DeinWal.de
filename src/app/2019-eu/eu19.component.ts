@@ -54,7 +54,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 	/** is this a touch device? then we shouldn't do hover stuff...*/
 	touchDevice = false;
 	/** wie hoch soll das auswertungspodest sein? -- wenn eine partei nur wenige stimmen hat, ist der name schwer zu lesen, daher hab ich mal ein podest eingefuehrt */
-	auswertungspodesthoehe = "0em";
+	//auswertungspodesthoehe = "0em";
 	/** which divs with moreInfos to show?1 */
 	moreInfos = {};
 	/** text to share on twitter etc*/
@@ -379,6 +379,9 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 		return (Math.round(100 * precision[nachkommastellen] * n) / (precision[nachkommastellen])) + "%";
 	}
 
+  rmPercent (value) {
+    return value.replace("%","");
+  }
 
 	/**
 	 * auswertungstabelle generieren und anzeigen
@@ -439,7 +442,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 		
 		if (nAnswered > 0) {
       for (const partyName of this.parties) {
-        this.overallResult[partyName] = this.toPercent(nzustimmung[partyName] / nAnswered);
+        this.overallResult[partyName] = this.toPercent(nzustimmung[partyName] / nAnswered,0);
       }
 			
 			// set party priority
@@ -454,27 +457,6 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 				}
 			}
 			
-			if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.04) {
-				this.auswertungspodesthoehe = "6em";
-			}
-			else if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.09) {
-				this.auswertungspodesthoehe = "5em";
-			}
-			else if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.15) {
-				this.auswertungspodesthoehe = "4em";
-			}
-			else if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.20) {
-				this.auswertungspodesthoehe = "3em";
-			}
-			else if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.25) {
-				this.auswertungspodesthoehe = "2em";
-			}
-			else if (nzustimmung[this.partypriority[this.partypriority.length - 1]] / nAnswered < 0.30) {
-				this.auswertungspodesthoehe = "1em";
-			}
-			else {
-				this.auswertungspodesthoehe = "0em";
-			}
 			this.shareText = "";
 			for (let i = 0; i < this.partypriority.length; i++) {
 				this.shareText += this.overallResult[this.partypriority[i]] +  " " + this.getProperPartyName (this.partypriority[i]) + " ";
@@ -482,13 +464,14 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			this.shareText += " -- sagt #DeinWal";
 		}
     
+    
     // group consent parties and collect the consent keys
-    for (const p in this.overallResult.consent) {
-      if (!this.overallResult.groupedConsent.hasOwnProperty (this.overallResult.consent[p])) {
-        this.overallResult.groupedConsent[this.overallResult.consent[p]] = [];
-        this.overallResult.groupedConsentKeys.push (this.overallResult.consent[p]);
+    for (const p in this.overallResult["consent"]) {
+      if (!this.overallResult["groupedConsent"].hasOwnProperty (this.overallResult["consent"][p])) {
+        this.overallResult["groupedConsent"][this.overallResult["consent"][p]] = [];
+        this.overallResult["groupedConsentKeys"].push (this.overallResult["consent"][p]);
       }
-      this.overallResult.groupedConsent[this.overallResult.consent[p]].push (p);
+      this.overallResult["groupedConsent"][this.overallResult["consent"][p]].push (p);
     }
     
     // sort consent groups according to

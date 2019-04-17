@@ -163,14 +163,12 @@
     </header>
     
     <!-- auswertungsbars -->
-    <div class="w3-padding w3-center" id="party-bar-chart">
+    <div class="w3-padding" id="party-bar-chart">
       <ng-container *ngFor="let party of partypriority">
-	<div class="veritcal-bar w3-border" [style.width.%]="100 / (partypriority.length)">
-	  <div class="veritcal-bar-progress {{getPartyClass (party)}}" [style.height]="overallResult[party]">{{overallResult[party]}}<br>{{getProperPartyName (party)}}</div>
-	</div>
+        <div class="bar {{getPartyClass (party)}} bar-{{rmPercent (overallResult[party])}}" [attr.data-content]="overallResult[party] + ' ' + getProperPartyName (party)" title="{{overallResult[party]}} {{getProperPartyName (party)}}">&nbsp;</div>
+        <div style="clear:both"></div>
+        <!--div class="bar {{getPartyClass (party)}}" [style.width]="overallResult[party]">{{overallResult[party]}}</div-->
       </ng-container>
-      <div class="w3-border w3-dark-grey" id="party-bar-podest" [style.height]="auswertungspodesthoehe">
-      </div>
       <div class="share-buttons">
 	<a href="https://twitter.com/intent/tweet?url=https://deinwal.de&amp;text={{shareText}}" class="twitter w3-button" title="Share on Twitter" target="_blank"><i class="fa fa-twitter"></i><span> Twitter</span></a>
 	<a href="https://www.facebook.com/sharer/sharer.php?u=https://deinwal.de" class="facebook w3-button" title="Share on Facebook" target="_blank"><i class="fa fa-facebook"></i><span> Facebook</span></a>
