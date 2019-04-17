@@ -390,7 +390,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 		this.progress = this.toPercent (1);
 		this.app.overwriteTitle("Auswertung");
 
-    this.overallResult = {'consent': {}};
+    this.overallResult = {'consent': {}, 'groupedConsent': {}, 'groupedConsentKeys': []};
     const nzustimmung = {};
     
     for (const p of this.parties) {
@@ -481,11 +481,19 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			}
 			this.shareText += " -- sagt #DeinWal";
 		}
+    
+    for (const p in this.overallResult.consent) {
+      if (!this.overallResult.groupedConsent.hasOwnProperty (this.overallResult.consent[p])) {
+        this.overallResult.groupedConsent[this.overallResult.consent[p]] = [];
+        this.overallResult.groupedConsentKeys.push (this.overallResult.consent[p]);
+      }
+      this.overallResult.groupedConsent[this.overallResult.consent[p]].push (p);
+    }
 		
 		this.shareText = encodeURIComponent (this.shareText);
 		this.resultsVisible = true;
 	}
-
+  
 	/**
 	 * hat eine partei mit der antwort eines users uebereingestimmt?
 	 *

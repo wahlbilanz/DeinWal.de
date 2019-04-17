@@ -169,6 +169,9 @@ th small {
 .consent-result {
 	white-space: nowrap;
 }
+.consent-result img {
+	margin-left: 5px;
+}
 
 #party-bar-podest {
 	width: 100%;
@@ -187,7 +190,9 @@ th small {
     -o-transition: all 0.3s; /* Opera */
 } 
 
-
+.opaqueresult {
+  opacity: 0.2;
+}
 
 .share-buttons {
   padding-top: 1em;
