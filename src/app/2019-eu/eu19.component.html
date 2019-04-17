@@ -208,7 +208,7 @@
 	      <th class="w3-left-align">Abstimmung</th>
 	      <th class="w3-center">Deine Antwort</th>
 	      
-	      <th class="w3-center" colspan="4">Übereinstimmung mit den Parteien</th>
+	      <th class="w3-center" colspan="16">Übereinstimmung mit den Parteien</th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -247,7 +247,7 @@
 		  
 		  <!-- show details for this question? -->
 		  <tr class="auswertung-detail" id="auswertung-complex-detail-{{q}}" *ngIf="complexDetails[q]">
-		    <td class="w3-left-align w3-border-black w3-leftbar w3-light-grey" colspan="6">
+		    <td class="w3-left-align w3-border-black w3-leftbar w3-light-grey" colspan="18">
 		      <div class="w3-margin-bottom">
 			<span class="q-context" [innerHTML]="quest.fragen[q].context"></span>
 			<strong class="q-question" [innerHTML]="quest.fragen[q].frage"></strong>
@@ -342,7 +342,7 @@
 		  <td class="w3-left-align">
 		    <ng-container *ngFor="let party of partypriority">
 		      <ng-container *ngIf="quest.fragen[q].consent.indexOf (party) > -1">
-			<img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+            <img class='optional-margin partylogolist' src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
 		      </ng-container>
 		    </ng-container>
 		  </td>
@@ -386,16 +386,16 @@
 	  
 	  <!-- summary of the simple table -->
 	  <tr class="auswertung-abschnitt">
-	    <th colspan="2" class="w3-grey w3-center">Gesamt</th>
+	    <th colspan="2" class="w3-grey">Gesamt</th>
 	  </tr>
 	  
-	  <tr class="auswertung-zeile">
-	    <th colspan="2" class="w3-center">
+	  <tr class="w3-left-align auswertung-zeile">
+	    <th colspan="2">
         <ng-container *ngFor="let num of overallResult.groupedConsentKeys">
           <span class='w3-margin optional-margin consent-result'>
             {{num}}x
             <ng-container *ngFor="let party of overallResult.groupedConsent[num]">
-              <img class='optional-margin' src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+              <img class='optional-margin partylogolist' src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
             </ng-container><br>
           </span>
 	      </ng-container>

@@ -169,8 +169,9 @@ th small {
 .consent-result {
 	white-space: nowrap;
 }
-.consent-result img {
+.partylogolist {
 	margin-left: 5px;
+	margin-top: 5px;
 }
 
 #party-bar-podest {
