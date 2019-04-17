@@ -33,6 +33,11 @@ th small {
 	/*display: none;*/
 }
 
+@media screen and (min-width: 680px) {
+    .optional-center {
+      text-align: center;
+    }
+}
 @media screen and (max-width: 680px) {
     .optional-margin {
         margin-left: 0 !important;
@@ -166,9 +171,6 @@ th small {
  min-width: 25px;
 }
 
-.consent-result {
-	white-space: nowrap;
-}
 .partylogolist {
 	margin-left: 5px;
 	margin-top: 5px;

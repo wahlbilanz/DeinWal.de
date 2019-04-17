@@ -342,7 +342,7 @@
 		  <td class="w3-left-align">
 		    <ng-container *ngFor="let party of partypriority">
 		      <ng-container *ngIf="quest.fragen[q].consent.indexOf (party) > -1">
-            <img class='optional-margin partylogolist' src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
+            <img class='optional-margin partylogolist' src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}"> 
 		      </ng-container>
 		    </ng-container>
 		  </td>
@@ -386,18 +386,22 @@
 	  
 	  <!-- summary of the simple table -->
 	  <tr class="auswertung-abschnitt">
-	    <th colspan="2" class="w3-grey">Gesamt</th>
+	    <th colspan="2" class="w3-grey optional-center">Gesamtergebnis</th>
 	  </tr>
 	  
 	  <tr class="w3-left-align auswertung-zeile">
-	    <th colspan="2">
+	    <th colspan="2" class="optional-center">
         <ng-container *ngFor="let num of overallResult.groupedConsentKeys">
-          <span class='w3-margin optional-margin consent-result'>
-            {{num}}x
-            <ng-container *ngFor="let party of overallResult.groupedConsent[num]">
-              <img class='optional-margin partylogolist' src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}">
-            </ng-container><br>
-          </span>
+          <div>
+          {{num}} &Uuml;bereinstimmung<ng-container *ngIf="num != 1">en</ng-container> mit:
+          </div>
+          <div>
+            <ng-container *ngFor="let party of partypriority">
+              <ng-container *ngIf="overallResult.groupedConsent[num].indexOf (party) > -1">
+                <img class='optional-margin partylogolist' src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}"> 
+              </ng-container>
+            </ng-container>
+          </div>
 	      </ng-container>
 	    </th>
 	  </tr>
