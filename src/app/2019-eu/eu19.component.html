@@ -171,8 +171,8 @@
     <!-- auswertungsbars -->
     <div class="w3-padding" id="party-bar-chart">
       <ng-container *ngFor="let party of partypriority">
-        <div class="bar {{getPartyClass (party)}} bar-{{rmPercent (overallResult[party])}}" [attr.data-content]="overallResult[party] + ' ' + getProperPartyName (party)" title="{{overallResult[party]}} {{getProperPartyName (party)}}">&nbsp;</div>
-        <div style="clear:both"></div>
+        <div *ngIf="overallResult[party] != '-'" class="bar {{getPartyClass (party)}} bar-{{rmPercent (overallResult[party])}}" [attr.data-content]="overallResult[party] + ' ' + getProperPartyName (party)" title="{{overallResult[party]}} {{getProperPartyName (party)}}">&nbsp;</div>
+        <div *ngIf="overallResult[party] == '-'" class="bar {{getPartyClass (party)}} bar-25" [attr.data-content]="overallResult[party] + ' ' + getProperPartyName (party)" title="{{overallResult[party]}} {{getProperPartyName (party)}}">&nbsp;</div>
         <!--div class="bar {{getPartyClass (party)}}" [style.width]="overallResult[party]">{{overallResult[party]}}</div-->
       </ng-container>
       <div class="share-buttons">

@@ -175,8 +175,8 @@ th small {
     color: white;
 }
 .dielinke,  .dielinke:after {
-	background-color: #e0001a;
-    color: white;
+	background-color: black;
+    color: #e0001a;
 }
 .fpd,  .fpd:after {
 	background-color: #feed01;
@@ -212,11 +212,11 @@ th small {
 }
 .freiewaehler,  .freiewaehler:after {
 	background-color: #f39401;
-    color: white;
+    color: black;
 }
 .piraten,  .piraten:after {
 	background-color: #000000;
-    color: white;
+    color: #ff8800;
 }
 .unknown,  .unknown:after {
 	background-color: #6d6d6d;
