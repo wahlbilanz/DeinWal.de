@@ -152,6 +152,7 @@ th small {
     position: absolute;
     white-space: nowrap;
     overflow: hidden;
+    font-weight: bold;
     content: attr(data-content);
 }
 
