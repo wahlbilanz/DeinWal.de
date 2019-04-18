@@ -3,19 +3,45 @@ import { settings } from './settings';
 import { Title } from '@angular/platform-browser';
 import { Router, NavigationEnd } from '@angular/router';
 import { QuestiondataService } from './questiondata.service';
+import { StorageService } from './storage.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  host: {
+    '(window:beforeunload)': 'beforeunload($event)'
+  }
 })
 export class AppComponent {
 	
+   beforeunload(event){
+     if (!this.storage.isSaving ()) {
+       var message = 'Deine Eingaben sind nicht gespeichert! Wenn du die Seite verlaesst, geht alle verloren. Bist du sicher, dass du nicht vorher nochmal speichern möchtest?';
+       // TODO the confirm message is default -> how to set our message??
+        if (typeof event == 'undefined') {
+          event = window.event;
+        }
+        if (event) {
+          event.preventDefault();
+          event.returnValue = message;
+        }
+        return message;
+    }
+   }
+   
+  
 	questionIndex = {};
   currentQuiz = "";
   
   // setup route-listener to update title of the page 
-  constructor(router:Router, private titleService:Title, private qserv: QuestiondataService) {
+  constructor(router:Router,
+      private titleService:Title,
+      private qserv: QuestiondataService,
+			private storage: StorageService) {
+        
+        this.storage.isSaving ();
+        
        router.events.subscribe((event)=>{ 
           if(event instanceof NavigationEnd) {
             var title = this.getTitle(router.routerState, router.routerState.root).join('-');
@@ -64,4 +90,6 @@ export class AppComponent {
     }
     return data;
   }
+  
+  
 }

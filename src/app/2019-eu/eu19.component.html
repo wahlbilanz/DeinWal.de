@@ -5,9 +5,9 @@
       <span class="w3-tooltip w3-margin optional-margin">
 	<span style="position:absolute;left:0;top:1.8em;width:15em;" class="w3-text w3-tag w3-padding-16 w3-animate-opacity">{{speichernTooltip}}</span> 
 	
-	<button class="w3-button w3-hover-dark-grey" (click)="toggleSave()" *ngIf="!doSave && !saveImpossible"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
-	<button class="w3-button w3-dark-grey" (click)="toggleSave()" *ngIf="doSave && !saveImpossible"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
-	<button class="w3-button w3-dark-grey w3-hover-red" (click)="toggleSave()" *ngIf="saveImpossible"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
+	<button class="w3-button w3-hover-dark-grey" (click)="toggleSave()" *ngIf="!storage.isSaving() && !storage.isSaveImpossible()"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
+	<button class="w3-button w3-dark-grey" (click)="toggleSave()" *ngIf="storage.isSaving() && !storage.isSaveImpossible()"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
+	<button class="w3-button w3-dark-grey w3-hover-red" (click)="toggleSave()" *ngIf="storage.isSaveImpossible()"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
 	
       </span>
 
@@ -31,9 +31,9 @@
 	<span style="position:absolute;left:0;top:1.8em;width:15em;" class="w3-text w3-tag w3-padding-16 w3-animate-opacity">{{speichernTooltip}}</span> 
 	
 	
-	<button class="w3-button w3-hover-dark-grey" (click)="toggleSave()" *ngIf="!doSave && !saveImpossible"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
-	<button class="w3-button w3-dark-grey" (click)="toggleSave()" *ngIf="doSave && !saveImpossible"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
-	<button class="w3-button w3-dark-grey w3-hover-red" (click)="toggleSave()" *ngIf="saveImpossible"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
+	<button class="w3-button w3-hover-dark-grey" (click)="toggleSave()" *ngIf="!storage.isSaving() && !storage.isSaveImpossible()"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
+	<button class="w3-button w3-dark-grey" (click)="toggleSave()" *ngIf="storage.isSaving() && !storage.isSaveImpossible()"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
+	<button class="w3-button w3-dark-grey w3-hover-red" (click)="toggleSave()" *ngIf="storage.isSaveImpossible()"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{speichernText}}</button>
 	
       </span>
       

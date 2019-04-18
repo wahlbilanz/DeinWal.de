@@ -2,6 +2,7 @@ import { Component, OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, D
 import { ActivatedRoute, Router } from '@angular/router'
 import { Location } from '@angular/common';
 import { QuestiondataService } from '../questiondata.service';
+import { StorageService } from '../storage.service';
 import { AppComponent } from '../app.component';
 
 
@@ -30,9 +31,9 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	/** options for votes with: 0 => enthaltung; 1 => ja ; 2 => nein*/
 	voteOptions = ['enthaltung', 'ja', 'nein'];
 	/** should we save the answers in the local storage*/
-	doSave: boolean = false; // if true: save choices in localStorage
+	//doSave: boolean = false; // if true: save choices in localStorage
 	/** saving is impossible if the users blocks local storage */
-	saveImpossible: boolean = false;
+	//saveImpossible: boolean = false;
 	/** auswertung der auswertung*/
 	overallResult = {};
 	/** text fuer den speichern button */
@@ -72,6 +73,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	
 	constructor (
 			private qserv: QuestiondataService,
+			private storage: StorageService,
 			private app: AppComponent,
 			private route: ActivatedRoute,
 				private router: Router,
@@ -88,7 +90,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 		
 		this.touchDevice = false;
 
-		if (this.doSave) {
+		if (this.storage.isSaving ()) {
 //			this.app.log('restoring data from local storage');
 			this.getQuestionDataFromLocalStorage();
 		}
@@ -647,33 +649,21 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 
 
 	toggleSave() {
-	if (!this.saveImpossible) {
-			localStorage.setItem('doSave', JSON.stringify (!this.doSave));
-			this.checkSave ();
+    this.storage.toggleSave ();
 			
-			if (this.doSave) {
+			if (this.storage.isSaving ()) {
 				this.saveQuestionDataToLocalStorage();
 			} else {
 				this.eraseQuestionDataFromLocalStorage();
 			}
 	}
-	}
 
 	checkSave () {
-		this.doSave = false;
-		
-		try {
-			if (localStorage.getItem ('doSave') !== null) {
-				this.doSave = JSON.parse(localStorage.getItem('doSave'));
-			}
-		} catch (e) {
-			this.saveImpossible = true;
-		}
 
-		if (this.doSave) {
+		if (this.storage.isSaving ()) {
 			this.speichernText = 'gespeichert';
 			this.speichernTooltip = 'Deine Eingaben werden in deinem Browser gespeichert. Nochmal drücken zum Löschen.';
-		} else if (this.saveImpossible) {
+		} else if (this.storage.isSaveImpossible ()) {
 				this.speichernText = 'speichern nicht möglich';
 				this.speichernTooltip = 'Dein Browser erlaubt keine Cookies und/oder local Storage. Deine Eingaben gehen verloren wenn du das Fenster schliesst oder neu lädst.';
 		} else {
@@ -683,24 +673,23 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	}
 
 	eraseQuestionDataFromLocalStorage() {
-	if (!this.saveImpossible) {
-		localStorage.clear(); // clear the whole thing
-	}
+	this.storage.clear ();
 	}
 
 	saveQuestionDataToLocalStorage() {
-		if (this.doSave) {
-			localStorage.setItem('questionData', JSON.stringify(this.questionData));
-			localStorage.setItem('questionResults', JSON.stringify(this.questionResults));
-			localStorage.setItem('answers', JSON.stringify(this.answers));
+		if (this.storage.isSaving ()) {
+			this.storage.setItem('questionData', JSON.stringify(this.questionData), this.routeId);
+			this.storage.setItem('questionResults', JSON.stringify(this.questionResults), this.routeId);
+			this.storage.setItem('answers', JSON.stringify(this.answers), this.routeId);
 		}
 	}
 
 	getQuestionDataFromLocalStorage() {
-	this.questionResults = JSON.parse(localStorage.getItem('questionResults'));
-		this.questionData = JSON.parse(localStorage.getItem('questionData'));
-		this.answers = JSON.parse(localStorage.getItem('answers'));
-		this.doSave = JSON.parse(localStorage.getItem('doSave'));
+    if (this.storage.isSaving ()) {
+      this.questionResults = JSON.parse(this.storage.getItem('questionResults', this.routeId));
+      this.questionData = JSON.parse(this.storage.getItem('questionData', this.routeId));
+      this.answers = JSON.parse(this.storage.getItem('answers', this.routeId));
+    }
 	}
 
 
