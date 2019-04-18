@@ -242,6 +242,10 @@ th small {
 	text-decoration: underline;
 }
 
+.enthalten-info {
+  max-width: 285px;
+}
+
 .transition{
     transition: all 0.3s;
     -moz-transition: all 0.3s; /* Firefox 4 */

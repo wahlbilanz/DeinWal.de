@@ -139,6 +139,12 @@
 		  
 	  </div>
 	  <div style="clear:both"></div>
+    <div class="enthalten-info w3-small w3-right w3-blue w3-padding" *ngIf="answers[q]==0">
+      Ist es dir wirklich wichtig, dass sich eine Partei hier enth&auml;lt?
+      Wenn dir die Frage jedoch nur egal ist, lass sie einfach unbeantwortet.
+      Lies dazu auch: <a [routerLink]="['/faq']" fragment="wannenthalten">Wann enthalten?</a>
+    </div>
+	  <div style="clear:both"></div>
 	  
 	<!-- card navigation -->
 	</div>
