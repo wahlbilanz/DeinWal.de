@@ -163,7 +163,7 @@ th small {
 }
 
 .diegruenen, .diegruenen:after {
-	background-color: #19a329;
+	background-color: #64a12d;
     color: white;
 }
 .cducsu, .cducsu:after{
@@ -171,15 +171,15 @@ th small {
     color: white;
 }
 .spd,  .spd:after{
-	background-color: #ff481f;
+	background-color: #eb001f;
     color: white;
 }
 .dielinke,  .dielinke:after {
-	background-color: black;
-    color: #e0001a;
+	background-color: #be3075;
+    color: white;
 }
 .fpd,  .fpd:after {
-	background-color: #feed01;
+	background-color: #ffed00;
     color: black;
 }
 .oedp,  .oedp:after {
@@ -187,36 +187,36 @@ th small {
     color: white;
 }
 .buendnisc,  .buendnisc:after {
-	background-color: #0371ba;
+	background-color: #0b5da5;
     color: white;
 }
 .alfa,  .alfa:after {
-	background-color: #ff9300;
+	background-color: #f29200;
     color: white;
 }
 .diepartei,  .diepartei:after {
-	background-color: #981436;
+	background-color: #6d6d6d;
     color: white;
 }
 .afd,  .afd:after {
-	background-color: #009fe1;
+	background-color: #009ee0;
     color: white;
 }
 .npd,  .npd:after {
-	background-color: #e1011c;
+	background-color: #8b4726;
     color: white;
 }
 .blaue,  .blaue:after {
-	background-color: #2c4296;
+	background-color: #0000ff;
     color: white;
 }
 .freiewaehler,  .freiewaehler:after {
-	background-color: #f39401;
-    color: black;
+	background-color: #2f6590;
+    color: white;
 }
 .piraten,  .piraten:after {
-	background-color: #000000;
-    color: #ff8800;
+	background-color: #ff820a;
+    color: white;
 }
 .unknown,  .unknown:after {
 	background-color: #6d6d6d;
