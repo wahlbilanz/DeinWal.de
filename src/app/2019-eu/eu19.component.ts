@@ -201,7 +201,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
           
           
 					// special stuff for intro card
-					for (let q = 0; q < this.questionData.length; q++) {
+					for (let q = 1; q < this.questionData.length; q++) {
 						this.themengebiete += this.questionData[q]['titel'];
 						if (q == this.questionData.length - 2) {
 							this.themengebiete += ' und ';
@@ -209,7 +209,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 							this.themengebiete += ', ';
 						}
 					}
-					this.nQuestions = Object.keys(this.answers).length + 2; /*cause that's the answer! and who's checking that anyway...*/
+					this.nQuestions = Object.keys(this.answers).length;
 					
 					this.updatedQuestions = true;
 				} catch (e) {

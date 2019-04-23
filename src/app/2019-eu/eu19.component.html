@@ -52,7 +52,7 @@
 	</div>
 	<!-- otherwise show intro -->
 	<div class="question-description w3-margin" *ngIf="question.intro">
-	  Auf den folgenden Quiz-Karten kannst du über Anträge und Gesetzentwürfe aus dem Bundestag entscheiden.
+	  Auf den folgenden Quiz-Karten kannst du über Anträge und Gesetzentwürfe aus dem europäischen Parlament entscheiden.
 	  <strong>Oben links kannst du die Eingaben in deinem Browser-Profil speichern,</strong>
 	  dann gehen sie nicht verloren wenn du die Seite neu lädst oder kurz eine andere Seite besuchst.
 	  <small>(<a [routerLink]="['/faq']" fragment="speicherung">Was wird wie gespeichert?</a>)</small>
@@ -67,12 +67,13 @@
 	   
 	   Du kannst auch direkt zur Auswertung springen und das Quiz damit vorzeitig beenden.
 	   Dann bleiben die &uuml;brigen Fragen einfach unbeantwortet.
-	   Von der Auswertung kannst du natürlich auch jeder Zeit wieder zurück zu den Fragen!
+	   Von der Auswertung kommst du natürlich auch jeder Zeit wieder zurück zu den Fragen!
 	   Ganz unten zeigt dir ein Fortschrittsbalken wie weit du bist.
 	   
 	   <br> <br>
-	   
-	   <strong>Aus über 200&nbsp;real stattgefundenen Abstimmungen haben wir {{ nQuestions }}&nbsp;Fragen ausgewählt und in {{ questionData.length - 1 }}&nbsp;Themengebiete unterteilt:</strong> 
+     
+	   Ein grosser Dank geht an <a href="https://www.abgeordnetenwatch.de/" target="_blank">abgeordnetenwatch.de</a>, die hunderte real stattgefundenen Abstimmungen maschienenlesbar zur Verfügung stellen!
+	   <strong>Aus diesem Datensatz haben wir {{ nQuestions }}&nbsp;Fragen ausgewählt und in {{ questionData.length - 1 }}&nbsp;Themengebiete unterteilt:</strong> 
 	   {{ themengebiete }}.
 	   Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeigt.
 	   Eine einzelne Abstimmung sieht wie folgt aus:

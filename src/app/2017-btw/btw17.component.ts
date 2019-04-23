@@ -191,7 +191,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
           
           
 					// special stuff for intro card
-					for (let q = 0; q < this.questionData.length; q++) {
+					for (let q = 1; q < this.questionData.length; q++) {
 						this.themengebiete += this.questionData[q]['titel'];
 						if (q == this.questionData.length - 2) {
 							this.themengebiete += ' und ';
