@@ -11,7 +11,7 @@
             "subtext": "",
             "fragen": {
               "example": {
-                "context": "Eine Frage hat manchmal ein bisschen Kontext.",
+                "context": "Eine Frage hat manchmal ein bisschen Kontext. ",
                 "frage": "Die eigentliche Frage ist aber immer fett gedruckt.",
                 "inverted": false,
                 "link": "https://wahlbilanz.de",
