@@ -7,6 +7,16 @@ export class StorageService {
 
   constructor() {
     this.checkSaving ();
+    
+    console.log ("local storage");
+    for(var key in localStorage) {
+      console.log (key);
+      console.log (localStorage.getItem(key));
+}
+    /*for (var i = 0; i < localStorage.length; i++){
+    console.log ("local storage");
+    console.log(localStorage.getItem(localStorage.key(i)));
+}*/
   }
   
 	cachedData = {};
@@ -62,9 +72,9 @@ export class StorageService {
 		if (this.doSave && !this.cachedData.hasOwnProperty(storageId)) {
       console.log ("getting item " + storageId);
       this.cachedData[storageId] = localStorage.getItem(storageId);
-      //console.log (this.cachedData[storageId]);
+      
     }
-    
+    console.log (this.cachedData[storageId]);
     return this.cachedData[storageId];
 	}
   clear () {

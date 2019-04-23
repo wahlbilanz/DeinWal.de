@@ -188,11 +188,11 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 									}
 								}
 
-								if (this.questionResults[f]['gesamt' + this.voteOptions[1]] > this.questionResults[f]['gesamt' + this.voteOptions[2]]) {
+								/*if (this.questionResults[f]['gesamt' + this.voteOptions[1]] > this.questionResults[f]['gesamt' + this.voteOptions[2]]) {
 									this.questionResults[f]['gesamt'] = "Vom Parlament <strong>angenommen mit " + this.questionResults[f]['gesamt' + this.voteOptions[1]] + " Ja-Stimmen</strong> bei " + this.questionResults[f]['gesamt' + this.voteOptions[2]] + " Nein-Stimmen und " + this.questionResults[f]['gesamt' + this.voteOptions[0]] + " Enthaltungen";
 								} else {
 									this.questionResults[f]['gesamt'] = "Vom Parlament <strong>abgelehnt mit " + this.questionResults[f]['gesamt' + this.voteOptions[2]] + " Nein-Stimmen</strong> bei " + this.questionResults[f]['gesamt' + this.voteOptions[1]] + " Ja-Stimmen und " + this.questionResults[f]['gesamt' + this.voteOptions[0]] + " Enthaltungen";
-								}
+								}*/
 								
 							}
 						}
@@ -717,9 +717,17 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 
 	getQuestionDataFromLocalStorage() {
     if (this.storage.isSaving ()) {
-	this.questionResults = JSON.parse(this.storage.getItem('questionResults', this.routeId));
-		this.questionData = JSON.parse(this.storage.getItem('questionData', this.routeId));
-		this.answers = JSON.parse(this.storage.getItem('answers', this.routeId));
+    const questionResults = JSON.parse(this.storage.getItem('questionResults', this.routeId));
+		const questionData = JSON.parse(this.storage.getItem('questionData', this.routeId));
+		const answers = JSON.parse(this.storage.getItem('answers', this.routeId));
+    
+    if (questionResults)
+      this.questionResults = questionResults;
+    if (questionData)
+      this.questionData = questionData;
+    if (answers)
+      this.answers = answers;
+    
     console.log (this.answers);
     console.log (this.questionResults);
     

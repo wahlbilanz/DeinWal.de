@@ -686,9 +686,16 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 
 	getQuestionDataFromLocalStorage() {
     if (this.storage.isSaving ()) {
-      this.questionResults = JSON.parse(this.storage.getItem('questionResults', this.routeId));
-      this.questionData = JSON.parse(this.storage.getItem('questionData', this.routeId));
-      this.answers = JSON.parse(this.storage.getItem('answers', this.routeId));
+    const questionResults = JSON.parse(this.storage.getItem('questionResults', this.routeId));
+		const questionData = JSON.parse(this.storage.getItem('questionData', this.routeId));
+		const answers = JSON.parse(this.storage.getItem('answers', this.routeId));
+    
+    if (questionResults)
+      this.questionResults = questionResults;
+    if (questionData)
+      this.questionData = questionData;
+    if (answers)
+      this.answers = answers;
     }
 	}
 
