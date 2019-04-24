@@ -248,7 +248,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 	observeUrl () {
 		// parse route/url
 		this.route.params.subscribe(params => {
-			//console.log ("found params: ", params);
+			//this.app.log ("found params: ", params);
 			try {
 				let card = 0;
 				// requested auswertung?
@@ -262,7 +262,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 				if (Number.isNaN(card)) {
 					card = 0;
 					this.router.navigate(['europawal2019', 0], {replaceUrl:true});
-					//console.log ("replacing location to " + 'quiz/0');
+					//this.app.log ("replacing location to " + 'quiz/0');
 				} else {
 					if (!this.updatedQuestions) {
 						this.updateQuestions (card);
@@ -275,10 +275,10 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 				}
 			} catch (e) {
 				// if there was an error or nothing is given: show first question
-				//console.log('keine question id angegeben ');
+				//this.app.log('keine question id angegeben ');
 				//initialCard = 0;
 				this.router.navigate(['europawal2019', 0], {replaceUrl:true});
-				//console.log ("replacing location to " + 'quiz/0');
+				//this.app.log ("replacing location to " + 'quiz/0');
 			}
 		
 		});
@@ -727,10 +727,6 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
       this.questionData = questionData;
     if (answers)
       this.answers = answers;
-    
-    console.log (this.answers);
-    console.log (this.questionResults);
-    
   }
 	}
 

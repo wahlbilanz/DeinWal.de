@@ -204,7 +204,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 					this.updatedQuestions = true;
 				} catch (e) {
 					// unexpected votes format?
-					console.log('could not parse votes.json', e);
+					this.app.log('could not parse votes.json', e);
 					// show error
 					this.alertSlide = {
 						'titel': 'Es ist ein Fehler aufgetreten!',
@@ -234,7 +234,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	observeUrl () {
 		// parse route/url
 		this.route.params.subscribe(params => {
-			//console.log ("found params: ", params);
+			//this.app.log ("found params: ", params);
 			try {
 				let card = 0;
 				// requested auswertung?
@@ -248,7 +248,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 				if (Number.isNaN(card)) {
 					card = 0;
 					this.router.navigate(['bundestagswal2017', 0], {replaceUrl:true});
-					//console.log ("replacing location to " + 'quiz/0');
+					//this.app.log ("replacing location to " + 'quiz/0');
 				} else {
 					if (!this.updatedQuestions) {
 						this.updateQuestions (card);
@@ -261,10 +261,10 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 				}
 			} catch (e) {
 				// if there was an error or nothing is given: show first question
-				//console.log('keine question id angegeben ');
+				//this.app.log('keine question id angegeben ');
 				//initialCard = 0;
 				this.router.navigate(['bundestagswal2017', 0], {replaceUrl:true});
-				//console.log ("replacing location to " + 'quiz/0');
+				//this.app.log ("replacing location to " + 'quiz/0');
 			}
 		
 		});
@@ -274,7 +274,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	 * print answers in console
 	 */
 	debugAnswers() {
-		console.log(this.answers);
+		this.app.log(this.answers);
 	}
 
 	/**
@@ -301,7 +301,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
     
 		this.app.currentQuiz = this.routeId;
     
-		//console.log ("showing question " + n);
+		//this.app.log ("showing question " + n);
 		this.app.questionIndex[this.routeId] = n;
 		window.scrollTo(0,0);
 		
@@ -315,14 +315,14 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 			this.app.questionIndex[this.routeId] = 0;
 		}
 		
-//		console.log (this.questionIndex[this.routeId]);
-//		console.log (this.questionData);
+//		this.app.log (this.questionIndex[this.routeId]);
+//		this.app.log (this.questionData);
 
 		// if n is bigger than the number of questions -> show results
 		if (this.app.questionIndex[this.routeId] >= this.questionData.length && this.questionData.length > 0) {
 			//this.location.replaceState ('quiz/auswertung'); // change URL
 			this.router.navigate(['bundestagswal2017', 'auswertung'], {replaceUrl:true});
-			//console.log ("setting location to " + 'quiz/auswertung');
+			//this.app.log ("setting location to " + 'quiz/auswertung');
 			this.showResults();
 		} else if (this.questionData.length == 0) {
 			this.resultsVisible = false;
@@ -389,10 +389,10 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 			this.resultsVisible = false;
 			this.progress = this.toPercent (n / (this.questionData.length));
 			//this.question = this.questionData[this.app.questionIndex[this.routeId]];
-			//console.log ("question title " + this.question["titel"]);
+			//this.app.log ("question title " + this.question["titel"]);
 			// get sub-questions
 			//this.actualQuestions = Object.keys(this.question['fragen']);
-			//console.log (this.question);
+			//this.app.log (this.question);
 		}
 	}
 
@@ -405,7 +405,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 		let next = this.app.questionIndex[this.routeId] + n;
 		//this.location.go('quiz/' + next);
 		this.router.navigate(['bundestagswal2017', next]);
-		//console.log ("setting location to " + 'quiz/' + next);
+		//this.app.log ("setting location to " + 'quiz/' + next);
 		this.showQuestion(next); // die entsprechende URL im adressfeld anzeigen und auf history-stack pushen
 	}
 
@@ -426,7 +426,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 	 * auswertungstabelle generieren und anzeigen
 	 */
 	showResults() {
-		//console.log ("showing results");
+		//this.app.log ("showing results");
 //		this.location.go('quiz/auswertung') // change URL
 		this.router.navigate(['bundestagswal2017', 'auswertung'], {replaceUrl:true});
 		window.scrollTo(0,0);
@@ -449,7 +449,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 						const opt = this.voteOptions;
 						const answer = opt[this.answers[f]];
 						const results = this.questionResults[f];
-						//console.log (f, this.questionResults[f]);
+						//this.app.log (f, this.questionResults[f]);
 						nAnswered++;
 						for (const partyName of ['gruenen', 'cdu/csu', 'spd', 'die.linke']) {
 							if (!this.overallResult['consent'][partyName]) {
@@ -471,7 +471,7 @@ export class BundestagsWal2017 implements OnInit, AfterContentInit, AfterViewIni
 						}
 					}
 				}
-				//console.log (f, q['fragen'][f]['score']);
+				//this.app.log (f, q['fragen'][f]['score']);
 			}
 		}
 		
