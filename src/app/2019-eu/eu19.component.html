@@ -60,19 +60,13 @@
 	  <br> <br>
 	  
 	   Mit den Knöpfen ganz unten kannst du zwischen den Themengebieten navigieren oder direkt zur Auswertung gelangen.
-	   Du musst nicht zwingend alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen.
-	   <strong>Eine unbeantwortete Frage hat einen anderen Einfluss auf das Ergebnis, als eine Enthaltung</strong> - siehe <a [routerLink]="['/faq']" fragment="berechnung">Berechnung der Auswertung?</a>.
-	   
-	   <br><br>
-	   
-	   Du kannst auch direkt zur Auswertung springen und das Quiz damit vorzeitig beenden.
-	   Dann bleiben die &uuml;brigen Fragen einfach unbeantwortet.
-	   Von der Auswertung kommst du natürlich auch jeder Zeit wieder zurück zu den Fragen!
-	   Ganz unten zeigt dir ein Fortschrittsbalken wie weit du bist.
+     Du musst nicht alle Fragen beantworten, sondern kannst Fragen unbeantwortet lassen.
+	   <strong>Im Gegensatz zu einer Enthaltung hat eine unbeantwortete Frage aber keinen Einfluss auf das Ergebnis</strong>
+    - siehe <a [routerLink]="['/faq']" fragment="berechnung">Berechnung der Auswertung?</a>.
 	   
 	   <br> <br>
      
-	   Ein grosser Dank geht an <a href="https://www.abgeordnetenwatch.de/" target="_blank">abgeordnetenwatch.de</a>, die hunderte real stattgefundenen Abstimmungen maschienenlesbar zur Verfügung stellen!
+	   Ein grosser Dank geht an <a href="https://www.abgeordnetenwatch.de/" target="_blank">abgeordnetenwatch.de</a>, die hunderte real stattgefundenen Abstimmungen maschinenlesbar zur Verfügung stellen!
 	   <strong>Aus diesem Datensatz haben wir {{ nQuestions }}&nbsp;Fragen ausgewählt und in {{ questionData.length - 1 }}&nbsp;Themengebiete unterteilt:</strong> 
 	   {{ themengebiete }}.
 	   Jedes Themengebiet wird in einer eigenen Quiz-Karte (so wie diese Seite) angezeigt.

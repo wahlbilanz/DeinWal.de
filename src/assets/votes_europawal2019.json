@@ -437,14 +437,18 @@
             "subtext": "",
             "fragen": {
                 "0aa8e687-5c86-4150-a0b3-0d7d46d22fc0": {
-                    "context": "????",
-                    "frage": "????",
+                    "context": "Frauen erhalten in der EU im durchschnitt einen 16 % niedrigeren Stundenlohn und eine etwa 40 % niedrigere Rente als Männer. Bei zukünftigen Änderungen der Steuerpolitik soll verpflichtend deren Auswirkungen auf die Gleichstellung der Geschlechter berücksichtigt werden, zum Beispiel durch niedriegere Verbrauchersteuern aber höheren Unternehmenssteuern, was Frauen zugute kommen würde.",
+                    "frage": "Stimmst du für die Vorgaben für mehr Steuergerechtigkeit?",
                     "short": "Gleichstellung",
                     "subtext": "",
                     "moreInfos": [
                       {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu/abstimmungen/gleichstellung-der-geschlechter-in-der-steuerpolitik"
+                      },
+                      {
+                          "text": "Vorschlag im Europaparlament",
+                          "link": "http://www.europarl.europa.eu/doceo/document/A-8-2018-0416_DE.html?redirect"
                       }
                     ],
                     "invert": false
@@ -484,7 +488,7 @@
                     "invert": false
                 },
                 "75998fad-a01d-4538-8145-5ecae20b5ec4": {
-                    "context": "Bis 2015 war das Land für einen Flüchtling zuständig, bei dem der Flüchtling zuerst die EU betrat (Erstkontaktländer, Dublin-Verordnung). Die Mittelmeerstaaten finden diese Verordnung ungerecht.",
+                    "context": "Bis 2015 war das Land für einen Flüchtling zuständig, in welchem der Flüchtling zuerst die EU betrat (Erstkontaktländer, Dublin-Verordnung). Die Mittelmeerstaaten finden diese Verordnung ungerecht.",
                     "frage": "Stimmst du einer solidarischeren Verteilung der Flüchtlinge zu?",
                     "short": "Flüchtlingsverteilung",
                     "subtext": "",
