@@ -9,14 +9,32 @@ import { Router, NavigationEnd } from '@angular/router'
 export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, AfterViewChecked, DoCheck, OnChanges {
   localStorageOn = 'gespeichert';
   
-  othertools = [];
+  othertoolsBtw17 = [];
+  othertoolsEu19 = [];
   
   constructor(private router: Router) {
     this.updateLocalStorage ();
     
+	this.othertoolsEu19 = this.shuffle ([
+		/*{
+			'pre': '',
+			'name': '',
+			'link': ''
+		},*/
+		{
+			'pre': 'zum',
+			'name': 'Digital-O-Mat',
+			'link': 'https://ep2019.digital-o-mat.de/'
+		},
+		{
+			'pre': 'in den',
+			'name': 'Wahl-O-Mat',
+			'link': 'https://www.wahl-o-mat.de/'
+		},
+  ])
     
 
-	this.othertools = this.shuffle ([
+	this.othertoolsBtw17 = this.shuffle ([
 		/*{
 			'pre': '',
 			'name': '',
@@ -122,7 +140,7 @@ export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, Af
         const tree = this.router.parseUrl(this.router.url);
         if (tree.fragment) {
           const element = document.querySelector("#" + tree.fragment);
-          if (element) { element.scrollIntoView(element); }
+          if (element) { element.scrollIntoView(); }
         }
       }
     });

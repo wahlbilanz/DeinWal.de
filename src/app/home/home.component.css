@@ -1,20 +1,17 @@
-#home {
+#home, #archiv {
 	max-width: 950px;
 	margin: 5px auto;
 }
-#home-whale {
+#home-whale, .archivwal {
 	max-height: 90%;
 	margin: auto;
 	padding: 20px;
 	
 }
-#home-whale object {
+#home-whale object, .archivwal object {
 	width: 100%;
 }
-#home-whale div {
-   margin-bottom: 3em;
-}
-#home-text {
+#home-text, .archivetext{
 	padding: 20px;
 }
 

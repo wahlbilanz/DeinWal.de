@@ -9,8 +9,6 @@
 		    </object>
 		    <h2 class="w3-padding w3-display-bottomleft w3-display-hover">Du hast den Wal!</h2>
         </div>
-        Gute Neuigkeiten: <strong>Wir arbeiten an einem Europawal!</strong>
-        Angepeilt ist der 21. April &mdash; so stay tuned :)
 	</div>
 
 	<div id="home-text" class="w3-half w3-left">
@@ -18,26 +16,80 @@
 				Mit deinem Wal kannst du prüfen, welche Partei wie du denkt.
   		</p>
   		<p>
-  			Hier kannst du die Abstimmungen im Bundestag der letzten Legislaturperiode nachspielen,
+  			Hier kannst du die Abstimmungen im Europaparlament der letzten Legislaturperiode nachspielen,
   			als wärst du live dabei gewesen!
   			In der Auswertung siehst du,
   			welche Parteien in deinem Sinne abgestimmt haben.
   		</p>
   		<p>
-  			<a routerLink="/quiz/{{getQuestionIndex ()}}" class="w3-button w3-indigo w3-hover-blue">Quiz zur Bundestagswahl 2017</a>
+  			<a routerLink="/europawal2019/{{getQuestionIndex ('europawal2019')}}" class="w3-button w3-indigo w3-hover-blue">Quiz zur Europawahl 2019</a>
   		</p>
   		<p>
-			Auch wenn dein Wal dem <a href="https://www.wahl-o-mat.de/" target="_blank">Wahl-O-Mat</a> sehr ähnelt, steckt doch ein ganz anderes Konzept dahinter.
+			Auch wenn DeinWal dem <a href="https://www.wahl-o-mat.de/" target="_blank">Wahl-O-Mat</a> sehr ähnelt, steckt doch ein ganz anderes Konzept dahinter.
 			Hier sagen die Parteien nicht, wie sie zu einem Thema <em>abstimmen würden</em>
 			&mdash; hier zählt, wie sie zu einem Thema <em>abgestimmt haben!</em>
-			Das unterscheidet deinen Wal übrigens auch von den typischen Wahlprogrammen.
+			Das unterscheidet DeinWal übrigens auch von den typischen Wahlprogrammen.
   		</p>
-    <p> <i>Update:</i> </p>
-    <p>
-      Die Bundestagswahl 2017 ist nun schon vorüber.
-      Trotzdem könnt ihr das Quiz zur Bundestagswahl 2017 mit den Abstimmungsergebnissen von Abstimmungen zwischen 2013 und 2017 weiterhin spielen.
-      Ob es für eine zukünftige Wahlen wieder ein DeinWal.de Quiz geben wird ist noch offen,
-      aber aufgrund des enormen positiven Feedbacks haben wir Lust, DeinWal auch in Zukunft weiter zu führen.
-    </p>
 	</div>
+</div>
+<div class="w3-container w3-padding-16 w3-margin-top optional-padding" id="archiv">
+        <header class="w3-container">
+  		<h2 class="">Wal-Archiv</h2>
+  		</header>
+      <p class="archivetext">
+      Einige Wahlen sind nun schon vorüber.
+      Trotzdem könnt ihr vergangene Wale nochmal spielen:
+      </p>
+      
+	<div class="w3-container w3-card-4 w3-padding-16 w3-margin-top optional-padding w3-animate-zoom" id="archivebox">
+	<div class="archivwal w3-display-container w3-half">
+        <div class="w3-display-container">
+		    <object type="image/svg+xml" data="/assets/europawal.svg">
+			    <img src="/assets/europawal.png" alt="DeinWal.de - Du hast den Wal zum EU-Parlament 2019!" />
+		    </object>
+		    <h2 class="w3-padding w3-display-bottomleft w3-display-hover">EuropaWal!</h2>
+        </div>
+	</div>
+	<div class="archivetext w3-half w3-left">
+  		<h3>
+				Der EuropaWal 2019
+  		</h3>
+  		<p>
+  			Hier kannst du die Abstimmungen der 8. Legislaturperiode (2014-2019) im Europaparlament nachspielen,
+  			als wärst du live dabei gewesen!
+  			In der Auswertung siehst du,
+  			welche Parteien in deinem Sinne abgestimmt haben.
+  		</p>
+  		<p>
+  			<a routerLink="/europawal2019/{{getQuestionIndex ('europawal2019')}}" class="w3-button w3-indigo w3-hover-blue">Quiz zur Europawahl 2019</a>
+  		</p>
+	</div>
+	</div>
+  
+  <div style="clear:both"></div>
+      
+	<div class="w3-container w3-card-4 w3-padding-16 w3-margin-top optional-padding w3-animate-zoom" id="archivebox">
+	<div class="archivwal w3-display-container w3-half">
+        <div class="w3-display-container">
+		    <object type="image/svg+xml" data="/assets/bundestagswal.svg">
+			    <img src="/assets/bundestagswal.png" alt="DeinWal.de - Du hast den Wal zum Bundestag 2017!" />
+		    </object>
+		    <h2 class="w3-padding w3-display-bottomleft w3-display-hover">BundestagsWal!</h2>
+        </div>
+	</div>
+	<div class="archivetext w3-half w3-left">
+  		<h3>
+				Der BundestagsWal 2017
+  		</h3>
+  		<p>
+  			Hier kannst du die Abstimmungen im Bundestag der 18. Legislaturperiode (2013-2017) nachspielen,
+  			als wärst du live dabei gewesen!
+  			In der Auswertung siehst du,
+  			welche Parteien in deinem Sinne abgestimmt haben.
+  		</p>
+  		<p>
+  			<a routerLink="/bundestagswal2017/{{getQuestionIndex ('bundestagswal2017')}}" class="w3-button w3-indigo w3-hover-blue">Quiz zur Bundestagswahl 2017</a>
+  		</p>
+	</div>
+      
 </div>

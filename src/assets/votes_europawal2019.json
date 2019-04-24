@@ -1,0 +1,3573 @@
+{ 
+    "quiz": [
+            {
+              "intro": true,
+                "topic": [
+                    "deinwal"
+                ],
+            "titel": "Gleich geht's los!",
+            "beschreibung": "you'd never see this.",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+              "example": {
+                "context": "Eine Frage hat manchmal ein bisschen Kontext. ",
+                "frage": "Die eigentliche Frage ist aber immer fett gedruckt.",
+                "inverted": false,
+                "link": "https://wahlbilanz.de",
+                "short": "example",
+                "subtext": "Über einen Link kannst du mehr zu einer Abstimmung erfahren:",
+                "moreInfos": [
+                    {
+                        "text": "Hier gibt es ge­ge­be­nen­falls weitere Information und Links, wie zum Beispiel:",
+                        "link": ""
+                    },
+                    {
+                        "text": "Blauwal von oben gesehen",
+                        "link": "https://de.wikipedia.org/wiki/Datei:Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg"
+                    },
+                    {
+                        "text": "Methanhydrat",
+                        "link": "https://de.wikipedia.org/wiki/Methanhydrat"
+                    }
+                ]
+              }
+            }
+        },
+        {
+            "titel": "Internationales",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "34d2fd08-9bbf-4948-88c6-183864116d6d": {
+                    "context": "Es kam zu einem bewaffneten Konflikt im Osten der Ukraine und Russland annektierte die Krim.",
+                    "frage": "Sollten die Beziehungen zu Russland kritisch neubewertet werden?",
+                    "short": "Russland",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/kritische-neubewertung-der-beziehungen-zu-russland"
+                      },
+                      {
+                          "text": "Informationen zur Krim bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Krim"
+                      },
+                      {
+                          "text": "Ukraine Konflikt im Informations-Portal zur politischen Bildung",
+                          "link": "https://www.politische-bildung.de/proteste_ukraine.html"
+                      }
+                    ],
+                    "invert": false
+                },
+                "5ec1c8eb-b80b-4a18-a0cb-c2054067ba2e": {
+                    "context": "Im Juli 2016 gab es einen Putschversuch in der Türkei.",
+                    "frage": "Sollten die EU-Beitrittsverhandlungen mit der Türkei gestoppt werden, bis sich die politische Situation verbessert und stabilisiert hat?",
+                    "short": "Türkeibeitritt",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Entschliessungsantrag im EU-Parlament",
+                          "link": "http://www.europarl.europa.eu/doceo/document/RC-8-2016-1276_DE.html?redirect"
+                      },
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/eu-beitrittsverhandlungen-mit-der-tuerkei-einfrieren"
+                      },
+                      {
+                          "text": "Informationen bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Beitrittsverhandlungen_der_T%C3%BCrkei_mit_der_Europ%C3%A4ischen_Union"
+                      }
+                    ],
+                    "invert": false
+                },
+                "a7bfb784-f0e3-4dea-9ee5-a63024adff6f": {
+                    "context": "Geheimdienste der USA nutzen \"erweiterte Verhörmethoden\", die unter Anderem gegen das Recht auf Freiheit, Sicherheit und menschenwürdige Behandlung verstoßen und im Rahmen des Völkerrechts untersagt sind.",
+                    "frage": "Sollte die EU diese Methoden verurteilen und ein Verbot fordern?",
+                    "short": "Folter",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Entschliessungsantrag im EU-Parlament",
+                          "link": "http://www.europarl.europa.eu/doceo/document/RC-8-2015-0123_DE.pdf"
+                      },
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/verurteilung-von-cia-foltermethoden"
+                      }
+                    ],
+                    "invert": false
+                },
+                "e784ad92-3bf7-45b4-884d-e8c7320dd90c": {
+                    "context": "2015 wurde nur 6,2% der Entwicklungshilfe im Bereich Bildung investiert.",
+                    "frage": "Sollte die Bildungshile auf bis zu 15% der offiziellen Entwicklungshilfe aufgestockt werden, mit einem besonderen Fokus auf hochwertige und inklusive Grundbildung?",
+                    "short": "Bildungshilfe",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/entwicklungshilfe-der-eu-fuer-das-bildungswesen "
+                      }
+                    ],
+                    "invert": false
+                },
+                "2b962506-401b-45b7-8a4d-c3a12b35ceef": {
+                    "context": "",
+                    "frage": "Sollte die EU weiter militärisch im nahen Osten und in Nordafrika präsent sein?",
+                    "short": "Auslandseinsatz",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Umfangreiche Entschließung des Europäischen Parlaments",
+                          "link": "http://www.europarl.europa.eu/sides/getDoc.do?pubRef=-//EP//NONSGML+TA+P8-TA-2015-0271+0+DOC+PDF+V0//DE"
+                      },
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/eu-sicherheitspolitik-im-nahen-osten-und-nordafrika"
+                      }
+                    ],
+                    "invert": false
+                }
+            }
+        },
+        {
+            "titel": "Natur und Umwelt",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "20b545ab-e31f-4404-ba34-fed1f163cce2": {
+                    "context": "Glyphosat ist ein Herbizid mit umstrittenen Auswirkung auf die Gesundheit des Menschen.",
+                    "frage": "Stimmst du einer Zulassung fuer weitere 7&nbsp;Jahre zu, in denen die gesundheitliche Auswirkungen wissenschaftlich genauer untersucht werden?",
+                    "short": "Glyphosat",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/resolution-zur-neuzulassung-des-herbizids-glyphosat"
+                      }
+                    ],
+                    "invert": false
+                },
+                "299d2467-520f-4d6c-9273-93b2f95719f8": {
+                    "context": "In der EU dürfen Kosmetika nicht an Tieren getestet werden. Manche Firmen umgehen diese Regelung, indem sie diese Tests in nicht-EU-Staaten durchführen.",
+                    "frage": "Sollte ein Importverbot betroffene Produkte erstellt werden?",
+                    "short": "Tierversuche",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/weltweites-verbot-von-tierversuchen"
+                      }
+                    ],
+                    "invert": false
+                },
+                "83f43a49-c047-4390-aaee-14cbe5a55525": {
+                    "context": "Die europäischen Mitgliedsstaaten können selbst entscheiden, ob sie gentechnisch veränderte Sojasorten anbauen wollen. Ohne Grenzkontrollen kann der Handel mit gentechnisch veränderten Organismen zwischen den Mitgliedsstaaten aber kaum überwacht werden.",
+                    "frage": "Sollte der Anbau von gentechnisch veränderten Sojabohnen in einzelnen EU-Ländern erlaubt sein? ",
+                    "short": "Gensoja",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/anbau-von-gentechnisch-veraenderten-sojabohnen-der-europaeischen"
+                      }
+                    ],
+                    "invert": false
+                },
+                "277599c2-6d75-4593-9a33-dd94d25871dd": {
+                    "context": "",
+                    "frage": "Sollten Einwegkunststoffe, wie Plastikbesteck und -teller, Wattestäbchen, Trinkhalme, Rührstäbchen und Luftballonstäbe, verboten werden?",
+                    "short": "Einwegplastik",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Entwurf beim EU-Parlament",
+                          "link": "http://www.europarl.europa.eu/doceo/document/A-8-2018-0317_DE.html"
+                      },
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/verbot-von-einwegplastik"
+                      },
+                      {
+                          "text": "MDR",
+                          "link": "https://www.mdr.de/nachrichten/politik/ausland/eu-verbote-gegen-plastikmuell-100.html"
+                      },
+                      {
+                          "text": "ZEIT online",
+                          "link": "https://www.zeit.de/politik/2019-03/einweg-verbot-plastikmuell-meere-eu-parlament"
+                      }
+                    ],
+                    "invert": false
+                },
+                "1e33c664-17d7-4631-bb13-d50eea58837f": {
+                    "context": "",
+                    "frage": "Sollte das Urspungsland von Fleischerzeugnissen auf Verpackungsetiketten gekennzeichnet werden?",
+                    "short": "Fleischursprung",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/kennzeichnung-des-ursprungslands-von-fleisch"
+                      }
+                    ],
+                    "invert": false
+                }
+            }
+        },
+        {
+            "titel": "Abwehr",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "43b62e8f-afef-4083-a71b-753ccdbecd6d": {
+                    "context": "Im Rahmen einer EU-Strategie zur Bekämpfung von Radikalisierungstendenzen soll zum Beispiel eine schwarze Liste europäischer Dschihadisten und Terrorverdächtiger erstellt werden und der Austausch zwischen nationalen Polizeien und Europol intensiviert werden.",
+                    "frage": "Sollte das Vorgehen gegen Terrorverdächtige europaweit koordiniert werden?",
+                    "short": "Terrorabwehr",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/gemeinsame-strategie-zur-praevention-von-radikalisierung"
+                      }
+                    ],
+                    "invert": false
+                },
+                "29540433-69b2-4a60-9d7b-5bf47bed9ee8": {
+                    "context": "",
+                    "frage": "Sollte die EU einheitlich und gemeinsam Cyberkapazitäten entwickeln und die Zusammenarbeit im Bereich der Cyberabwehr verbessern?",
+                    "short": "Cyberabwehr",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Entschließung des Europäischen Parlaments",
+                          "link": "http://www.europarl.europa.eu/sides/getDoc.do?type=TA&reference=P8-TA-2018-0258&language=DE&ring=A8-2018-0189"
+                      },
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/cyber-abwehr"
+                      }
+                    ],
+                    "invert": false
+                },
+                "55617778-d77e-4532-be49-1cf9f1e168f4": {
+                    "context": "Mit einem europäischen Verteidigungsfonds sollen die EU-Staaten jährlich etwa 5,5 Milliarden aufbringen, um damit zum Beispiel gemeinsam Material zu kaufen und Waffenentwicklung zu betreiben. Die EU soll damit auch unabhängiger von dem Militär der USA werden.",
+                    "frage": "Stimmst du der Errichtung eines europäischen Verteidigungsfonds zu?",
+                    "short": "Militärfonds",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Pressemitteilung der Europäischen Kommission",
+                          "link": "http://europa.eu/rapid/press-release_IP-17-1508_de.htm"
+                      },
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/errichtung-des-europaeischen-verteidigungsfonds"
+                      },
+                      {
+                          "text": "SPIEGEL online",
+                          "link": "https://www.spiegel.de/politik/ausland/ruestung-eu-verteidigungsfonds-laut-gutachten-illegal-a-1242792.html"
+                      },
+                      {
+                          "text": "WELT",
+                          "link": "https://www.welt.de/wirtschaft/article181405646/Europaeischer-Verteidigungsfonds-Der-schwierige-Traum-von-europaeischen-Waffenschmieden.html"
+                      }
+                    ],
+                    "invert": false
+                }
+            }
+        },
+        {
+            "titel": "Digitales",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "98056b77-4079-4c08-b4a7-69036c4bcaf5": {
+                    "context": "Facebook hat zugegeben, dass die britische Firma Cambridge Analytica an private Informationen von bis zu 87&nbsp;Millionen Facebook-Benutzern gekommen war.",
+                    "frage": "Sollte Facebook sich einer ausgiebigen Prüfung durch die EU stellen und sollte der Schutz der personenbezogenen Daten durch neue Rechtsvorschriften verstärkt werden?",
+                    "short": "Facebook",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/nutzung-der-daten-von-facebook-usern-durch-cambridge-analytica"
+                      },
+                      {
+                          "text": "Süddeutsche Zeitung",
+                          "link": "https://www.sueddeutsche.de/digital/datenmissbrauch-was-ist-eigentlich-gerade-bei-facebook-los-1.3932349"
+                      },
+                      {
+                          "text": "netzpolitik.org",
+                          "link": "https://netzpolitik.org/der-facebook-cambridge-analytica-datenskandal/"
+                      }
+                    ],
+                    "invert": false
+                },
+                "9bbf91f1-b259-4dbb-bfd9-d3c3bc5f9ec1": {
+                    "context": "",
+                    "frage": "Sollten Fluggesellschaften dazu verpflichtet werden, die Daten aller Flugpassagiere an die Ermittlungsbehörden der EU-Staaten weiterzuleiten?",
+                    "short": "Fluggastdaten",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Entwurf beim EU-Parlament",
+                          "link": "http://www.europarl.europa.eu/doceo/document/A-8-2015-0248_DE.html"
+                      },
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/eu-richtlinien-ueber-verwendung-von-fluggastdaten"
+                      },
+                      {
+                          "text": "Fluggastdatengesetz bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Fluggastdatengesetz"
+                      },
+                      {
+                          "text": "Fluggastdatensatz bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Passenger_Name_Record"
+                      },
+                      {
+                          "text": "Heise online ",
+                          "link": "https://www.heise.de/newsticker/meldung/Ueber-500-Beamte-kuemmern-sich-kuenftig-um-Speicherung-von-Fluggastdaten-4403717.html"
+                      },
+                      {
+                          "text": "Süddeutsche Zeitung",
+                          "link": "https://www.sueddeutsche.de/politik/eu-airlines-muessen-fluggastdaten-an-eu-staaten-weitergeben-1.2949624"
+                      }
+                    ],
+                    "invert": false
+                },
+                "0705670c-1e29-4056-b4f2-6c2ff82a9e47": {
+                    "context": "Der Zugang zu den Unterlagen der EU-Organe ist schwierig.",
+                    "frage": "Sollte ein Ansatz entwickelt werden, mit dem so viele Dokumente wie möglich auf die \"einfachste, benutzerfreundlichste und zugänglichste Art\" offengelegt werden können?",
+                    "short": "Aktenzugang",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu/abstimmungen/zugang-der-oeffentlichkeit-zu-dokumenten-aus-den-jahren-2014-2015"
+                      }
+                    ],
+                    "invert": false
+                },
+                "20ef0ba6-4336-4f20-98c3-9493dee4e314": {
+                    "context": "Im Rahmen einer Urheberrechtsreform soll die Verantwortung fuer Urheberrechtsverstoesse von den Nutzern auf die Plattformen uebertragen werden. Plattformen sollen hochgeladene Inhalte pruefen und die Veroeffentlichung unterbinden oder die Urheber vergueten. Um Schadensersatzansprüchen vorzubeugen, muessen die Unternehmen voraussichtliche auf Uploadfilter zurueckgreifen.",
+                    "frage": "Stimmst du der Urheberrechtsreform vom März 2019 zu?",
+                    "short": "Urheberrecht",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/reform-des-urheberrechts"
+                      }
+                    ],
+                    "invert": false
+                }
+            }
+        },
+        {
+            "titel": "Handel und Finanzen",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "f22c10c4-e5eb-481a-ae8d-9d8a42a604ba": {
+                    "context": "Das CETA-Freihandelsabkommen soll acht separat bestehenden Abkommen zwischen der EU und Kanada ersetzen und wirtschaftliche Beziehungen zu Kannada vereinfachen und stärken. Es sieht unter anderem die Aufhebung von Zöllen, eine Vereinheitlichung von Standards zur Vereinfachung des Handels, die Liberalisierung des Handels mit Dienstleistungen und eine Investitionsförderung (inkl. umstrittenen Investorenschutz) vor.",
+                    "frage": "Stimmst du dem CETA-Freihandelsabkommen mit Kannada zu?",
+                    "short": "CETA",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/umsetzung-des-handelsabkommens-ceta-mit-kanada"
+                      }
+                    ],
+                    "invert": false
+                },
+                "de2c3caf-d77b-457a-8e02-73bcdb60abad": {
+                    "context": "Oktober 2015: Griechenland steckt weiter in einer Finanzkrise. Die Arbeitslosigkeit stieg zwischen 2007 und 2014 um 18.3% und etwa ein Drittel der Bevölkerung hat keine Krankenversicherung mehr.",
+                    "frage": "Soll Griechenland schneller Hilfsgelder abrufen können und eine Auszahlung von 35 Milliarden Euro aus dem Europäischen Struktur- und Investitionsfond vorgezogen werden?",
+                    "short": "Griechenland",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/auszahlung-von-griechenlandhilfen"
+                      }
+                    ],
+                    "invert": false
+                },
+                "2436eb70-9eb4-4cb6-999f-b6d2ad59782e": {
+                    "context": "Der europäische Struktur- und Investitionsfonds soll die europäische Wirtschaft besonders in strukturschwachen Regionen in den Jahren 2015 bis 2017 mit 315 Milliarden Euro fördern. Insbesondere sollen Infrastrukturprojekte wie Straßen und Brücken, aber auch kleine und mittlere Unternehmen gefördert werden.",
+                    "frage": "Stimmst du der Einrichtung des europäischen Struktur- und Investitionsfonds EFSI zu?",
+                    "short": "EFSI",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Broschüre des Bundesministeriums für Wirtschaft und Energie",
+                          "link": "https://www.bmwi.de/Redaktion/DE/Publikationen/Europa/europaeische-struktur-und-investitionsfonds-in-deutschland.html"
+                      },
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/schaffung-eines-europaeischen-struktur-und-investitionsfonds"
+                      },
+                      {
+                          "text": "Informationen bei Lexxion",
+                          "link": "https://www.lexxion.eu/themen/eu-struktur-fonds/"
+                      },
+                      {
+                          "text": "Regionalpolitik der Europäischen Union bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Regionalpolitik_der_Europ%C3%A4ischen_Union"
+                      }
+                    ],
+                    "invert": false
+                }
+            }
+        },
+        {
+            "titel": "Soziales",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "0aa8e687-5c86-4150-a0b3-0d7d46d22fc0": {
+                    "context": "????",
+                    "frage": "????",
+                    "short": "Gleichstellung",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu/abstimmungen/gleichstellung-der-geschlechter-in-der-steuerpolitik"
+                      }
+                    ],
+                    "invert": false
+                },
+                "482a257f-d807-494a-98ff-b94b0626582a": {
+                    "context": "",
+                    "frage": "Sollten unionsweite Maßnahmen zum Schutz der Akademischen Freiheit getroffen werden?",
+                    "short": "Uni-Freiheit",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/schutz-der-akademischen-freiheit"
+                      }
+                    ],
+                    "invert": false
+                }
+            }
+        },
+        {
+            "titel": "Inneres",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "5901f8e8-6515-4b71-8b49-0b6a93c87279": {
+                    "context": "",
+                    "frage": "Sollten minderjährige, unbegleitete Geflüchtete einen besseren Schutz als bisher genießen und nicht mehr gegen Ihren Willen festgehalten werden dürfen?",
+                    "short": "Flüchtlingsschutz",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/schutz-unbegleiteter-minderjaehriger-gefluechteter"
+                      }
+                    ],
+                    "invert": false
+                },
+                "75998fad-a01d-4538-8145-5ecae20b5ec4": {
+                    "context": "Bis 2015 war das Land für einen Flüchtling zuständig ist, bei dem der Flüchtling zuerst die EU betreten hat (Erstkontaktländer, Dublin-Verordnung). Die Mittelmeerstaaten finden diese Verordnung ungerecht.",
+                    "frage": "Stimmst du einer solidarischeren Verteilung der Flüchtlinge zu?",
+                    "short": "Flüchtlingsverteilung",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Entwurf beim EU-Parlament",
+                          "link": "http://www.europarl.europa.eu/doceo/document/A-8-2017-0345_DE.html?redirect#title2"
+                      },
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/reform-der-dublin-verordnung"
+                      },
+                      {
+                          "text": "News-Beitrag des EU-Parlaments",
+                          "link": "http://www.europarl.europa.eu/news/de/headlines/world/20180615STO05927/eu-asylreform-standpunkt-des-parlaments-zur-dublin-verordnung"
+                      },
+                      {
+                          "text": "ZEIT online",
+                          "link": "https://www.zeit.de/politik/2018-06/eu-gipfel-angela-merkel-asylpolitik-solidaritaet-eu-staaten/seite-2"
+                      }
+                    ],
+                    "invert": false
+                },
+                "844ed2e1-303f-49bb-a63f-b7adb938593a": {
+                    "context": "In einer Reform des Wahlrechts zur Europawahl soll unter anderem das Wahlalter auf 16 Jahre gesenkt werden. Die umstrittenste Neuerung ist eine 3%-Hürde fuer Parteien, womit kleine Parteien kaum eine Chance auf einen Sizt im Parlament haetten.",
+                    "frage": "Sollte das Europawahlrecht reformiert werden?",
+                    "short": "Wahlrecht",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/aenderung-des-wahlrechts-zum-eu-parlament"
+                      }
+                    ],
+                    "invert": false
+                }
+            }
+        },
+        {
+            "titel": "Diverses",
+            "beschreibung": "",
+            "bild": "",
+            "subtext": "",
+            "fragen": {
+                "3c2af2c6-bac0-4374-ae06-ce80d7948180": {
+                    "context": "",
+                    "frage": "Sollten Hassverbrechen und Hetze nachdrücklich verurteilt, untersucht und strafrechtlich verfolgt werden?",
+                    "short": "Hassverbrechen",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/zunahme-neofaschistischer-gewalttaten-europa"
+                      }
+                    ],
+                    "invert": false
+                },
+                "23d630ef-fd10-4f95-8caa-254d08280541": {
+                    "context": "Eine Straftat zeugt von signifikantem Unrechtsgehalt und es droht ein Strafverfahren vor Gericht.",
+                    "frage": "Sollte das Manipulieren von Kilometerzählern in Kraffahrzeugen als Straftat bewertet werden?",
+                    "short": "Kilometerzähler",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu/abstimmungen/manipulation-des-kilometerzaehlers-kraftfahrzeugen"
+                      },
+                      {
+                          "text": "Unterschied zwischen Straftat und Ordnungswidrigkeit bei Paradisi",
+                          "link": "http://www.paradisi.de/Freizeit_und_Erholung/Gesellschaft/Kriminalitaet/Artikel/14784.php"
+                      }
+                    ],
+                    "invert": false
+                },
+                "fa3b937b-f7ee-4e28-9172-02034bc92a40": {
+                    "context": "",
+                    "frage": "Sollte der Wechsel zwischen Sommer- und Winterzeit abgeschafft werden?",
+                    "short": "Sommerzeit",
+                    "subtext": "",
+                    "moreInfos": [
+                      {
+                          "text": "Informationen bei abgeordnetenwatch.de",
+                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/zeitumstellung-abschaffen"
+                      }
+                    ],
+                    "invert": false
+                }
+            }
+        }
+    ],
+    "results": {
+      
+      "299d2467-520f-4d6c-9273-93b2f95719f8": {
+        "GRUENE": {
+            "dafuer": 11,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 5,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "BLAUE": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 5,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "FDP": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 30,
+            "enthalten": 1,
+            "gesamt": 34,
+            "dagegen": 0,
+            "abwesend": 3
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 24,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 3
+        }
+    },
+    "482a257f-d807-494a-98ff-b94b0626582a": {
+        "GRUENE": {
+            "dafuer": 9,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "OEDP": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 0,
+            "enthalten": 3,
+            "gesamt": 5,
+            "dagegen": 1,
+            "abwesend": 1
+        },
+        "DIEPARTEI": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 5,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "FDP": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 4,
+            "enthalten": 17,
+            "gesamt": 34,
+            "dagegen": 5,
+            "abwesend": 8
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 24,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 3
+        }
+    },
+    "29540433-69b2-4a60-9d7b-5bf47bed9ee8": {
+        "GRUENE": {
+            "dafuer": 0,
+            "enthalten": 2,
+            "gesamt": 11,
+            "dagegen": 8,
+            "abwesend": 1
+        },
+        "OEDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 3,
+            "abwesend": 1
+        },
+        "DIEPARTEI": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 6,
+            "abwesend": 1
+        },
+        "FDP": {
+            "dafuer": 2,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "CDU/CSU": {
+            "dafuer": 32,
+            "enthalten": 1,
+            "gesamt": 34,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "individual": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 16,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 1,
+            "abwesend": 10
+        }
+    },
+    "0aa8e687-5c86-4150-a0b3-0d7d46d22fc0": {
+        "GRUENE": {
+            "dafuer": 10,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "OEDP": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 5,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 5,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "FDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 3,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 0,
+            "enthalten": 2,
+            "gesamt": 34,
+            "dagegen": 31,
+            "abwesend": 1
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 24,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 3
+        }
+    },
+    "43b62e8f-afef-4083-a71b-753ccdbecd6d": {
+        "GRUENE": {
+            "dafuer": 9,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 4,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 7,
+            "dagegen": 5,
+            "abwesend": 1
+        },
+        "FDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 2,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 30,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 0,
+            "abwesend": 4
+        },
+        "individual": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 19,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 6,
+            "abwesend": 2
+        }
+    },
+    "3c2af2c6-bac0-4374-ae06-ce80d7948180": {
+        "GRUENE": {
+            "dafuer": 8,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 3
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 1,
+            "enthalten": 1,
+            "gesamt": 5,
+            "dagegen": 0,
+            "abwesend": 3
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 4,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 3
+        },
+        "FDP": {
+            "dafuer": 2,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "CDU/CSU": {
+            "dafuer": 6,
+            "enthalten": 10,
+            "gesamt": 34,
+            "dagegen": 9,
+            "abwesend": 9
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 18,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 9
+        }
+    },
+    "2b962506-401b-45b7-8a4d-c3a12b35ceef": {
+        "GRUENE": {
+            "dafuer": 7,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 4
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 0,
+            "enthalten": 5,
+            "gesamt": 5,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 7,
+            "abwesend": 0
+        },
+        "FDP": {
+            "dafuer": 2,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "CDU/CSU": {
+            "dafuer": 29,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 0,
+            "abwesend": 5
+        },
+        "individual": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 7,
+            "enthalten": 15,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 5
+        }
+    },
+    "75998fad-a01d-4538-8145-5ecae20b5ec4": {
+        "GRUENE": {
+            "dafuer": 8,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 3
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 4,
+            "abwesend": 1
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 3,
+            "enthalten": 2,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "FDP": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 20,
+            "enthalten": 2,
+            "gesamt": 34,
+            "dagegen": 1,
+            "abwesend": 11
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 22,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 5
+        }
+    },
+    "20b545ab-e31f-4404-ba34-fed1f163cce2": {
+        "GRUENE": {
+            "dafuer": 0,
+            "enthalten": 11,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "OEDP": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 5,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "LINKE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 6,
+            "abwesend": 1
+        },
+        "FDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 3,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 29,
+            "enthalten": 1,
+            "gesamt": 34,
+            "dagegen": 0,
+            "abwesend": 4
+        },
+        "individual": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 23,
+            "enthalten": 2,
+            "gesamt": 26,
+            "dagegen": 0,
+            "abwesend": 1
+        }
+    },
+    "98056b77-4079-4c08-b4a7-69036c4bcaf5": {
+        "GRUENE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 5,
+            "abwesend": 6
+        },
+        "OEDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 1,
+            "abwesend": 4
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "AFD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 3,
+            "abwesend": 4
+        },
+        "FDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 1,
+            "abwesend": 2
+        },
+        "CDU/CSU": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 18,
+            "abwesend": 15
+        },
+        "individual": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "PIRATEN": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 13,
+            "abwesend": 14
+        }
+    },
+    "e784ad92-3bf7-45b4-884d-e8c7320dd90c": {
+        "GRUENE": {
+            "dafuer": 10,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "ALFA": {
+            "dafuer": 5,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 1,
+            "abwesend": 3
+        },
+        "FDP": {
+            "dafuer": 2,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "CDU/CSU": {
+            "dafuer": 20,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 0,
+            "abwesend": 14
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 17,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 10
+        }
+    },
+    "5901f8e8-6515-4b71-8b49-0b6a93c87279": {
+        "GRUENE": {
+            "dafuer": 11,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "ALFA": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 5,
+            "dagegen": 4,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 5,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "FDP": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 31,
+            "abwesend": 2
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 24,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 3
+        }
+    },
+    "5ec1c8eb-b80b-4a18-a0cb-c2054067ba2e": {
+        "GRUENE": {
+            "dafuer": 10,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "ALFA": {
+            "dafuer": 5,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "LINKE": {
+            "dafuer": 4,
+            "enthalten": 2,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "FDP": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 26,
+            "enthalten": 2,
+            "gesamt": 33,
+            "dagegen": 2,
+            "abwesend": 3
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 22,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 5
+        }
+    },
+    "34d2fd08-9bbf-4948-88c6-183864116d6d": {
+        "GRUENE": {
+            "dafuer": 8,
+            "enthalten": 1,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 1,
+            "enthalten": 4,
+            "gesamt": 5,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 7,
+            "abwesend": 0
+        },
+        "FDP": {
+            "dafuer": 2,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "CDU/CSU": {
+            "dafuer": 33,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "individual": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 23,
+            "enthalten": 3,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 1
+        }
+    },
+    "55617778-d77e-4532-be49-1cf9f1e168f4": {
+        "GRUENE": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 8,
+            "abwesend": 0
+        },
+        "OEDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 5,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 5,
+            "abwesend": 2
+        },
+        "FDP": {
+            "dafuer": 2,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "CDU/CSU": {
+            "dafuer": 30,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 0,
+            "abwesend": 4
+        },
+        "individual": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 0,
+            "enthalten": 6,
+            "gesamt": 27,
+            "dagegen": 20,
+            "abwesend": 1
+        }
+    },
+    "9bbf91f1-b259-4dbb-bfd9-d3c3bc5f9ec1": {
+        "GRUENE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 10,
+            "abwesend": 1
+        },
+        "OEDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 4,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "LINKE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 6,
+            "abwesend": 1
+        },
+        "FDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 3,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 27,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 0,
+            "abwesend": 7
+        },
+        "individual": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 12,
+            "enthalten": 1,
+            "gesamt": 26,
+            "dagegen": 11,
+            "abwesend": 2
+        }
+    },
+    "23d630ef-fd10-4f95-8caa-254d08280541": {
+        "GRUENE": {
+            "dafuer": 9,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "DIEPARTEI": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 5,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "FDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "CDU/CSU": {
+            "dafuer": 31,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 0,
+            "abwesend": 3
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 24,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 3
+        }
+    },
+    "20ef0ba6-4336-4f20-98c3-9493dee4e314": {
+        "GRUENE": {
+            "dafuer": 2,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 7,
+            "abwesend": 2
+        },
+        "OEDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "ALFA": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 2,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 7,
+            "abwesend": 0
+        },
+        "FDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 2,
+            "abwesend": 1
+        },
+        "CDU/CSU": {
+            "dafuer": 32,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 2,
+            "abwesend": 0
+        },
+        "individual": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 0,
+            "enthalten": 3,
+            "gesamt": 27,
+            "dagegen": 23,
+            "abwesend": 1
+        }
+    },
+    "2436eb70-9eb4-4cb6-999f-b6d2ad59782e": {
+        "GRUENE": {
+            "dafuer": 6,
+            "enthalten": 1,
+            "gesamt": 11,
+            "dagegen": 1,
+            "abwesend": 3
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "ALFA": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 4,
+            "abwesend": 1
+        },
+        "DIEPARTEI": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 5,
+            "abwesend": 2
+        },
+        "FDP": {
+            "dafuer": 2,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "CDU/CSU": {
+            "dafuer": 31,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 0,
+            "abwesend": 3
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 24,
+            "enthalten": 1,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 2
+        }
+    },
+    "1e33c664-17d7-4631-bb13-d50eea58837f": {
+        "GRUENE": {
+            "dafuer": 10,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 2,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 6,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "FDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 2,
+            "abwesend": 1
+        },
+        "CDU/CSU": {
+            "dafuer": 2,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 32,
+            "abwesend": 0
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 25,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 2
+        }
+    },
+    "f22c10c4-e5eb-481a-ae8d-9d8a42a604ba": {
+        "GRUENE": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 11,
+            "dagegen": 10,
+            "abwesend": 0
+        },
+        "OEDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 5,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 6,
+            "abwesend": 1
+        },
+        "FDP": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 34,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "individual": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 16,
+            "enthalten": 3,
+            "gesamt": 26,
+            "dagegen": 5,
+            "abwesend": 2
+        }
+    },
+    "fa3b937b-f7ee-4e28-9172-02034bc92a40": {
+        "GRUENE": {
+            "dafuer": 10,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "ALFA": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 4,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "BLAUE": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 7,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FDP": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 26,
+            "enthalten": 2,
+            "gesamt": 34,
+            "dagegen": 5,
+            "abwesend": 1
+        },
+        "individual": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 18,
+            "enthalten": 1,
+            "gesamt": 27,
+            "dagegen": 1,
+            "abwesend": 7
+        }
+    },
+    "844ed2e1-303f-49bb-a63f-b7adb938593a": {
+        "GRUENE": {
+            "dafuer": 0,
+            "enthalten": 4,
+            "gesamt": 11,
+            "dagegen": 5,
+            "abwesend": 2
+        },
+        "OEDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 5,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 5,
+            "abwesend": 2
+        },
+        "FDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "CDU/CSU": {
+            "dafuer": 26,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 2,
+            "abwesend": 6
+        },
+        "individual": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "SPD": {
+            "dafuer": 24,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 3
+        }
+    },
+    "83f43a49-c047-4390-aaee-14cbe5a55525": {
+        "GRUENE": {
+            "dafuer": 11,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 4,
+            "abwesend": 1
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "LINKE": {
+            "dafuer": 6,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "FDP": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 2,
+            "abwesend": 1
+        },
+        "CDU/CSU": {
+            "dafuer": 0,
+            "enthalten": 3,
+            "gesamt": 34,
+            "dagegen": 29,
+            "abwesend": 2
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 24,
+            "enthalten": 0,
+            "gesamt": 26,
+            "dagegen": 0,
+            "abwesend": 2
+        }
+    },
+    "0705670c-1e29-4056-b4f2-6c2ff82a9e47": {
+        "GRUENE": {
+            "dafuer": 9,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 4,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "BLAUE": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 4,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 3
+        },
+        "FDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 2
+        },
+        "CDU/CSU": {
+            "dafuer": 11,
+            "enthalten": 4,
+            "gesamt": 34,
+            "dagegen": 15,
+            "abwesend": 4
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 17,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 10
+        }
+    },
+    "de2c3caf-d77b-457a-8e02-73bcdb60abad": {
+        "GRUENE": {
+            "dafuer": 10,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 4,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 6,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "FDP": {
+            "dafuer": 0,
+            "enthalten": 3,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 16,
+            "enthalten": 5,
+            "gesamt": 34,
+            "dagegen": 9,
+            "abwesend": 4
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 25,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 2
+        }
+    },
+    "a7bfb784-f0e3-4dea-9ee5-a63024adff6f": {
+        "GRUENE": {
+            "dafuer": 10,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 2,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 3,
+            "abwesend": 0
+        },
+        "DIEPARTEI": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "AFD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 0,
+            "enthalten": 1,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 6,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "FDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 1,
+            "abwesend": 1
+        },
+        "CDU/CSU": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 34,
+            "abwesend": 0
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 25,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 2
+        }
+    },
+    "277599c2-6d75-4593-9a33-dd94d25871dd": {
+        "GRUENE": {
+            "dafuer": 11,
+            "enthalten": 0,
+            "gesamt": 11,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "OEDP": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BUENDNISC": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "ALFA": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 5,
+            "dagegen": 3,
+            "abwesend": 1
+        },
+        "DIEPARTEI": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "AFD": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "NPD": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "BLAUE": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 1,
+            "abwesend": 0
+        },
+        "LINKE": {
+            "dafuer": 6,
+            "enthalten": 0,
+            "gesamt": 7,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "FDP": {
+            "dafuer": 3,
+            "enthalten": 0,
+            "gesamt": 3,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "CDU/CSU": {
+            "dafuer": 27,
+            "enthalten": 0,
+            "gesamt": 34,
+            "dagegen": 3,
+            "abwesend": 4
+        },
+        "individual": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "FREIEWAEHLER": {
+            "dafuer": 0,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 1
+        },
+        "PIRATEN": {
+            "dafuer": 1,
+            "enthalten": 0,
+            "gesamt": 1,
+            "dagegen": 0,
+            "abwesend": 0
+        },
+        "SPD": {
+            "dafuer": 25,
+            "enthalten": 0,
+            "gesamt": 27,
+            "dagegen": 0,
+            "abwesend": 2
+        }
+      }
+    }
+}

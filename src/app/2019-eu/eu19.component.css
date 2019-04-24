@@ -1,0 +1,421 @@
+.question-description {
+	
+}
+/*.q-question {
+	font-weight: bold;
+}
+.q-buttons {
+	float: right;
+}
+.q-text {
+	float: left;
+}*/
+
+.myQuestions,
+.myResult {
+	max-width: 1000px;
+	margin: 5px auto;
+	margin-bottom: 20px;
+}
+.question-tags {
+	margin: 10px 0px;
+}
+.question-tag {
+	padding-left: 5px;
+}
+.question-tag:before {
+	content: '#';
+}
+th small {
+	font-weight: normal;
+}
+#complextable {
+	/*display: none;*/
+}
+@media screen and (max-width: 850px) {
+  .complex-logo-head {
+    width: 3em;
+  }
+}
+@media screen and (max-width: 730px) {
+  .complex-logo-head {
+    width: 2.5em;
+  }
+}
+@media screen and (max-width: 650px) {
+  .complex-logo-head {
+    width: 2.4em;
+  }
+}
+@media screen and (min-width: 680px) {
+    .optional-center {
+      text-align: center;
+    }
+}
+@media screen and (max-width: 680px) {
+    .optional-margin {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .optional-padding{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .q-buttons .w3-button {
+    	padding: 8px 15px !important;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    #tableswitcher{
+    	display: none;
+    }
+	.mobile-not {
+		display: none;
+	}
+}
+@media screen and (min-width: 570px) {
+	#notableswitcher {
+    	display: none;
+    }
+}
+/*.partyDetailsBar {
+	min-width
+}*/
+.partyDetailsTable {
+	width: 100%;
+}
+.partyDetailsImage {
+	width: 70px;
+}
+
+.stackedbar {
+    height: 10px;
+    width: 100%;
+    margin: 5px 0;
+    padding: 0;
+}
+
+
+.stackedbarbar {
+	height: 10px;
+	float: left;
+}
+
+.stackedbar .w3-green {
+	background-image: url('/assets/add/yes.png');
+}
+
+.stackedbar .w3-red {
+	background-image: url('/assets/add/no.png');
+}
+
+/*
+#party-bar-chart {
+	width: 100%;
+	display: inline-block;
+}
+.veritcal-bar {
+	height: 300px;
+	position: relative;
+	float: left;
+}
+
+.veritcal-bar-progress {
+	color: #fff;
+	width:100%;
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+}
+*/
+/*#party-bar-chart .bar {
+  color: white;
+}
+#party-bar-chart .fpd {
+  color: black;
+}*/
+
+.bar {
+    position: relative;
+    margin-top: 2px;
+}
+
+.bar:before {
+    /*padding: 10px 0;*/
+    text-indent: 14px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+    content: attr(data-content);
+}
+.bar:after {
+    /*padding: 10px 0;*/
+    text-indent: 10px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+    content: attr(data-content);
+}
+
+.bar:before {
+    background-color: #eee;
+    color: black;
+    width: 100%;
+}
+
+.diegruenen, .diegruenen:after {
+	background-color: #64a12d;
+    color: white;
+}
+.cducsu, .cducsu:after{
+	background-color: #000;
+    color: white;
+}
+.spd,  .spd:after{
+	background-color: #eb001f;
+    color: white;
+}
+.dielinke,  .dielinke:after {
+	background-color: #be3075;
+    color: white;
+}
+.fpd,  .fpd:after {
+	background-color: #ffed00;
+    color: black;
+}
+.oedp,  .oedp:after {
+	background-color: #f36717;
+    color: white;
+}
+.buendnisc,  .buendnisc:after {
+	background-color: #0b5da5;
+    color: white;
+}
+.alfa,  .alfa:after {
+	background-color: #f29200;
+    color: white;
+}
+.diepartei,  .diepartei:after {
+	background-color: #6d6d6d;
+    color: white;
+}
+.afd,  .afd:after {
+	background-color: #009ee0;
+    color: white;
+}
+.npd,  .npd:after {
+	background-color: #8b4726;
+    color: white;
+}
+.blaue,  .blaue:after {
+	background-color: #0000ff;
+    color: white;
+}
+.freiewaehler,  .freiewaehler:after {
+	background-color: #2f6590;
+    color: white;
+}
+.piraten,  .piraten:after {
+	background-color: #ff820a;
+    color: white;
+}
+.unknown,  .unknown:after {
+	background-color: #6d6d6d;
+    color: white;
+}
+
+
+#progressbar {
+ min-width: 25px;
+}
+
+.partylogolist {
+	margin-left: 5px;
+	margin-top: 5px;
+}
+/*
+#party-bar-podest {
+	width: 100%;
+	float: left;
+	
+}*/
+
+.myQuestions .q-text button {
+	text-decoration: underline;
+}
+
+.enthalten-info {
+  max-width: 285px;
+}
+
+.transition{
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; /* Firefox 4 */
+    -webkit-transition: all 0.3s; /* Safari and Chrome */
+    -o-transition: all 0.3s; /* Opera */
+} 
+
+.opaqueresult {
+  opacity: 0.2;
+}
+
+.share-buttons {
+  padding-top: 1em;
+  border-top: 1px solid #ddd;
+}
+
+.twitter,
+.twitter:visited {
+  background-color: #77bcf1;
+  color: #fff;
+  border-color: #77bcf1;
+}
+.twitter:hover {
+    background-color: #fff !important;
+    color: #77bcf1 !important;
+    border-color: #77bcf1 !important;
+}
+.facebook,
+.facebook:visited {
+  background-color: #627aac;
+  color: #fff;
+  border-color: #627aac;
+}
+.facebook:hover {
+    background-color: #fff !important;
+    color: #627aac !important;
+    border-color: #627aac !important;
+}
+.linkedin,
+.linkedin:visited  {
+  background-color: #0073b0;
+  color: #fff;
+  border-color: #0073b0;
+}
+.linkedin:hover {
+    background-color: #fff !important;
+    color: #0073b0 !important;
+    border-color: #0073b0 !important;
+}
+.google-plus,
+.google-plus:visited {
+  background-color: #e36f60;
+  color: #fff;
+  border-color: #e36f60;
+}
+.google-plus:hover {
+  background-color: #fff !important;
+  color: #e36f60 !important;
+  border-color: #e36f60 !important;
+}
+
+
+
+.bar-0:after {width: 0%;}
+.bar-1:after {width: 1%;}
+.bar-2:after {width: 2%;}
+.bar-3:after {width: 3%;}
+.bar-4:after {width: 4%;}
+.bar-5:after {width: 5%;}
+.bar-6:after {width: 6%;}
+.bar-7:after {width: 7%;}
+.bar-8:after {width: 8%;}
+.bar-9:after {width: 9%;}
+.bar-10:after {width: 10%;}
+.bar-11:after {width: 11%;}
+.bar-12:after {width: 12%;}
+.bar-13:after {width: 13%;}
+.bar-14:after {width: 14%;}
+.bar-15:after {width: 15%;}
+.bar-16:after {width: 16%;}
+.bar-17:after {width: 17%;}
+.bar-18:after {width: 18%;}
+.bar-19:after {width: 19%;}
+.bar-20:after {width: 20%;}
+.bar-21:after {width: 21%;}
+.bar-22:after {width: 22%;}
+.bar-23:after {width: 23%;}
+.bar-24:after {width: 24%;}
+.bar-25:after {width: 25%;}
+.bar-26:after {width: 26%;}
+.bar-27:after {width: 27%;}
+.bar-28:after {width: 28%;}
+.bar-29:after {width: 29%;}
+.bar-30:after {width: 30%;}
+.bar-31:after {width: 31%;}
+.bar-32:after {width: 32%;}
+.bar-33:after {width: 33%;}
+.bar-34:after {width: 34%;}
+.bar-35:after {width: 35%;}
+.bar-36:after {width: 36%;}
+.bar-37:after {width: 37%;}
+.bar-38:after {width: 38%;}
+.bar-39:after {width: 39%;}
+.bar-40:after {width: 40%;}
+.bar-41:after {width: 41%;}
+.bar-42:after {width: 42%;}
+.bar-43:after {width: 43%;}
+.bar-44:after {width: 44%;}
+.bar-45:after {width: 45%;}
+.bar-46:after {width: 46%;}
+.bar-47:after {width: 47%;}
+.bar-48:after {width: 48%;}
+.bar-49:after {width: 49%;}
+.bar-50:after {width: 50%;}
+.bar-51:after {width: 51%;}
+.bar-52:after {width: 52%;}
+.bar-53:after {width: 53%;}
+.bar-54:after {width: 54%;}
+.bar-55:after {width: 55%;}
+.bar-56:after {width: 56%;}
+.bar-57:after {width: 57%;}
+.bar-58:after {width: 58%;}
+.bar-59:after {width: 59%;}
+.bar-60:after {width: 60%;}
+.bar-61:after {width: 61%;}
+.bar-62:after {width: 62%;}
+.bar-63:after {width: 63%;}
+.bar-64:after {width: 64%;}
+.bar-65:after {width: 65%;}
+.bar-66:after {width: 66%;}
+.bar-67:after {width: 67%;}
+.bar-68:after {width: 68%;}
+.bar-69:after {width: 69%;}
+.bar-70:after {width: 70%;}
+.bar-71:after {width: 71%;}
+.bar-72:after {width: 72%;}
+.bar-73:after {width: 73%;}
+.bar-74:after {width: 74%;}
+.bar-75:after {width: 75%;}
+.bar-76:after {width: 76%;}
+.bar-77:after {width: 77%;}
+.bar-78:after {width: 78%;}
+.bar-79:after {width: 79%;}
+.bar-80:after {width: 80%;}
+.bar-81:after {width: 81%;}
+.bar-82:after {width: 82%;}
+.bar-83:after {width: 83%;}
+.bar-84:after {width: 84%;}
+.bar-85:after {width: 85%;}
+.bar-86:after {width: 86%;}
+.bar-87:after {width: 87%;}
+.bar-88:after {width: 88%;}
+.bar-89:after {width: 89%;}
+.bar-90:after {width: 90%;}
+.bar-91:after {width: 91%;}
+.bar-92:after {width: 92%;}
+.bar-93:after {width: 93%;}
+.bar-94:after {width: 94%;}
+.bar-95:after {width: 95%;}
+.bar-96:after {width: 96%;}
+.bar-97:after {width: 97%;}
+.bar-98:after {width: 98%;}
+.bar-99:after {width: 99%;}
+.bar-100:after {width: 100%;}
