@@ -17,7 +17,7 @@ export class AppComponent {
 	
    beforeunload(event){
      if (!this.storage.isSaving ()) {
-       var message = 'Deine Eingaben sind nicht gespeichert! Wenn du die Seite verlaesst, geht alle verloren. Bist du sicher, dass du nicht vorher nochmal speichern möchtest?';
+       var message = 'Deine Eingaben sind nicht gespeichert! Wenn du die Seite verlässt, geht alle Antworten verloren. Bist du sicher, dass du nicht vorher nochmal speichern möchtest?';
        // TODO the confirm message is default -> how to set our message??
         if (typeof event == 'undefined') {
           event = window.event;

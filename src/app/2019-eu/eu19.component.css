@@ -145,7 +145,15 @@ th small {
     margin-top: 2px;
 }
 
-.bar:before,
+.bar:before {
+    /*padding: 10px 0;*/
+    text-indent: 14px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+    content: attr(data-content);
+}
 .bar:after {
     /*padding: 10px 0;*/
     text-indent: 10px;
