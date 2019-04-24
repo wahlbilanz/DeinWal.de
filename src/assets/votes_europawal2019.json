@@ -68,7 +68,7 @@
                     "subtext": "",
                     "moreInfos": [
                       {
-                          "text": "Entschliessungsantrag im EU-Parlament",
+                          "text": "Entschließungsantrag im EU-Parlament",
                           "link": "http://www.europarl.europa.eu/doceo/document/RC-8-2016-1276_DE.html?redirect"
                       },
                       {
@@ -89,7 +89,7 @@
                     "subtext": "",
                     "moreInfos": [
                       {
-                          "text": "Entschliessungsantrag im EU-Parlament",
+                          "text": "Entschließungsantrag im EU-Parlament",
                           "link": "http://www.europarl.europa.eu/doceo/document/RC-8-2015-0123_DE.pdf"
                       },
                       {
@@ -139,7 +139,7 @@
             "fragen": {
                 "20b545ab-e31f-4404-ba34-fed1f163cce2": {
                     "context": "Glyphosat ist ein Herbizid mit umstrittenen Auswirkung auf die Gesundheit des Menschen.",
-                    "frage": "Stimmst du einer Zulassung fuer weitere 7&nbsp;Jahre zu, in denen die gesundheitliche Auswirkungen wissenschaftlich genauer untersucht werden?",
+                    "frage": "Stimmst du einer Zulassung fuer weitere 7&nbsp;Jahre zu, in denen die gesundheitlichen Auswirkungen wissenschaftlich genauer untersucht werden?",
                     "short": "Glyphosat",
                     "subtext": "",
                     "moreInfos": [
@@ -165,7 +165,7 @@
                 },
                 "83f43a49-c047-4390-aaee-14cbe5a55525": {
                     "context": "Die europäischen Mitgliedsstaaten können selbst entscheiden, ob sie gentechnisch veränderte Sojasorten anbauen wollen. Ohne Grenzkontrollen kann der Handel mit gentechnisch veränderten Organismen zwischen den Mitgliedsstaaten aber kaum überwacht werden.",
-                    "frage": "Sollte der Anbau von gentechnisch veränderten Sojabohnen in einzelnen EU-Ländern erlaubt sein? ",
+                    "frage": "Sollte der Anbau von gentechnisch veränderter Sojabohnen in einzelnen EU-Ländern erlaubt sein? ",
                     "short": "Gensoja",
                     "subtext": "",
                     "moreInfos": [
@@ -178,7 +178,7 @@
                 },
                 "277599c2-6d75-4593-9a33-dd94d25871dd": {
                     "context": "",
-                    "frage": "Sollten Einwegkunststoffe, wie Plastikbesteck und -teller, Wattestäbchen, Trinkhalme, Rührstäbchen und Luftballonstäbe, verboten werden?",
+                    "frage": "Sollten Einwegkunststoffe, wie Plastikbesteck und -teller, Wattestäbchen, Trinkhalme, Rührstäbchen und Luftballonstäbe, zum Schutz der Umwelt verboten werden?",
                     "short": "Einwegplastik",
                     "subtext": "",
                     "moreInfos": [
@@ -253,7 +253,7 @@
                     "invert": false
                 },
                 "55617778-d77e-4532-be49-1cf9f1e168f4": {
-                    "context": "Mit einem europäischen Verteidigungsfonds sollen die EU-Staaten jährlich etwa 5,5 Milliarden aufbringen, um damit zum Beispiel gemeinsam Material zu kaufen und Waffenentwicklung zu betreiben. Die EU soll damit auch unabhängiger von dem Militär der USA werden.",
+                    "context": "Mit einem europäischen Verteidigungsfonds sollen die EU-Staaten jährlich etwa 5,5 Milliarden aufbringen, um damit zum Beispiel gemeinsam Material zu kaufen und Waffenentwicklung zu betreiben. Die EU soll damit auch unabhängiger vom Militär der USA werden.",
                     "frage": "Stimmst du der Errichtung eines europäischen Verteidigungsfonds zu?",
                     "short": "Militärfonds",
                     "subtext": "",
@@ -353,7 +353,7 @@
                     "invert": false
                 },
                 "20ef0ba6-4336-4f20-98c3-9493dee4e314": {
-                    "context": "Im Rahmen einer Urheberrechtsreform soll die Verantwortung fuer Urheberrechtsverstoesse von den Nutzern auf die Plattformen uebertragen werden. Plattformen sollen hochgeladene Inhalte pruefen und die Veroeffentlichung unterbinden oder die Urheber vergueten. Um Schadensersatzansprüchen vorzubeugen, muessen die Unternehmen voraussichtliche auf Uploadfilter zurueckgreifen.",
+                    "context": "Im Rahmen einer Urheberrechtsreform soll die Verantwortung für Urheberrechtsverstöße von den Nutzern auf die Plattformen übertragen werden. Plattformen sollen hochgeladene Inhalte prüfen und die Veröffentlichung unterbinden oder die Urheber vergüten. Um Schadensersatzansprüchen vorzubeugen, müssen die Unternehmen voraussichtlich auf Uploadfilter zurückgreifen.",
                     "frage": "Stimmst du der Urheberrechtsreform vom März 2019 zu?",
                     "short": "Urheberrecht",
                     "subtext": "",
@@ -374,14 +374,18 @@
             "subtext": "",
             "fragen": {
                 "f22c10c4-e5eb-481a-ae8d-9d8a42a604ba": {
-                    "context": "Das CETA-Freihandelsabkommen soll acht separat bestehenden Abkommen zwischen der EU und Kanada ersetzen und wirtschaftliche Beziehungen zu Kannada vereinfachen und stärken. Es sieht unter anderem die Aufhebung von Zöllen, eine Vereinheitlichung von Standards zur Vereinfachung des Handels, die Liberalisierung des Handels mit Dienstleistungen und eine Investitionsförderung (inkl. umstrittenen Investorenschutz) vor.",
-                    "frage": "Stimmst du dem CETA-Freihandelsabkommen mit Kannada zu?",
+                    "context": "Das CETA-Freihandelsabkommen soll acht separat bestehende Abkommen zwischen der EU und Kanada ersetzen und die wirtschaftlichen Beziehungen zu Kanada vereinfachen und stärken. Es sieht unter anderem die Aufhebung von Zöllen, eine Vereinheitlichung von Standards zur Vereinfachung des Handels, die Liberalisierung des Handels mit Dienstleistungen und Investitionsschutz durch Schiedsgerichte vor. Insbesondere die Schiedsgerichte sorgten für viel Kritik.",
+                    "frage": "Stimmst du dem CETA-Freihandelsabkommen mit Kanada zu?",
                     "short": "CETA",
                     "subtext": "",
                     "moreInfos": [
                       {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/umsetzung-des-handelsabkommens-ceta-mit-kanada"
+                      },
+                      {
+                          "text": "Informationen bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Umfassendes_Wirtschafts-_und_Handelsabkommen"
                       }
                     ],
                     "invert": false
@@ -480,7 +484,7 @@
                     "invert": false
                 },
                 "75998fad-a01d-4538-8145-5ecae20b5ec4": {
-                    "context": "Bis 2015 war das Land für einen Flüchtling zuständig ist, bei dem der Flüchtling zuerst die EU betreten hat (Erstkontaktländer, Dublin-Verordnung). Die Mittelmeerstaaten finden diese Verordnung ungerecht.",
+                    "context": "Bis 2015 war das Land für einen Flüchtling zuständig, bei dem der Flüchtling zuerst die EU betrat (Erstkontaktländer, Dublin-Verordnung). Die Mittelmeerstaaten finden diese Verordnung ungerecht.",
                     "frage": "Stimmst du einer solidarischeren Verteilung der Flüchtlinge zu?",
                     "short": "Flüchtlingsverteilung",
                     "subtext": "",
@@ -500,12 +504,16 @@
                       {
                           "text": "ZEIT online",
                           "link": "https://www.zeit.de/politik/2018-06/eu-gipfel-angela-merkel-asylpolitik-solidaritaet-eu-staaten/seite-2"
+                      },
+                      {
+                          "text": "Die Dublin-Verordnung bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Dubliner_%C3%9Cbereinkommen"
                       }
                     ],
                     "invert": false
                 },
                 "844ed2e1-303f-49bb-a63f-b7adb938593a": {
-                    "context": "In einer Reform des Wahlrechts zur Europawahl soll unter anderem das Wahlalter auf 16 Jahre gesenkt werden. Die umstrittenste Neuerung ist eine 3%-Hürde fuer Parteien, womit kleine Parteien kaum eine Chance auf einen Sizt im Parlament haetten.",
+                    "context": "In einer Reform des Wahlrechts zur Europawahl soll unter anderem das Wahlalter auf 16 Jahre gesenkt werden. Die umstrittenste Neuerung ist eine 3%-Hürde für Parteien, womit kleine Parteien kaum eine Chance auf einen Sizt im Parlament hätten.",
                     "frage": "Sollte das Europawahlrecht reformiert werden?",
                     "short": "Wahlrecht",
                     "subtext": "",
@@ -513,6 +521,10 @@
                       {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/aenderung-des-wahlrechts-zum-eu-parlament"
+                      },
+                      {
+                          "text": "Informationen bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Europawahlgesetz"
                       }
                     ],
                     "invert": false
@@ -540,7 +552,7 @@
                 },
                 "23d630ef-fd10-4f95-8caa-254d08280541": {
                     "context": "Eine Straftat zeugt von signifikantem Unrechtsgehalt und es droht ein Strafverfahren vor Gericht.",
-                    "frage": "Sollte das Manipulieren von Kilometerzählern in Kraffahrzeugen als Straftat bewertet werden?",
+                    "frage": "Sollte das Manipulieren von Kilometerzählern in Kraftfahrzeugen als Straftat bewertet werden?",
                     "short": "Kilometerzähler",
                     "subtext": "",
                     "moreInfos": [
