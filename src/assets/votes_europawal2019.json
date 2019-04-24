@@ -49,6 +49,14 @@
                       {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/kritische-neubewertung-der-beziehungen-zu-russland"
+                      },
+                      {
+                          "text": "Informationen zur Krim bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Krim"
+                      },
+                      {
+                          "text": "Ukraine Konflikt im Informations-Portal zur politischen Bildung",
+                          "link": "https://www.politische-bildung.de/proteste_ukraine.html"
                       }
                     ],
                     "invert": false
@@ -111,6 +119,10 @@
                     "subtext": "",
                     "moreInfos": [
                       {
+                          "text": "Umfangreiche Entschließung des Europäischen Parlaments",
+                          "link": "http://www.europarl.europa.eu/sides/getDoc.do?pubRef=-//EP//NONSGML+TA+P8-TA-2015-0271+0+DOC+PDF+V0//DE"
+                      },
+                      {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/eu-sicherheitspolitik-im-nahen-osten-und-nordafrika"
                       }
@@ -127,7 +139,7 @@
             "fragen": {
                 "20b545ab-e31f-4404-ba34-fed1f163cce2": {
                     "context": "Glyphosat ist ein Herbizid mit umstrittenen Auswirkung auf die Gesundheit des Menschen.",
-                    "frage": "Stimmst du einer Zulassung fuer weitere 7 Jahre zu, in denen die gesundheitliche Auswirkungen wissenschaftlich genauer untersucht werden?",
+                    "frage": "Stimmst du einer Zulassung fuer weitere 7&nbsp;Jahre zu, in denen die gesundheitliche Auswirkungen wissenschaftlich genauer untersucht werden?",
                     "short": "Glyphosat",
                     "subtext": "",
                     "moreInfos": [
@@ -152,7 +164,7 @@
                     "invert": false
                 },
                 "83f43a49-c047-4390-aaee-14cbe5a55525": {
-                    "context": "Die europaeischen Mitgliedsstaaten koennen selbst entscheiden, ob sie gentechnisch veränderten Sojasorten anbauen wollen. Ohne Grenzkontrollen kann der Handel mit gentechnisch veränderten Organismen zwischen den Mitgliedsstaaten aber kaum ueberwacht werden.",
+                    "context": "Die europäischen Mitgliedsstaaten können selbst entscheiden, ob sie gentechnisch veränderte Sojasorten anbauen wollen. Ohne Grenzkontrollen kann der Handel mit gentechnisch veränderten Organismen zwischen den Mitgliedsstaaten aber kaum überwacht werden.",
                     "frage": "Sollte der Anbau von gentechnisch veränderten Sojabohnen in einzelnen EU-Ländern erlaubt sein? ",
                     "short": "Gensoja",
                     "subtext": "",
@@ -230,6 +242,10 @@
                     "subtext": "",
                     "moreInfos": [
                       {
+                          "text": "Entschließung des Europäischen Parlaments",
+                          "link": "http://www.europarl.europa.eu/sides/getDoc.do?type=TA&reference=P8-TA-2018-0258&language=DE&ring=A8-2018-0189"
+                      },
+                      {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/cyber-abwehr"
                       }
@@ -270,7 +286,7 @@
             "subtext": "",
             "fragen": {
                 "98056b77-4079-4c08-b4a7-69036c4bcaf5": {
-                    "context": "Facebook hat zugegeben, dass die britische Firma Cambridge Analytica an private Informationen von bis zu 87 Millionen Facebook-Benutzern gekommen war.",
+                    "context": "Facebook hat zugegeben, dass die britische Firma Cambridge Analytica an private Informationen von bis zu 87&nbsp;Millionen Facebook-Benutzern gekommen war.",
                     "frage": "Sollte Facebook sich einer ausgiebigen Prüfung durch die EU stellen und sollte der Schutz der personenbezogenen Daten durch neue Rechtsvorschriften verstärkt werden?",
                     "short": "Facebook",
                     "subtext": "",
@@ -278,6 +294,14 @@
                       {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/nutzung-der-daten-von-facebook-usern-durch-cambridge-analytica"
+                      },
+                      {
+                          "text": "Süddeutsche Zeitung",
+                          "link": "https://www.sueddeutsche.de/digital/datenmissbrauch-was-ist-eigentlich-gerade-bei-facebook-los-1.3932349"
+                      },
+                      {
+                          "text": "netzpolitik.org",
+                          "link": "https://netzpolitik.org/der-facebook-cambridge-analytica-datenskandal/"
                       }
                     ],
                     "invert": false
@@ -309,7 +333,7 @@
                           "link": "https://www.heise.de/newsticker/meldung/Ueber-500-Beamte-kuemmern-sich-kuenftig-um-Speicherung-von-Fluggastdaten-4403717.html"
                       },
                       {
-                          "text": "Süddeutsche",
+                          "text": "Süddeutsche Zeitung",
                           "link": "https://www.sueddeutsche.de/politik/eu-airlines-muessen-fluggastdaten-an-eu-staaten-weitergeben-1.2949624"
                       }
                     ],
@@ -376,7 +400,7 @@
                     "invert": false
                 },
                 "2436eb70-9eb4-4cb6-999f-b6d2ad59782e": {
-                    "context": "Der europäische Struktur- und Investitionsfonds soll die europäische Wirtschaft bsonders in strukturschwachen Regionen in den Jahren 2015 bis 2017 mit 315 Milliarden Euro fördern. Insbesondere sollen Infrastrukturprojekte wie Straßen und Brücken, aber auch kleine und mittlere Unternehmen gefördert werden.",
+                    "context": "Der europäische Struktur- und Investitionsfonds soll die europäische Wirtschaft besonders in strukturschwachen Regionen in den Jahren 2015 bis 2017 mit 315 Milliarden Euro fördern. Insbesondere sollen Infrastrukturprojekte wie Straßen und Brücken, aber auch kleine und mittlere Unternehmen gefördert werden.",
                     "frage": "Stimmst du der Einrichtung des europäischen Struktur- und Investitionsfonds EFSI zu?",
                     "short": "EFSI",
                     "subtext": "",
@@ -444,7 +468,7 @@
             "fragen": {
                 "5901f8e8-6515-4b71-8b49-0b6a93c87279": {
                     "context": "",
-                    "frage": "Sollten minderjährige, unbegleitete Gefluechtete einen besseren Schutz als bisher genießen und nicht mehr gegen Ihren Willen festgehalten werden dürfen?",
+                    "frage": "Sollten minderjährige, unbegleitete Geflüchtete einen besseren Schutz als bisher genießen und nicht mehr gegen Ihren Willen festgehalten werden dürfen?",
                     "short": "Flüchtlingsschutz",
                     "subtext": "",
                     "moreInfos": [
@@ -456,7 +480,7 @@
                     "invert": false
                 },
                 "75998fad-a01d-4538-8145-5ecae20b5ec4": {
-                    "context": "Die Dublin-Verordnung regelte bis 2015, dass das Land für einen Flüchtling zuständig ist, bei dem der Flüchtling zuerst die EU betreten hat. Die Mittelmeerstaaten fanden diese Verordnung ungerecht, weil die meisten Flüchtlinge über das Mittelmeer kommen und nach der Verordnung zunächst in den Erstkontaktländern verbleiben müssen.",
+                    "context": "Bis 2015 war das Land für einen Flüchtling zuständig ist, bei dem der Flüchtling zuerst die EU betreten hat (Erstkontaktländer, Dublin-Verordnung). Die Mittelmeerstaaten finden diese Verordnung ungerecht.",
                     "frage": "Stimmst du einer solidarischeren Verteilung der Flüchtlinge zu?",
                     "short": "Flüchtlingsverteilung",
                     "subtext": "",
@@ -523,6 +547,10 @@
                       {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu/abstimmungen/manipulation-des-kilometerzaehlers-kraftfahrzeugen"
+                      },
+                      {
+                          "text": "Unterschied zwischen Straftat und Ordnungswidrigkeit bei Paradisi",
+                          "link": "http://www.paradisi.de/Freizeit_und_Erholung/Gesellschaft/Kriminalitaet/Artikel/14784.php"
                       }
                     ],
                     "invert": false
