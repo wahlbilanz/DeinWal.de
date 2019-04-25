@@ -165,7 +165,7 @@
                 },
                 "83f43a49-c047-4390-aaee-14cbe5a55525": {
                     "context": "Die europäischen Mitgliedsstaaten können selbst entscheiden, ob sie gentechnisch veränderte Sojasorten anbauen wollen. Ohne Grenzkontrollen kann der Handel mit gentechnisch veränderten Organismen zwischen den Mitgliedsstaaten aber kaum überwacht werden.",
-                    "frage": "Sollte der Anbau von gentechnisch veränderten Sojabohnen in einzelnen EU-Ländern erlaubt sein? ",
+                    "frage": "Sollte der Anbau von gentechnisch veränderter Sojabohnen in einzelnen EU-Ländern erlaubt sein? ",
                     "short": "Gensoja",
                     "subtext": "",
                     "moreInfos": [
@@ -178,7 +178,7 @@
                 },
                 "277599c2-6d75-4593-9a33-dd94d25871dd": {
                     "context": "",
-                    "frage": "Sollten Einwegkunststoffe, wie Plastikbesteck und -teller, Wattestäbchen, Trinkhalme, Rührstäbchen und Luftballonstäbe, verboten werden?",
+                    "frage": "Sollten Einwegkunststoffe, wie Plastikbesteck und -teller, Wattestäbchen, Trinkhalme, Rührstäbchen und Luftballonstäbe, zum Schutz der Umwelt verboten werden?",
                     "short": "Einwegplastik",
                     "subtext": "",
                     "moreInfos": [
@@ -374,7 +374,7 @@
             "subtext": "",
             "fragen": {
                 "f22c10c4-e5eb-481a-ae8d-9d8a42a604ba": {
-                    "context": "Das CETA-Freihandelsabkommen soll acht separat bestehende Abkommen zwischen der EU und Kanada ersetzen und wirtschaftliche Beziehungen zu Kanada vereinfachen und stärken. Es sieht unter anderem die Aufhebung von Zöllen, eine Vereinheitlichung von Standards zur Vereinfachung des Handels, die Liberalisierung des Handels mit Dienstleistungen und eine Investitionsförderung (inkl. umstrittenen Investorenschutz) vor.",
+                    "context": "Das CETA-Freihandelsabkommen soll acht separat bestehende Abkommen zwischen der EU und Kanada ersetzen und die wirtschaftlichen Beziehungen zu Kanada vereinfachen und stärken. Es sieht unter anderem die Aufhebung von Zöllen, eine Vereinheitlichung von Standards zur Vereinfachung des Handels, die Liberalisierung des Handels mit Dienstleistungen und Investitionsschutz durch Schiedsgerichte vor. Insbesondere die Schiedsgerichte sorgten für viel Kritik.",
                     "frage": "Stimmst du dem CETA-Freihandelsabkommen mit Kanada zu?",
                     "short": "CETA",
                     "subtext": "",
@@ -382,6 +382,10 @@
                       {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/umsetzung-des-handelsabkommens-ceta-mit-kanada"
+                      },
+                      {
+                          "text": "Informationen bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Umfassendes_Wirtschafts-_und_Handelsabkommen"
                       }
                     ],
                     "invert": false
@@ -484,7 +488,7 @@
                     "invert": false
                 },
                 "75998fad-a01d-4538-8145-5ecae20b5ec4": {
-                    "context": "Bis 2015 war das Land für einen Flüchtling zuständig, in dem der Flüchtling zuerst die EU betrat (Erstkontaktländer, Dublin-Verordnung). Die Mittelmeerstaaten finden diese Verordnung ungerecht.",
+                    "context": "Bis 2015 war das Land für einen Flüchtling zuständig, in welchem der Flüchtling zuerst die EU betrat (Erstkontaktländer, Dublin-Verordnung). Die Mittelmeerstaaten finden diese Verordnung ungerecht.",
                     "frage": "Stimmst du einer solidarischeren Verteilung der Flüchtlinge zu?",
                     "short": "Flüchtlingsverteilung",
                     "subtext": "",
