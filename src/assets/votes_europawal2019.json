@@ -139,7 +139,7 @@
             "fragen": {
                 "20b545ab-e31f-4404-ba34-fed1f163cce2": {
                     "context": "Glyphosat ist ein Herbizid mit umstrittenen Auswirkung auf die Gesundheit des Menschen.",
-                    "frage": "Stimmst du einer Zulassung fuer weitere 7&nbsp;Jahre zu, in denen die gesundheitliche Auswirkungen wissenschaftlich genauer untersucht werden?",
+                    "frage": "Stimmst du einer Zulassung für weitere 7&nbsp;Jahre zu, in denen die gesundheitlichen Auswirkungen wissenschaftlich genauer untersucht werden?",
                     "short": "Glyphosat",
                     "subtext": "",
                     "moreInfos": [
@@ -353,7 +353,7 @@
                     "invert": false
                 },
                 "20ef0ba6-4336-4f20-98c3-9493dee4e314": {
-                    "context": "Im Rahmen einer Urheberrechtsreform soll die Verantwortung fuer Urheberrechtsverstoesse von den Nutzern auf die Plattformen uebertragen werden. Plattformen sollen hochgeladene Inhalte pruefen und die Veroeffentlichung unterbinden oder die Urheber vergueten. Um Schadensersatzansprüchen vorzubeugen, muessen die Unternehmen voraussichtliche auf Uploadfilter zurueckgreifen.",
+                    "context": "Im Rahmen einer Urheberrechtsreform soll die Verantwortung für Urheberrechtsverstöße von den Nutzern auf die Plattformen übertragen werden. Plattformen sollen hochgeladene Inhalte prüfen und die Veröffentlichung unterbinden oder die Urheber vergüten. Um Schadensersatzansprüchen vorzubeugen, müssen die Unternehmen voraussichtlich auf Uploadfilter zurückgreifen.",
                     "frage": "Stimmst du der Urheberrechtsreform vom März 2019 zu?",
                     "short": "Urheberrecht",
                     "subtext": "",
@@ -509,7 +509,7 @@
                     "invert": false
                 },
                 "844ed2e1-303f-49bb-a63f-b7adb938593a": {
-                    "context": "In einer Reform des Wahlrechts zur Europawahl soll unter anderem das Wahlalter auf 16 Jahre gesenkt werden. Die umstrittenste Neuerung ist eine 3%-Hürde fuer Parteien, womit kleine Parteien kaum eine Chance auf einen Sizt im Parlament haetten.",
+                    "context": "In einer Reform des Wahlrechts zur Europawahl soll unter anderem das Wahlalter auf 16 Jahre gesenkt werden. Die umstrittenste Neuerung ist eine 3%-Hürde für Parteien, womit kleine Parteien kaum eine Chance auf einen Sizt im Parlament hätten.",
                     "frage": "Sollte das Europawahlrecht reformiert werden?",
                     "short": "Wahlrecht",
                     "subtext": "",
