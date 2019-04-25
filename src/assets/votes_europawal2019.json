@@ -101,7 +101,7 @@
                 },
                 "e784ad92-3bf7-45b4-884d-e8c7320dd90c": {
                     "context": "2015 wurde nur 6,2% der Entwicklungshilfe im Bereich Bildung investiert.",
-                    "frage": "Sollte die Bildungshile auf bis zu 15% der offiziellen Entwicklungshilfe aufgestockt werden, mit einem besonderen Fokus auf hochwertige und inklusive Grundbildung?",
+                    "frage": "Sollte die Bildungshilfe auf bis zu 15% der offiziellen Entwicklungshilfe aufgestockt werden, mit einem besonderen Fokus auf hochwertige und inklusive Grundbildung?",
                     "short": "Bildungshilfe",
                     "subtext": "",
                     "moreInfos": [
@@ -139,7 +139,7 @@
             "fragen": {
                 "20b545ab-e31f-4404-ba34-fed1f163cce2": {
                     "context": "Glyphosat ist ein Herbizid mit umstrittenen Auswirkung auf die Gesundheit des Menschen.",
-                    "frage": "Stimmst du einer Zulassung fuer weitere 7&nbsp;Jahre zu, in denen die gesundheitlichen Auswirkungen wissenschaftlich genauer untersucht werden?",
+                    "frage": "Stimmst du einer Zulassung für weitere 7&nbsp;Jahre zu, in denen die gesundheitlichen Auswirkungen wissenschaftlich genauer untersucht werden?",
                     "short": "Glyphosat",
                     "subtext": "",
                     "moreInfos": [
@@ -152,7 +152,7 @@
                 },
                 "299d2467-520f-4d6c-9273-93b2f95719f8": {
                     "context": "In der EU dürfen Kosmetika nicht an Tieren getestet werden. Manche Firmen umgehen diese Regelung, indem sie diese Tests in nicht-EU-Staaten durchführen.",
-                    "frage": "Sollte ein Importverbot betroffene Produkte erstellt werden?",
+                    "frage": "Sollte ein Importverbot für betroffene Produkte erstellt werden?",
                     "short": "Tierversuche",
                     "subtext": "",
                     "moreInfos": [
@@ -392,7 +392,7 @@
                 },
                 "de2c3caf-d77b-457a-8e02-73bcdb60abad": {
                     "context": "Oktober 2015: Griechenland steckt weiter in einer Finanzkrise. Die Arbeitslosigkeit stieg zwischen 2007 und 2014 um 18.3% und etwa ein Drittel der Bevölkerung hat keine Krankenversicherung mehr.",
-                    "frage": "Soll Griechenland schneller Hilfsgelder abrufen können und eine Auszahlung von 35 Milliarden Euro aus dem Europäischen Struktur- und Investitionsfond vorgezogen werden?",
+                    "frage": "Soll Griechenland schneller Hilfsgelder abrufen können und eine Auszahlung von 35 Milliarden Euro aus dem Europäischen Struktur- und Investitionsfonds vorgezogen werden?",
                     "short": "Griechenland",
                     "subtext": "",
                     "moreInfos": [
@@ -437,7 +437,7 @@
             "subtext": "",
             "fragen": {
                 "0aa8e687-5c86-4150-a0b3-0d7d46d22fc0": {
-                    "context": "Frauen erhalten in der EU im durchschnitt einen 16 % niedrigeren Stundenlohn und eine etwa 40 % niedrigere Rente als Männer. Bei zukünftigen Änderungen der Steuerpolitik soll verpflichtend deren Auswirkungen auf die Gleichstellung der Geschlechter berücksichtigt werden, zum Beispiel durch niedriegere Verbrauchersteuern aber höheren Unternehmenssteuern, was Frauen zugute kommen würde.",
+                    "context": "Frauen erhalten in der EU im Durchschnitt einen 16 % niedrigeren Stundenlohn und eine etwa 40 % niedrigere Rente als Männer. Bei zukünftigen Änderungen der Steuerpolitik soll verpflichtend deren Auswirkungen auf die Gleichstellung der Geschlechter berücksichtigt werden, zum Beispiel durch niedriegere Verbrauchersteuern aber höhere Unternehmenssteuern, was Frauen zugute kommen würde.",
                     "frage": "Stimmst du für die Vorgaben für mehr Steuergerechtigkeit?",
                     "short": "Gleichstellung",
                     "subtext": "",
@@ -517,7 +517,7 @@
                     "invert": false
                 },
                 "844ed2e1-303f-49bb-a63f-b7adb938593a": {
-                    "context": "In einer Reform des Wahlrechts zur Europawahl soll unter anderem das Wahlalter auf 16 Jahre gesenkt werden. Die umstrittenste Neuerung ist eine 3%-Hürde für Parteien, womit kleine Parteien kaum eine Chance auf einen Sizt im Parlament hätten.",
+                    "context": "In einer Reform des Wahlrechts zur Europawahl soll unter anderem das Wahlalter auf 16 Jahre gesenkt werden. Die umstrittenste Neuerung ist eine 3%-Hürde für Parteien, womit kleine Parteien kaum eine Chance auf einen Sitz im Parlament hätten.",
                     "frage": "Sollte das Europawahlrecht reformiert werden?",
                     "short": "Wahlrecht",
                     "subtext": "",
