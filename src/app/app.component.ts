@@ -14,7 +14,8 @@ import { StorageService } from './storage.service';
   }
 })
 export class AppComponent {
-	
+	includePartyPics = true;
+  
    beforeunload(event){
      if (!this.storage.isSaving ()) {
        var message = 'Deine Eingaben sind nicht gespeichert! Wenn du die Seite verlässt, geht alle Antworten verloren. Bist du sicher, dass du nicht vorher nochmal speichern möchtest?';
@@ -54,6 +55,11 @@ export class AppComponent {
        
       this.qserv.getData ("europawal2019").subscribe((data) => { this.log('preloaded votes for eu19 :)'); });
       this.qserv.getData ("bundestagswal2017").subscribe((data) => { this.log('preloaded votes for btw17 :)'); });
+      this.getRidOfPartyPics ();
+    }
+    
+    getRidOfPartyPics ()  {
+      setTimeout(() => this.includePartyPics = false, 2000);
     }
   
   /**

@@ -7,6 +7,7 @@
   <a routerLink="/impressum" class="w3-bar-item w3-button menu">Impressum</a>
 </div> 
 <router-outlet></router-outlet>
+<ng-container *ngIf="includePartyPics">
 <span id="preloader" class="disappear">
 	<i class="fa fa-bluetooth" aria-hidden="true"></i>
 	<img src="/assets/partei-logos/diegruenen.png" alt="Bündnis 90/Die Grünen" title="Bündnis 90/Die Grünen">
@@ -25,3 +26,4 @@
 	<img src="/assets/partei-logos/buendnisc.png" alt="Bündnis C" title="Bündnis C">
 	<img src="/assets/partei-logos/unknown.png" alt="Unbekannte Partei" title="Unbekannte Partei">
 </span>
+</ng-container>
