@@ -437,11 +437,15 @@
             "subtext": "",
             "fragen": {
                 "0aa8e687-5c86-4150-a0b3-0d7d46d22fc0": {
-                    "context": "Frauen erhalten in der EU im Durchschnitt einen 16 % niedrigeren Stundenlohn und eine etwa 40 % niedrigere Rente als Männer. Bei zukünftigen Änderungen der Steuerpolitik soll verpflichtend deren Auswirkungen auf die Gleichstellung der Geschlechter berücksichtigt werden, zum Beispiel durch niedriegere Verbrauchersteuern aber höhere Unternehmenssteuern, was Frauen zugute kommen würde.",
-                    "frage": "Stimmst du für die Vorgaben für mehr Steuergerechtigkeit?",
+                    "context": "Frauen erhalten in der EU im Durchschnitt einen 16%&nbsp;niedrigeren Stundenlohn und eine etwa 40%&nbsp;niedrigere Rente als Männer.",
+                    "frage": "Sollten zukünftige Änderungen der Steuerpolitik zwingend die Gleichstellung der Geschlechter berücksichtigen?",
                     "short": "Gleichstellung",
                     "subtext": "",
                     "moreInfos": [
+                      {
+                          "text": "Bei zukünftigen Änderungen der Steuerpolitik soll verpflichtend deren Auswirkungen auf die Gleichstellung der Geschlechter berücksichtigt werden, zum Beispiel durch niedriegere Verbrauchersteuern aber höhere Unternehmenssteuern, was besonders Frauen zugute kommen würde.",
+                          "link": ""
+                      },
                       {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu/abstimmungen/gleichstellung-der-geschlechter-in-der-steuerpolitik"
