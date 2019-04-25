@@ -68,7 +68,7 @@
                     "subtext": "",
                     "moreInfos": [
                       {
-                          "text": "Entschliessungsantrag im EU-Parlament",
+                          "text": "Entschließungsantrag im EU-Parlament",
                           "link": "http://www.europarl.europa.eu/doceo/document/RC-8-2016-1276_DE.html?redirect"
                       },
                       {
@@ -89,7 +89,7 @@
                     "subtext": "",
                     "moreInfos": [
                       {
-                          "text": "Entschliessungsantrag im EU-Parlament",
+                          "text": "Entschließungsantrag im EU-Parlament",
                           "link": "http://www.europarl.europa.eu/doceo/document/RC-8-2015-0123_DE.pdf"
                       },
                       {
@@ -253,7 +253,7 @@
                     "invert": false
                 },
                 "55617778-d77e-4532-be49-1cf9f1e168f4": {
-                    "context": "Mit einem europäischen Verteidigungsfonds sollen die EU-Staaten jährlich etwa 5,5 Milliarden aufbringen, um damit zum Beispiel gemeinsam Material zu kaufen und Waffenentwicklung zu betreiben. Die EU soll damit auch unabhängiger von dem Militär der USA werden.",
+                    "context": "Mit einem europäischen Verteidigungsfonds sollen die EU-Staaten jährlich etwa 5,5 Milliarden aufbringen, um damit zum Beispiel gemeinsam Material zu kaufen und Waffenentwicklung zu betreiben. Die EU soll damit auch unabhängiger vom Militär der USA werden.",
                     "frage": "Stimmst du der Errichtung eines europäischen Verteidigungsfonds zu?",
                     "short": "Militärfonds",
                     "subtext": "",
@@ -484,7 +484,7 @@
                     "invert": false
                 },
                 "75998fad-a01d-4538-8145-5ecae20b5ec4": {
-                    "context": "Bis 2015 war das Land für einen Flüchtling zuständig, bei dem der Flüchtling zuerst die EU betreten hat (Erstkontaktländer, Dublin-Verordnung). Die Mittelmeerstaaten finden diese Verordnung ungerecht.",
+                    "context": "Bis 2015 war das Land für einen Flüchtling zuständig, in dem der Flüchtling zuerst die EU betrat (Erstkontaktländer, Dublin-Verordnung). Die Mittelmeerstaaten finden diese Verordnung ungerecht.",
                     "frage": "Stimmst du einer solidarischeren Verteilung der Flüchtlinge zu?",
                     "short": "Flüchtlingsverteilung",
                     "subtext": "",
@@ -504,6 +504,10 @@
                       {
                           "text": "ZEIT online",
                           "link": "https://www.zeit.de/politik/2018-06/eu-gipfel-angela-merkel-asylpolitik-solidaritaet-eu-staaten/seite-2"
+                      },
+                      {
+                          "text": "Die Dublin-Verordnung bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Dubliner_%C3%9Cbereinkommen"
                       }
                     ],
                     "invert": false
@@ -517,6 +521,10 @@
                       {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/aenderung-des-wahlrechts-zum-eu-parlament"
+                      },
+                      {
+                          "text": "Informationen bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Europawahlgesetz"
                       }
                     ],
                     "invert": false
