@@ -38,9 +38,9 @@ export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, Af
 		},
 		{
 			'pre': 'auf',
-			'name': '"your vote matters"',
+			'name': 'your vote matters',
 			'link': 'https://yourvotematters.eu'
-		},
+		}
   ])
     
 
