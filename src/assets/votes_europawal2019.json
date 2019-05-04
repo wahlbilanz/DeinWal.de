@@ -475,8 +475,24 @@
                     "subtext": "",
                     "moreInfos": [
                       {
+                          "text": "Datum der Abstimmung: 26. März 2019 ",
+                          "link": ""
+                      },
+                      {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/reform-des-urheberrechts"
+                      },
+                      {
+                          "text": "Artikel auf ZDF.de zu den wichtigsten Punkten",
+                          "link": "https://www.zdf.de/nachrichten/heute/leistungsschutzrecht-und-meinungsfreiheit-reform-des-europaeischen-urheberrechts-100.html"
+                      },
+                      {
+                          "text": "Artikel auf Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Urheberrechtsreform_der_Europ%C3%A4ischen_Union"
+                      },
+                      {
+                          "text": "jede Menge Text vom Europaparlament",
+                          "link": "http://www.europarl.europa.eu/doceo/document/TA-8-2019-0231_EN.html"
                       }
                     ],
                     "invert": false
@@ -496,6 +512,10 @@
                     "subtext": "",
                     "moreInfos": [
                       {
+                          "text": "Datum der Abstimmung: 15. Februar 2017 ",
+                          "link": ""
+                      },
+                      {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/umsetzung-des-handelsabkommens-ceta-mit-kanada"
                       },
@@ -513,8 +533,16 @@
                     "subtext": "",
                     "moreInfos": [
                       {
+                          "text": "Datum der Abstimmung: 6. Oktober 2015 ",
+                          "link": ""
+                      },
+                      {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/auszahlung-von-griechenlandhilfen"
+                      },
+                      {
+                          "text": "Text vom Europaparlament",
+                          "link": "http://www.europarl.europa.eu/doceo/document/TA-8-2015-0332_DE.html?redirect"
                       }
                     ],
                     "invert": false
@@ -525,6 +553,10 @@
                     "short": "EFSI",
                     "subtext": "",
                     "moreInfos": [
+                      {
+                          "text": "Datum der Abstimmung: 7. Juli 2015 ",
+                          "link": ""
+                      },
                       {
                           "text": "Broschüre des Bundesministeriums für Wirtschaft und Energie",
                           "link": "https://www.bmwi.de/Redaktion/DE/Publikationen/Europa/europaeische-struktur-und-investitionsfonds-in-deutschland.html"
@@ -559,6 +591,10 @@
                     "subtext": "",
                     "moreInfos": [
                       {
+                          "text": "Datum der Abstimmung: 15. Januar 2019 ",
+                          "link": ""
+                      },
+                      {
                           "text": "Bei zukünftigen Änderungen der Steuerpolitik soll verpflichtend deren Auswirkungen auf die Gleichstellung der Geschlechter berücksichtigt werden, zum Beispiel durch niedriegere Verbrauchersteuern aber höhere Unternehmenssteuern, was besonders Frauen zugute kommen würde.",
                           "link": ""
                       },
@@ -580,8 +616,16 @@
                     "subtext": "",
                     "moreInfos": [
                       {
+                          "text": "Datum der Abstimmung: 29. November 2018 ",
+                          "link": ""
+                      },
+                      {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/schutz-der-akademischen-freiheit"
+                      },
+                      {
+                          "text": "Die Akademische Freiheit auf ZEIT.de",
+                          "link": "https://www.zeit.de/1963/31/die-akademische-freiheit/komplettansicht"
                       }
                     ],
                     "invert": false
@@ -601,6 +645,14 @@
                     "subtext": "",
                     "moreInfos": [
                       {
+                          "text": "Datum der Abstimmung: 3. Mai 2018 ",
+                          "link": ""
+                      },
+                      {
+                          "text": "Entschließung des Europaparlaments",
+                          "link": "http://www.europarl.europa.eu/doceo/document/TA-8-2018-0201_DE.html?redirect"
+                      },
+                      {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/schutz-unbegleiteter-minderjaehriger-gefluechteter"
                       }
@@ -613,6 +665,10 @@
                     "short": "Flüchtlingsverteilung",
                     "subtext": "",
                     "moreInfos": [
+                      {
+                          "text": "Datum der Abstimmung: 16. November 2017 ",
+                          "link": ""
+                      },
                       {
                           "text": "Entwurf beim EU-Parlament",
                           "link": "http://www.europarl.europa.eu/doceo/document/A-8-2017-0345_DE.html?redirect#title2"
@@ -643,6 +699,14 @@
                     "subtext": "",
                     "moreInfos": [
                       {
+                          "text": "Datum der Abstimmung: 11. November 2015 ",
+                          "link": ""
+                      },
+                      {
+                          "text": "Bericht des Parlaments",
+                          "link": "www.europarl.europa.eu/sides/getDoc.do?pubRef=-//EP//NONSGML+REPORT+A8-2015-0286+0+DOC+PDF+V0//DE"
+                      },
+                      {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/aenderung-des-wahlrechts-zum-eu-parlament"
                       },
@@ -668,6 +732,14 @@
                     "subtext": "",
                     "moreInfos": [
                       {
+                          "text": "Datum der Abstimmung: 23. Oktober 2018 ",
+                          "link": ""
+                      },
+                      {
+                          "text": "Entschließungsantrag des Parlaments",
+                          "link": "http://www.europarl.europa.eu/doceo/document/RC-8-2018-0481_DE.html?redirect"
+                      },
+                      {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/zunahme-neofaschistischer-gewalttaten-europa"
                       }
@@ -681,12 +753,24 @@
                     "subtext": "",
                     "moreInfos": [
                       {
+                          "text": "In Deutschland ist das schon seit ein paar Jahren eine Straftat.",
+                          "link": ""
+                      },
+                      {
+                          "text": "Datum der Abstimmung: 31. Mai 2018 ",
+                          "link": ""
+                      },
+                      {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu/abstimmungen/manipulation-des-kilometerzaehlers-kraftfahrzeugen"
                       },
                       {
                           "text": "Unterschied zwischen Straftat und Ordnungswidrigkeit bei Paradisi",
                           "link": "http://www.paradisi.de/Freizeit_und_Erholung/Gesellschaft/Kriminalitaet/Artikel/14784.php"
+                      },
+                      {
+                          "text": "Entschließung des Parlaments",
+                          "link": "http://www.europarl.europa.eu/doceo/document/TA-8-2018-0235_DE.html?redirect#top"
                       }
                     ],
                     "invert": false
@@ -698,8 +782,24 @@
                     "subtext": "",
                     "moreInfos": [
                       {
+                          "text": "Datum der Abstimmung: 26. März 2019 ",
+                          "link": ""
+                      },
+                      {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/zeitumstellung-abschaffen"
+                      },
+                      {
+                          "text": "Bericht des Parlaments",
+                          "link": "http://www.europarl.europa.eu/doceo/document/A-8-2019-0169_DE.html"
+                      },
+                      {
+                          "text": "Sommerzeit bei Wikipedia",
+                          "link": "https://de.wikipedia.org/wiki/Sommerzeit"
+                      },
+                      {
+                          "text": "Artikel auf ZDF.de",
+                          "link": "https://www.zdf.de/nachrichten/heute/winterzeit-sommerzeit-ende-der-zeitumstellung-ab-2021-worum-es-geht-100.html"
                       }
                     ],
                     "invert": false
