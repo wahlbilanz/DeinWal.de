@@ -477,7 +477,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
     }
     
     // sort consent groups according to
-    this.overallResult["groupedConsentKeys"] = this.overallResult["groupedConsentKeys"].sort().reverse ();
+    this.overallResult["groupedConsentKeys"] = this.overallResult["groupedConsentKeys"].sort(function(a,b){return a-b}).reverse ();
 		
 		this.shareText = encodeURIComponent (this.shareText);
 		this.resultsVisible = true;
