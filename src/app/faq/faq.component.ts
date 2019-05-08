@@ -31,6 +31,16 @@ export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, Af
 			'name': 'Wahl-O-Mat',
 			'link': 'https://www.wahl-o-mat.de/'
 		},
+		{
+			'pre': 'auf den',
+			'name': 'Voteswiper',
+			'link': 'https://www.voteswiper.org'
+		},
+		{
+			'pre': 'auf',
+			'name': 'your vote matters',
+			'link': 'https://yourvotematters.eu'
+		}
   ])
     
 
