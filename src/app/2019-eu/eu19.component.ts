@@ -493,12 +493,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 	 */
 	getZustimmungsPunkte(partyResults, answer) {
 		const opt = this.voteOptions;
-    console.log (partyResults)
 		let nAbgegebeneStimmen = partyResults[opt[0]] + partyResults[opt[1]] + partyResults[opt[2]];
-    
-    if (nAbgegebeneStimmen != partyResults["gesamt"] - partyResults["abwesend"]) {
-      console.log ("!!!!!!!!!!!!!!!!!")
-    }
     
     
     // in der eu gibts parties mit nur einer person... wenn die mal nicht da ist -> keine abgegebene stimme -> division durch 0 -> :(
