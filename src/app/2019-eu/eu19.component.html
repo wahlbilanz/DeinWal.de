@@ -350,7 +350,7 @@
 		  <td class="w3-left-align">
 		    <ng-container *ngFor="let party of partypriority">
 		      <ng-container *ngIf="quest.fragen[q].consent.indexOf (party) > -1">
-            <img class='optional-margin partylogolist' src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}"> 
+            <img class='optional-margin partylogolist' src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="{{getProperPartyName (party)}}: {{questionResults[q][party].dafuer}} Ja-Stimmen, {{questionResults[q][party].dagegen}} Nein-Stimmen, {{questionResults[q][party].enthalten}} Enthaltungen, {{questionResults[q][party].abwesend}} Abwesend"> 
 		      </ng-container>
 		    </ng-container>
 		  </td>
