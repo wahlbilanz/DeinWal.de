@@ -493,27 +493,34 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 	 */
 	getZustimmungsPunkte(partyResults, answer) {
 		const opt = this.voteOptions;
+    console.log (partyResults)
 		let nAbgegebeneStimmen = partyResults[opt[0]] + partyResults[opt[1]] + partyResults[opt[2]];
-    // in der eu gibts parties mit nur einer person... wenn die mal nicht da ist -> keine abgegebene stimme -> division durch 0 -> :(
-    if (nAbgegebeneStimmen < 1) {
-      return { 'punkteRelativ': 0, 'punkteAbsolut': 0, 'nAbgegebeneStimmen': 0, 'scoreDescription': "nicht beteiligt"  };
+    
+    if (nAbgegebeneStimmen != partyResults["gesamt"] - partyResults["abwesend"]) {
+      console.log ("!!!!!!!!!!!!!!!!!")
     }
+    
+    
+    // in der eu gibts parties mit nur einer person... wenn die mal nicht da ist -> keine abgegebene stimme -> division durch 0 -> :(
+    /*if (nAbgegebeneStimmen < 1) {
+      return { 'punkteRelativ': 0, 'punkteAbsolut': 0, 'nAbgegebeneStimmen': 0, 'scoreDescription': "nicht beteiligt"  };
+    }*/
 		let punkte = 0;
 		let description = "";
 		if (answer === 'enthalten') { // Enthaltung
 			punkte = partyResults[opt[0]] + 0.5 * partyResults[opt[1]] + 0.5 * partyResults[opt[2]];
 			description = "(1/2 · Ja + 1/2 · Nein + Enthaltung) / Gesamt = ("
-				+ 0.5 * partyResults[opt[1]] + " + " + 0.5 * partyResults[opt[2]] + " + " + partyResults[opt[0]] + ") / " + nAbgegebeneStimmen
+				+ 0.5 * partyResults[opt[1]] + " + " + 0.5 * partyResults[opt[2]] + " + " + partyResults[opt[0]] + ") / " + partyResults["gesamt"]
 				+ " = ";
 		} else if (answer === 'dafuer') { // ja
 			punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[1]];
 			description = "(Ja + 1/2 · Enthaltung) / Gesamt = ("
-				+ partyResults[opt[1]] + " + " + 0.5 * partyResults[opt[0]] + ") / " + nAbgegebeneStimmen
+				+ partyResults[opt[1]] + " + " + 0.5 * partyResults[opt[0]] + ") / " + partyResults["gesamt"]
 				+ " = ";
 		} else if (answer === 'dagegen') { // nein
 			punkte = 0.5 * partyResults[opt[0]] + partyResults[opt[2]];
 			description = "(Nein + 1/2 · Enthaltung) / Gesamt = ("
-				+ partyResults[opt[2]] + " + " + 0.5 * partyResults[opt[0]] + ") / " + nAbgegebeneStimmen
+				+ partyResults[opt[2]] + " + " + 0.5 * partyResults[opt[0]] + ") / " + partyResults["gesamt"]
 				+ " = ";
 		} else {
 			// wenn der Benutzer gar keine Antwort ausgewaehlt hat
@@ -521,7 +528,7 @@ export class EuropaWal2019 implements OnInit, AfterContentInit, AfterViewInit, A
 			punkte = 0;
 			nAbgegebeneStimmen = 0;
 		}
-		return { 'punkteRelativ': (punkte / nAbgegebeneStimmen), 'punkteAbsolut': punkte, 'nAbgegebeneStimmen': nAbgegebeneStimmen, 'scoreDescription':description  };
+		return { 'punkteRelativ': (punkte / partyResults['gesamt']), 'punkteAbsolut': punkte, 'nAbgegebeneStimmen': nAbgegebeneStimmen, 'scoreDescription':description  };
 	}
 
 

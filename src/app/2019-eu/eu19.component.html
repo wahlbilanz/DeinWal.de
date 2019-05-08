@@ -274,7 +274,7 @@
 				<div class="stackedbarbar w3-red" [style.width.%]="questionResults[q][party].dagegen * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div>
 				<div class="stackedbarbar w3-blue" [style.width.%]="questionResults[q][party].enthalten * 100 / questionResults[q][party].relevant" style="margin:0;padding:0;top:0;bottom:0"></div><br>
 			      </div>
-			      Ja: {{questionResults[q][party].dafuer}} &mdash; Nein: {{questionResults[q][party].dagegen}} &mdash; Enthaltung: {{questionResults[q][party].enthalten}}<br>
+			      Ja: {{questionResults[q][party].dafuer}} &mdash; Nein: {{questionResults[q][party].dagegen}} &mdash; Enthaltung: {{questionResults[q][party].enthalten}} &mdash; Abwesend: {{questionResults[q][party].abwesend}}<br>
 			      Score: {{quest.fragen[q]["score"][party]}} <strong>{{quest.fragen[q][party]}} wie du</strong><br>
             </div>
         <span *ngIf="questionResults[q][party].relevant == 0">nicht beteiligt</span>
