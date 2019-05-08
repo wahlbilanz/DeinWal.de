@@ -265,7 +265,7 @@
 			<ng-container *ngFor="let party of partypriority">
 			  <tr [ngClass]="{'opaqueresult': questionResults[q][party].relevant < 1}">
 			    <td class="partyDetailsImage">
-			      <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis {{getProperPartyName (party)}}: {{questionResults[q][party].dafuer}} Ja-Stimmen, {{questionResults[q][party].dagegen}} Nein-Stimmen, {{questionResults[q][party].enthalten}} Enthaltungen">
+			      <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis {{getProperPartyName (party)}}: {{questionResults[q][party].dafuer}} Ja-Stimmen, {{questionResults[q][party].dagegen}} Nein-Stimmen, {{questionResults[q][party].enthalten}} Enthaltungen, {{questionResults[q][party].abwesend}} Abwesend">
 			    </td>
 			    <td class="partyDetailsBar">
         <div *ngIf="questionResults[q][party].relevant > 0">
@@ -371,7 +371,7 @@
 		      <ng-container *ngFor="let party of partypriority">
 		      <tr [ngClass]="{'opaqueresult': questionResults[q][party].relevant < 1}">
 			<td class="partyDetailsImage">
-			  <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis {{getProperPartyName (party)}}: {{questionResults[q][party].dafuer}} Ja-Stimmen, {{questionResults[q][party].dagegen}} Nein-Stimmen, {{questionResults[q][party].enthalten}} Enthaltungen">
+			  <img src="/assets/partei-logos/{{getPartyLogo (party)}}" alt="{{getProperPartyName (party)}}" title="Ergebnis {{getProperPartyName (party)}}: {{questionResults[q][party].dafuer}} Ja-Stimmen, {{questionResults[q][party].dagegen}} Nein-Stimmen, {{questionResults[q][party].enthalten}} Enthaltungen, {{questionResults[q][party].abwesend}} Abwesend">
 			</td>
 			<td class="partyDetailsBar">
 			  <div class="stackedbar" *ngIf="questionResults[q][party].relevant > 0">
