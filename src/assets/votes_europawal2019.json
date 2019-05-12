@@ -381,35 +381,6 @@
             "bild": "",
             "subtext": "",
             "fragen": {
-                "98056b77-4079-4c08-b4a7-69036c4bcaf5": {
-                    "context": "Facebook hat zugegeben, dass die britische Firma Cambridge Analytica an private Informationen von bis zu 87&nbsp;Millionen Facebook-Benutzern gekommen war.",
-                    "frage": "Sollte Facebook sich einer ausgiebigen Prüfung durch die EU stellen und sollte der Schutz der personenbezogenen Daten durch neue Rechtsvorschriften verstärkt werden?",
-                    "short": "Facebook",
-                    "subtext": "",
-                    "moreInfos": [
-                      {
-                          "text": "Datum der Abstimmung: 16. Oktober 2018 ",
-                          "link": ""
-                      },
-                      {
-                          "text": "Entschließungsantrag des Parlaments",
-                          "link": "http://www.europarl.europa.eu/doceo/document/B-8-2018-0480_DE.html?redirect"
-                      },
-                      {
-                          "text": "Informationen bei abgeordnetenwatch.de",
-                          "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/nutzung-der-daten-von-facebook-usern-durch-cambridge-analytica"
-                      },
-                      {
-                          "text": "Süddeutsche Zeitung",
-                          "link": "https://www.sueddeutsche.de/digital/datenmissbrauch-was-ist-eigentlich-gerade-bei-facebook-los-1.3932349"
-                      },
-                      {
-                          "text": "netzpolitik.org",
-                          "link": "https://netzpolitik.org/der-facebook-cambridge-analytica-datenskandal/"
-                      }
-                    ],
-                    "invert": false
-                },
                 "9bbf91f1-b259-4dbb-bfd9-d3c3bc5f9ec1": {
                     "context": "",
                     "frage": "Sollten Fluggesellschaften dazu verpflichtet werden, die Daten aller Flugpassagiere an die Ermittlungsbehörden der EU-Staaten weiterzuleiten?",
