@@ -190,6 +190,10 @@
                       {
                           "text": "Informationen bei abgeordnetenwatch.de",
                           "link": "https://www.abgeordnetenwatch.de/eu-parlament-2014-2019/abstimmungen/resolution-zur-neuzulassung-des-herbizids-glyphosat"
+                      },
+                      {
+                          "text": "Eigentlich war eine Zulassung für weitere 15 Jahre vorgesehen - 7 Jahre plus weitere Untersuchungen stellt einen Kompromiss dar.",
+                          "link": ""
                       }
                     ],
                     "invert": false
@@ -242,7 +246,7 @@
                 },
                 "277599c2-6d75-4593-9a33-dd94d25871dd": {
                     "context": "",
-                    "frage": "Sollten Einwegkunststoffe, wie Plastikbesteck und -teller, Wattestäbchen, Trinkhalme, Rührstäbchen und Luftballonstäbe, zum Schutz der Umwelt verboten werden?",
+                    "frage": "Sollten Einwegkunststoffe, wie Plastikbesteck und -teller, Wattestäbchen, Trinkhalme, Rührstäbchen und Luftballonstäbe verboten werden?",
                     "short": "Einwegplastik",
                     "subtext": "",
                     "moreInfos": [
@@ -303,8 +307,8 @@
             "subtext": "",
             "fragen": {
                 "43b62e8f-afef-4083-a71b-753ccdbecd6d": {
-                    "context": "Im Rahmen einer EU-Strategie zur Bekämpfung von Radikalisierungstendenzen soll zum Beispiel eine schwarze Liste europäischer Dschihadisten und Terrorverdächtiger erstellt werden und der Austausch zwischen nationalen Polizeien und Europol intensiviert werden.",
-                    "frage": "Sollte das Vorgehen gegen Terrorverdächtige europaweit koordiniert werden?",
+                    "context": "",
+                    "frage": "Sollte eine schwarze Liste europäischer Dschihadisten und Terrorverdächtiger zentral erstellt und der Austausch zwischen nationalen Polizeien und Europol intensiviert werden?",
                     "short": "Terrorabwehr",
                     "subtext": "",
                     "moreInfos": [
@@ -441,7 +445,7 @@
                 },
                 "20ef0ba6-4336-4f20-98c3-9493dee4e314": {
                     "context": "Im Rahmen einer Urheberrechtsreform soll die Verantwortung für Urheberrechtsverstöße von den Nutzern auf die Plattformen übertragen werden. Plattformen sollen hochgeladene Inhalte prüfen und die Veröffentlichung unterbinden oder die Urheber vergüten. Um Schadensersatzansprüchen vorzubeugen, müssen die Unternehmen voraussichtlich auf Uploadfilter zurückgreifen.",
-                    "frage": "Stimmst du der Urheberrechtsreform vom März 2019 zu?",
+                    "frage": "Stimmst du der Urheberrechtsreform zu?",
                     "short": "Urheberrecht",
                     "subtext": "",
                     "moreInfos": [
