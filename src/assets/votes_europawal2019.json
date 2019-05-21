@@ -41,7 +41,7 @@
             "subtext": "",
             "fragen": {
                 "34d2fd08-9bbf-4948-88c6-183864116d6d": {
-                    "context": "Es kam zu einem bewaffneten Konflikt im Osten der Ukraine und Russland annektierte die Krim.",
+                    "context": "Es kam zu einem bewaffneten Konflikt im Osten der Ukraine, und Russland annektierte die Krim.",
                     "frage": "Sollten die Beziehungen zu Russland kritisch neubewertet werden?",
                     "short": "Russland",
                     "subtext": "",
@@ -170,7 +170,7 @@
             "subtext": "",
             "fragen": {
                 "20b545ab-e31f-4404-ba34-fed1f163cce2": {
-                    "context": "Glyphosat ist ein Herbizid mit umstrittenen Auswirkung auf die Gesundheit des Menschen.",
+                    "context": "Glyphosat ist ein Herbizid mit umstrittenen Auswirkungen auf die Gesundheit des Menschen.",
                     "frage": "Stimmst du einer Zulassung für weitere 7&nbsp;Jahre zu, in denen die gesundheitlichen Auswirkungen wissenschaftlich genauer untersucht werden?",
                     "short": "Glyphosat",
                     "subtext": "",
@@ -502,7 +502,7 @@
                     "invert": false
                 },
                 "de2c3caf-d77b-457a-8e02-73bcdb60abad": {
-                    "context": "Oktober 2015: Griechenland steckt weiter in einer Finanzkrise. Die Arbeitslosigkeit stieg zwischen 2007 und 2014 um 18.3% und etwa ein Drittel der Bevölkerung hat keine Krankenversicherung mehr.",
+                    "context": "Oktober 2015: Griechenland steckt weiter in einer Finanzkrise. Die Arbeitslosigkeit stieg zwischen 2007 und 2014 um 18.3%, und etwa ein Drittel der Bevölkerung hat keine Krankenversicherung mehr.",
                     "frage": "Soll Griechenland schneller Hilfsgelder abrufen können und eine Auszahlung von 35 Milliarden Euro aus dem Europäischen Struktur- und Investitionsfonds vorgezogen werden?",
                     "short": "Griechenland",
                     "subtext": "",
