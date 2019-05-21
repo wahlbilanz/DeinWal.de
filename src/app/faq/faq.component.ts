@@ -22,6 +22,21 @@ export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, Af
 			'link': ''
 		},*/
 		{
+			'pre': 'in die',
+			'name': 'Wahlprogramme der verschiedenen Parteien',
+			'link': 'https://www.europawahl-bw.de/europawahlprogramme.html'
+		},
+		{
+			'pre': '',
+			'name': 'Wer steht zur Wahl?',
+			'link': 'https://www.bpb.de/politik/wahlen/wer-steht-zur-wahl/287905/europawahl-2019'
+		},
+		{
+			'pre': 'ins',
+			'name': 'Europa-Wahlbingo',
+			'link': 'https://wahlbingo.bpb.de/'
+		},
+		{
 			'pre': 'zum',
 			'name': 'Digital-O-Mat',
 			'link': 'https://ep2019.digital-o-mat.de/'
@@ -37,9 +52,9 @@ export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, Af
 			'link': 'https://www.voteswiper.org'
 		},
 		{
-			'pre': 'auf',
-			'name': 'your vote matters',
-			'link': 'https://yourvotematters.eu'
+			'pre': 'zum',
+			'name': 'Euromat',
+			'link': 'https://www.euromat.info/de/'
 		}
   ])
     
