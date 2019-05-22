@@ -22,6 +22,21 @@ export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, Af
 			'link': ''
 		},*/
 		{
+			'pre': 'zu',
+			'name': 'EU and I',
+			'link': 'https://euandi2019.eu/survey/default/DE'
+		},
+		{
+			'pre': 'zu',
+			'name': 'Ausgewählt.eu',
+			'link': 'https://www.ausgewaehlt.eu/'
+		},
+		{
+			'pre': 'in den ',
+			'name': 'Wahl-Kompass',
+			'link': 'https://europa.wahl-kompass.de/de/#!/'
+		},
+		{
 			'pre': 'in die',
 			'name': 'Wahlprogramme der verschiedenen Parteien',
 			'link': 'https://www.europawahl-bw.de/europawahlprogramme.html'
