@@ -22,6 +22,21 @@ export class FaqComponent implements OnInit, AfterContentInit, AfterViewInit, Af
 			'link': ''
 		},*/
 		{
+			'pre': 'zum',
+			'name': 'Agrar-O-Mat',
+			'link': 'https://www.agrarheute.com/agraromat'
+		},
+		{
+			'pre': 'zum',
+			'name': 'Digital-Thesen-Check',
+			'link': 'https://eudigital19.d-64.org/'
+		},
+		{
+			'pre': 'in den',
+			'name': 'Sozial-O-Mat',
+			'link': 'https://www.sozial-o-mat.de/'
+		},
+		{
 			'pre': 'zu',
 			'name': 'EU and I',
 			'link': 'https://euandi2019.eu/survey/default/DE'
