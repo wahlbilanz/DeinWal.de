@@ -1,0 +1,36 @@
+kind: pipeline
+name: build
+type: docker
+
+# only build on master and develop
+trigger:
+  branch:
+    - master
+    - develop
+
+steps:
+- name: build
+  image: plugins/docker
+  pull: if-not-exists
+  settings:
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo:
+      from_secret: docker_repo
+    registry:
+      from_secret: docker_registry
+- name: notify
+  image: drillster/drone-email
+  settings:
+    host:
+      from_secret: drone_mail_host
+    username:
+      from_secret: drone_mail_user
+    password:
+      from_secret: drone_mail_password
+    from:
+      from_secret: drone_mail_noreply
+  when:
+    status: [ success, failure ]
