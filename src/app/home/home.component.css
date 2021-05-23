@@ -1,4 +1,4 @@
-#home, #archiv {
+#home, #archiv, #next {
 	max-width: 950px;
 	margin: 5px auto;
 }
@@ -6,9 +6,9 @@
 	max-height: 90%;
 	margin: auto;
 	padding: 20px;
-	
+
 }
-#home-whale object, .archivwal object {
+#home-whale object, .archivwal object, #next-whale object {
 	width: 100%;
 }
 #home-text, .archivetext{
