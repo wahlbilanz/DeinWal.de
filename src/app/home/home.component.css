@@ -1,4 +1,4 @@
-#home, #archiv, #next {
+#home, #archiv, #next, #home-note  {
 	max-width: 950px;
 	margin: 5px auto;
 }
@@ -14,7 +14,10 @@
 #home-text, .archivetext{
 	padding: 20px;
 }
-
+#home-note {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 @media screen and (max-width: 680px) {
     .optional-margin {
         margin-left: 0 !important;
