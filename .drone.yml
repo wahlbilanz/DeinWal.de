@@ -10,7 +10,7 @@ trigger:
 
 steps:
 - name: build
-  image: plugins/docker
+  image: plugins/kaniko
   pull: if-not-exists
   settings:
     username:
